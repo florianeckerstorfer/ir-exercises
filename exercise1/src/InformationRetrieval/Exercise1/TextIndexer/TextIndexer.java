@@ -1,4 +1,4 @@
-package InformationRetrival.TextIndexer;
+package InformationRetrieval.Exercise1.TextIndexer;
 
 class TextIndexer {
 
