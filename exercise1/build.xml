@@ -2,11 +2,12 @@
   <property name="build-dir" location="bin" />
   <property name="source-dir" location="src" />
 
-   <target name='clean' description="Delete all build artifacts." >
-     <delete dir='${build}'/>
+   <target name="clean">
+     <delete dir="${build-dir}" />
+     <mkdir dir="${build-dir}" />
    </target>
 
-   <target name='compile' description='Compile source files and place beside source.'>
+   <target name="compile">
      <javac srcdir="${source-dir}" destdir="${build-dir}" includeantruntime="false" />
    </target>
 
