@@ -1,0 +1,13 @@
+<project name="ir-exercise1" default='compile' basedir="." >
+  <property name="build-dir" location="bin" />
+  <property name="source-dir" location="src" />
+
+   <target name='clean' description="Delete all build artifacts." >
+     <delete dir='${build}'/>
+   </target>
+
+   <target name='compile' description='Compile source files and place beside source.'>
+     <javac srcdir="${source-dir}" destdir="${build-dir}" includeantruntime="false" />
+   </target>
+
+</project>
