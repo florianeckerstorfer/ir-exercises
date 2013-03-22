@@ -19,7 +19,7 @@
         <javac srcdir="${source-dir}" destdir="${build-dir}" includeantruntime="false" />
     </target>
 
-    <target name="jar" depends="compile">
+    <target name="dist" depends="compile">
         <mkdir dir="${dist-dir}/lib"/>
         <jar jarfile="${dist-dir}/lib/${project-name}.jar" basedir="${build-dir}">
             <manifest>
@@ -28,7 +28,7 @@
         </jar>
     </target>
 
-    <target name="run" depends="jar">
+    <target name="run" depends="dist">
         <java jar="${dist-dir}/lib/${project-name}.jar" fork="true" />
     </target>
 
