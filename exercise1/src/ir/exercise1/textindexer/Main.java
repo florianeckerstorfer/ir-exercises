@@ -1,4 +1,4 @@
-package InformationRetrieval.Exercise1.TextIndexer;
+package ir.exercise1.textindexer;
 
 class Main {
 

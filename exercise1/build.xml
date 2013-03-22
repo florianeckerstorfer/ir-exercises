@@ -21,11 +21,15 @@
 
     <target name="jar" depends="compile">
         <mkdir dir="${dist-dir}/lib"/>
-        <jar jarfile="${dist-dir}/lib/${project-name}-${DSTAMP}.jar" includes="${build-dir}/**/*.class" basedir="${build-dir}">
+        <jar jarfile="${dist-dir}/lib/${project-name}.jar" basedir="${build-dir}">
             <manifest>
-                <attribute name="Main-Class" value="InformationRetrieval.Exercise1.TextIndexer.Main" />
+                <attribute name="Main-Class" value="ir.exercise1.textindexer.Main" />
             </manifest>
         </jar>
+    </target>
+
+    <target name="run" depends="jar">
+        <java jar="${dist-dir}/lib/${project-name}.jar" fork="true" />
     </target>
 
 </project>
