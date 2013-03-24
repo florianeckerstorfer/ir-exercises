@@ -1,16 +1,10 @@
 package ir.exercise1.textindexer.reader.document;
 
 import java.io.File;
-import java.io.FileInputStream;
-import java.nio.channels.FileChannel;
-import java.nio.MappedByteBuffer;
-import java.nio.charset.Charset;
-import java.io.FileNotFoundException;
-import java.io.IOException;
 
 import ir.exercise1.textindexer.document.DocumentInterface;
-import ir.exercise1.textindexer.document.Document;
 import ir.exercise1.textindexer.document.DocumentFactoryInterface;
+import ir.exercise1.textindexer.reader.file.FileReaderInterface;
 
 /**
  * TextDocumentReader
@@ -20,10 +14,12 @@ import ir.exercise1.textindexer.document.DocumentFactoryInterface;
 public class TextDocumentReader implements DocumentReaderInterface
 {
     protected DocumentFactoryInterface documentFactory;
+    protected FileReaderInterface fileReader;
 
-    public TextDocumentReader(DocumentFactoryInterface documentFactory)
+    public TextDocumentReader(DocumentFactoryInterface documentFactory, FileReaderInterface fileReader)
     {
-        this.documentFactory = documentFactory;
+        this.documentFactory    = documentFactory;
+        this.fileReader         = fileReader;
     }
 
     /**
@@ -36,37 +32,8 @@ public class TextDocumentReader implements DocumentReaderInterface
     {
         DocumentInterface document = documentFactory.newDocument();
         document.setName(file.getName());
-        try {
-            document.setContent(readFile(file));
-        } catch (FileNotFoundException ex) {
-            return null;
-        } catch (IOException ex) {
-            return null;
-        }
+        document.setContent(fileReader.read(file));
 
         return document;
-    }
-
-    /**
-     * Reads the given file and returns the content as string.
-     * #
-     * @param  file
-     * @return
-     * @throws FileNotFoundException if the file doesn't exist.
-     * @throws IOException           if the file can't be read.
-     */
-    protected String readFile(File file)
-        throws FileNotFoundException, IOException
-    {
-        FileInputStream stream = new FileInputStream(file);
-        try {
-            FileChannel fc = stream.getChannel();
-            MappedByteBuffer bb = fc.map(FileChannel.MapMode.READ_ONLY, 0, fc.size());
-            /* Instead of using default, pass in a decoder. */
-            return Charset.defaultCharset().decode(bb).toString();
-        }
-        finally {
-            stream.close();
-        }
     }
 }
