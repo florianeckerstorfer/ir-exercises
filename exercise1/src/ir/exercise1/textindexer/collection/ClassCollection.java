@@ -28,13 +28,23 @@ public class ClassCollection implements CollectionInterface
     }
 
     /**
+     * Returns the number of documents in the collection.
+     *
+     * @return
+     */
+    public int size()
+    {
+        return documents.size();
+    }
+
+    /**
      * Returns if the document has another document.
      *
      * @return
      */
     public boolean hasNext()
     {
-        return ((current+1) < documents.size());
+        return ((current+1) <= documents.size());
     }
 
     /**
@@ -44,8 +54,12 @@ public class ClassCollection implements CollectionInterface
      */
     public DocumentInterface next()
     {
+        if (!hasNext()) {
+            return null;
+        }
+        DocumentInterface document = documents.get(current);
         current += 1;
-        return documents.get(current);
+        return document;
     }
 
     /**
