@@ -12,20 +12,8 @@ import ir.exercise1.textindexer.document.DocumentInterface;
  */
 public class ClassCollection implements CollectionInterface
 {
-    protected String className;
     protected List<DocumentInterface> documents = new ArrayList<DocumentInterface>();
     protected int current = 0;
-
-    /**
-     * Constructor.
-     *
-     * @param  className
-     * @return
-     */
-    public ClassCollection(String className)
-    {
-        this.className = className;
-    }
 
     /**
      * Adds a new document to the collection.

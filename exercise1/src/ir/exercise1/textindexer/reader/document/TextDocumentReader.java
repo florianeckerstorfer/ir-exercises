@@ -10,6 +10,7 @@ import java.io.IOException;
 
 import ir.exercise1.textindexer.document.DocumentInterface;
 import ir.exercise1.textindexer.document.Document;
+import ir.exercise1.textindexer.document.DocumentFactoryInterface;
 
 /**
  * TextDocumentReader
@@ -18,6 +19,13 @@ import ir.exercise1.textindexer.document.Document;
  */
 public class TextDocumentReader implements DocumentReaderInterface
 {
+    protected DocumentFactoryInterface documentFactory;
+
+    public TextDocumentReader(DocumentFactoryInterface documentFactory)
+    {
+        this.documentFactory = documentFactory;
+    }
+
     /**
      * Reads the given document.
      *
@@ -26,7 +34,7 @@ public class TextDocumentReader implements DocumentReaderInterface
      */
     public DocumentInterface read(File file)
     {
-        DocumentInterface document = new Document();
+        DocumentInterface document = documentFactory.newDocument();
         document.setName(file.getName());
         try {
             document.setContent(readFile(file));

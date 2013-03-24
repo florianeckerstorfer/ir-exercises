@@ -5,6 +5,7 @@ import java.io.File;
 import ir.exercise1.textindexer.reader.document.DocumentReaderInterface;
 import ir.exercise1.textindexer.collection.CollectionInterface;
 import ir.exercise1.textindexer.collection.ClassCollection;
+import ir.exercise1.textindexer.document.ClassDocument;
 
 /**
  * DirectoryAsClassCollectionReader
@@ -14,7 +15,7 @@ import ir.exercise1.textindexer.collection.ClassCollection;
  *
  * @author Florian Eckerstorfer <florian@eckerstorfer.co>
  */
-public class DirectoryAsClassCollectionReader implements CollectionReaderInterface
+public class ClassCollectionReader implements CollectionReaderInterface
 {
     protected String baseDirectory;
     protected DocumentReaderInterface documentReader;
@@ -26,7 +27,7 @@ public class DirectoryAsClassCollectionReader implements CollectionReaderInterfa
      * @param  documentReader
      * @return
      */
-    public DirectoryAsClassCollectionReader(String baseDirectory, DocumentReaderInterface documentReader)
+    public ClassCollectionReader(String baseDirectory, DocumentReaderInterface documentReader)
     {
         this.baseDirectory      = baseDirectory;
         this.documentReader     = documentReader;
@@ -39,24 +40,25 @@ public class DirectoryAsClassCollectionReader implements CollectionReaderInterfa
      */
     public CollectionInterface read()
     {
-        return null;
-    }
+        CollectionInterface collection = new ClassCollection();
+        File directory = new File(baseDirectory);
 
-    /**
-     * Read the collection of the given class.
-     *
-     * @param  className
-     * @return
-     */
-    public CollectionInterface readClass(String className)
-    {
-        CollectionInterface collection = new ClassCollection(className);
-        File directory = new File(baseDirectory + "/" + className);
-        for (final File entry : directory.listFiles()) {
-            if (entry.isFile()) {
-                collection.addDocument(documentReader.read(entry));
+        // Iterate through all classes
+        for (final File classEntry : directory.listFiles()) {
+            // Ignore files, we just look at directories
+            if (classEntry.isDirectory()) {
+                // Now let's iterate through all documents in the class.
+                for (final File documentEntry : classEntry.listFiles()) {
+                    // If the entry is a document, add it to the collection
+                    if (documentEntry.isFile()) {
+                        ClassDocument document = (ClassDocument)documentReader.read(documentEntry);
+                        document.setClassName(classEntry.getName());
+                        collection.addDocument(document);
+                    }
+                }
             }
         }
+
         return collection;
     }
 }
