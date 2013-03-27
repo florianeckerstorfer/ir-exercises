@@ -7,6 +7,7 @@ import ir.exercise1.textindexer.reader.file.FilesystemReader;
 import ir.exercise1.textindexer.document.DocumentInterface;
 import ir.exercise1.textindexer.document.ClassDocument;
 import ir.exercise1.textindexer.document.ClassDocumentFactory;
+import ir.exercise1.textindexer.input.TextInput;
 import ir.exercise1.textindexer.collection.CollectionInterface;
 
 /**
@@ -23,10 +24,15 @@ class Main
 
         CollectionReaderInterface reader = new ClassCollectionReader("./data/20_newsgroups_subset", new TextDocumentReader(new ClassDocumentFactory(), new FilesystemReader()));
         CollectionInterface collection = reader.read();
+        
+        TextInput textInputTools = new TextInput();
+        		
         while (collection.hasNext()) {
             ClassDocument doc = (ClassDocument)collection.next();
             System.out.println(doc.getClassName() + ": " + doc.getName());
-            // System.out.println(doc.getContent());
+            
+            textInputTools.tokenize(doc);
         }
+        
     }
 }
