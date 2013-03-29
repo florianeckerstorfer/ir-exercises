@@ -11,6 +11,8 @@ The following libraries must be put into the `vendor/` directory.
 - [`hamcrest-core-1.3.jar`](http://search.maven.org/remotecontent?filepath=org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar)
 - [`junit-4.11.jar`](http://search.maven.org/remotecontent?filepath=junit/junit/4.11/junit-4.11.jar)
 - [`objenesis-1.3.jar`](http://objenesis.googlecode.com/files/objenesis-1.3-bin.zip)
+- [`commons-cli-1.2`](http://tweedo.com/mirror/apache//commons/cli/binaries/commons-cli-1.2-bin.zip)
+
 
 Usage
 -----
@@ -27,6 +29,10 @@ Run the text indexer:
 
     $ ant run
 
+Or run them all at once:
+
+    $ ant compile dist run
+    
 Run all tests:
 
     $ ant test
