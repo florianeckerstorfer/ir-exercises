@@ -16,9 +16,9 @@ import java.util.Scanner;
 
 public class TextInput implements InputInterface {
 	
-	private boolean stemming = false;
+	//need cli parser
+	private boolean allowStemming = true;
 	
-	// args
 	private double lowerThreshold;
 	private double upperThreshold;
 	
@@ -28,11 +28,8 @@ public class TextInput implements InputInterface {
 		invertedIndex = new HashMap<String, Set<Integer>>();
 	}
 	
-	public void buildIndex() {
+	public void buildIndex(CollectionInterface collection) {
 		
-		CollectionReaderInterface reader = new ClassCollectionReader("./data/20_newsgroups_subset", new TextDocumentReader(new ClassDocumentFactory(), new FilesystemReader()));
-        CollectionInterface collection = reader.read();
-        
         while (collection.hasNext()) {
         	
         	ClassDocument doc = (ClassDocument)collection.next();
@@ -40,13 +37,13 @@ public class TextInput implements InputInterface {
             
             ArrayList<String> tokens = TextTools.tokenize(doc.getContent());
             
-            for (String token : tokens) {
-            	
+            if (allowStemming) {
+            	tokens = TextTools.doStemming(tokens);
             }
             
+            System.out.println("***** let's take a break here, it's easier to test *****");
             break; //todo: delete it
         }
-        
 	}
 	
 	
