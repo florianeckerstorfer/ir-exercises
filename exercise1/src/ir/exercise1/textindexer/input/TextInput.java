@@ -4,7 +4,10 @@ import ir.exercise1.textindexer.Tools.Stemmer;
 import ir.exercise1.textindexer.Tools.TextTools;
 import ir.exercise1.textindexer.collection.CollectionInterface;
 import ir.exercise1.textindexer.document.ClassDocument;
+import ir.exercise1.textindexer.writer.ArffIndexFileWriter;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.HashSet;
 import java.util.Hashtable;
 import java.util.Iterator;
@@ -51,10 +54,15 @@ public class TextInput implements InputInterface {
 
 	public void buildIndex() {
 		
+		System.out.println("tokenization started");
 		documentTokenization();
+		
+		System.out.println("computation of tf-idf weight started");
 		computeWeights();
 		
-
+		System.out.println("arff index writing started");
+		writeIndexToArff();
+		
 		tokensCount = termFrequencyList.size();
 		
 		avgTokensPerDoc = tokensCount / docsCount;
@@ -65,6 +73,21 @@ public class TextInput implements InputInterface {
 		System.out.println(avgTokensPerDoc + " avg. # tokens per document");
 	}
 	
+	private void writeIndexToArff() {
+		
+		ArffIndexFileWriter arffWriter = new ArffIndexFileWriter();
+		
+		File file = new File("./arff/newgroup_index.arff"); //todo: add .gz
+		
+		try {
+			arffWriter.setOutputFile(file);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		arffWriter.createIndexFile(weightedIndex);
+	}
 	
 	/**
 	 * tokenization chop on every whitespace and non-alphanumeric character
@@ -116,7 +139,7 @@ public class TextInput implements InputInterface {
 
 			textScanner.close();
 			
-			if (loopBreaker == 3) break; // todo: 
+			if (loopBreaker == 333) break; // todo: 
 		}
 		
 		
@@ -130,7 +153,6 @@ public class TextInput implements InputInterface {
 		//tf = # of occurance of the term in document
 		//tf-idf = tf x idf
 		
-		int iterationsCnt = 0;
 		
 		Iterator<Map.Entry<String, Hashtable<String, Integer>>> iterator = termFrequencyList.entrySet().iterator();
 		
@@ -147,7 +169,6 @@ public class TextInput implements InputInterface {
 			Iterator<Map.Entry<String, Integer>> iterator2 = terms.getValue().entrySet().iterator();
 
 			while(iterator2.hasNext()) {
-				iterationsCnt++;
 				Map.Entry<String, Integer> docs = iterator2.next();
 				String curDoc = docs.getKey();
 				
@@ -157,9 +178,6 @@ public class TextInput implements InputInterface {
 			}
 		}
 		
-		System.out.println(weightedIndex);
-		
-		System.out.println("# of iterations: " + iterationsCnt);
 		
 	}
 	
