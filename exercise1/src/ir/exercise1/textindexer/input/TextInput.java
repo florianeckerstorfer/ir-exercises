@@ -77,7 +77,7 @@ public class TextInput implements InputInterface {
 		
 		ArffIndexFileWriter arffWriter = new ArffIndexFileWriter();
 		
-		File file = new File("./arff/newgroup_index.arff"); //todo: add .gz
+		File file = new File("./arff/newgroup_index.arff.gz"); //todo: add .gz
 		
 		try {
 			arffWriter.setOutputFile(file);
