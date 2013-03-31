@@ -1,6 +1,7 @@
 package ir.exercise1.textindexer.collection;
 
 import java.util.Iterator;
+import java.util.List;
 
 import ir.exercise1.textindexer.document.DocumentInterface;
 
@@ -18,4 +19,7 @@ public interface CollectionInterface extends Iterator
      * @return
      */
     public CollectionInterface addDocument(DocumentInterface document);
+    
+    public long getDocumentCount();
+    
  }

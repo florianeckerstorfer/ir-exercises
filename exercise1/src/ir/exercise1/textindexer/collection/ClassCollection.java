@@ -15,7 +15,8 @@ public class ClassCollection implements CollectionInterface
     protected List<DocumentInterface> documents = new ArrayList<DocumentInterface>();
     protected int current = 0;
 
-    /**
+
+	/**
      * Adds a new document to the collection.
      *
      * @param  document
@@ -69,4 +70,13 @@ public class ClassCollection implements CollectionInterface
     {
         throw new UnsupportedOperationException();
     }
+
+	/* (non-Javadoc)
+	 * @see ir.exercise1.textindexer.collection.CollectionInterface#getDocumentCnt()
+	 */
+	@Override
+	public long getDocumentCount() {
+		// TODO Auto-generated method stub
+		return documents.size();
+	}
 }

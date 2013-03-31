@@ -26,55 +26,21 @@ public class TextToolsTest {
 	}
 	
 	@Test
-	public void testTokenize_chop_on_whitespace() {
-		Document document = new Document("whitespaces", "foo bar");
-		
-		ArrayList<String> tokens = TextTools.tokenize(document.getContent());
-		
-		assertEquals(2, tokens.size());
-	}
-	
-	@Test
-	public void testTokenize_chopping() {
-		Document document = new Document("do the right chop", "foo   !%/bar¤¤$    ");
-		
-		ArrayList<String> tokens = TextTools.tokenize(document.getContent());
-		
-		assertEquals("bar", tokens.get(1));
-	}
-	
-	@Test
-	public void testTokenize_chop_on_non_alphanumeric_character() {
-		Document document = new Document("non-alphanumeric", "foo.bar@foo!bar,foo,=bar");
-		ArrayList<String> tokens = TextTools.tokenize(document.getContent());
-		
-		assertEquals(6, tokens.size());
-	}
-	
-	@Test
-	public void testIgnoreStopWords() {
-		Document document = new Document("stop words", "foo is bar again");
-		ArrayList<String> tokens = TextTools.tokenize(document.getContent());
-		
-		assertEquals(2, tokens.size());
-	}
-	
-	@Test
 	public void testAll_stopWords() {
-		Document document = new Document("stop words", "as we may...");
-		ArrayList<String> tokens = TextTools.tokenize(document.getContent());
 		
-		assertEquals(0, tokens.size());
+		boolean b = TextTools.isStopWord("be");
+		
+		assertEquals(true, b);
 	}
+	
 	
 	@Test
 	public void testDoStemming_Suffix_stripping() {
-		ArrayList<String> tokens = new ArrayList<String>();
-		tokens.add("university");
+		Stemmer stemmer = new Stemmer();
 		
-		tokens = TextTools.doStemming(tokens);
+		String s = TextTools.doStemming("university", stemmer);
 		
-		assertEquals("univers", tokens.get(0));
+		assertEquals("univers", s);
 	}
 	
 

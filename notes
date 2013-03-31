@@ -1,2 +1,11 @@
-the newsgroup data has characteristics, which could be used for search optimization. 
+- docID for Document needs to implemented (lower searching costs)
+
+- the newsgroup data has characteristics, which could be used for search optimization. 
 e.g. the information about the author and the topic should be more important than the content
+
+- is the size of the string big enough to contain every character of a large document? 
+	string uses a array for internal storage, it is possible to get string with size Integer.MAX_VALUE or
+	half of the maximum heap size
+	
+	grepping your heap size: $ java -XX:+PrintFlagsFinal -version 2>&1 | grep MaxHeapSize
+	

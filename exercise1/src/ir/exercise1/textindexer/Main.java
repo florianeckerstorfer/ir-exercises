@@ -50,7 +50,7 @@ class Main
         
         System.out.println("Let's start by reading files from the file system.");
 
-        TextInput textInput = new TextInput();
-        textInput.buildIndex(collection);
+        TextInput textInput = new TextInput(collection);
+        textInput.buildIndex();
     }
 }
