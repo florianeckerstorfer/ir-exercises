@@ -107,7 +107,7 @@ public class TextInput implements InputInterface {
 			Stemmer porterStemmer = new Stemmer();
 
 			Scanner textScanner = new Scanner(doc.getContent());
-
+			
 			while (textScanner.hasNext()) {
 				String compound = textScanner.next().toLowerCase();
 				
@@ -139,7 +139,7 @@ public class TextInput implements InputInterface {
 
 			textScanner.close();
 			
-			if (loopBreaker == 333) break; // todo: 
+			if (loopBreaker == 33) break; // todo: 
 		}
 		
 		

@@ -2,8 +2,6 @@
 
 - td*idf is slightly different than my result from calculator... (maybe bug somewhere)
 
-- docID for Document needs to implemented (lower searching costs)
-
 - the newsgroup data has characteristics, which could be used for search optimization. 
 e.g. the information about the author and the topic should be more important than the content
 
