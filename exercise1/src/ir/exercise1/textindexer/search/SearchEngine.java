@@ -1,4 +1,4 @@
-package ir.exercises1.textindexer.search;
+package ir.exercise1.textindexer.search;
 
 import ir.exercise1.textindexer.reader.file.FilesystemGzipReader;
 
