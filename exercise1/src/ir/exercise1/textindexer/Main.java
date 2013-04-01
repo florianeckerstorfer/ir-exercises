@@ -55,7 +55,7 @@ class Main
         textInput.buildIndex();
         
         
-        SearchEngine searchEngine = new SearchEngine(new File("./arff/newgroup_index.arff"), new File("./output/output.txt"));
+        SearchEngine searchEngine = new SearchEngine(new File("./arff/newgroup_index.arff.gz"), new File("./output/output.txt"));
         searchEngine.search("test");
     }
 }

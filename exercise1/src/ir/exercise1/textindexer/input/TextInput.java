@@ -159,7 +159,6 @@ public class TextInput implements InputInterface {
 		//tf = # of occurance of the term in document
 		//tf-idf = tf x idf
 		
-		
 		Iterator<Map.Entry<String, Hashtable<String, Integer>>> iterator = termFrequencyList.entrySet().iterator();
 		
 		while(iterator.hasNext()) {

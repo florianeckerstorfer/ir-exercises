@@ -1,6 +1,6 @@
 package ir.exercises1.textindexer.search;
 
-import ir.exercise1.textindexer.reader.file.FilesystemReader;
+import ir.exercise1.textindexer.reader.file.FilesystemGzipReader;
 
 import java.io.BufferedOutputStream;
 import java.io.File;
@@ -24,7 +24,7 @@ public class SearchEngine {
 	
 	public SearchEngine(File indexFile, File resultFile) {
 		
-		FilesystemReader fr = new FilesystemReader();
+		FilesystemGzipReader fr = new FilesystemGzipReader();
 		
 		try {
 			fos = new FileOutputStream(resultFile);
