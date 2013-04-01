@@ -4,10 +4,13 @@ import ir.exercise1.textindexer.Tools.Stemmer;
 import ir.exercise1.textindexer.Tools.TextTools;
 import ir.exercise1.textindexer.collection.CollectionInterface;
 import ir.exercise1.textindexer.document.ClassDocument;
+import ir.exercise1.textindexer.model.Term;
 import ir.exercise1.textindexer.writer.file.ArffIndexFileWriter;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Hashtable;
 import java.util.Iterator;
@@ -15,6 +18,7 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Scanner;
 import java.util.Set;
+
 
 public class TextInput implements InputInterface {
 
@@ -28,30 +32,33 @@ public class TextInput implements InputInterface {
 	// TODO add document class name to arff file
 	// TODO change to more efficient data structures
 	
+	Double[][] dictionary; // -> sparse Matrix
+	ArrayList<String> docNamesList = new ArrayList<String>();
+	ArrayList<String> termsList = new ArrayList<String>();
+	
+	ArrayList<Term> tokens = new ArrayList<Term>();
+	
 	//terms -> docs -> frequency (zero values won't be safed)
 	Hashtable<String, Hashtable<String, Integer>> termFrequencyList;
-	//terms -> docs -> weight
-	Hashtable<String, Hashtable<String, Double>> weightedIndex; // TODO skip this and save directly into arff file
 	
 	private CollectionInterface collection;
 
-	long docsCount;
+	int docsCount;
 	long avgTokensPerDoc;
-	long termsCount;
+	int termsCount;
 	long tokensCount;
 
 	public TextInput(CollectionInterface collection) {
-
+		
 		this.collection = collection;
 		termFrequencyList = new Hashtable<String, Hashtable<String, Integer>>();
-		weightedIndex = new Hashtable<String, Hashtable<String, Double>>();
-		
+
 		allowStemming = true; // needs to be parsed from cli
 		
-		lowerThreshold = 1; // TODO cli parser
-		upperThreshold = 30; // TODO cli parser
+		lowerThreshold = 0; // TODO cli parser
+		upperThreshold = 1000; // TODO cli parser
 		
-		docsCount = collection.getDocumentCount();
+		docsCount = 0;
 		tokensCount = 0;
 		termsCount = 0; //  TODO calculate when terms list is finished
 		avgTokensPerDoc = 0;
@@ -62,13 +69,28 @@ public class TextInput implements InputInterface {
 		System.out.println("tokenization started");
 		documentTokenization();
 		
+		termsCount = termsList.size();
+		docsCount = docNamesList.size();
+		
+		dictionary = new Double[docsCount][termsCount];
+		
+		System.out.println("# of terms: " + termsCount);
+		
 		System.out.println("computation of tf-idf weight started");
 		computeWeights();
+		
+		/*
+		for(int i = 0; i < dictionary.length; i++) {
+			System.out.println();
+			for(int j = 0; j < dictionary[i].length; j++) {
+				System.out.print(dictionary[i][j] + " ");
+			}
+		}
+		*/
 		
 		System.out.println("arff index writing started");
 		writeIndexToArff();
 		
-		tokensCount = termFrequencyList.size();
 		
 		avgTokensPerDoc = tokensCount / docsCount;
 
@@ -91,7 +113,7 @@ public class TextInput implements InputInterface {
 			e.printStackTrace();
 		}
 		
-		arffWriter.createIndexFile(weightedIndex);
+		arffWriter.createIndexFile(docNamesList, termsList, dictionary);
 	}
 	
 	/**
@@ -108,7 +130,8 @@ public class TextInput implements InputInterface {
 			ClassDocument doc = (ClassDocument) collection.next();
 			System.out.println(doc.getClassName() + ": " + doc.getName());
 
-			
+			docNamesList.add(doc.getName());
+
 			Stemmer porterStemmer = new Stemmer();
 
 			Scanner textScanner = new Scanner(doc.getContent());
@@ -136,7 +159,7 @@ public class TextInput implements InputInterface {
 							token = TextTools.doStemming(token, porterStemmer);
 						}
 						
-						addToTermFrequencyList(token, doc.getName());
+						addToTokensList(doc.getName(), token);
 					}
 				}
 				compoundScanner.close();
@@ -148,9 +171,34 @@ public class TextInput implements InputInterface {
 			if (loopBreaker == 33) break; //  TODO 
 		}
 		
-		
 		System.out.println("***** let's take a break here, it's easier to test (don't forget to delete the break or set variable to 0) *****");
-
+	
+	}
+	
+	
+	/**
+	 * @param docName
+	 * @param token
+	 */
+	private void addToTokensList(String docName, String token) {
+		// TODO Auto-generated method stub
+		
+		boolean tokenExists = false;
+		
+		for(Term t : tokens) {
+			if (t.getName().equals(token)) {
+				t.addDoc(docName);
+				tokenExists = true;
+			}
+		}
+		
+		if(tokenExists == false) {
+			Term curTerm = new Term(token);
+			curTerm.addDoc(docName);
+			
+			tokens.add(curTerm);
+			termsList.add(token);
+		}
 	}
 	
 	private void computeWeights() {
@@ -159,70 +207,39 @@ public class TextInput implements InputInterface {
 		//tf = # of occurance of the term in document
 		//tf-idf = tf x idf
 		
-		Iterator<Map.Entry<String, Hashtable<String, Integer>>> iterator = termFrequencyList.entrySet().iterator();
 		
-		while(iterator.hasNext()) {
-			Map.Entry<String, Hashtable<String, Integer>> terms = iterator.next();
-			String curTerm = terms.getKey();
-		
-			int df = terms.getValue().size();
-
-			//System.out.println(curTerm + ": df=" + df);
+		for(int row = 0; row < tokens.size(); row++) {
+			Term curTerm = tokens.get(row);
 			
+			int df = curTerm.getDocFreq().size();
+			//System.out.println("df of " + curTerm.getName() + " is " + df);
 			double idf = Math.log(collection.getDocumentCount()/df);
 			
-			Iterator<Map.Entry<String, Integer>> iterator2 = terms.getValue().entrySet().iterator();
+			Iterator<Map.Entry<String, Integer>> iterator = curTerm.getDocFreq().entrySet().iterator();
 			
-			while(iterator2.hasNext()) {
-				Map.Entry<String, Integer> docs = iterator2.next();
-				String curDoc = docs.getKey();
+			for(int column = 0; iterator.hasNext(); column++) {
+				Map.Entry<String, Integer> curDocs = iterator.next();
 				
-				int tf = docs.getValue();
-				//System.out.println("tf of " + curTerm + " in " + curDoc + " is " + tf);
+				int tf = curDocs.getValue();
+				
+				//System.out.println("tf of " + curTerm.getName() + " in " + curDocs.getKey() + " is " + tf);
 				if(tf >= lowerThreshold && tf <= upperThreshold) {
-					addToWeightedIndex(curTerm, curDoc, tf*idf);
+					addToDictionary(column, curTerm.getName(), tf*idf);
 				}
+				
 			}
+			
 		}
+
 	}
 	
-	private void addToWeightedIndex(String term, String docName, double weight) {
+
+	private void addToDictionary(int column, String term, double weight) {
 		
-		if(!weightedIndex.containsKey(term)) {
-			Hashtable<String, Double> newDocWeightedIndex = new Hashtable<String, Double>();
-			newDocWeightedIndex.put(docName, weight);
-			
-			weightedIndex.put(term, newDocWeightedIndex);
-			
-		} else {
-			Hashtable<String, Double> currentDocWeightedIndex = weightedIndex.get(term);
-			
-			if(!currentDocWeightedIndex.containsKey(docName)) {
-				currentDocWeightedIndex.put(docName, weight);
-			}
-		}
-	}
-	
-	private void addToTermFrequencyList(String token, String docName) {
+		int rowOfTerm = termsList.indexOf(term);
 		
-		if(!termFrequencyList.containsKey(token)) {
-			
-			Hashtable<String, Integer> newTermDocFrequencyList = new Hashtable<String, Integer>();
-			newTermDocFrequencyList.put(docName, 1);
-			
-			termFrequencyList.put(token, newTermDocFrequencyList);
-			
-		} else {
-			
-			Hashtable<String, Integer> currentTermDocFrequencyList = termFrequencyList.get(token);
-			
-			if(!currentTermDocFrequencyList.containsKey(docName)) {
-				currentTermDocFrequencyList.put(docName, 1);
-			} else {
-				int currentTermFrequency = currentTermDocFrequencyList.get(docName);
-				currentTermDocFrequencyList.put(docName, currentTermFrequency + 1);
-			}
-		}
+		dictionary[column][rowOfTerm] = weight;
+		//System.out.println("column: " + column + ", row: " + rowOfTerm + ": " + weight);
 	}
 
 }

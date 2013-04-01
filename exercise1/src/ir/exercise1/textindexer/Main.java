@@ -10,13 +10,13 @@ import ir.exercise1.textindexer.reader.collection.CollectionReaderInterface;
 import ir.exercise1.textindexer.reader.collection.ClassCollectionReader;
 import ir.exercise1.textindexer.reader.document.TextDocumentReader;
 import ir.exercise1.textindexer.reader.file.FilesystemReader;
+import ir.exercise1.textindexer.search.SearchEngine;
 import ir.exercise1.textindexer.document.DocumentInterface;
 import ir.exercise1.textindexer.document.ClassDocument;
 import ir.exercise1.textindexer.document.ClassDocumentFactory;
 import ir.exercise1.textindexer.input.TextInput;
 import ir.exercise1.textindexer.Tools.TextTools;
 import ir.exercise1.textindexer.collection.CollectionInterface;
-import ir.exercises1.textindexer.search.SearchEngine;
 
 /**
  * Main
@@ -54,8 +54,9 @@ class Main
         TextInput textInput = new TextInput(collection);
         textInput.buildIndex();
         
+        String resultFileName = "<postingListSize>_topic<XX>_groupC<YY>";
         
-        SearchEngine searchEngine = new SearchEngine(new File("./arff/newgroup_index.arff.gz"), new File("./output/output.txt"));
+        SearchEngine searchEngine = new SearchEngine(new File("./arff/newgroup_index.arff.gz"), new File("./output/"+resultFileName+".txt"));
         searchEngine.search("test");
     }
 }
