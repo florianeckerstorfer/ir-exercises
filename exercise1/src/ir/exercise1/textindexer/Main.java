@@ -16,6 +16,7 @@ import ir.exercise1.textindexer.document.ClassDocumentFactory;
 import ir.exercise1.textindexer.input.TextInput;
 import ir.exercise1.textindexer.Tools.TextTools;
 import ir.exercise1.textindexer.collection.CollectionInterface;
+import ir.exercises1.textindexer.search.SearchEngine;
 
 /**
  * Main
@@ -52,5 +53,9 @@ class Main
 
         TextInput textInput = new TextInput(collection);
         textInput.buildIndex();
+        
+        
+        SearchEngine searchEngine = new SearchEngine(new File("./arff/newgroup_index.arff"), new File("./output/output.txt"));
+        searchEngine.search("test");
     }
 }

@@ -1,4 +1,4 @@
-package ir.exercise1.textindexer.writer;
+package ir.exercise1.textindexer.writer.file;
 
 import java.io.BufferedOutputStream;
 import java.io.File;
@@ -17,6 +17,7 @@ import java.util.zip.GZIPOutputStream;
  */
 public class ArffIndexFileWriter {
 	
+	// TODO seperate arff logic from filesystem writer
 	String path;
 	FileOutputStream fos;
 	GZIPOutputStream gzipos;
@@ -26,7 +27,7 @@ public class ArffIndexFileWriter {
 	public void setOutputFile(File file) throws IOException {
 		fos = new FileOutputStream(file);
 		gzipos = new GZIPOutputStream(fos);
-		bos = new BufferedOutputStream(gzipos); //todo: change argument to gzipos
+		bos = new BufferedOutputStream(gzipos); // TODO change argument to gzipos
 		ps = new PrintStream(bos);
 	}
 	
@@ -43,8 +44,9 @@ public class ArffIndexFileWriter {
 		ps.print("@RELATION ");
 		ps.println("20_newsgroups_subset"); //todo
 		ps.println();
-		ps.println("@ATTRIBUTE term STRING");
+		ps.println("@ATTRIBUTE class STRING");
 		ps.println("@ATTRIBUTE docID STRING");
+		ps.println("@ATTRIBUTE term STRING");
 		ps.println("@ATTRIBUTE tf-idf-weight NUMERIC");
 		
 		ps.println("@DATA");
@@ -62,7 +64,8 @@ public class ArffIndexFileWriter {
 				String curDoc = docs.getKey();
 				double curWeight = docs.getValue();
 				
-				ps.println(curTerm + ", " + curDoc + ", " + curWeight);
+				// TODO add document class
+				ps.println("classname" + ", " + curDoc + ", " +curTerm + ", " + curWeight);
 			}
 		}
 		

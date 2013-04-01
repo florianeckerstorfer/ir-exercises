@@ -4,7 +4,7 @@ import ir.exercise1.textindexer.Tools.Stemmer;
 import ir.exercise1.textindexer.Tools.TextTools;
 import ir.exercise1.textindexer.collection.CollectionInterface;
 import ir.exercise1.textindexer.document.ClassDocument;
-import ir.exercise1.textindexer.writer.ArffIndexFileWriter;
+import ir.exercise1.textindexer.writer.file.ArffIndexFileWriter;
 
 import java.io.File;
 import java.io.IOException;
@@ -18,18 +18,20 @@ import java.util.Set;
 
 public class TextInput implements InputInterface {
 
-	// todo: cli parser
+	//  TODO cli parser
 	private boolean allowStemming;
 
 	private double lowerThreshold;
 	private double upperThreshold;
 
-	//todo: maybe build the weightedIndex without intermediate steps?
+	// TODO maybe build the weightedIndex without intermediate steps?
+	// TODO add document class name to arff file
+	// TODO change to more efficient data structures
 	
 	//terms -> docs -> frequency (zero values won't be safed)
 	Hashtable<String, Hashtable<String, Integer>> termFrequencyList;
 	//terms -> docs -> weight
-	Hashtable<String, Hashtable<String, Double>> weightedIndex;
+	Hashtable<String, Hashtable<String, Double>> weightedIndex; // TODO skip this and save directly into arff file
 	
 	private CollectionInterface collection;
 
@@ -45,10 +47,13 @@ public class TextInput implements InputInterface {
 		weightedIndex = new Hashtable<String, Hashtable<String, Double>>();
 		
 		allowStemming = true; // needs to be parsed from cli
-
+		
+		lowerThreshold = 1; // TODO cli parser
+		upperThreshold = 30; // TODO cli parser
+		
 		docsCount = collection.getDocumentCount();
 		tokensCount = 0;
-		termsCount = 0; // todo: calculate when terms list is finished
+		termsCount = 0; //  TODO calculate when terms list is finished
 		avgTokensPerDoc = 0;
 	}
 
@@ -77,7 +82,7 @@ public class TextInput implements InputInterface {
 		
 		ArffIndexFileWriter arffWriter = new ArffIndexFileWriter();
 		
-		File file = new File("./arff/newgroup_index.arff.gz"); //todo: add .gz
+		File file = new File("./arff/newgroup_index.arff.gz"); // TODO add .gz
 		
 		try {
 			arffWriter.setOutputFile(file);
@@ -95,10 +100,10 @@ public class TextInput implements InputInterface {
 	 */
 	private void documentTokenization() {
 		
-		int loopBreaker = 0; //todo: 
+		int loopBreaker = 0; // TODO 
 		
 		while (collection.hasNext()) {
-			loopBreaker++; //todo: 
+			loopBreaker++; // TODO 
 			
 			ClassDocument doc = (ClassDocument) collection.next();
 			System.out.println(doc.getClassName() + ": " + doc.getName());
@@ -139,7 +144,8 @@ public class TextInput implements InputInterface {
 
 			textScanner.close();
 			
-			if (loopBreaker == 33) break; // todo: 
+			
+			if (loopBreaker == 33) break; //  TODO 
 		}
 		
 		
@@ -159,7 +165,7 @@ public class TextInput implements InputInterface {
 		while(iterator.hasNext()) {
 			Map.Entry<String, Hashtable<String, Integer>> terms = iterator.next();
 			String curTerm = terms.getKey();
-			
+		
 			int df = terms.getValue().size();
 
 			//System.out.println(curTerm + ": df=" + df);
@@ -167,18 +173,18 @@ public class TextInput implements InputInterface {
 			double idf = Math.log(collection.getDocumentCount()/df);
 			
 			Iterator<Map.Entry<String, Integer>> iterator2 = terms.getValue().entrySet().iterator();
-
+			
 			while(iterator2.hasNext()) {
 				Map.Entry<String, Integer> docs = iterator2.next();
 				String curDoc = docs.getKey();
 				
 				int tf = docs.getValue();
-				
-				addToWeightedIndex(curTerm, curDoc, tf*idf);
+				//System.out.println("tf of " + curTerm + " in " + curDoc + " is " + tf);
+				if(tf >= lowerThreshold && tf <= upperThreshold) {
+					addToWeightedIndex(curTerm, curDoc, tf*idf);
+				}
 			}
 		}
-		
-		
 	}
 	
 	private void addToWeightedIndex(String term, String docName, double weight) {
@@ -218,7 +224,6 @@ public class TextInput implements InputInterface {
 				currentTermDocFrequencyList.put(docName, currentTermFrequency + 1);
 			}
 		}
-		
 	}
 
 }
