@@ -47,7 +47,9 @@ class Main
     
     public static void runTextIndexer() {
     	CollectionReaderInterface reader = new ClassCollectionReader("./data/20_newsgroups_subset", new TextDocumentReader(new ClassDocumentFactory(), new FilesystemReader()));
-        CollectionInterface collection = reader.read();
+    	//CollectionReaderInterface reader = new ClassCollectionReader("./test/data/testdata", new TextDocumentReader(new ClassDocumentFactory(), new FilesystemReader()));
+
+    	CollectionInterface collection = reader.read();
         
         System.out.println("Let's start by reading files from the file system.");
 

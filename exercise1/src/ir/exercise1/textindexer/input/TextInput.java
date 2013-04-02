@@ -28,7 +28,6 @@ public class TextInput implements InputInterface {
 	private double lowerThreshold;
 	private double upperThreshold;
 
-	// TODO maybe build the weightedIndex without intermediate steps?
 	// TODO add document class name to arff file
 	// TODO change to more efficient data structures
 	
@@ -37,9 +36,6 @@ public class TextInput implements InputInterface {
 	ArrayList<String> termsList = new ArrayList<String>();
 	
 	ArrayList<Term> tokens = new ArrayList<Term>();
-	
-	//terms -> docs -> frequency (zero values won't be safed)
-	Hashtable<String, Hashtable<String, Integer>> termFrequencyList;
 	
 	private CollectionInterface collection;
 
@@ -51,7 +47,6 @@ public class TextInput implements InputInterface {
 	public TextInput(CollectionInterface collection) {
 		
 		this.collection = collection;
-		termFrequencyList = new Hashtable<String, Hashtable<String, Integer>>();
 
 		allowStemming = true; // needs to be parsed from cli
 		
@@ -69,6 +64,7 @@ public class TextInput implements InputInterface {
 		System.out.println("tokenization started");
 		documentTokenization();
 		
+		System.out.println(tokens.toString());
 		termsCount = termsList.size();
 		docsCount = docNamesList.size();
 		
@@ -168,7 +164,7 @@ public class TextInput implements InputInterface {
 			textScanner.close();
 			
 			
-			if (loopBreaker == 33) break; //  TODO 
+			if (loopBreaker == 3) break; //  TODO 
 		}
 		
 		System.out.println("***** let's take a break here, it's easier to test (don't forget to delete the break or set variable to 0) *****");
@@ -207,39 +203,39 @@ public class TextInput implements InputInterface {
 		//tf = # of occurance of the term in document
 		//tf-idf = tf x idf
 		
-		
 		for(int row = 0; row < tokens.size(); row++) {
 			Term curTerm = tokens.get(row);
 			
 			int df = curTerm.getDocFreq().size();
+			
 			//System.out.println("df of " + curTerm.getName() + " is " + df);
 			double idf = Math.log(collection.getDocumentCount()/df);
 			
 			Iterator<Map.Entry<String, Integer>> iterator = curTerm.getDocFreq().entrySet().iterator();
-			
-			for(int column = 0; iterator.hasNext(); column++) {
+
+			while(iterator.hasNext()) {
 				Map.Entry<String, Integer> curDocs = iterator.next();
-				
 				int tf = curDocs.getValue();
+
+				int column = docNamesList.indexOf(curDocs.getKey());
 				
-				//System.out.println("tf of " + curTerm.getName() + " in " + curDocs.getKey() + " is " + tf);
+				System.out.println("column of " + curDocs.getKey() + " is " + column);
+				
 				if(tf >= lowerThreshold && tf <= upperThreshold) {
 					addToDictionary(column, curTerm.getName(), tf*idf);
 				}
-				
 			}
 			
 		}
-
 	}
 	
-
 	private void addToDictionary(int column, String term, double weight) {
 		
 		int rowOfTerm = termsList.indexOf(term);
 		
 		dictionary[column][rowOfTerm] = weight;
-		//System.out.println("column: " + column + ", row: " + rowOfTerm + ": " + weight);
+		//System.out.println("column: " + column + ", " + "row: " + rowOfTerm + ", tf: " + weight);
+		
 	}
 
 }

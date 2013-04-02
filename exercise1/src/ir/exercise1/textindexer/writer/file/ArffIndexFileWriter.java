@@ -72,26 +72,6 @@ public class ArffIndexFileWriter {
 			ps.println();
 		}
 		
-		/*
-		Iterator<Map.Entry<String, Hashtable<String, Double>>> iterator = weightedIndex.entrySet().iterator();
-		
-		while(iterator.hasNext()) {
-			Map.Entry<String, Hashtable<String, Double>> docs = iterator.next();
-			String curDoc = docs.getKey();
-			
-			Iterator<Map.Entry<String, Double>> iterator2 = docs.getValue().entrySet().iterator();
-
-			while(iterator2.hasNext()) {
-				Map.Entry<String, Double> terms = iterator2.next();
-				String curTerm = terms.getKey();
-				double curWeight = terms.getValue();
-				
-				//  TODO  add document class
-				ps.println("classname" + ", " + curDoc + ", " + curTerm + ", " + curWeight);
-			}
-		}
-		*/
-		
 		ps.close();
 	}
 	
