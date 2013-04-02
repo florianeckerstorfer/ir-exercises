@@ -140,7 +140,7 @@ public class SearchEngine {
 		
 		for (int i = 0; i < result.length; i++) {
 			
-			output += "topic"+topic+ " Q0" + " " + "docID" + " " + (i+1) + " " + result[inverse_i] + " " + "\n";
+			output += "topic"+topic+ " Q0" + " " + "docID" + " " + (i+1) + " " + result[inverse_i] + " " + "group" +group + " " + postingListSize + "\n";
 			inverse_i--;
 		}
 		System.out.println(output);
