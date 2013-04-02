@@ -45,7 +45,7 @@ public class ArffIndexFileWriter {
 		ps.print("@RELATION ");
 		ps.println("20_newsgroups_subset"); // TODO 
 		ps.println();
-		ps.println("@ATTRIBUTE class STRING");
+		ps.println("@ATTRIBUTE className STRING");
 		ps.println("@ATTRIBUTE docID STRING");
 		
 		for(String term : terms) {
