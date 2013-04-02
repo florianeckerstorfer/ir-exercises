@@ -12,6 +12,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Scanner;
 
 
@@ -161,7 +162,7 @@ public class TextInput implements InputInterface {
 
 			textScanner.close();
 			
-			if (loopBreaker == 3) break; //  TODO 
+			if (loopBreaker == 33) break; //  TODO 
 		}
 		
 		System.out.println("***** let's take a break here, it's easier to test (don't forget to delete the break or set variable to 0) *****");

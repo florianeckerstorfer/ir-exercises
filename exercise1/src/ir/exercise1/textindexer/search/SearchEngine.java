@@ -10,6 +10,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.PrintStream;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 
 /**
@@ -96,24 +97,51 @@ public class SearchEngine {
 		
 		textScanner.close();
 		
-		String result = score(queryTerms);
+		Double result[] = score(queryTerms);
 		
-		pos.print(result);
+		pos.print(toPrintForm(1, result, "C", "small"));
 		
 		pos.close();
 		
 	}
 	
-	private String score(ArrayList<String> queryTerms) {
+	private Double[] score(ArrayList<String> queryTerms) {
 		
 		String result = "";
 		
-		for(String queryTerm : queryTerms) {
-			int indexOfQueryTerm = allTerms.indexOf(queryTerm);
-					
+		Double[] scores = new Double[queryTerms.size()];
+		
+		for(int i = 0; i < queryTerms.size(); i++) {
+			double score = 0.0;
+			int indexOfQueryTerm = allTerms.indexOf(queryTerms.get(i));
+			
+			if (indexOfQueryTerm != -1) {
+				for (int j = 0; j < allDocs.size(); j++) {
+					if(dictionary[j][indexOfQueryTerm] != null) {
+						//System.out.println("query term: " + queryTerms.get(i) + ", j: " + j + ", indexOfQueryTerm: " + indexOfQueryTerm);
+						score += dictionary[j][indexOfQueryTerm];
+						//System.out.println("score: " + score);
+					}
+				}
+			}
+			
+			scores[i] = score;
 		}
 		
-		return result;
+		Arrays.sort(scores);
+		
+		return scores;
+	}
+	
+	private String toPrintForm(int topic, Double[] result, String group, String postingListSize) {
+		
+		String output = "";
+		for (int i = 0; i < result.length; i++) {
+			output += "topic"+topic+ " Q0" + " " + "docID" + " " + (i+1) + " " + result[i%result.length] + " " + "\n";
+		}
+		System.out.println(output);
+		return output;
+		
 	}
 	
 }

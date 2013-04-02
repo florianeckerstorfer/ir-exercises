@@ -56,8 +56,6 @@ class Main
         SearchEngine searchEngine = new SearchEngine(new File("./arff/newgroup_index.arff.gz"), new File("./output/"+resultFileName+".txt"));
         //searchEngine.search("test");
         searchEngine.searchPrototype("talk.politics.mideast/76261", textInput.getDictionaryPrototype(), textInput.getAllTermsPrototype(), textInput.getAllDocNamesPrototype());
-        
-        
-        
+        //searchEngine.searchPrototype("word", textInput.getDictionaryPrototype(), textInput.getAllTermsPrototype(), textInput.getAllDocNamesPrototype());
     }
 }
