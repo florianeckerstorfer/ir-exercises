@@ -136,8 +136,12 @@ public class SearchEngine {
 	private String toPrintForm(int topic, Double[] result, String group, String postingListSize) {
 		
 		String output = "";
+		int inverse_i = result.length-1;
+		
 		for (int i = 0; i < result.length; i++) {
-			output += "topic"+topic+ " Q0" + " " + "docID" + " " + (i+1) + " " + result[i%result.length] + " " + "\n";
+			
+			output += "topic"+topic+ " Q0" + " " + "docID" + " " + (i+1) + " " + result[inverse_i] + " " + "\n";
+			inverse_i--;
 		}
 		System.out.println(output);
 		return output;
