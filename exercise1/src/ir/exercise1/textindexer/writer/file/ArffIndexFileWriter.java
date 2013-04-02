@@ -11,6 +11,8 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.zip.GZIPOutputStream;
 
+import weka.core.Attribute;
+
 /**
  * ArffFileWriter
  *
@@ -33,7 +35,7 @@ public class ArffIndexFileWriter {
 	}
 	
 	public void createIndexFile(ArrayList<String> docNames, ArrayList<String> terms, Double[][] dictionary) {
-		
+				
 		//header
 		ps.println("% 1. Title: 20_newsgroups_subset Index");
 		ps.println("% 2. Sources:");
@@ -73,6 +75,7 @@ public class ArffIndexFileWriter {
 		}
 		
 		ps.close();
+		
 	}
 	
 	

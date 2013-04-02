@@ -24,7 +24,6 @@ public class FilesystemGzipReader implements FileReaderInterface {
 	@Override
 	public String read(File file) {
 		
-		System.out.println("asdf");
 		FileInputStream stream;
 		GZIPInputStream gzis;
 		InputStreamReader reader;

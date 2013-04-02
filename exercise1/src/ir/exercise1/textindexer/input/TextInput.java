@@ -10,14 +10,10 @@ import ir.exercise1.textindexer.writer.file.ArffIndexFileWriter;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Hashtable;
 import java.util.Iterator;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Scanner;
-import java.util.Set;
+
 
 
 public class TextInput implements InputInterface {
@@ -31,10 +27,14 @@ public class TextInput implements InputInterface {
 	// TODO add document class name to arff file
 	// TODO change to more efficient data structures
 	
-	Double[][] dictionary; // -> sparse Matrix
+	// TODO to save the docNames and the terms in separate lists is clumsy...
+	Double[][] dictionary; // TODO -> sparse Matrix
+	//list of all docName in the collection
 	ArrayList<String> docNamesList = new ArrayList<String>();
+	//list of all terms in the collection
 	ArrayList<String> termsList = new ArrayList<String>();
 	
+	//contains a list of Term objects. Term objects themself contains a list of docNames, where they are contained
 	ArrayList<Term> tokens = new ArrayList<Term>();
 	
 	private CollectionInterface collection;
@@ -61,10 +61,8 @@ public class TextInput implements InputInterface {
 
 	public void buildIndex() {
 		
-		System.out.println("tokenization started");
 		documentTokenization();
 		
-		System.out.println(tokens.toString());
 		termsCount = termsList.size();
 		docsCount = docNamesList.size();
 		
@@ -163,7 +161,6 @@ public class TextInput implements InputInterface {
 
 			textScanner.close();
 			
-			
 			if (loopBreaker == 3) break; //  TODO 
 		}
 		
@@ -219,13 +216,10 @@ public class TextInput implements InputInterface {
 
 				int column = docNamesList.indexOf(curDocs.getKey());
 				
-				System.out.println("column of " + curDocs.getKey() + " is " + column);
-				
 				if(tf >= lowerThreshold && tf <= upperThreshold) {
 					addToDictionary(column, curTerm.getName(), tf*idf);
 				}
 			}
-			
 		}
 	}
 	
@@ -237,5 +231,16 @@ public class TextInput implements InputInterface {
 		//System.out.println("column: " + column + ", " + "row: " + rowOfTerm + ", tf: " + weight);
 		
 	}
-
+	
+	public Double[][] getDictionaryPrototype() {
+		return dictionary;
+	}
+	
+	public ArrayList<String> getAllDocNamesPrototype() {
+		return docNamesList;
+		
+	}
+	public ArrayList<String> getAllTermsPrototype() {
+		return termsList;
+	}
 }

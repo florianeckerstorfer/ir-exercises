@@ -1,21 +1,14 @@
 package ir.exercise1.textindexer;
 
 import java.io.File;
-import java.util.ArrayList;
-
-import org.apache.commons.cli.Option;
-import org.apache.commons.cli.Options;
 
 import ir.exercise1.textindexer.reader.collection.CollectionReaderInterface;
 import ir.exercise1.textindexer.reader.collection.ClassCollectionReader;
 import ir.exercise1.textindexer.reader.document.TextDocumentReader;
 import ir.exercise1.textindexer.reader.file.FilesystemReader;
 import ir.exercise1.textindexer.search.SearchEngine;
-import ir.exercise1.textindexer.document.DocumentInterface;
-import ir.exercise1.textindexer.document.ClassDocument;
 import ir.exercise1.textindexer.document.ClassDocumentFactory;
 import ir.exercise1.textindexer.input.TextInput;
-import ir.exercise1.textindexer.Tools.TextTools;
 import ir.exercise1.textindexer.collection.CollectionInterface;
 
 /**
@@ -43,6 +36,8 @@ class Main
     	        Runtime.getRuntime().availableProcessors());
     	System.out.println("Total memory (bytes): " + 
     	        Runtime.getRuntime().totalMemory()); //memory used by the jvm. not quite what i was looking for
+    	    	
+    	System.out.println();
     }
     
     public static void runTextIndexer() {
@@ -59,6 +54,10 @@ class Main
         String resultFileName = "<postingListSize>_topic<XX>_groupC<YY>";
         
         SearchEngine searchEngine = new SearchEngine(new File("./arff/newgroup_index.arff.gz"), new File("./output/"+resultFileName+".txt"));
-        searchEngine.search("test");
+        //searchEngine.search("test");
+        searchEngine.searchPrototype("talk.politics.mideast/76261", textInput.getDictionaryPrototype(), textInput.getAllTermsPrototype(), textInput.getAllDocNamesPrototype());
+        
+        
+        
     }
 }
