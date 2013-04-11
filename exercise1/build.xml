@@ -7,6 +7,10 @@
 
     <path id="main.classpath">
         <pathelement location="${build-dir}" />
+        <pathelement location="${vendor-dir}/args4j-2.0.21.jar" />
+        <pathelement location="${vendor-dir}/weka.jar" />
+        <pathelement location="${vendor-dir}/colt.jar" />
+        <pathelement location="${vendor-dir}/concurrent.jar" />
     </path>
 
     <path id="test.classpath">
