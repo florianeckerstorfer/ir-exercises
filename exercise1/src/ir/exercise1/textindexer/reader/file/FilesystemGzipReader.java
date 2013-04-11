@@ -15,45 +15,34 @@ import java.util.zip.GZIPInputStream;
  * FilesystemGzipReader
  *
  * @author hmiao87@gmail.com (Haichao Miao)
+ * @author florian@eckerstorfer.co (Florian Eckerstorfer)
  */
-public class FilesystemGzipReader implements FileReaderInterface {
-
+public class FilesystemGzipReader implements FileReaderInterface
+{
 	/* (non-Javadoc)
 	 * @see ir.exercise1.textindexer.reader.file.FileReaderInterface#read(java.io.File)
 	 */
 	@Override
-	public String read(File file) {
-		
-		FileInputStream stream;
-		GZIPInputStream gzis;
-		InputStreamReader reader;
-		BufferedReader in;
-		String readed = "";
-		
+	public String read(File file)
+	{
+		String content = "";
+
 		try {
-			stream = new FileInputStream(file);
-	        gzis = new GZIPInputStream(stream);
-	        reader = new InputStreamReader(gzis);
-	        in = new BufferedReader(reader);
-	        
-	        String line = null;
-	        
-	        while ((line = in.readLine()) != null){
-	        	
-	        	readed += line + "\n";
+	        BufferedReader reader = new BufferedReader(
+	        	new InputStreamReader(new GZIPInputStream(new FileInputStream(file)))
+	        );
+	        String line;
+
+	        while ((line = reader.readLine()) != null) {
+	        	content += line + "\n";
 	    	}
-	        
-	        in.close();
-	        
+
+	        reader.close();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-		return readed;
-        
-	}
-	
-	
 
+		return content;
+	}
 }
