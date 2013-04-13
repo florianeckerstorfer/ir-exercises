@@ -133,7 +133,7 @@ public class TextIndexer implements IndexerInterface
 		return stemming;
 	}
 
-	public void buildIndex()
+	public void buildIndex(ArffIndexFileWriter arffWriter)
 	{
 		documentTokenization();
 
@@ -147,17 +147,8 @@ public class TextIndexer implements IndexerInterface
 		System.out.println("computation of tf-idf weight started");
 		computeWeights();
 
-		/*
-		for(int i = 0; i < dictionary.length; i++) {
-			System.out.println();
-			for(int j = 0; j < dictionary[i].length; j++) {
-				System.out.print(dictionary[i][j] + " ");
-			}
-		}
-		*/
-
 		System.out.println("arff index writing started");
-		writeIndexToArff();
+		writeIndexToArff(arffWriter);
 
 
 		avgTokensPerDoc = tokensCount / docsCount;
@@ -168,19 +159,8 @@ public class TextIndexer implements IndexerInterface
 		System.out.println(avgTokensPerDoc + " avg. # tokens per document");
 	}
 
-	private void writeIndexToArff()
+	private void writeIndexToArff(ArffIndexFileWriter arffWriter)
 	{
-		ArffIndexFileWriter arffWriter = new ArffIndexFileWriter();
-
-		File file = new File("./arff/newgroup_index.arff.gz"); // TODO add .gz
-
-		try {
-			arffWriter.setOutputFile(file);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-
 		arffWriter.createIndexFile(docNamesList, termsList, dictionary);
 	}
 
@@ -191,7 +171,7 @@ public class TextIndexer implements IndexerInterface
 	private void documentTokenization()
 	{
 		int loopBreaker = 0; // TODO
-		StemmerInterface porterStemmer
+		StemmerInterface porterStemmer;
 
 		while (collection.hasNext()) {
 			loopBreaker++; // TODO
@@ -223,11 +203,9 @@ public class TextIndexer implements IndexerInterface
 					String token = compoundScanner.next();
 
 					if (!TextTools.isStopWord(token)) {
-
 						if (stemming) {
 							token = TextTools.doStemming(token, porterStemmer);
 						}
-
 						addToTokensList(doc.getName(), token);
 					}
 				}

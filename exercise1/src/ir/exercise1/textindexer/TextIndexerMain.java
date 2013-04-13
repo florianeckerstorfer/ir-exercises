@@ -3,12 +3,19 @@ package ir.exercise1.textindexer;
 import java.io.File;
 import java.util.List;
 import java.util.ArrayList;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
+import java.util.zip.GZIPOutputStream;
+import java.io.BufferedOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.PrintStream;
 
 import org.kohsuke.args4j.Argument;
 import org.kohsuke.args4j.CmdLineException;
 import org.kohsuke.args4j.CmdLineParser;
 import org.kohsuke.args4j.Option;
-import org.kohsuke.args4j.spi.BooleanOptionHandler;
 
 import ir.exercise1.common.timer.Timer;
 
@@ -17,6 +24,7 @@ import ir.exercise1.textindexer.reader.collection.CollectionReaderInterface;
 import ir.exercise1.textindexer.reader.collection.ClassCollectionReader;
 import ir.exercise1.textindexer.reader.document.TextDocumentReader;
 import ir.exercise1.textindexer.reader.file.FilesystemReader;
+import ir.exercise1.textindexer.writer.file.ArffIndexFileWriter;
 import ir.exercise1.textindexer.search.SearchEngine;
 import ir.exercise1.textindexer.document.ClassDocumentFactory;
 import ir.exercise1.textindexer.indexer.TextIndexer;
@@ -88,6 +96,9 @@ public class TextIndexerMain
     @Option(name="-directory", usage="Directory of the collection to index")
     private String collectionDirectory;
 
+    @Option(name="-output", usage="File to write the GZ compressed index to")
+    private String outputFile;
+
     @Option(name="-lower-threshold", usage="Lower bound for frequency thresholding")
     private double lowerThreshold;
 
@@ -128,15 +139,34 @@ public class TextIndexerMain
         );
         CollectionInterface collection = reader.read();
 
-        // Based on the read collection, we can now build the index
+
+
         TextIndexer indexer = new TextIndexer(collection);
         indexer.setLowerThreshold(lowerThreshold);
         indexer.setUpperThreshold(upperThreshold);
         indexer.setStemming(stemming);
-        indexer.buildIndex();
+
+        indexer.buildIndex(createIndexFileWriter(outputFile));
 
         timer.stop();
 
         System.out.println("Running time: " + timer.getTime() + "ms");
+    }
+
+    private ArffIndexFileWriter createIndexFileWriter(String outputFile)
+    {
+        try {
+            return new ArffIndexFileWriter(new PrintStream(
+                new BufferedOutputStream(new GZIPOutputStream(new FileOutputStream(new File(outputFile))))
+            ));
+        } catch (FileNotFoundException e) {
+            System.out.println("Could not find file " + outputFile + ".");
+            System.exit(1);
+        } catch (IOException e) {
+            System.out.println("IO Error: " + e.getMessage());
+            System.exit(1);
+        }
+
+        return null;
     }
 }

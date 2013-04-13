@@ -18,68 +18,60 @@ import weka.core.Attribute;
  *
  * @author hmiao87@gmail.com (Haichao Miao)
  */
-public class ArffIndexFileWriter {
-	
-	//  TODO  seperate arff logic from filesystem writer
-	String path;
-	FileOutputStream fos;
-	GZIPOutputStream gzipos;
-	BufferedOutputStream bos;
-	PrintStream ps;
-	
-	public void setOutputFile(File file) throws IOException {
-		fos = new FileOutputStream(file);
-		gzipos = new GZIPOutputStream(fos);
-		bos = new BufferedOutputStream(gzipos); //  TODO  change argument to gzipos
-		ps = new PrintStream(bos);
+public class ArffIndexFileWriter
+{
+	PrintStream outputStream;
+
+	public ArffIndexFileWriter(PrintStream outputStream)
+	{
+		this.outputStream = outputStream;
 	}
-	
-	public void createIndexFile(ArrayList<String> docNames, ArrayList<String> terms, Double[][] dictionary) {
-				
+
+	public void createIndexFile(ArrayList<String> docNames, ArrayList<String> terms, Double[][] dictionary)
+	{
 		//header
-		ps.println("% 1. Title: 20_newsgroups_subset Index");
-		ps.println("% 2. Sources:");
-		ps.println("% \t Creator: Haichao Miao & Florian Eckerstorfer");
-		ps.println("% \t Date: " + new java.util.Date());
-		ps.println("% allow_stemming: "); // TODO 
-		ps.println("% upper_bound: "); // TODO 
-		ps.println("% lower_bound: "); // TODO 
-		ps.print("@RELATION ");
-		ps.println("20_newsgroups_subset"); // TODO 
-		ps.println();
-		ps.println("@ATTRIBUTE className STRING");
-		ps.println("@ATTRIBUTE docID STRING");
-		
+		outputStream.println("% 1. Title: 20_newsgroups_subset Index");
+		outputStream.println("% 2. Sources:");
+		outputStream.println("% \t Creator: Haichao Miao & Florian Eckerstorfer");
+		outputStream.println("% \t Date: " + new java.util.Date());
+		outputStream.println("% allow_stemming: "); // TODO
+		outputStream.println("% upper_bound: "); // TODO
+		outputStream.println("% lower_bound: "); // TODO
+		outputStream.print("@RELATION ");
+		outputStream.println("20_newsgroups_subset"); // TODO
+		outputStream.println();
+		outputStream.println("@ATTRIBUTE className STRING");
+		outputStream.println("@ATTRIBUTE docID STRING");
+
 		for(String term : terms) {
-			ps.print("@ATTRIBUTE ");
-			ps.print(term);
-			ps.println(" NUMERIC");
+			outputStream.print("@ATTRIBUTE ");
+			outputStream.print(term);
+			outputStream.println(" NUMERIC");
 		}
-		
-		
-		ps.println("@DATA");
-		
+
+		outputStream.println("@DATA");
+
 		for(int i = 0; i < dictionary.length; i++) {
-			ps.print("classname, "); // TODO
-			ps.print(docNames.get(i) + ", ");
+			outputStream.print("classname, "); // TODO
+			outputStream.print(docNames.get(i) + ", ");
 			for(int j = 0; j < dictionary[i].length; j++) {
 				if(dictionary[i][j] != null) {
-					ps.print(dictionary[i][j]);
+					outputStream.print(dictionary[i][j]);
 				} else {
-					ps.print(0);
+					outputStream.print(0);
 				}
-				
-				ps.print(", ");
+
+				outputStream.print(", ");
 			}
-			ps.println();
+			outputStream.println();
 		}
-		
-		ps.close();
-		
+
+		outputStream.close();
+
 	}
-	
-	
-	
-	
-	
+
+
+
+
+
 }

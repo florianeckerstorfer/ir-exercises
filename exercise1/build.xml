@@ -58,6 +58,8 @@
             <arg value="-upper-threshold" />
             <arg value="1000" />
             <arg value="-stemming" />
+            <arg value="-output" />
+            <arg value="./arff/newgroup_index.arff.gz" />
         </java>
     </target>
 
