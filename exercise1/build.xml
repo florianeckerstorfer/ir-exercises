@@ -5,6 +5,10 @@
     <property name="dist-dir" location="dist" />
     <property name="source-dir" location="src" />
 
+    <property name="jar-name" value="${dist-dir}/lib/TextIndexer.jar" />
+
+    <property name="collection-directory" location="./data/20_newsgroups_subset" />
+
     <path id="main.classpath">
         <pathelement location="${build-dir}" />
         <pathelement location="${vendor-dir}/args4j-2.0.21.jar" />
@@ -30,7 +34,9 @@
 
     <target name="clean">
         <delete dir="${build-dir}" />
+        <delete dir="${dist-dir}" />
         <mkdir dir="${build-dir}" />
+        <mkdir dir="${dist-dir}" />
     </target>
 
     <target name="compile" depends="init">
@@ -42,15 +48,21 @@
 
     <target name="dist" depends="compile">
         <mkdir dir="${dist-dir}/lib"/>
-        <jar jarfile="${dist-dir}/lib/${project-name}.jar" basedir="${build-dir}">
+        <jar jarfile="${jar-name}" basedir="${build-dir}">
             <manifest>
-                <attribute name="Main-Class" value="ir.exercise1.textindexer.Main" />
+                <attribute name="Main-Class" value="ir.exercise1.textindexer.TextIndexer" />
             </manifest>
         </jar>
     </target>
 
     <target name="run" depends="dist">
-        <java jar="${dist-dir}/lib/${project-name}.jar" fork="true" />
+        <java jar="${jar-name}" fork="true">
+            <classpath refid="main.classpath" />
+            <arg value="${collection-directory}" />
+            <arg value="0" />
+            <arg value="1000" />
+            <arg value="true" />
+        </java>
     </target>
 
     <target name="test" depends="compile">

@@ -16,15 +16,11 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Scanner;
 
-
-
-public class TextInput implements InputInterface {
-
-	//  TODO cli parser
-	private boolean allowStemming;
-
-	private double lowerThreshold;
-	private double upperThreshold;
+public class TextInput implements InputInterface
+{
+	private boolean allowStemming = true;
+	private double lowerThreshold = 0;
+	private double upperThreshold = 1000;
 
 	// TODO add document class name to arff file
 	// TODO change to more efficient data structures
@@ -46,14 +42,9 @@ public class TextInput implements InputInterface {
 	int termsCount;
 	long tokensCount;
 
-	public TextInput(CollectionInterface collection) {
-
+	public TextInput(CollectionInterface collection)
+	{
 		this.collection = collection;
-
-		allowStemming = true; // needs to be parsed from cli
-
-		lowerThreshold = 0; // TODO cli parser
-		upperThreshold = 1000; // TODO cli parser
 
 		docsCount = 0;
 		tokensCount = 0;
@@ -61,8 +52,38 @@ public class TextInput implements InputInterface {
 		avgTokensPerDoc = 0;
 	}
 
-	public void buildIndex() {
+	public void setLowerThreshold(double lowerThreshold)
+	{
+		this.lowerThreshold = lowerThreshold;
+	}
 
+	public double getLowerThreshold()
+	{
+		return lowerThreshold;
+	}
+
+	public void setUpperThreshold(double upperThreshold)
+	{
+		this.upperThreshold = upperThreshold;
+	}
+
+	public double getUpperThreshold()
+	{
+		return upperThreshold;
+	}
+
+	public void setStemming(boolean stemming)
+	{
+		this.allowStemming = stemming;
+	}
+
+	public boolean getStemming()
+	{
+		return allowStemming;
+	}
+
+	public void buildIndex()
+	{
 		documentTokenization();
 
 		termsCount = termsList.size();
@@ -96,8 +117,8 @@ public class TextInput implements InputInterface {
 		System.out.println(avgTokensPerDoc + " avg. # tokens per document");
 	}
 
-	private void writeIndexToArff() {
-
+	private void writeIndexToArff()
+	{
 		ArffIndexFileWriter arffWriter = new ArffIndexFileWriter();
 
 		File file = new File("./arff/newgroup_index.arff.gz"); // TODO add .gz
@@ -116,8 +137,8 @@ public class TextInput implements InputInterface {
 	 * tokenization chop on every whitespace and non-alphanumeric character
 	 * stopWords will be ingored
 	 */
-	private void documentTokenization() {
-
+	private void documentTokenization()
+	{
 		int loopBreaker = 0; // TODO
 
 		while (collection.hasNext()) {
@@ -175,9 +196,8 @@ public class TextInput implements InputInterface {
 	 * @param docName
 	 * @param token
 	 */
-	private void addToTokensList(String docName, String token) {
-		// TODO Auto-generated method stub
-
+	private void addToTokensList(String docName, String token)
+	{
 		boolean tokenExists = false;
 
 		for(Term t : tokens) {
@@ -196,7 +216,8 @@ public class TextInput implements InputInterface {
 		}
 	}
 
-	private void computeWeights() {
+	private void computeWeights()
+	{
 		//df = # of docs in the collection that contains the term
 		//idf = log(collectionSize / df)
 		//tf = # of occurance of the term in document
@@ -214,7 +235,7 @@ public class TextInput implements InputInterface {
 
 			while(iterator.hasNext()) {
 				Map.Entry<String, Integer> curDocs = iterator.next();
-				int tf = curDocs.getValue();
+				double tf = 1+Math.log(curDocs.getValue());
 
 				int column = docNamesList.indexOf(curDocs.getKey());
 
@@ -225,7 +246,8 @@ public class TextInput implements InputInterface {
 		}
 	}
 
-	private void addToDictionary(int column, String term, double weight) {
+	private void addToDictionary(int column, String term, double weight)
+	{
 
 		int rowOfTerm = termsList.indexOf(term);
 
@@ -234,15 +256,19 @@ public class TextInput implements InputInterface {
 
 	}
 
-	public Double[][] getDictionaryPrototype() {
+	public Double[][] getDictionaryPrototype()
+	{
 		return dictionary;
 	}
 
-	public ArrayList<String> getAllDocNamesPrototype() {
+	public ArrayList<String> getAllDocNamesPrototype()
+	{
 		return docNamesList;
 
 	}
-	public ArrayList<String> getAllTermsPrototype() {
+
+	public ArrayList<String> getAllTermsPrototype()
+	{
 		return termsList;
 	}
 }
