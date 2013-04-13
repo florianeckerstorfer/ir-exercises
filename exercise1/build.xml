@@ -10,7 +10,6 @@
     <property name="collection-directory" location="./data/20_newsgroups_subset" />
 
     <path id="main.classpath">
-        <pathelement location="${build-dir}" />
         <pathelement location="${vendor-dir}/args4j-2.0.21.jar" />
         <pathelement location="${vendor-dir}/weka.jar" />
         <pathelement location="${vendor-dir}/colt.jar" />
@@ -46,30 +45,30 @@
         </javac>
     </target>
 
-    <target name="dist" depends="compile">
-        <mkdir dir="${dist-dir}/lib"/>
-        <jar jarfile="${jar-name}" basedir="${build-dir}">
-            <manifest>
-                <attribute name="Main-Class" value="ir.exercise1.textindexer.TextIndexer" />
-            </manifest>
-        </jar>
-    </target>
-
-    <target name="run" depends="dist">
-        <java jar="${jar-name}" fork="true">
-            <classpath refid="main.classpath" />
-            <arg value="${collection-directory}" />
+    <target name="run" depends="compile">
+        <java classname="ir.exercise1.textindexer.TextIndexerMain">
+            <classpath>
+                <pathelement location="${build-dir}" />
+                <path refid="main.classpath" />
+            </classpath>
+            <arg value="-directory" />
+            <arg value="./data/20_newsgroups_subset" />
+            <arg value="-lower-threshold" />
             <arg value="0" />
+            <arg value="-upper-threshold" />
             <arg value="1000" />
-            <arg value="true" />
+            <arg value="-stemming" />
         </java>
     </target>
 
     <target name="test" depends="compile">
         <junit showoutput="yes" haltonfailure="no">
             <formatter type="plain" usefile="false" />
-            <classpath refid="main.classpath" />
-            <classpath refid="test.classpath" />
+            <classpath>
+                <pathelement location="${build-dir}" />
+                <path refid="main.classpath" />
+                <path refid="test.classpath" />
+            </classpath>
             <batchtest fork="yes">
                 <fileset dir="src">
                     <include name="**/*Test*.java" />

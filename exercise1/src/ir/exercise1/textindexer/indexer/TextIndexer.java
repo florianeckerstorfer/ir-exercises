@@ -1,4 +1,4 @@
-package ir.exercise1.textindexer.input;
+package ir.exercise1.textindexer.indexer;
 
 import ir.exercise1.textindexer.stemmer.StemmerInterface;
 import ir.exercise1.textindexer.stemmer.PorterStemmer;
@@ -16,7 +16,7 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Scanner;
 
-public class TextInput implements InputInterface
+public class TextIndexer implements IndexerInterface
 {
 	private boolean allowStemming = true;
 	private double lowerThreshold = 0;
@@ -42,7 +42,7 @@ public class TextInput implements InputInterface
 	int termsCount;
 	long tokensCount;
 
-	public TextInput(CollectionInterface collection)
+	public TextIndexer(CollectionInterface collection)
 	{
 		this.collection = collection;
 
@@ -52,31 +52,61 @@ public class TextInput implements InputInterface
 		avgTokensPerDoc = 0;
 	}
 
+	/**
+	 * Sets the lower bound for frequency tresholding.
+	 *
+	 * @param lowerThreshold The lower threshold
+	 */
 	public void setLowerThreshold(double lowerThreshold)
 	{
 		this.lowerThreshold = lowerThreshold;
 	}
 
+	/**
+	 * Returns the lower bound for frequency tresholding.
+	 *
+	 * @return The lower threshold
+	 */
 	public double getLowerThreshold()
 	{
 		return lowerThreshold;
 	}
 
+	/**
+	 * Sets the upper bound for frequency thresholding.
+	 *
+	 * @param upperThreshold The upper threshold
+	 */
 	public void setUpperThreshold(double upperThreshold)
 	{
 		this.upperThreshold = upperThreshold;
 	}
 
+	/**
+	 * Returns the upper bound for frequency thresholding.
+	 *
+	 * @return The upper threshold
+	 */
 	public double getUpperThreshold()
 	{
 		return upperThreshold;
 	}
 
+	/**
+	 * Sets if stemming should be usedf.
+	 *
+	 * @param stemming TRUE if stemming should be used, FALSE otherwise
+	 */
 	public void setStemming(boolean stemming)
 	{
 		this.allowStemming = stemming;
 	}
 
+	/**
+	 * Returns if stemming should be used.
+	 *
+	 * @return TRUE if stemming should be used, FALSE otherwise
+	 */
 	public boolean getStemming()
 	{
 		return allowStemming;
