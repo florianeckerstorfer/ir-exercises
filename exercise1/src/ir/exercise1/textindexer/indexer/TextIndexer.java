@@ -18,18 +18,35 @@ import java.util.Scanner;
 
 public class TextIndexer implements IndexerInterface
 {
-	private boolean allowStemming = true;
+	/**
+	 * The lower bound of the frequency threshold.
+	 */
 	private double lowerThreshold = 0;
+
+	/**
+	 * The upper bound of the frequency threshold.
+	 */
 	private double upperThreshold = 1000;
+
+	/**
+	 * If TRUE stemming is used.
+	 */
+	private boolean stemming = true;
 
 	// TODO add document class name to arff file
 	// TODO change to more efficient data structures
 
 	// TODO to save the docNames and the terms in separate lists is clumsy...
 	Double[][] dictionary; // TODO -> sparse Matrix
-	//list of all docName in the collection
+
+	/**
+	 * List of all docName in the collection
+	 */
 	ArrayList<String> docNamesList = new ArrayList<String>();
-	//list of all terms in the collection
+
+	/**
+	 * List of all terms in the collection
+	 */
 	ArrayList<String> termsList = new ArrayList<String>();
 
 	//contains a list of Term objects. Term objects themself contains a list of docNames, where they are contained
@@ -37,19 +54,23 @@ public class TextIndexer implements IndexerInterface
 
 	private CollectionInterface collection;
 
-	int docsCount;
-	long avgTokensPerDoc;
-	int termsCount;
-	long tokensCount;
+	int docsCount = 0;
+	long avgTokensPerDoc = 0;
+	int termsCount = 0;
+	long tokensCount = 0;
 
+	/**
+	 * Constructor.
+	 *
+	 * @param collection
+	 *
+	 * @return
+	 */
 	public TextIndexer(CollectionInterface collection)
 	{
 		this.collection = collection;
 
-		docsCount = 0;
-		tokensCount = 0;
 		termsCount = 0; //  TODO calculate when terms list is finished
-		avgTokensPerDoc = 0;
 	}
 
 	/**
@@ -99,7 +120,7 @@ public class TextIndexer implements IndexerInterface
 	 */
 	public void setStemming(boolean stemming)
 	{
-		this.allowStemming = stemming;
+		this.stemming = stemming;
 	}
 
 	/**
@@ -109,7 +130,7 @@ public class TextIndexer implements IndexerInterface
 	 */
 	public boolean getStemming()
 	{
-		return allowStemming;
+		return stemming;
 	}
 
 	public void buildIndex()
@@ -170,6 +191,7 @@ public class TextIndexer implements IndexerInterface
 	private void documentTokenization()
 	{
 		int loopBreaker = 0; // TODO
+		StemmerInterface porterStemmer
 
 		while (collection.hasNext()) {
 			loopBreaker++; // TODO
@@ -179,7 +201,7 @@ public class TextIndexer implements IndexerInterface
 
 			docNamesList.add(doc.getName());
 
-			StemmerInterface porterStemmer = new PorterStemmer();
+			porterStemmer = new PorterStemmer();
 
 			Scanner textScanner = new Scanner(doc.getContent());
 
@@ -202,7 +224,7 @@ public class TextIndexer implements IndexerInterface
 
 					if (!TextTools.isStopWord(token)) {
 
-						if (allowStemming) {
+						if (stemming) {
 							token = TextTools.doStemming(token, porterStemmer);
 						}
 

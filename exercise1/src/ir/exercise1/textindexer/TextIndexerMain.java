@@ -94,7 +94,7 @@ public class TextIndexerMain
     @Option(name="-upper-threshold", usage="Upper bound for frequency thresholding")
     private double upperThreshold;
 
-    @Option(name="-stemming", usage="Enable or disable stemming")
+    @Option(name="-stemming", usage="Flag if stemming should be used")
     private boolean stemming;
 
     public TextIndexerMain(String[] args)
