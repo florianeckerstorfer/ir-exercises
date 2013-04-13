@@ -2,18 +2,17 @@ package ir.exercise1.textindexer.indexer;
 
 import ir.exercise1.textindexer.stemmer.StemmerInterface;
 import ir.exercise1.textindexer.stemmer.PorterStemmer;
-import ir.exercise1.textindexer.Tools.TextTools;
+import ir.exercise1.textindexer.tokenizer.Tokenizer;
+import ir.exercise1.textindexer.tools.TextTools;
 import ir.exercise1.textindexer.collection.CollectionInterface;
 import ir.exercise1.textindexer.document.ClassDocument;
 import ir.exercise1.textindexer.model.Term;
 import ir.exercise1.textindexer.writer.file.ArffIndexFileWriter;
 
-import java.io.File;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Scanner;
 
 public class TextIndexer implements IndexerInterface
@@ -39,20 +38,8 @@ public class TextIndexer implements IndexerInterface
 	// TODO to save the docNames and the terms in separate lists is clumsy...
 	Double[][] dictionary; // TODO -> sparse Matrix
 
-	/**
-	 * List of all docName in the collection
-	 */
-	ArrayList<String> docNamesList = new ArrayList<String>();
-
-	/**
-	 * List of all terms in the collection
-	 */
-	ArrayList<String> termsList = new ArrayList<String>();
-
-	//contains a list of Term objects. Term objects themself contains a list of docNames, where they are contained
-	ArrayList<Term> tokens = new ArrayList<Term>();
-
 	private CollectionInterface collection;
+	private Tokenizer tokenizer;
 
 	int docsCount = 0;
 	long avgTokensPerDoc = 0;
@@ -66,15 +53,16 @@ public class TextIndexer implements IndexerInterface
 	 *
 	 * @return
 	 */
-	public TextIndexer(CollectionInterface collection)
+	public TextIndexer(CollectionInterface collection, Tokenizer tokenizer)
 	{
 		this.collection = collection;
+		this.tokenizer  = tokenizer;
 
 		termsCount = 0; //  TODO calculate when terms list is finished
 	}
 
 	/**
-	 * Sets the lower bound for frequency tresholding.
+	 * Sets the lower bound for frequency thresholding.
 	 *
 	 * @param lowerThreshold The lower threshold
 	 */
@@ -84,7 +72,7 @@ public class TextIndexer implements IndexerInterface
 	}
 
 	/**
-	 * Returns the lower bound for frequency tresholding.
+	 * Returns the lower bound for frequency thresholding.
 	 *
 	 * @return The lower threshold
 	 */
@@ -114,7 +102,7 @@ public class TextIndexer implements IndexerInterface
 	}
 
 	/**
-	 * Sets if stemming should be usedf.
+	 * Sets if stemming should be used.
 	 *
 	 * @param stemming TRUE if stemming should be used, FALSE otherwise
 	 */
@@ -135,10 +123,10 @@ public class TextIndexer implements IndexerInterface
 
 	public void buildIndex(ArffIndexFileWriter arffWriter)
 	{
-		documentTokenization();
+		tokenizer.tokenize(collection);
 
-		termsCount = termsList.size();
-		docsCount = docNamesList.size();
+		termsCount = tokenizer.getTermsList().size();
+		docsCount = tokenizer.getDocNamesList().size();
 
 		dictionary = new Double[docsCount][termsCount];
 
@@ -161,89 +149,7 @@ public class TextIndexer implements IndexerInterface
 
 	private void writeIndexToArff(ArffIndexFileWriter arffWriter)
 	{
-		arffWriter.createIndexFile(docNamesList, termsList, dictionary);
-	}
-
-	/**
-	 * tokenization chop on every whitespace and non-alphanumeric character
-	 * stopWords will be ingored
-	 */
-	private void documentTokenization()
-	{
-		int loopBreaker = 0; // TODO
-		StemmerInterface porterStemmer;
-
-		while (collection.hasNext()) {
-			loopBreaker++; // TODO
-
-			ClassDocument doc = (ClassDocument) collection.next();
-			System.out.println(doc.getClassName() + ": " + doc.getName());
-
-			docNamesList.add(doc.getName());
-
-			porterStemmer = new PorterStemmer();
-
-			Scanner textScanner = new Scanner(doc.getContent());
-
-			while (textScanner.hasNext()) {
-				String compound = textScanner.next().toLowerCase();
-
-				// replace everything that is not a letter with a white space
-				// for the word scanner (since the standard delimiter uses
-				// whitespace)
-				// not very efficient to run through the string twice, but it
-				// works
-				compound = compound.replaceAll("[^a-z\\s]", " ");
-
-				compound = compound.trim();
-
-				Scanner compoundScanner = new Scanner(compound);
-
-				while (compoundScanner.hasNext()) {
-					String token = compoundScanner.next();
-
-					if (!TextTools.isStopWord(token)) {
-						if (stemming) {
-							token = TextTools.doStemming(token, porterStemmer);
-						}
-						addToTokensList(doc.getName(), token);
-					}
-				}
-				compoundScanner.close();
-			}
-
-			textScanner.close();
-
-			if (loopBreaker == 33) break; //  TODO
-		}
-
-		System.out.println("***** let's take a break here, it's easier to test (don't forget to delete the break or set variable to 0) *****");
-
-	}
-
-
-	/**
-	 * @param docName
-	 * @param token
-	 */
-	private void addToTokensList(String docName, String token)
-	{
-		boolean tokenExists = false;
-
-		for(Term t : tokens) {
-			if (t.getName().equals(token)) {
-				t.addDoc(docName);
-				tokenExists = true;
-			}
-		}
-
-		if(tokenExists == false) {
-			Term curTerm = new Term(token);
-			curTerm.addDoc(docName);
-
-			tokens.add(curTerm);
-			termsList.add(token);
-		}
+		arffWriter.createIndexFile(tokenizer.getDocNamesList(), tokenizer.getTermsList(), dictionary);
 	}
 
 	private void computeWeights()
@@ -253,8 +159,8 @@ public class TextIndexer implements IndexerInterface
 		//tf = # of occurance of the term in document
 		//tf-idf = tf x idf
 
-		for(int row = 0; row < tokens.size(); row++) {
-			Term curTerm = tokens.get(row);
+		for(int row = 0; row < tokenizer.getTokens().size(); row++) {
+			Term curTerm = tokenizer.getTokens().get(row);
 
 			int df = curTerm.getDocFreq().size();
 
@@ -267,7 +173,7 @@ public class TextIndexer implements IndexerInterface
 				Map.Entry<String, Integer> curDocs = iterator.next();
 				double tf = 1+Math.log(curDocs.getValue());
 
-				int column = docNamesList.indexOf(curDocs.getKey());
+				int column = tokenizer.getDocNamesList().indexOf(curDocs.getKey());
 
 				if(tf >= lowerThreshold && tf <= upperThreshold) {
 					addToDictionary(column, curTerm.getName(), tf*idf);
@@ -278,11 +184,8 @@ public class TextIndexer implements IndexerInterface
 
 	private void addToDictionary(int column, String term, double weight)
 	{
-
-		int rowOfTerm = termsList.indexOf(term);
-
+		int rowOfTerm = tokenizer.getTermsList().indexOf(term);
 		dictionary[column][rowOfTerm] = weight;
-		//System.out.println("column: " + column + ", " + "row: " + rowOfTerm + ", tf: " + weight);
 
 	}
 
@@ -291,14 +194,14 @@ public class TextIndexer implements IndexerInterface
 		return dictionary;
 	}
 
-	public ArrayList<String> getAllDocNamesPrototype()
+	public List<String> getAllDocNamesPrototype()
 	{
-		return docNamesList;
+		return tokenizer.getDocNamesList();
 
 	}
 
-	public ArrayList<String> getAllTermsPrototype()
+	public List<String> getAllTermsPrototype()
 	{
-		return termsList;
+		return tokenizer.getTermsList();
 	}
 }

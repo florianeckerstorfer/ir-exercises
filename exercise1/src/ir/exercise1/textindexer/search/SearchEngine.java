@@ -2,7 +2,7 @@ package ir.exercise1.textindexer.search;
 
 import ir.exercise1.textindexer.stemmer.PorterStemmer;
 import ir.exercise1.textindexer.stemmer.StemmerInterface;
-import ir.exercise1.textindexer.Tools.TextTools;
+import ir.exercise1.textindexer.tools.TextTools;
 import ir.exercise1.textindexer.reader.file.FileReaderInterface;
 
 import java.io.BufferedOutputStream;

@@ -1,4 +1,4 @@
-package ir.exercise1.textindexer.Tools;
+package ir.exercise1.textindexer.tools;
 
 import static org.junit.Assert.assertEquals;
 import ir.exercise1.textindexer.document.Document;

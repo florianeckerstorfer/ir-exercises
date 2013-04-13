@@ -8,7 +8,6 @@ import java.io.IOException;
 
 import java.util.zip.GZIPOutputStream;
 import java.io.BufferedOutputStream;
-import java.io.File;
 import java.io.FileOutputStream;
 import java.io.PrintStream;
 
@@ -19,13 +18,12 @@ import org.kohsuke.args4j.Option;
 
 import ir.exercise1.common.timer.Timer;
 
-import ir.exercise1.textindexer.reader.file.FilesystemGzipReader;
 import ir.exercise1.textindexer.reader.collection.CollectionReaderInterface;
 import ir.exercise1.textindexer.reader.collection.ClassCollectionReader;
 import ir.exercise1.textindexer.reader.document.TextDocumentReader;
 import ir.exercise1.textindexer.reader.file.FilesystemReader;
+import ir.exercise1.textindexer.tokenizer.Tokenizer;
 import ir.exercise1.textindexer.writer.file.ArffIndexFileWriter;
-import ir.exercise1.textindexer.search.SearchEngine;
 import ir.exercise1.textindexer.document.ClassDocumentFactory;
 import ir.exercise1.textindexer.indexer.TextIndexer;
 import ir.exercise1.textindexer.collection.CollectionInterface;
@@ -138,10 +136,10 @@ public class TextIndexerMain
             new TextDocumentReader(new ClassDocumentFactory(), new FilesystemReader())
         );
         CollectionInterface collection = reader.read();
+        
+        Tokenizer tokenizer = new Tokenizer(stemming);
 
-
-
-        TextIndexer indexer = new TextIndexer(collection);
+        TextIndexer indexer = new TextIndexer(collection, tokenizer);
         indexer.setLowerThreshold(lowerThreshold);
         indexer.setUpperThreshold(upperThreshold);
         indexer.setStemming(stemming);

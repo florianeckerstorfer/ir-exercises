@@ -1,4 +1,4 @@
-package ir.exercise1.textindexer.Tools;
+package ir.exercise1.textindexer.tools;
 
 import ir.exercise1.textindexer.document.DocumentInterface;
 import ir.exercise1.textindexer.stemmer.StemmerInterface;

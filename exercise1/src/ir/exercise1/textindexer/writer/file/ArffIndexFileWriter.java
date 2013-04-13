@@ -1,22 +1,13 @@
 package ir.exercise1.textindexer.writer.file;
 
-import java.io.BufferedOutputStream;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
 import java.io.PrintStream;
-import java.util.ArrayList;
-import java.util.Hashtable;
-import java.util.Iterator;
-import java.util.Map;
-import java.util.zip.GZIPOutputStream;
-
-import weka.core.Attribute;
+import java.util.List;
 
 /**
  * ArffFileWriter
  *
  * @author hmiao87@gmail.com (Haichao Miao)
+ * @author florian@eckerstorfer.co (Florian Eckerstorfer)
  */
 public class ArffIndexFileWriter
 {
@@ -27,7 +18,7 @@ public class ArffIndexFileWriter
 		this.outputStream = outputStream;
 	}
 
-	public void createIndexFile(ArrayList<String> docNames, ArrayList<String> terms, Double[][] dictionary)
+	public void createIndexFile(List<String> docNames, List<String> terms, Double[][] dictionary)
 	{
 		//header
 		outputStream.println("% 1. Title: 20_newsgroups_subset Index");
