@@ -1,15 +1,11 @@
 package ir.exercise1.textindexer.tokenizer;
 
-import ir.exercise1.textindexer.collection.CollectionInterface;
 import ir.exercise1.textindexer.document.ClassDocument;
 import ir.exercise1.textindexer.model.InvertedIndex;
-import ir.exercise1.textindexer.model.Term;
 import ir.exercise1.textindexer.stemmer.PorterStemmer;
 import ir.exercise1.textindexer.stemmer.StemmerInterface;
 import ir.exercise1.textindexer.tools.TextTools;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 /**

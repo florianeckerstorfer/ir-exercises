@@ -172,7 +172,7 @@ public class TextIndexer implements IndexerInterface
 		//tf = # of occurance of the term in document
 		//tf-idf = tf x idf
 
-		for(int row = 0; row < index.getTokens().size(); row++) {
+		for (int row = 0; row < index.getTokens().size(); row++) {
 			String token = index.getTokens().get(row);
 			PostingList postingList = index.getPostingList(token);
 
@@ -183,12 +183,12 @@ public class TextIndexer implements IndexerInterface
 
 			Iterator<Map.Entry<Integer, PostingList.Posting>> iterator = postingList.getDocuments().entrySet().iterator();
 
-			while(iterator.hasNext()) {
+			while (iterator.hasNext()) {
 				Map.Entry<Integer, PostingList.Posting> curDocs = iterator.next();
 				PostingList.Posting posting = curDocs.getValue();
 				double tf = 1+Math.log(posting.getCount());
 
-				if(tf >= lowerThreshold && tf <= upperThreshold) {
+				if (tf >= lowerThreshold && tf <= upperThreshold) {
 					posting.setTfIdf(tf*idf);
 					addToDictionary(curDocs.getKey(), row, tf*idf);
 				}
@@ -199,7 +199,6 @@ public class TextIndexer implements IndexerInterface
 	private void addToDictionary(int column, int row, double weight)
 	{
 		 dictionary[column][row] = weight;
-
 	}
 //
 //	public Double[][] getDictionaryPrototype()

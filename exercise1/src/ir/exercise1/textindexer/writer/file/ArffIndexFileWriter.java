@@ -1,6 +1,7 @@
 package ir.exercise1.textindexer.writer.file;
 
 import ir.exercise1.textindexer.model.InvertedIndex;
+import ir.exercise1.textindexer.model.PostingList;
 
 import java.io.PrintStream;
 
@@ -43,21 +44,43 @@ public class ArffIndexFileWriter
 		}
 
 		outputStream.println("@DATA");
-
-		for(int i = 0; i < dictionary.length; i++) {
-			outputStream.print("classname, "); // TODO
-			outputStream.print(index.getDocumentName(i) + ", ");
-			for(int j = 0; j < dictionary[i].length; j++) {
-				if(dictionary[i][j] != null) {
-					outputStream.print(dictionary[i][j]);
+		
+		PostingList postingList;
+		PostingList.Posting posting;
+		
+		for (int documentId = 0; documentId < index.getDocumentCount(); documentId++) {
+			outputStream.print("className, "); // TODO
+			outputStream.print(index.getDocumentName(documentId));
+			
+			for (int tokenId = 0; tokenId < index.getIndexSize(); tokenId++) {
+				postingList = index.getPostingList(index.getToken(tokenId));
+				posting = postingList.getPosting(documentId);
+				
+				if (null != posting) {
+					outputStream.print(posting.getTfIdf());
 				} else {
 					outputStream.print(0);
 				}
-
+				
 				outputStream.print(", ");
 			}
-			outputStream.println();
+			outputStream.print("\n");
 		}
+
+//		for(int i = 0; i < dictionary.length; i++) {
+//			outputStream.print("classname, "); // TODO
+//			outputStream.print(index.getDocumentName(i) + ", ");
+//			for(int j = 0; j < dictionary[i].length; j++) {
+//				if(dictionary[i][j] != null) {
+//					outputStream.print(dictionary[i][j]);
+//				} else {
+//					outputStream.print(0);
+//				}
+//
+//				outputStream.print(", ");
+//			}
+//			outputStream.println();
+//		}
 
 		outputStream.close();
 

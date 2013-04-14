@@ -54,7 +54,13 @@ public class InvertedIndex
 		return index.get(token);
 	}
 	
-	public List<String> getTokens() {
+	public String getToken(int index)
+	{
+		return tokens.get(index);
+	}
+	
+	public List<String> getTokens()
+	{
 		return tokens;
 	}
 	

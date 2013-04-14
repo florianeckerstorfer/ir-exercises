@@ -155,7 +155,11 @@ public class TextIndexerMain
     {
         try {
             return new ArffIndexFileWriter(new PrintStream(
-                new BufferedOutputStream(new GZIPOutputStream(new FileOutputStream(new File(outputFile))))
+                new BufferedOutputStream(
+//                	new GZIPOutputStream(
+                		new FileOutputStream(new File(outputFile))
+//                	)
+                )
             ));
         } catch (FileNotFoundException e) {
             System.out.println("Could not find file " + outputFile + ".");

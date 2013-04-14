@@ -44,6 +44,11 @@ public class PostingList
 		return documents;
 	}
 	
+	public Posting getPosting(Integer documentId)
+	{
+		return documents.get(documentId);
+	}
+	
 	public int getDocumentFrequency()
 	{
 		return documents.size();
