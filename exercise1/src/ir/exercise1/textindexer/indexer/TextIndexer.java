@@ -162,12 +162,7 @@ public class TextIndexer implements IndexerInterface
 		computeWeights(index, weightedIndex);
 
 		System.out.println("\nStarting to write ARFF index.");
-		writeIndexToArff(weightedIndex, arffWriter);
-	}
-
-	private void writeIndexToArff(WeightedInvertedIndex index, ArffIndexFileWriter arffWriter)
-	{
-		arffWriter.createIndexFile(index);
+		arffWriter.buildIndexFile(weightedIndex, getStemming(), getLowerThreshold(), getUpperThreshold());
 	}
 
 	private void computeWeights(InvertedIndex index, WeightedInvertedIndex weightedIndex)

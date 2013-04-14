@@ -139,7 +139,7 @@ public class TextIndexerMain
         
         Tokenizer tokenizer = new Tokenizer(stemming);
 
-        TextIndexer indexer = new TextIndexer(collection, tokenizer, 2000);
+        TextIndexer indexer = new TextIndexer(collection, tokenizer, 200);
         indexer.setLowerThreshold(lowerThreshold);
         indexer.setUpperThreshold(upperThreshold);
         indexer.setStemming(stemming);
@@ -156,9 +156,9 @@ public class TextIndexerMain
         try {
             return new ArffIndexFileWriter(new PrintStream(
                 new BufferedOutputStream(
-//                	new GZIPOutputStream(
+                	new GZIPOutputStream(
                 		new FileOutputStream(new File(outputFile))
-//                	)
+                	)
                 )
             ));
         } catch (FileNotFoundException e) {

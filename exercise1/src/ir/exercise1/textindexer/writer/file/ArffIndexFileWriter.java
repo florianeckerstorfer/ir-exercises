@@ -1,12 +1,15 @@
 package ir.exercise1.textindexer.writer.file;
 
-import ir.exercise1.textindexer.model.InvertedIndex;
-import ir.exercise1.textindexer.model.PostingList;
 import ir.exercise1.textindexer.model.WeightedInvertedIndex;
 import ir.exercise1.textindexer.model.WeightedPosting;
 import ir.exercise1.textindexer.model.WeightedPostingList;
 
 import java.io.PrintStream;
+
+import weka.core.Attribute;
+import weka.core.FastVector;
+import weka.core.Instance;
+import weka.core.Instances;
 
 /**
  * ArffFileWriter
@@ -22,64 +25,66 @@ public class ArffIndexFileWriter
 	{
 		this.outputStream = outputStream;
 	}
-
-	public void createIndexFile(WeightedInvertedIndex index)
+	
+	public void buildIndexFile(WeightedInvertedIndex index, boolean stemming, double lowerThreshold, double upperThreshold)
 	{
 		//header
 		outputStream.println("% 1. Title: 20_newsgroups_subset Index");
 		outputStream.println("% 2. Sources:");
 		outputStream.println("% \t Creator: Haichao Miao & Florian Eckerstorfer");
 		outputStream.println("% \t Date: " + new java.util.Date());
-		outputStream.println("% allow_stemming: "); // TODO
-		outputStream.println("% upper_bound: "); // TODO
-		outputStream.println("% lower_bound: "); // TODO
-		outputStream.print("@RELATION ");
-		outputStream.println("20_newsgroups_subset"); // TODO
-		outputStream.println();
-		outputStream.println("@ATTRIBUTE className STRING");
-		outputStream.println("@ATTRIBUTE docID STRING");
-
+		outputStream.println("% stemming: " + (stemming ? "true" : "false"));
+		outputStream.println("% lowerThreshold: " + lowerThreshold);
+		outputStream.println("% upperThreshold: " + upperThreshold);
+		
+		FastVector atts = new FastVector();
+		double[] vals;
+		
+		atts.addElement(new Attribute("className", (FastVector) null));
+		atts.addElement(new Attribute("docID", (FastVector) null));
+		
+		Instances data = new Instances("20_newsgroups_subset", atts, 0);
 		
 		for(String token : index.getTokens()) {
 			if (index.hasPostingList(token)) {
-				outputStream.print("@ATTRIBUTE ");
-				outputStream.print(token);
-				outputStream.println(" NUMERIC");
+				atts.addElement(new Attribute(token));
 			}
 		}
-
-		outputStream.println("@DATA");
 		
 		WeightedPostingList postingList;
 		WeightedPosting posting;
 		
+		int attId;
+		
+		// Iterate through all documents
 		for (int documentId = 0; documentId < index.getDocumentCount(); documentId++) {
-			outputStream.print("className, "); // TODO
-			outputStream.print(index.getDocumentName(documentId));
+			vals = new double[data.numAttributes()];
+			vals[0] = data.attribute(0).addStringValue("className");
+			vals[1] = data.attribute(1).addStringValue(index.getDocumentName(documentId));
 			
+			attId = 2;
+			
+			// Iterate through all tokens
 			for(String token : index.getTokens()) {
+				// Only add token to the ARFF file if it has a posting list
 				if (index.hasPostingList(token)) {
 					postingList = index.getPostingList(token);
 					posting = postingList.getPosting(documentId);
 				
+					// We need to check if the posting exists, otherwise TF.IDF is 0
 					if (null != posting) {
-						outputStream.print(posting.getTfIdf());
+						vals[attId] = posting.getTfIdf();
 					} else {
-						outputStream.print(0);
+						vals[attId] = 0;
 					}
 				
-					outputStream.print(", ");
+					attId++;
 				}
 			}
-			outputStream.print("\n");
+			data.add(new Instance(1.0, vals));
 		}
-
+		
+		outputStream.print(data);
 		outputStream.close();
-
 	}
-
-
-
-
-
 }
