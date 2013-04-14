@@ -1,6 +1,5 @@
 package ir.exercise1.textindexer.model;
 
-import java.util.ArrayList;
 import java.util.Hashtable;
 
 /**

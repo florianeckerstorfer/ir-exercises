@@ -2,11 +2,12 @@ package ir.exercise1.textindexer.indexer;
 
 import ir.exercise1.textindexer.tokenizer.Tokenizer;
 import ir.exercise1.textindexer.collection.CollectionInterface;
-import ir.exercise1.textindexer.model.Term;
+import ir.exercise1.textindexer.document.ClassDocument;
+import ir.exercise1.textindexer.model.InvertedIndex;
+import ir.exercise1.textindexer.model.PostingList;
 import ir.exercise1.textindexer.writer.file.ArffIndexFileWriter;
 
 import java.util.Iterator;
-import java.util.List;
 import java.util.Map;
 
 public class TextIndexer implements IndexerInterface
@@ -117,20 +118,38 @@ public class TextIndexer implements IndexerInterface
 
 	public void buildIndex(ArffIndexFileWriter arffWriter)
 	{
-		tokenizer.tokenize(collection);
+		InvertedIndex index = new InvertedIndex();
+		tokenizer.setInvertedIndex(index);
+		
+		int loopBreaker = 0; // TODO
+		while (collection.hasNext()) {
+			loopBreaker++; // TODO
 
-		termsCount = tokenizer.getTerms().size();
-		docsCount = tokenizer.getDocumentNames().size();
+			ClassDocument document = (ClassDocument) collection.next();
+			
+			System.out.println(document.getClassName() + ": " + document.getName());
+
+			int documentId = index.addDocument(document.getName());
+			tokenizer.tokenize(document, documentId);
+			
+			if (loopBreaker == 33) {
+				System.out.println("ATTENTION! We stop indexing after 33 documents!");
+				break; //  TODO
+			}
+		}
+
+		termsCount = index.getIndexSize();
+		docsCount = index.getDocumentCount();
 
 		dictionary = new Double[docsCount][termsCount];
 
 		System.out.println("# of terms: " + termsCount);
 
 		System.out.println("computation of tf-idf weight started");
-		computeWeights();
+		computeWeights(index);
 
 		System.out.println("arff index writing started");
-		writeIndexToArff(arffWriter);
+		writeIndexToArff(index, arffWriter);
 
 
 		avgTokensPerDoc = tokensCount / docsCount;
@@ -141,61 +160,61 @@ public class TextIndexer implements IndexerInterface
 		System.out.println(avgTokensPerDoc + " avg. # tokens per document");
 	}
 
-	private void writeIndexToArff(ArffIndexFileWriter arffWriter)
+	private void writeIndexToArff(InvertedIndex index, ArffIndexFileWriter arffWriter)
 	{
-		arffWriter.createIndexFile(tokenizer.getDocumentNames(), tokenizer.getTerms(), dictionary);
+		arffWriter.createIndexFile(index, dictionary);
 	}
 
-	private void computeWeights()
+	private void computeWeights(InvertedIndex index)
 	{
 		//df = # of docs in the collection that contains the term
 		//idf = log(collectionSize / df)
 		//tf = # of occurance of the term in document
 		//tf-idf = tf x idf
 
-		for(int row = 0; row < tokenizer.getTokens().size(); row++) {
-			Term curTerm = tokenizer.getTokens().get(row);
+		for(int row = 0; row < index.getTokens().size(); row++) {
+			String token = index.getTokens().get(row);
+			PostingList postingList = index.getPostingList(token);
 
-			int df = curTerm.getDocFreq().size();
+			int df = postingList.getDocumentFrequency();
 
 			//System.out.println("df of " + curTerm.getName() + " is " + df);
 			double idf = Math.log(collection.getDocumentCount()/df);
 
-			Iterator<Map.Entry<String, Integer>> iterator = curTerm.getDocFreq().entrySet().iterator();
+			Iterator<Map.Entry<Integer, PostingList.Posting>> iterator = postingList.getDocuments().entrySet().iterator();
 
 			while(iterator.hasNext()) {
-				Map.Entry<String, Integer> curDocs = iterator.next();
-				double tf = 1+Math.log(curDocs.getValue());
-
-				int column = tokenizer.getDocumentNames().indexOf(curDocs.getKey());
+				Map.Entry<Integer, PostingList.Posting> curDocs = iterator.next();
+				PostingList.Posting posting = curDocs.getValue();
+				double tf = 1+Math.log(posting.getCount());
 
 				if(tf >= lowerThreshold && tf <= upperThreshold) {
-					addToDictionary(column, curTerm.getName(), tf*idf);
+					posting.setTfIdf(tf*idf);
+					addToDictionary(curDocs.getKey(), row, tf*idf);
 				}
 			}
 		}
 	}
 
-	private void addToDictionary(int column, String term, double weight)
+	private void addToDictionary(int column, int row, double weight)
 	{
-		int rowOfTerm = tokenizer.getTerms().indexOf(term);
-		dictionary[column][rowOfTerm] = weight;
+		 dictionary[column][row] = weight;
 
 	}
-
-	public Double[][] getDictionaryPrototype()
-	{
-		return dictionary;
-	}
-
-	public List<String> getAllDocNamesPrototype()
-	{
-		return tokenizer.getDocumentNames();
-
-	}
-
-	public List<String> getAllTermsPrototype()
-	{
-		return tokenizer.getTerms();
-	}
+//
+//	public Double[][] getDictionaryPrototype()
+//	{
+//		return dictionary;
+//	}
+//
+//	public List<String> getAllDocNamesPrototype()
+//	{
+//		return tokenizer.getDocumentNames();
+//
+//	}
+//
+//	public List<String> getAllTermsPrototype()
+//	{
+//		return tokenizer.getTerms();
+//	}
 }

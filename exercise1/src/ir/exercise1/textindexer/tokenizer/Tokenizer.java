@@ -2,6 +2,7 @@ package ir.exercise1.textindexer.tokenizer;
 
 import ir.exercise1.textindexer.collection.CollectionInterface;
 import ir.exercise1.textindexer.document.ClassDocument;
+import ir.exercise1.textindexer.model.InvertedIndex;
 import ir.exercise1.textindexer.model.Term;
 import ir.exercise1.textindexer.stemmer.PorterStemmer;
 import ir.exercise1.textindexer.stemmer.StemmerInterface;
@@ -18,93 +19,48 @@ import java.util.Scanner;
  */
 public class Tokenizer
 {
-	/**
-	 * Contains a list of Term objects.
-	 * 
-	 * Term objects itself contains a list of docNames, where they are contained
-	 */
-	List<Term> tokens = new ArrayList<Term>();
-	
-	/**
-	 * List of all docName in the collection
-	 */
-	List<String> documentNames = new ArrayList<String>();
-
-	/**
-	 * List of all terms in the collection
-	 */
-	List<String> terms = new ArrayList<String>();
+	private InvertedIndex index;
 
 	/** Flag, if TRUE terms will be stemmed */
 	private boolean stemming;
 
+	/**
+	 * Constructor.
+	 * 
+	 * @param stemming
+	 */
 	public Tokenizer(boolean stemming)
 	{
 		this.stemming = stemming;
 	}
 	
 	/**
-	 * Returns the tokens.
+	 * Sets the inverted index.
 	 * 
-	 * @return
+	 * @param index
 	 */
-	public List<Term> getTokens()
+	public void setInvertedIndex(InvertedIndex index)
 	{
-		return tokens;
+		this.index = index;
 	}
 	
 	/**
-	 * Returns the document names.
+	 * Returns the inverted index.
 	 * 
 	 * @return
 	 */
-	public List<String> getDocumentNames()
+	public InvertedIndex getInvertedIndex()
 	{
-		return documentNames;
-	}
-	
-	/**
-	 * Returns the terms.
-	 * 
-	 * @return
-	 */
-	public List<String> getTerms()
-	{
-		return terms;
-	}
-	
-	/**
-	 * Tokenizes the given collection.
-	 * 
-	 * @param collection
-	 */
-	public void tokenize(CollectionInterface collection)
-	{
-		int loopBreaker = 0; // TODO
-		while (collection.hasNext()) {
-			loopBreaker++; // TODO
-
-			ClassDocument document = (ClassDocument) collection.next();
-			
-			System.out.println(document.getClassName() + ": " + document.getName());
-
-			documentNames.add(document.getName());
-			
-			tokenizeDocument(document);
-			
-			if (loopBreaker == 33) {
-				System.out.println("ATTENTION! We stop indexing after 33 documents!");
-				break; //  TODO
-			}
-		}
+		return index;
 	}
 	
 	/**
 	 * Tokenizes the given document.
 	 * 
 	 * @param document
+	 * @param documentId
 	 */
-	public void tokenizeDocument(ClassDocument document)
+	public void tokenize(ClassDocument document, int documentId)
 	{
 		StemmerInterface porterStemmer = new PorterStemmer();
 
@@ -117,35 +73,11 @@ public class Tokenizer
 					if (stemming) {
 						token = TextTools.doStemming(token, porterStemmer);
 					}
-					addToTokensList(document.getName(), token);
+					index.addToken(token, documentId);
 				}
 			}
 		}
 
 		textScanner.close();
-	}
-	
-	/**
-	 * @param documentName
-	 * @param token
-	 */
-	private void addToTokensList(String documentName, String token)
-	{
-		boolean tokenExists = false;
-
-		for(Term t : tokens) {
-			if (t.getName().equals(token)) {
-				t.addDoc(documentName);
-				tokenExists = true;
-			}
-		}
-
-		if(tokenExists == false) {
-			Term curTerm = new Term(token);
-			curTerm.addDoc(documentName);
-
-			tokens.add(curTerm);
-			terms.add(token);
-		}
 	}
 }

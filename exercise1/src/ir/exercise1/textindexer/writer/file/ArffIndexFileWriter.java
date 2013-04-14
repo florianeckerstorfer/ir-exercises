@@ -1,7 +1,8 @@
 package ir.exercise1.textindexer.writer.file;
 
+import ir.exercise1.textindexer.model.InvertedIndex;
+
 import java.io.PrintStream;
-import java.util.List;
 
 /**
  * ArffFileWriter
@@ -18,7 +19,7 @@ public class ArffIndexFileWriter
 		this.outputStream = outputStream;
 	}
 
-	public void createIndexFile(List<String> docNames, List<String> terms, Double[][] dictionary)
+	public void createIndexFile(InvertedIndex index, Double[][] dictionary)
 	{
 		//header
 		outputStream.println("% 1. Title: 20_newsgroups_subset Index");
@@ -34,9 +35,10 @@ public class ArffIndexFileWriter
 		outputStream.println("@ATTRIBUTE className STRING");
 		outputStream.println("@ATTRIBUTE docID STRING");
 
-		for(String term : terms) {
+		
+		for(String token : index.getTokens()) {
 			outputStream.print("@ATTRIBUTE ");
-			outputStream.print(term);
+			outputStream.print(token);
 			outputStream.println(" NUMERIC");
 		}
 
@@ -44,7 +46,7 @@ public class ArffIndexFileWriter
 
 		for(int i = 0; i < dictionary.length; i++) {
 			outputStream.print("classname, "); // TODO
-			outputStream.print(docNames.get(i) + ", ");
+			outputStream.print(index.getDocumentName(i) + ", ");
 			for(int j = 0; j < dictionary[i].length; j++) {
 				if(dictionary[i][j] != null) {
 					outputStream.print(dictionary[i][j]);
