@@ -139,7 +139,7 @@ public class TextIndexerMain
         
         Tokenizer tokenizer = new Tokenizer(stemming);
 
-        TextIndexer indexer = new TextIndexer(collection, tokenizer);
+        TextIndexer indexer = new TextIndexer(collection, tokenizer, 2000);
         indexer.setLowerThreshold(lowerThreshold);
         indexer.setUpperThreshold(upperThreshold);
         indexer.setStemming(stemming);

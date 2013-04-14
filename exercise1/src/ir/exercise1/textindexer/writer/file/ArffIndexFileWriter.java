@@ -2,6 +2,9 @@ package ir.exercise1.textindexer.writer.file;
 
 import ir.exercise1.textindexer.model.InvertedIndex;
 import ir.exercise1.textindexer.model.PostingList;
+import ir.exercise1.textindexer.model.WeightedInvertedIndex;
+import ir.exercise1.textindexer.model.WeightedPosting;
+import ir.exercise1.textindexer.model.WeightedPostingList;
 
 import java.io.PrintStream;
 
@@ -20,7 +23,7 @@ public class ArffIndexFileWriter
 		this.outputStream = outputStream;
 	}
 
-	public void createIndexFile(InvertedIndex index)
+	public void createIndexFile(WeightedInvertedIndex index)
 	{
 		//header
 		outputStream.println("% 1. Title: 20_newsgroups_subset Index");
@@ -38,31 +41,35 @@ public class ArffIndexFileWriter
 
 		
 		for(String token : index.getTokens()) {
-			outputStream.print("@ATTRIBUTE ");
-			outputStream.print(token);
-			outputStream.println(" NUMERIC");
+			if (index.hasPostingList(token)) {
+				outputStream.print("@ATTRIBUTE ");
+				outputStream.print(token);
+				outputStream.println(" NUMERIC");
+			}
 		}
 
 		outputStream.println("@DATA");
 		
-		PostingList postingList;
-		PostingList.Posting posting;
+		WeightedPostingList postingList;
+		WeightedPosting posting;
 		
 		for (int documentId = 0; documentId < index.getDocumentCount(); documentId++) {
 			outputStream.print("className, "); // TODO
 			outputStream.print(index.getDocumentName(documentId));
 			
 			for(String token : index.getTokens()) {
-				postingList = index.getPostingList(token);
-				posting = postingList.getPosting(documentId);
+				if (index.hasPostingList(token)) {
+					postingList = index.getPostingList(token);
+					posting = postingList.getPosting(documentId);
 				
-				if (null != posting) {
-					outputStream.print(posting.getTfIdf());
-				} else {
-					outputStream.print(0);
+					if (null != posting) {
+						outputStream.print(posting.getTfIdf());
+					} else {
+						outputStream.print(0);
+					}
+				
+					outputStream.print(", ");
 				}
-				
-				outputStream.print(", ");
 			}
 			outputStream.print("\n");
 		}

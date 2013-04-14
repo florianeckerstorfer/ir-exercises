@@ -53,35 +53,4 @@ public class PostingList
 	{
 		return documents.size();
 	}
-	
-	public class Posting
-	{
-		int count = 0;
-		double tfIdf = 0.0;
-		
-		public Posting(int count)
-		{
-			this.count = count;
-		}
-		
-		public void incrementCount()
-		{
-			count++;
-		}
-		
-		public int getCount()
-		{
-			return count;
-		}
-		
-		public void setTfIdf(Double tfIdf)
-		{
-			this.tfIdf = tfIdf;  
-		}
-		
-		public double getTfIdf()
-		{
-			return tfIdf;
-		}
-	}
 }
