@@ -1,10 +1,8 @@
 package ir.exercise1.textindexer.tools;
 
 import static org.junit.Assert.assertEquals;
-import ir.exercise1.textindexer.document.Document;
 import ir.exercise1.textindexer.stemmer.*;
 
-import java.util.ArrayList;
 
 import org.junit.Before;
 import org.junit.Test;

@@ -1,10 +1,7 @@
 package ir.exercise1.textindexer.tools;
 
-import ir.exercise1.textindexer.document.DocumentInterface;
 import ir.exercise1.textindexer.stemmer.StemmerInterface;
 
-import java.util.ArrayList;
-import java.util.Scanner;
 
 /**
  * TextTools

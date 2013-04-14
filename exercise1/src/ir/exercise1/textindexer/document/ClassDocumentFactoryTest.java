@@ -1,12 +1,7 @@
 package ir.exercise1.textindexer.document;
 
 import static org.junit.Assert.*;
-import static org.easymock.EasyMock.*;
 import static org.hamcrest.CoreMatchers.*;
-
-import org.hamcrest.Description;
-import org.hamcrest.Matcher;
-import org.hamcrest.StringDescription;
 
 import org.junit.*;
 import org.junit.runner.RunWith;

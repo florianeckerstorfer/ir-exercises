@@ -1,7 +1,6 @@
 package ir.exercise1.textindexer.collection;
 
 import java.util.Iterator;
-import java.util.List;
 
 import ir.exercise1.textindexer.document.DocumentInterface;
 
@@ -10,7 +9,7 @@ import ir.exercise1.textindexer.document.DocumentInterface;
  *
  * @author Florian Eckerstorfer <florian@eckerstorfer.co>
  */
-public interface CollectionInterface extends Iterator
+public interface CollectionInterface extends Iterator<DocumentInterface>
 {
     /**
      * Adds a document to the collection.

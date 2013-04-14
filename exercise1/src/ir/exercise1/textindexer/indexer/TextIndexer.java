@@ -177,9 +177,6 @@ public class TextIndexer implements IndexerInterface
 		//tf = # of occurance of the term in document
 		//tf-idf = tf x idf
 		
-		double maxThreshold = -1;
-		double minThreshold = -1;
-		
 		double totalTf = 0;
 		int tfCount = 0;
 		
@@ -195,7 +192,6 @@ public class TextIndexer implements IndexerInterface
 
 			int df = postingList.getDocumentFrequency();
 
-			//System.out.println("df of " + curTerm.getName() + " is " + df);
 			double idf = Math.log(collection.getDocumentCount()/df);
 
 			Iterator<Map.Entry<Integer, Posting>> iterator = postingList.getDocuments().entrySet().iterator();
@@ -206,15 +202,10 @@ public class TextIndexer implements IndexerInterface
 				double tf = 1+Math.log(posting.getCount());
 				
 				if (tf >= lowerThreshold && tf <= upperThreshold) {
-					totalTf += tf;
-					tfCount++;
 					weightedPosting = new WeightedPosting(tf*idf);
 					weightedPostingList.setPosting(document.getKey(), weightedPosting);
 				}
 			}
 		}
-		System.out.println("total tf = " + totalTf);
-		System.out.println("tf count = " + tfCount);
-		System.out.println("average tf = " + (totalTf/tfCount));
 	}
 }

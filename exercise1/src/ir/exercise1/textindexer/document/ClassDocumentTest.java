@@ -1,7 +1,6 @@
 package ir.exercise1.textindexer.document;
 
 import static org.junit.Assert.*;
-import static org.easymock.EasyMock.*;
 
 import org.junit.*;
 import org.junit.runner.RunWith;
