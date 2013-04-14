@@ -11,6 +11,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+/**
+ * Tokenizer.
+ * 
+ * @author florian@eckerstorfer.co (Florian Eckerstorfer)
+ */
 public class Tokenizer
 {
 	/**
@@ -23,12 +28,12 @@ public class Tokenizer
 	/**
 	 * List of all docName in the collection
 	 */
-	List<String> docNamesList = new ArrayList<String>();
+	List<String> documentNames = new ArrayList<String>();
 
 	/**
 	 * List of all terms in the collection
 	 */
-	List<String> termsList = new ArrayList<String>();
+	List<String> terms = new ArrayList<String>();
 
 	/** Flag, if TRUE terms will be stemmed */
 	private boolean stemming;
@@ -38,32 +43,54 @@ public class Tokenizer
 		this.stemming = stemming;
 	}
 	
+	/**
+	 * Returns the tokens.
+	 * 
+	 * @return
+	 */
 	public List<Term> getTokens()
 	{
 		return tokens;
 	}
 	
-	public List<String> getDocNamesList()
+	/**
+	 * Returns the document names.
+	 * 
+	 * @return
+	 */
+	public List<String> getDocumentNames()
 	{
-		return docNamesList;
+		return documentNames;
 	}
 	
-	public List<String> getTermsList()
+	/**
+	 * Returns the terms.
+	 * 
+	 * @return
+	 */
+	public List<String> getTerms()
 	{
-		return termsList;
+		return terms;
 	}
 	
+	/**
+	 * Tokenizes the given collection.
+	 * 
+	 * @param collection
+	 */
 	public void tokenize(CollectionInterface collection)
 	{
 		int loopBreaker = 0; // TODO
 		while (collection.hasNext()) {
 			loopBreaker++; // TODO
 
-			ClassDocument doc = (ClassDocument) collection.next();
+			ClassDocument document = (ClassDocument) collection.next();
 			
-			System.out.println(doc.getClassName() + ": " + doc.getName());
+			System.out.println(document.getClassName() + ": " + document.getName());
 
-			docNamesList.add(doc.getName());
+			documentNames.add(document.getName());
+			
+			tokenizeDocument(document);
 			
 			if (loopBreaker == 33) {
 				System.out.println("ATTENTION! We stop indexing after 33 documents!");
@@ -72,29 +99,20 @@ public class Tokenizer
 		}
 	}
 	
+	/**
+	 * Tokenizes the given document.
+	 * 
+	 * @param document
+	 */
 	public void tokenizeDocument(ClassDocument document)
 	{
 		StemmerInterface porterStemmer = new PorterStemmer();
 
-		Scanner textScanner = new Scanner(document.getContent());
+		Scanner textScanner = new Scanner(document.getContent().toLowerCase()).useDelimiter("[^a-z]");
 
 		while (textScanner.hasNext()) {
-			String compound = textScanner.next().toLowerCase();
-
-			// replace everything that is not a letter with a white space
-			// for the word scanner (since the standard delimiter uses
-			// whitespace)
-			// not very efficient to run through the string twice, but it
-			// works
-			compound = compound.replaceAll("[^a-z\\s]", " ");
-
-			compound = compound.trim();
-
-			Scanner compoundScanner = new Scanner(compound);
-
-			while (compoundScanner.hasNext()) {
-				String token = compoundScanner.next();
-
+			String token = textScanner.next().trim();
+			if (token.length() > 0) {
 				if (!TextTools.isStopWord(token)) {
 					if (stemming) {
 						token = TextTools.doStemming(token, porterStemmer);
@@ -102,33 +120,32 @@ public class Tokenizer
 					addToTokensList(document.getName(), token);
 				}
 			}
-			compoundScanner.close();
 		}
 
 		textScanner.close();
 	}
 	
 	/**
-	 * @param docName
+	 * @param documentName
 	 * @param token
 	 */
-	private void addToTokensList(String docName, String token)
+	private void addToTokensList(String documentName, String token)
 	{
 		boolean tokenExists = false;
 
 		for(Term t : tokens) {
 			if (t.getName().equals(token)) {
-				t.addDoc(docName);
+				t.addDoc(documentName);
 				tokenExists = true;
 			}
 		}
 
 		if(tokenExists == false) {
 			Term curTerm = new Term(token);
-			curTerm.addDoc(docName);
+			curTerm.addDoc(documentName);
 
 			tokens.add(curTerm);
-			termsList.add(token);
+			terms.add(token);
 		}
 	}
 }

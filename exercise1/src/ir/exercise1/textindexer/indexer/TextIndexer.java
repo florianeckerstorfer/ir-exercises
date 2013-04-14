@@ -1,19 +1,13 @@
 package ir.exercise1.textindexer.indexer;
 
-import ir.exercise1.textindexer.stemmer.StemmerInterface;
-import ir.exercise1.textindexer.stemmer.PorterStemmer;
 import ir.exercise1.textindexer.tokenizer.Tokenizer;
-import ir.exercise1.textindexer.tools.TextTools;
 import ir.exercise1.textindexer.collection.CollectionInterface;
-import ir.exercise1.textindexer.document.ClassDocument;
 import ir.exercise1.textindexer.model.Term;
 import ir.exercise1.textindexer.writer.file.ArffIndexFileWriter;
 
-import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-import java.util.Scanner;
 
 public class TextIndexer implements IndexerInterface
 {
@@ -125,8 +119,8 @@ public class TextIndexer implements IndexerInterface
 	{
 		tokenizer.tokenize(collection);
 
-		termsCount = tokenizer.getTermsList().size();
-		docsCount = tokenizer.getDocNamesList().size();
+		termsCount = tokenizer.getTerms().size();
+		docsCount = tokenizer.getDocumentNames().size();
 
 		dictionary = new Double[docsCount][termsCount];
 
@@ -149,7 +143,7 @@ public class TextIndexer implements IndexerInterface
 
 	private void writeIndexToArff(ArffIndexFileWriter arffWriter)
 	{
-		arffWriter.createIndexFile(tokenizer.getDocNamesList(), tokenizer.getTermsList(), dictionary);
+		arffWriter.createIndexFile(tokenizer.getDocumentNames(), tokenizer.getTerms(), dictionary);
 	}
 
 	private void computeWeights()
@@ -173,7 +167,7 @@ public class TextIndexer implements IndexerInterface
 				Map.Entry<String, Integer> curDocs = iterator.next();
 				double tf = 1+Math.log(curDocs.getValue());
 
-				int column = tokenizer.getDocNamesList().indexOf(curDocs.getKey());
+				int column = tokenizer.getDocumentNames().indexOf(curDocs.getKey());
 
 				if(tf >= lowerThreshold && tf <= upperThreshold) {
 					addToDictionary(column, curTerm.getName(), tf*idf);
@@ -184,7 +178,7 @@ public class TextIndexer implements IndexerInterface
 
 	private void addToDictionary(int column, String term, double weight)
 	{
-		int rowOfTerm = tokenizer.getTermsList().indexOf(term);
+		int rowOfTerm = tokenizer.getTerms().indexOf(term);
 		dictionary[column][rowOfTerm] = weight;
 
 	}
@@ -196,12 +190,12 @@ public class TextIndexer implements IndexerInterface
 
 	public List<String> getAllDocNamesPrototype()
 	{
-		return tokenizer.getDocNamesList();
+		return tokenizer.getDocumentNames();
 
 	}
 
 	public List<String> getAllTermsPrototype()
 	{
-		return tokenizer.getTermsList();
+		return tokenizer.getTerms();
 	}
 }

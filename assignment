@@ -22,7 +22,7 @@ You need to sign up for the group at https://tuwel.tuwien.ac.at/mod/grouptool/vi
 You may, e.g., use the TUWEL forum of the course for finding group members; please, keep in mind that workload/grading doesn't take into account if 1 or 2 persons worked on the assignment, though. You can keep the same groups for the rest of the exercises.
 
 
-FYI: each of the mentioned available techniques are presented during the lectures as well as extensive information can be found on the Web (hint: if applicable do some scientific literature research). Consequently, concrete details connected to ways of implementation are deliberately left open. However, any questions and/or (constructive) discussions are very welcome in the TUWEL forum. 
+FYI: each of the mentioned available techniques are presented during the lectures as well as extensive information can be found on the Web (hint: if applicable do some scientific literature research). Consequently, concrete details connected to ways of implementation are deliberately left open. However, any questions and/or (constructive) discussions are very welcome in the TUWEL forum.
 
 
 
@@ -32,11 +32,12 @@ Develop a simple text indexer and feature extractor, based on the information fr
 
 As text document corpus to feed your indexer you will be provided with a subset of the 20-newsgroups data set, and available at https://tuwel.tuwien.ac.at/mod/resource/view.php?id=140543
 
-This corpus contains a set of classes, and each document is assigned to exactly one class. The assignment in this case is implicitly with the folder structure. Your WEKA output file should contain as one attribute this class assignment.
+This corpus contains a set of classes, and each document is assigned to exactly one class. The assignment in this case is implicitly with the folder structure. Your WEKA output file should contain as one attribute this class assignment. → TODO!!
 
-Your indexer should also allow optional stemming of the documents, and allow frequency thresholding for lower and upper bounds. For your submission, you shall provide three different files with a different numbers of terms, using different frequency thresholds. You shall provide one file with few, one with medium and one with as-many-as-possible terms.
+Your indexer should also allow optional stemming of the documents, and allow frequency thresholding for lower and upper bounds. For your submission, you shall provide three different files with a different numbers of terms, using different frequency thresholds → TODO! (cli parser, derzeit manuell einstellbar; eventuell buggy!)
+. You shall provide one file with few, one with medium and one with as-many-as-possible terms.
 
-Make use of the feature to gzip compress the ARFF files, to reduce the overall file size. The thresholds should be user-controlled parameters to your program. 
+Make use of the feature to gzip compress the ARFF files, to reduce the overall file size. The thresholds should be user-controlled parameters to your program.
 
 
 
@@ -45,25 +46,27 @@ Task 1.2
 
 In the second part, you shall perform similarity retrieval on the two document collections used before.
 
-Input: 
+TODO: COSINE SCORE!
+
+Input:
 * your indexer created in Task 1.1
 * a set of 20 topics for the postings (20 newsgroups) text collection
 
-Each topic is a document filename (without extension) meaning that you are required to find the set of documents most similar to the given one. You are free to use the full text as a query, or to create your own set of queries, as you see fit. 
+Each topic is a document filename (without extension) meaning that you are required to find the set of documents most similar to the given one. You are free to use the full text as a query, or to create your own set of queries, as you see fit.
 
 Output: for each topic, the top 10 most similar documents of the corresponding collection.
 
 Expected work (for each of the three postings lists (small, medium, large, see above))
 
-1. index the text collection 
+1. index the text collection
 2. implement a similarity measure (see chapters 6, 7) based on your indexer
 3. return the top 10 most similar documents to each topic using your own similarity measure
 
 Output format:
-We expect, from each group, a set of 60 plain-text files, with a particular filename and content. 
+We expect, from each group, a set of 60 plain-text files, with a particular filename and content.
 
 Filename: <postingListSize>_topic<XX>_group<YY>.txt
-where 
+where
 - postingListSize can be small | medium | large
 - XX is a number identifying the topic, between 1 and 20 (do not use prefix with 0s)
 - YY is a number identifying your working group
@@ -71,9 +74,9 @@ Example: medium_topic1_group10.txt
 
 Content: each file contains exactly 10 lines. Each line has the following syntax:
 topic<XX> Q0 <doc_id> <rank> <similarity> group<YY>_<postingListSize>
-The 10 lines in the file are ranked in decreasing order on similarity (i.e. the first line contains the doc_id of the document most similar to the topic, the second line - the second most similar and so forth). This should mean a monotonically increasing ordering on the value. 
+The 10 lines in the file are ranked in decreasing order on similarity (i.e. the first line contains the doc_id of the document most similar to the topic, the second line - the second most similar and so forth). This should mean a monotonically increasing ordering on the value.
 
-The doc_id is simply the filename (without extension). 
+The doc_id is simply the filename (without extension).
 
 Example of the content of a file:
 topic1 Q0 misc.forsale/74721 1 34.32 group10_medium
