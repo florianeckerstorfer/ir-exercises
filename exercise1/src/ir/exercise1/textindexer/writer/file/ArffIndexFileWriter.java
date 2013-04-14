@@ -20,7 +20,7 @@ public class ArffIndexFileWriter
 		this.outputStream = outputStream;
 	}
 
-	public void createIndexFile(InvertedIndex index, Double[][] dictionary)
+	public void createIndexFile(InvertedIndex index)
 	{
 		//header
 		outputStream.println("% 1. Title: 20_newsgroups_subset Index");
@@ -52,8 +52,8 @@ public class ArffIndexFileWriter
 			outputStream.print("className, "); // TODO
 			outputStream.print(index.getDocumentName(documentId));
 			
-			for (int tokenId = 0; tokenId < index.getIndexSize(); tokenId++) {
-				postingList = index.getPostingList(index.getToken(tokenId));
+			for(String token : index.getTokens()) {
+				postingList = index.getPostingList(token);
 				posting = postingList.getPosting(documentId);
 				
 				if (null != posting) {
@@ -66,21 +66,6 @@ public class ArffIndexFileWriter
 			}
 			outputStream.print("\n");
 		}
-
-//		for(int i = 0; i < dictionary.length; i++) {
-//			outputStream.print("classname, "); // TODO
-//			outputStream.print(index.getDocumentName(i) + ", ");
-//			for(int j = 0; j < dictionary[i].length; j++) {
-//				if(dictionary[i][j] != null) {
-//					outputStream.print(dictionary[i][j]);
-//				} else {
-//					outputStream.print(0);
-//				}
-//
-//				outputStream.print(", ");
-//			}
-//			outputStream.println();
-//		}
 
 		outputStream.close();
 

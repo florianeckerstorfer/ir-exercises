@@ -31,15 +31,10 @@ public class TextIndexer implements IndexerInterface
 	// TODO change to more efficient data structures
 
 	// TODO to save the docNames and the terms in separate lists is clumsy...
-	Double[][] dictionary; // TODO -> sparse Matrix
+//	Double[][] dictionary; // TODO -> sparse Matrix
 
 	private CollectionInterface collection;
 	private Tokenizer tokenizer;
-
-	int docsCount = 0;
-	long avgTokensPerDoc = 0;
-	int termsCount = 0;
-	long tokensCount = 0;
 
 	/**
 	 * Constructor.
@@ -52,8 +47,6 @@ public class TextIndexer implements IndexerInterface
 	{
 		this.collection = collection;
 		this.tokenizer  = tokenizer;
-
-		termsCount = 0; //  TODO calculate when terms list is finished
 	}
 
 	/**
@@ -138,12 +131,12 @@ public class TextIndexer implements IndexerInterface
 			}
 		}
 
-		termsCount = index.getIndexSize();
-		docsCount = index.getDocumentCount();
+		int tokensCount = index.getIndexSize();
+		int docsCount = index.getDocumentCount();
 
-		dictionary = new Double[docsCount][termsCount];
+//		dictionary = new Double[docsCount][termsCount];
 
-		System.out.println("# of terms: " + termsCount);
+		System.out.println("# of tokens: " + tokensCount);
 
 		System.out.println("computation of tf-idf weight started");
 		computeWeights(index);
@@ -152,17 +145,17 @@ public class TextIndexer implements IndexerInterface
 		writeIndexToArff(index, arffWriter);
 
 
-		avgTokensPerDoc = tokensCount / docsCount;
+		double avgTokensPerDoc = tokensCount / docsCount;
 
 		System.out.println(docsCount + " documents");
 		System.out.println(tokensCount + " tokens");
-		System.out.println(termsCount + " terms");
+		System.out.println(tokensCount + " terms");
 		System.out.println(avgTokensPerDoc + " avg. # tokens per document");
 	}
 
 	private void writeIndexToArff(InvertedIndex index, ArffIndexFileWriter arffWriter)
 	{
-		arffWriter.createIndexFile(index, dictionary);
+		arffWriter.createIndexFile(index);
 	}
 
 	private void computeWeights(InvertedIndex index)
@@ -190,16 +183,16 @@ public class TextIndexer implements IndexerInterface
 
 				if (tf >= lowerThreshold && tf <= upperThreshold) {
 					posting.setTfIdf(tf*idf);
-					addToDictionary(curDocs.getKey(), row, tf*idf);
+//					addToDictionary(curDocs.getKey(), row, tf*idf);
 				}
 			}
 		}
 	}
 
-	private void addToDictionary(int column, int row, double weight)
-	{
-		 dictionary[column][row] = weight;
-	}
+//	private void addToDictionary(int column, int row, double weight)
+//	{
+//		 dictionary[column][row] = weight;
+//	}
 //
 //	public Double[][] getDictionaryPrototype()
 //	{
