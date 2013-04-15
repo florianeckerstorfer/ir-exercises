@@ -172,9 +172,6 @@ public class TextIndexer implements IndexerInterface
 		//tf = # of occurance of the term in document
 		//tf-idf = tf x idf
 		
-		double totalTf = 0;
-		int tfCount = 0;
-		
 		WeightedPostingList weightedPostingList;
 		WeightedPosting weightedPosting;
 

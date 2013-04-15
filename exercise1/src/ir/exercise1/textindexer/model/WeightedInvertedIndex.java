@@ -29,6 +29,21 @@ public class WeightedInvertedIndex
 		return documentNames.size();
 	}
 	
+	public void addToken(String token, int documentId, double tfIdf)
+	{
+		WeightedPostingList postingList;
+		
+		if (!index.containsKey(token)) {
+			postingList = new WeightedPostingList();
+			index.put(token, postingList);
+			tokens.add(token);
+		} else {
+			postingList = index.get(token);
+		}
+		
+		postingList.setPosting(documentId, new WeightedPosting(tfIdf));
+	}
+	
 	public void setPostingList(String token, WeightedPostingList postingList)
 	{
 		tokens.add(token);

@@ -98,6 +98,17 @@
             <arg value="./output/index_small-threshold.arff.gz" />
         </java>
     </target>
+	
+    <target name="run-retrieval" depends="compile">
+        <java classname="ir.exercise1.similarityretrieval.SimilarityRetrievalMain">
+            <classpath>
+                <pathelement location="${build-dir}" />
+                <path refid="main.classpath" />
+            </classpath>
+            <arg value="-index" />
+            <arg value="./output/index_small-threshold.arff.gz" />
+        </java>
+    </target>
 
     <target name="test" depends="compile">
         <junit showoutput="yes" haltonfailure="no">
