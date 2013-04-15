@@ -59,7 +59,7 @@ public class ArffIndexFileWriter
 		// Iterate through all documents
 		for (int documentId = 0; documentId < index.getDocumentCount(); documentId++) {
 			vals = new double[data.numAttributes()];
-			vals[0] = data.attribute(0).addStringValue("className");
+			vals[0] = data.attribute(0).addStringValue(index.getClassName(documentId));
 			vals[1] = data.attribute(1).addStringValue(index.getDocumentName(documentId));
 			
 			attId = 2;

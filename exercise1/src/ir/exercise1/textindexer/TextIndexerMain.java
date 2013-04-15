@@ -67,25 +67,6 @@ public class TextIndexerMain
         System.out.println("java -jar TextIndexer.jar path/to/documents lowerThreshold upperThreshold stemming");
     }
 
-    public void runTextIndexer()
-    {
-        // String resultFileName = "<postingListSize>_topic<XX>_groupC<YY>";
-
-        // SearchEngine searchEngine = new SearchEngine(
-        //     new FilesystemGzipReader(),
-        //     new File("./arff/newgroup_index.arff.gz"),
-        //     new File("./output/" + resultFileName + ".txt")
-        // );
-        // //searchEngine.search("test");
-        // searchEngine.searchPrototype(
-        //     "talk.politics.mideast/76261",
-        //     textInput.getDictionaryPrototype(),
-        //     textInput.getAllTermsPrototype(),
-        //     textInput.getAllDocNamesPrototype()
-        // );
-        // //searchEngine.searchPrototype("word", textInput.getDictionaryPrototype(), textInput.getAllTermsPrototype(), textInput.getAllDocNamesPrototype());
-    }
-
     private Timer timer = new Timer();
 
     @Argument
@@ -139,7 +120,7 @@ public class TextIndexerMain
         
         Tokenizer tokenizer = new Tokenizer(stemming);
 
-        TextIndexer indexer = new TextIndexer(collection, tokenizer, 200);
+        TextIndexer indexer = new TextIndexer(collection, tokenizer, 500);
         indexer.setLowerThreshold(lowerThreshold);
         indexer.setUpperThreshold(upperThreshold);
         indexer.setStemming(stemming);

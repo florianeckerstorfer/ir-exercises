@@ -20,6 +20,7 @@ public class ArffIndexFileReader
 		
 		Instances data;
 		int docId;
+		String className = "";
 		
 		try {
 			data = new Instances(reader);
@@ -27,7 +28,15 @@ public class ArffIndexFileReader
 			data.setClassIndex(data.numAttributes() - 1);
 			
 			for (int i = 0; i < data.numInstances(); i++) {
+				try {
+					if (null != data.attribute(0).value(i)) {
+						className = data.attribute(0).value(i);
+					}
+				} catch (ArrayIndexOutOfBoundsException e) {
+				}
 				docId = index.addDocument(data.attribute(1).value(i));
+				index.addClassName(docId, className);
+				System.out.println(index.getClassName(docId));
 				for (int j = 2; j < data.numAttributes(); j++) {
 					index.addToken(data.attribute(j).name(), docId, data.instance(i).value(j));
 				}

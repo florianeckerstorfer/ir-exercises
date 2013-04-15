@@ -8,6 +8,7 @@ import java.util.Map;
 public class WeightedInvertedIndex
 {
 	private List<String> documentNames = new ArrayList<String>();
+	private Map<Integer, String> classNames = new HashMap<Integer, String>();
 	
 	private Map<String, WeightedPostingList> index = new HashMap<String, WeightedPostingList>();
 	private List<String> tokens = new ArrayList<String>();
@@ -27,6 +28,16 @@ public class WeightedInvertedIndex
 	public int getDocumentCount()
 	{
 		return documentNames.size();
+	}
+	
+	public void addClassName(Integer documentId, String className)
+	{
+		classNames.put(documentId, className);
+	}
+	
+	public String getClassName(Integer documentId)
+	{
+		return classNames.get(documentId);
 	}
 	
 	public void addToken(String token, int documentId, double tfIdf)
