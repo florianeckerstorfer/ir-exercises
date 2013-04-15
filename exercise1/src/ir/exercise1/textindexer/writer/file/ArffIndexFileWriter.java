@@ -82,6 +82,10 @@ public class ArffIndexFileWriter
 				}
 			}
 			data.add(new Instance(1.0, vals));
+			
+			if ((documentId % 100) == 0) {
+				System.out.println(documentId);
+			}
 		}
 		
 		outputStream.print(data);

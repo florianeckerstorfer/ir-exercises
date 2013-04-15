@@ -24,19 +24,31 @@ Ant is used to compile and run the text indexer. Compile the project:
 
     $ ant compile
 
-Create an executable JAR:
+You need to probably increase the memory the Java heap has:
 
-    $ ant dist
+    export ANT_OPTS=-Xmx10g
 
-Run the text indexer:
+Note: the memory is mostly when reading and reading ARFF files and highly depends on the Gargabe Collector of JVM (that is, luck).
 
-    $ ant run
+Now you can run the text indexer;
 
-Or run them all at once:
+    $ ant run-index-small
+    $ ant run-index-medium
+    $ ant run-index-large
 
-    $ ant compile dist run
+Or you can run all three at once:
 
-Run all tests:
+    $ ant run-index
 
-    $ ant test
+To fire 20 sample queries against the index you can use:
+
+    $ ant run-retrieval-small
+    $ ant run-retrieval-medium
+    $ ant run-retrieval-large
+
+Or you can execute all three at once:
+
+    $ ant run-retrieval
+
+The index is stored in `./output` and the results of the queries are stored in `./output/query`.
 

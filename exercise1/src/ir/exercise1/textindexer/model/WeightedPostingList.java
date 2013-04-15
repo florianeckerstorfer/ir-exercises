@@ -28,6 +28,11 @@ public class WeightedPostingList
 		return documents.get(documentId);
 	}
 	
+	public Map<Integer, WeightedPosting> getDocuments()
+	{
+		return documents;
+	}
+	
 	public int getSize()
 	{
 		return documents.size();

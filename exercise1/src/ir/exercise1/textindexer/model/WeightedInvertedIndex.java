@@ -40,6 +40,11 @@ public class WeightedInvertedIndex
 		return classNames.get(documentId);
 	}
 	
+	public Map<Integer, String> getClassNames()
+	{
+		return classNames;
+	}
+	
 	public void addToken(String token, int documentId, double tfIdf)
 	{
 		WeightedPostingList postingList;

@@ -99,6 +99,9 @@
         </java>
     </target>
 	
+	<target name="run-index" depends="run-index-small,run-index-medium,run-index-large">
+	</target>
+	
     <target name="run-retrieval-small" depends="compile">
         <java classname="ir.exercise1.similarityretrieval.SimilarityRetrievalMain">
             <classpath>
@@ -107,6 +110,9 @@
             </classpath>
             <arg value="-index" />
             <arg value="./output/index_small-threshold.arff.gz" />
+        	<arg value="-thresholdSize" />
+        	<arg value="small" />
+        	<arg value="-stemming" />
         </java>
     </target>
 	
@@ -118,6 +124,9 @@
             </classpath>
             <arg value="-index" />
             <arg value="./output/index_medium-threshold.arff.gz" />
+        	<arg value="-thresholdSize" />
+        	<arg value="medium" />
+	    	<arg value="-stemming" />
         </java>
     </target>
 	
@@ -129,8 +138,14 @@
             </classpath>
             <arg value="-index" />
             <arg value="./output/index_large-threshold.arff.gz" />
+        	<arg value="-thresholdSize" />
+        	<arg value="large" />
+        	<arg value="-stemming" />
         </java>
     </target>
+	
+	<target name="run-retrieval" depends="run-retrieval-small,run-retrieval-medium,run-retrieval-large">
+	</target>
 
     <target name="test" depends="compile">
         <junit showoutput="yes" haltonfailure="no">

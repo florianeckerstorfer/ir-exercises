@@ -38,6 +38,10 @@ public class TextIndexer implements IndexerInterface
 
 	private CollectionInterface collection;
 	private Tokenizer tokenizer;
+	
+	public TextIndexer()
+	{
+	}
 
 	/**
 	 * Constructor.
@@ -131,8 +135,6 @@ public class TextIndexer implements IndexerInterface
 
 			ClassDocument document = (ClassDocument) collection.next();
 			
-			System.out.println(document.getClassName() + ": " + document.getName());
-
 			int documentId = index.addDocument(document.getName());
 			weightedIndex.addDocument(document.getName());
 			weightedIndex.addClassName(documentId, document.getClassName());
@@ -164,7 +166,7 @@ public class TextIndexer implements IndexerInterface
 		arffWriter.buildIndexFile(weightedIndex, getStemming(), getLowerThreshold(), getUpperThreshold());
 	}
 
-	private void computeWeights(InvertedIndex index, WeightedInvertedIndex weightedIndex)
+	public void computeWeights(InvertedIndex index, WeightedInvertedIndex weightedIndex)
 	{
 		//df = # of docs in the collection that contains the term
 		//idf = log(collectionSize / df)
@@ -190,7 +192,7 @@ public class TextIndexer implements IndexerInterface
 			while (iterator.hasNext()) {
 				Map.Entry<Integer, Posting> document = iterator.next();
 				Posting posting = document.getValue();
-				double tf = 1+Math.log(posting.getCount());
+				double tf = Math.log(1 + posting.getCount());
 				
 				if (tf >= lowerThreshold && tf <= upperThreshold) {
 					weightedPosting = new WeightedPosting(tf*idf);

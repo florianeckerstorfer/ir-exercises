@@ -5,6 +5,7 @@ import ir.exercise1.textindexer.model.WeightedInvertedIndex;
 import java.io.BufferedReader;
 import java.io.IOException;
 
+import weka.core.Instance;
 import weka.core.Instances;
 
 /**
@@ -25,25 +26,38 @@ public class ArffIndexFileReader
 		try {
 			data = new Instances(reader);
 			reader.close();
+			reader = null;
 			data.setClassIndex(data.numAttributes() - 1);
 			
-			for (int i = 0; i < data.numInstances(); i++) {
-				try {
-					if (null != data.attribute(0).value(i)) {
-						className = data.attribute(0).value(i);
-					}
-				} catch (ArrayIndexOutOfBoundsException e) {
-				}
+			System.out.println("Start to build index based on read ARFF file.");
+			int classI = 1;
+			
+			for (int i = 1; i < data.numInstances(); i++) {
+				Instance instance = data.instance(i);
 				docId = index.addDocument(data.attribute(1).value(i));
+				if (i == 1 || (i % 400) == 0) {
+					className = data.attribute(0).value(classI);
+					classI++;
+				}
+				
 				index.addClassName(docId, className);
-				System.out.println(index.getClassName(docId));
 				for (int j = 2; j < data.numAttributes(); j++) {
-					index.addToken(data.attribute(j).name(), docId, data.instance(i).value(j));
+					if (instance.value(j) > 0) {
+						index.addToken(data.attribute(j).name(), docId, instance.value(j));
+					}
+				}
+				
+				instance = null;
+				
+				if ((i % 500) == 0) {
+					System.out.println(i);
 				}
 			}
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		
+		data = null;
 		
 		return index;
 	}
