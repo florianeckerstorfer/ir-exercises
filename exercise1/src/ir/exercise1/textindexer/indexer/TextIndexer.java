@@ -36,12 +36,6 @@ public class TextIndexer implements IndexerInterface
 	 */
 	private boolean stemming = true;
 
-	// TODO add document class name to arff file
-	// TODO change to more efficient data structures
-
-	// TODO to save the docNames and the terms in separate lists is clumsy...
-//	Double[][] dictionary; // TODO -> sparse Matrix
-
 	private CollectionInterface collection;
 	private Tokenizer tokenizer;
 
@@ -150,7 +144,7 @@ public class TextIndexer implements IndexerInterface
 				break;
 			}
 		}
-
+		
 		double avgTokensPerDoc = index.getIndexSize() / index.getDocumentCount();
 
 		System.out.println("\nSome startistics:");
@@ -160,6 +154,10 @@ public class TextIndexer implements IndexerInterface
 
 		System.out.println("Starting computation of TF.IDF weights.");
 		computeWeights(index, weightedIndex);
+		
+		// We don't need the normal index anymore, hopefully JVM garbage collects it
+		index = null;
+		collection = null;
 
 		System.out.println("\nStarting to write ARFF index.");
 		arffWriter.buildIndexFile(weightedIndex, getStemming(), getLowerThreshold(), getUpperThreshold());

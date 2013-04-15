@@ -45,7 +45,7 @@
         </javac>
     </target>
 
-    <target name="run-large" depends="compile">
+    <target name="run-index-large" depends="compile">
         <java classname="ir.exercise1.textindexer.TextIndexerMain">
             <classpath>
                 <pathelement location="${build-dir}" />
@@ -63,7 +63,7 @@
         </java>
     </target>
 
-    <target name="run-medium" depends="compile">
+    <target name="run-index-medium" depends="compile">
         <java classname="ir.exercise1.textindexer.TextIndexerMain">
             <classpath>
                 <pathelement location="${build-dir}" />
@@ -81,7 +81,7 @@
         </java>
     </target>
 
-    <target name="run-small" depends="compile">
+    <target name="run-index-small" depends="compile">
         <java classname="ir.exercise1.textindexer.TextIndexerMain">
             <classpath>
                 <pathelement location="${build-dir}" />
@@ -99,7 +99,7 @@
         </java>
     </target>
 	
-    <target name="run-retrieval" depends="compile">
+    <target name="run-retrieval-small" depends="compile">
         <java classname="ir.exercise1.similarityretrieval.SimilarityRetrievalMain">
             <classpath>
                 <pathelement location="${build-dir}" />
@@ -107,6 +107,28 @@
             </classpath>
             <arg value="-index" />
             <arg value="./output/index_small-threshold.arff.gz" />
+        </java>
+    </target>
+	
+    <target name="run-retrieval-medium" depends="compile">
+        <java classname="ir.exercise1.similarityretrieval.SimilarityRetrievalMain">
+            <classpath>
+                <pathelement location="${build-dir}" />
+                <path refid="main.classpath" />
+            </classpath>
+            <arg value="-index" />
+            <arg value="./output/index_medium-threshold.arff.gz" />
+        </java>
+    </target>
+	
+    <target name="run-retrieval-large" depends="compile">
+        <java classname="ir.exercise1.similarityretrieval.SimilarityRetrievalMain">
+            <classpath>
+                <pathelement location="${build-dir}" />
+                <path refid="main.classpath" />
+            </classpath>
+            <arg value="-index" />
+            <arg value="./output/index_large-threshold.arff.gz" />
         </java>
     </target>
 

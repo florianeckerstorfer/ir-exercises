@@ -28,7 +28,7 @@ public class ArffIndexFileReader
 			
 			for (int i = 0; i < data.numInstances(); i++) {
 				docId = index.addDocument(data.attribute(1).value(i));
-				for (int j = 0; j < data.numAttributes(); j++) {
+				for (int j = 2; j < data.numAttributes(); j++) {
 					index.addToken(data.attribute(j).name(), docId, data.instance(i).value(j));
 				}
 			}
