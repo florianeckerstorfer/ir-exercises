@@ -12,7 +12,7 @@ The following libraries must be put into the `vendor/` directory.
 - [`junit-4.11.jar`](http://search.maven.org/remotecontent?filepath=junit/junit/4.11/junit-4.11.jar)
 - [`objenesis-1.3.jar`](http://objenesis.googlecode.com/files/objenesis-1.3-bin.zip)
 - [`commons-cli-1.2.jar`](http://tweedo.com/mirror/apache//commons/cli/binaries/commons-cli-1.2-bin.zip)
-- [`weka.jar`](http://prdownloads.sourceforge.net/weka/weka-3-7-9.zip)
+- [`weka.jar`](http://sourceforge.net/projects/weka/files/latest/download)
 - [`args4j-2.0.21.jar`](http://maven.jenkins-ci.org/content/repositories/releases/args4j/args4j/2.0.21/args4j-2.0.21.jar)
 - [`colt.jar`](http://acs.lbl.gov/software/colt/colt-download/releases/colt-1.2.0.zip) (and `concurrent.jar` from the same download)
 
