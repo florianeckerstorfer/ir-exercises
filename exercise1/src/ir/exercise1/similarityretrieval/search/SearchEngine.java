@@ -39,7 +39,8 @@ public class SearchEngine
 {
 	public enum Measure {
 		OVERLAPSCORE,
-		COSINE
+		COSINE,
+		BM25
 	}
 
 	private WeightedInvertedIndex index;
@@ -48,13 +49,14 @@ public class SearchEngine
 	private Double[][] dictionary;
 	private ArrayList<String> allTerms;
 	private ArrayList<String> allDocs;
-	private Measure measure = Measure.OVERLAPSCORE;
+	public Measure measure = Measure.BM25;
 
 	public SearchEngine(WeightedInvertedIndex index, boolean stemming)
 	{
 		this.index = index;
 		this.stemming = stemming;
 	}
+	
 	
 	public String search(String query, int topicId, String groupName)
 	{
@@ -72,26 +74,34 @@ public class SearchEngine
 		
 		// TODO: Cosine scoring!!
 		
-		for (String queryToken : queryTokens) {
-			postingList = index.getPostingList(queryToken);
-			if (null != postingList) {
-				posting = postingList.getDocuments();
-				iterator = posting.entrySet().iterator();
-				while (iterator.hasNext()) {
-					document = iterator.next();
-					scores[document.getKey()] += document.getValue().getTfIdf();
+		if (measure == Measure.OVERLAPSCORE) {
+			for (String queryToken : queryTokens) {
+				postingList = index.getPostingList(queryToken);
+				if (null != postingList) {
+					posting = postingList.getDocuments();
+					iterator = posting.entrySet().iterator();
+					while (iterator.hasNext()) {
+						document = iterator.next();
+						scores[document.getKey()] += document.getValue().getTfIdf();
+					}
 				}
 			}
 		}
 		
-//		Iterator<String> it = index.getClassNames().values().iterator();
-//		while (it.hasNext()) {
-//			System.out.println(it.next());
-//		}
-		
-//		for (int i = 0; i < scores.length; i++) {
-//			System.out.println(index.getClassName(i) + "/" + index.getDocumentName(i) + ": " + scores[i]);
-//		}
+		if (measure == Measure.BM25) {
+			
+			for (String queryToken : queryTokens) {
+				postingList = index.getPostingList(queryToken);
+				if (null != postingList) {
+					posting = postingList.getDocuments();
+					iterator = posting.entrySet().iterator();
+					while (iterator.hasNext()) {
+						document = iterator.next();
+						scores[document.getKey()] += scoreBM25(document.getKey(), queryToken, document.getValue().getTfIdf());
+					}
+				}
+			}
+		}
 		
 		ArrayIndexComparator comparator = new ArrayIndexComparator(scores);
 		Integer[] indexes = comparator.createIndexArray();
@@ -110,6 +120,55 @@ public class SearchEngine
 		return output;
 	}
 	
+	private double scoreBM25(int docId, String queryToken, double tfIdf) {
+		
+		double score = 0.0;
+		
+		/**
+		 * parameter k1 calibrates document term frequency scaling. k1 = 0 -> corresponds to a binary model = no term frequency. 
+		 * increasing k1 give more boost to rare words
+		 */
+		double k1 = 3.0; 
+		
+		/**
+		 * parameter b calibrates the scaling by document length. takes values from 0 to 1. 
+		 * 0 -> no length normalization
+		 * 1 -> fully scalling the term weight by document length
+		 */
+		double b = 0.0;
+		
+		int N = index.getDocumentCount();
+		int df = 1;
+		
+		if (index.getPostingList(queryToken) != null) {
+			df = index.getPostingList(queryToken).getSize();
+		}
+		
+		int tf = (int) Math.pow(Math.E, tfIdf / Math.log(N/df)) - 1;
+		
+		int docLength;
+		
+		if (index.getDocLengths().get(docId) != null) {
+			docLength = index.getDocLengths().get(docId);
+		} else {
+			docLength = 1;
+		}
+		
+		double avgLength = index.getTotalDocLength() / N;
+		
+		score = Math.log(N / df) * (k1+1) * tf / (k1*((1-b)+b*(docLength/avgLength))+tf);
+		
+		/*
+		System.out.println("N: " + N);
+		System.out.println("df: " + df);
+		System.out.println("tf: " + tf);
+		System.out.println("docLength: " + docLength);
+		System.out.println("avgLength: " + avgLength);
+		*/
+		return score;
+	}
+	
+
 	private List<String> tokenizeQuery(String query)
 	{
 		StemmerInterface porterStemmer = new PorterStemmer();
@@ -134,102 +193,4 @@ public class SearchEngine
 		return queryTokens;
 	}
 	
-	private double calcWeighting(String token, int documentCount)
-	{
-		double tf = 0.0;
-		double df = 0.0;
-		return Math.log(1 + tf) * Math.log(documentCount/df);
-	}
-
-	public void searchPrototype(String query, Double[][] dictionary, ArrayList<String> termsList, ArrayList<String> docsList)
-	{
-		this.dictionary = dictionary;
-		allTerms = termsList;
-		allDocs = docsList;
-
-		boolean allowStemming = true; // TODO cli parser
-
-		ArrayList<String> queryTerms = new ArrayList<String>();
-
-		StemmerInterface porterStemmer = new PorterStemmer();
-
-		Scanner textScanner = new Scanner(query);
-
-		while (textScanner.hasNext()) {
-			String compound = textScanner.next().toLowerCase();
-
-			// replace everything that is not a letter with a white space
-			// for the word scanner (since the standard delimiter uses
-			// whitespace)
-			// not very efficient to run through the string twice, but it
-			// works
-			compound = compound.replaceAll("[^a-z\\s]", " ");
-			compound = compound.trim();
-			Scanner compoundScanner = new Scanner(compound);
-
-			while (compoundScanner.hasNext()) {
-				String token = compoundScanner.next();
-
-				if (!TextTools.isStopWord(token)) {
-
-					if (allowStemming) {
-						token = TextTools.doStemming(token, porterStemmer);
-					}
-
-					queryTerms.add(token);
-				}
-			}
-			compoundScanner.close();
-		}
-
-		textScanner.close();
-
-		Double result[] = score(queryTerms);
-
-		toPrintForm(1, result, "C", "small");
-
-	}
-
-	private Double[] score(ArrayList<String> queryTerms)
-	{
-		String result = "";
-
-		Double[] scores = new Double[queryTerms.size()];
-
-		for(int i = 0; i < queryTerms.size(); i++) {
-			double score = 0.0;
-			int indexOfQueryTerm = allTerms.indexOf(queryTerms.get(i));
-
-			if (indexOfQueryTerm != -1) {
-				for (int j = 0; j < allDocs.size(); j++) {
-					if(dictionary[j][indexOfQueryTerm] != null) {
-						//System.out.println("query term: " + queryTerms.get(i) + ", j: " + j + ", indexOfQueryTerm: " + indexOfQueryTerm);
-						score += dictionary[j][indexOfQueryTerm];
-						//System.out.println("score: " + score);
-					}
-				}
-			}
-
-			scores[i] = score;
-		}
-
-		Arrays.sort(scores);
-
-		return scores;
-	}
-
-	private String toPrintForm(int topic, Double[] result, String group, String postingListSize)
-	{
-		String output = "";
-		int inverse_i = result.length-1;
-
-		for (int i = 0; i < result.length; i++) {
-
-			output += "topic"+topic+ " Q0" + " " + "docID" + " " + (i+1) + " " + result[inverse_i] + " " + "group" +group + " " + postingListSize + "\n";
-			inverse_i--;
-		}
-		System.out.println(output);
-		return output;
-
-	}
 }

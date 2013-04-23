@@ -119,8 +119,8 @@ public class SimilarityRetrievalMain
         SearchEngine engine = new SearchEngine(index, stemming);
         
         List<String> queryFiles = new ArrayList<String>();
-        queryFiles.add("misc.forsale/76057");
-        queryFiles.add("talk.religion.misc/83561");
+        queryFiles.add("alt.atheism/51120");
+        queryFiles.add("alt.atheism/51121");
         queryFiles.add("talk.politics.mideast/75422");
         queryFiles.add("sci.electronics/53720");
         queryFiles.add("sci.crypt/15725");
@@ -147,6 +147,7 @@ public class SimilarityRetrievalMain
         	queryDocument = queryReader.read(new File("./data/20_newsgroups_subset/" + queryFile));
         	query = queryDocument.getContent();
         
+        	//result = engine.search(query, i, "groupC_" + thresholdSize);
         	result = engine.search(query, i, "groupC_" + thresholdSize);
         	
         	try {
