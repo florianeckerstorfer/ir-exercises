@@ -42,6 +42,7 @@ public class ArffIndexFileWriter
 		
 		atts.addElement(new Attribute("className", (FastVector) null));
 		atts.addElement(new Attribute("docID", (FastVector) null));
+		atts.addElement(new Attribute("docLength", (FastVector) null));
 		
 		Instances data = new Instances("20_newsgroups_subset", atts, 0);
 		
@@ -61,8 +62,8 @@ public class ArffIndexFileWriter
 			vals = new double[data.numAttributes()];
 			vals[0] = data.attribute(0).addStringValue(index.getClassName(documentId));
 			vals[1] = data.attribute(1).addStringValue(index.getDocumentName(documentId));
-			
-			attId = 2;
+			vals[2] = data.attribute(2).addStringValue(index.getDocLengths().get(documentId).toString()); 
+			attId = 3;
 			
 			// Iterate through all tokens
 			for(String token : index.getTokens()) {

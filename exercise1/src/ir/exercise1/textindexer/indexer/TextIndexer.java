@@ -147,7 +147,7 @@ public class TextIndexer implements IndexerInterface
 				break;
 			}
 		}
-		
+				
 		double avgTokensPerDoc = index.getIndexSize() / index.getDocumentCount();
 
 		System.out.println("\nSome startistics:");
@@ -157,7 +157,7 @@ public class TextIndexer implements IndexerInterface
 
 		System.out.println("Starting computation of TF.IDF weights.");
 		computeWeights(index, weightedIndex);
-		
+		weightedIndex.setDocLengths(index.getDocLengths());
 		// We don't need the normal index anymore, hopefully JVM garbage collects it
 		index = null;
 		collection = null;

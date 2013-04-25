@@ -14,6 +14,8 @@ public class InvertedIndex
 {
 	private List<String> documentNames = new ArrayList<String>();
 	
+	private Map<Integer, Integer> docLengths = new HashMap<Integer, Integer>();
+	
 	private Map<String, PostingList> index = new HashMap<String, PostingList>();
 	private List<String> tokens = new ArrayList<String>();
 	
@@ -67,5 +69,13 @@ public class InvertedIndex
 	public int getIndexSize()
 	{
 		return index.size();
+	}
+
+	public Map<Integer, Integer> getDocLengths() {
+		return docLengths;
+	}
+
+	public void setDocLengths(Map<Integer, Integer> docLengths) {
+		this.docLengths = docLengths;
 	}
 }

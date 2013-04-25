@@ -60,8 +60,9 @@ public class Tokenizer
 	{
 		StemmerInterface porterStemmer = new PorterStemmer();
 
+		int curDocLength = 0;
+		
 		Scanner textScanner = new Scanner(document.getContent().toLowerCase()).useDelimiter("[^a-z]");
-
 		while (textScanner.hasNext()) {
 			String token = textScanner.next().trim();
 			if (token.length() > 0) {
@@ -70,10 +71,14 @@ public class Tokenizer
 						token = TextTools.doStemming(token, porterStemmer);
 					}
 					index.addToken(token, documentId);
+					
+					curDocLength++;
 				}
 			}
 		}
-
+		
+		index.getDocLengths().put(documentId, curDocLength);
+		
 		textScanner.close();
 	}
 }
