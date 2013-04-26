@@ -3,26 +3,13 @@ package ir.exercise2.probmodel.search;
 import ir.exercise1.common.array.ArrayIndexComparator;
 import ir.exercise1.textindexer.stemmer.PorterStemmer;
 import ir.exercise1.textindexer.stemmer.StemmerInterface;
-import ir.exercise1.textindexer.tokenizer.Tokenizer;
 import ir.exercise1.textindexer.tools.TextTools;
-import ir.exercise1.textindexer.document.ClassDocument;
-import ir.exercise1.textindexer.document.DocumentInterface;
-import ir.exercise1.textindexer.indexer.TextIndexer;
-import ir.exercise1.textindexer.model.InvertedIndex;
 import ir.exercise1.textindexer.model.WeightedInvertedIndex;
 import ir.exercise1.textindexer.model.WeightedPosting;
 import ir.exercise1.textindexer.model.WeightedPostingList;
-import ir.exercise1.textindexer.reader.file.FileReaderInterface;
 
-import java.io.BufferedOutputStream;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collection;
-import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
@@ -46,9 +33,6 @@ public class SearchEngine
 	private WeightedInvertedIndex index;
 	private boolean stemming;
 
-	private Double[][] dictionary;
-	private ArrayList<String> allTerms;
-	private ArrayList<String> allDocs;
 	public Measure measure = Measure.BM25;
 
 	public SearchEngine(WeightedInvertedIndex index, boolean stemming)

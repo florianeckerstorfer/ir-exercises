@@ -14,7 +14,6 @@ import java.io.Reader;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.zip.GZIPInputStream;
-import java.util.zip.GZIPOutputStream;
 
 import org.kohsuke.args4j.Argument;
 import org.kohsuke.args4j.CmdLineException;
@@ -23,6 +22,8 @@ import org.kohsuke.args4j.Option;
 
 import ir.exercise1.common.timer.Timer;
 import ir.exercise1.similarityretrieval.reader.file.ArffIndexFileReader;
+import ir.exercise1.similarityretrieval.reader.file.IndexFileReaderInterface;
+import ir.exercise1.similarityretrieval.reader.file.TextIndexFileReader;
 import ir.exercise2.probmodel.search.SearchEngine;
 import ir.exercise1.textindexer.document.ClassDocumentFactory;
 import ir.exercise1.textindexer.document.DocumentInterface;
@@ -30,7 +31,6 @@ import ir.exercise1.textindexer.model.WeightedInvertedIndex;
 import ir.exercise1.textindexer.reader.document.DocumentReaderInterface;
 import ir.exercise1.textindexer.reader.document.TextDocumentReader;
 import ir.exercise1.textindexer.reader.file.FilesystemReader;
-import ir.exercise1.textindexer.tokenizer.Tokenizer;
 
 public class ProbModelMain
 {
@@ -104,66 +104,80 @@ public class ProbModelMain
     {
         timer.reset().start();
         
-        ArffIndexFileReader arffReader = new ArffIndexFileReader();
-        WeightedInvertedIndex index = arffReader.readIndex(getReader(indexFile));
-        arffReader = null;
-        
-        System.out.println("Read index from " + indexFile + ".");
-        System.out.println(index.getDocumentCount() + " documents");
-        System.out.println(index.getIndexSize() + " tokens");
-        
-        DocumentReaderInterface queryReader = new TextDocumentReader(new ClassDocumentFactory(), new FilesystemReader());
-        DocumentInterface queryDocument;
-        String query;
-        
-        SearchEngine engine = new SearchEngine(index, stemming);
-        
-        List<String> queryFiles = new ArrayList<String>();
-        queryFiles.add("alt.atheism/51120");
-        queryFiles.add("alt.atheism/51121");
-        queryFiles.add("talk.politics.mideast/75422");
-        queryFiles.add("sci.electronics/53720");
-        queryFiles.add("sci.crypt/15725");
-        queryFiles.add("misc.forsale/76165");
-        queryFiles.add("talk.politics.mideast/76261");
-        queryFiles.add("alt.atheism/53358");
-        queryFiles.add("sci.electronics/54340");
-        queryFiles.add("rec.motorcycles/104389");
-        queryFiles.add("talk.politics.guns/54328");
-        queryFiles.add("misc.forsale/76468");
-        queryFiles.add("sci.crypt/15469");
-        queryFiles.add("rec.sport.hockey/54171");
-        queryFiles.add("talk.religion.misc/84177");
-        queryFiles.add("rec.motorcycles/104727");
-        queryFiles.add("comp.sys.mac.hardware/52165");
-        queryFiles.add("sci.crypt/15379");
-        queryFiles.add("sci.space/60779");
-        queryFiles.add("sci.med/59456");
-        
-        String result;
-
-        int i = 1;
-        for (String queryFile : queryFiles) {
-        	queryDocument = queryReader.read(new File("./../exercise1/data/20_newsgroups_subset/" + queryFile));
-        	query = queryDocument.getContent();
-        
-        	//result = engine.search(query, i, "groupC_" + thresholdSize);
-        	result = engine.search(query, i, "groupC_" + thresholdSize);
-        	
-        	try {
-				PrintStream outputStream = new PrintStream(new BufferedOutputStream(
-				   new FileOutputStream(new File("./output/query/"+thresholdSize+"_topic"+i+"_groupC"))
-				));
-				outputStream.println(result);
-				outputStream.close();
-			} catch (FileNotFoundException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-        	
-        	i++;
+        IndexFileReaderInterface indexReader = null;
+        if (indexFile.contains("arff")) {
+        	indexReader = new ArffIndexFileReader();
+        } else if (indexFile.contains(".txt")) {
+        	indexReader = new TextIndexFileReader();
+        } else {
+        	System.out.println("Unsupported index file format.");
+        	System.exit(1);
         }
         
+        WeightedInvertedIndex index = null;
+        if (indexReader != null) {
+        	index = indexReader.readIndex(getReader(indexFile));
+        	indexReader = null;
+        }
+        
+        if (index != null) {
+	        System.out.println("Read index from " + indexFile + ".");
+	        System.out.println(index.getDocumentCount() + " documents");
+	        System.out.println(index.getIndexSize() + " tokens");
+	        
+	        DocumentReaderInterface queryReader = new TextDocumentReader(new ClassDocumentFactory(), new FilesystemReader());
+	        DocumentInterface queryDocument;
+	        String query;
+	        
+	        SearchEngine engine = new SearchEngine(index, stemming);
+	        
+	        List<String> queryFiles = new ArrayList<String>();
+	        queryFiles.add("alt.atheism/51120");
+	        queryFiles.add("alt.atheism/51121");
+	        queryFiles.add("talk.politics.mideast/75422");
+	        queryFiles.add("sci.electronics/53720");
+	        queryFiles.add("sci.crypt/15725");
+	        queryFiles.add("misc.forsale/76165");
+	        queryFiles.add("talk.politics.mideast/76261");
+	        queryFiles.add("alt.atheism/53358");
+	        queryFiles.add("sci.electronics/54340");
+	        queryFiles.add("rec.motorcycles/104389");
+	        queryFiles.add("talk.politics.guns/54328");
+	        queryFiles.add("misc.forsale/76468");
+	        queryFiles.add("sci.crypt/15469");
+	        queryFiles.add("rec.sport.hockey/54171");
+	        queryFiles.add("talk.religion.misc/84177");
+	        queryFiles.add("rec.motorcycles/104727");
+	        queryFiles.add("comp.sys.mac.hardware/52165");
+	        queryFiles.add("sci.crypt/15379");
+	        queryFiles.add("sci.space/60779");
+	        queryFiles.add("sci.med/59456");
+	        
+	        String result;
+	
+	        int i = 1;
+	        for (String queryFile : queryFiles) {
+	        	queryDocument = queryReader.read(new File("./../exercise1/data/20_newsgroups_subset/" + queryFile));
+	        	query = queryDocument.getContent();
+	        
+	        	//result = engine.search(query, i, "groupC_" + thresholdSize);
+	        	result = engine.search(query, i, "groupC_" + thresholdSize);
+	        	
+	        	try {
+					PrintStream outputStream = new PrintStream(new BufferedOutputStream(
+					   new FileOutputStream(new File("./output/query/"+thresholdSize+"_topic"+i+"_groupC"))
+					));
+					outputStream.println(result);
+					outputStream.close();
+				} catch (FileNotFoundException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+	        	
+	        	i++;
+	        }
+        }
+	        
         timer.stop();
 
         System.out.println("Running time: " + timer.getTime() + "ms");
@@ -174,8 +188,10 @@ public class ProbModelMain
         InputStream fileStream;
 		try {
 			fileStream = new FileInputStream(indexFile);
-			InputStream gzipStream = new GZIPInputStream(fileStream);
-			Reader decoder = new InputStreamReader(gzipStream, "UTF-8");
+			if (indexFile.contains(".gz")) {
+				fileStream = new GZIPInputStream(fileStream);
+			}
+			Reader decoder = new InputStreamReader(fileStream, "UTF-8");
 	        BufferedReader buffered = new BufferedReader(decoder);
 	        
 	        return buffered;

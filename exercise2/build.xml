@@ -54,6 +54,48 @@
                 <path refid="main.classpath" />
             </classpath>
             <arg value="-index" />
+            <arg value="./../exercise1/output/index_small-threshold.txt" />
+            <arg value="-thresholdSize" />
+            <arg value="small" />
+            <arg value="-stemming" />
+        </java>
+    </target>
+
+    <target name="run-retrieval-small-gz" depends="compile">
+        <java classname="ir.exercise2.probmodel.ProbModelMain">
+            <classpath>
+                <pathelement location="${build-dir}" />
+                <path refid="main.classpath" />
+            </classpath>
+            <arg value="-index" />
+            <arg value="./../exercise1/output/index_small-threshold.txt.gz" />
+            <arg value="-thresholdSize" />
+            <arg value="small" />
+            <arg value="-stemming" />
+        </java>
+    </target>
+
+    <target name="run-retrieval-small-arff" depends="compile">
+        <java classname="ir.exercise2.probmodel.ProbModelMain">
+            <classpath>
+                <pathelement location="${build-dir}" />
+                <path refid="main.classpath" />
+            </classpath>
+            <arg value="-index" />
+            <arg value="./../exercise1/output/index_small-threshold.arff" />
+            <arg value="-thresholdSize" />
+            <arg value="small" />
+            <arg value="-stemming" />
+        </java>
+    </target>
+
+    <target name="run-retrieval-small-arff-gz" depends="compile">
+        <java classname="ir.exercise2.probmodel.ProbModelMain">
+            <classpath>
+                <pathelement location="${build-dir}" />
+                <path refid="main.classpath" />
+            </classpath>
+            <arg value="-index" />
             <arg value="./../exercise1/output/index_small-threshold.arff.gz" />
             <arg value="-thresholdSize" />
             <arg value="small" />
@@ -62,6 +104,48 @@
     </target>
 
     <target name="run-retrieval-medium" depends="compile">
+        <java classname="ir.exercise2.probmodel.ProbModelMain">
+            <classpath>
+                <pathelement location="${build-dir}" />
+                <path refid="main.classpath" />
+            </classpath>
+            <arg value="-index" />
+            <arg value="./../exercise1/output/index_medium-threshold.txt" />
+            <arg value="-thresholdSize" />
+            <arg value="medium" />
+            <arg value="-stemming" />
+        </java>
+    </target>
+
+    <target name="run-retrieval-medium-gz" depends="compile">
+        <java classname="ir.exercise2.probmodel.ProbModelMain">
+            <classpath>
+                <pathelement location="${build-dir}" />
+                <path refid="main.classpath" />
+            </classpath>
+            <arg value="-index" />
+            <arg value="./../exercise1/output/index_medium-threshold.txt.gz" />
+            <arg value="-thresholdSize" />
+            <arg value="medium" />
+            <arg value="-stemming" />
+        </java>
+    </target>
+
+    <target name="run-retrieval-medium-arff" depends="compile">
+        <java classname="ir.exercise2.probmodel.ProbModelMain">
+            <classpath>
+                <pathelement location="${build-dir}" />
+                <path refid="main.classpath" />
+            </classpath>
+            <arg value="-index" />
+            <arg value="./../exercise1/output/index_medium-threshold.arff" />
+            <arg value="-thresholdSize" />
+            <arg value="medium" />
+            <arg value="-stemming" />
+        </java>
+    </target>
+
+    <target name="run-retrieval-medium-arff-gz" depends="compile">
         <java classname="ir.exercise2.probmodel.ProbModelMain">
             <classpath>
                 <pathelement location="${build-dir}" />
@@ -82,6 +166,48 @@
                 <path refid="main.classpath" />
             </classpath>
             <arg value="-index" />
+            <arg value="./../exercise1/output/index_large-threshold.txt" />
+            <arg value="-thresholdSize" />
+            <arg value="large" />
+            <arg value="-stemming" />
+        </java>
+    </target>
+
+    <target name="run-retrieval-large-gz" depends="compile">
+        <java classname="ir.exercise2.probmodel.ProbModelMain">
+            <classpath>
+                <pathelement location="${build-dir}" />
+                <path refid="main.classpath" />
+            </classpath>
+            <arg value="-index" />
+            <arg value="./../exercise1/output/index_large-threshold.txt.gz" />
+            <arg value="-thresholdSize" />
+            <arg value="large" />
+            <arg value="-stemming" />
+        </java>
+    </target>
+
+    <target name="run-retrieval-large-arff" depends="compile">
+        <java classname="ir.exercise2.probmodel.ProbModelMain">
+            <classpath>
+                <pathelement location="${build-dir}" />
+                <path refid="main.classpath" />
+            </classpath>
+            <arg value="-index" />
+            <arg value="./../exercise1/output/index_large-threshold.arff" />
+            <arg value="-thresholdSize" />
+            <arg value="large" />
+            <arg value="-stemming" />
+        </java>
+    </target>
+
+    <target name="run-retrieval-large-arff-gz" depends="compile">
+        <java classname="ir.exercise2.probmodel.ProbModelMain">
+            <classpath>
+                <pathelement location="${build-dir}" />
+                <path refid="main.classpath" />
+            </classpath>
+            <arg value="-index" />
             <arg value="./../exercise1/output/index_large-threshold.arff.gz" />
             <arg value="-thresholdSize" />
             <arg value="large" />
@@ -91,6 +217,15 @@
 
     <target name="run-retrieval" depends="run-retrieval-small,run-retrieval-medium,run-retrieval-large">
     </target>
+	
+    <target name="run-retrieval-gz" depends="run-retrieval-small-gz,run-retrieval-medium-gz,run-retrieval-large-gz">
+    </target>
+	
+    <target name="run-retrieval-arff" depends="run-retrieval-small-arff,run-retrieval-medium-arff,run-retrieval-large-arff">
+    </target>
+    	
+        <target name="run-retrieval-arff-gz" depends="run-retrieval-small-arff-gz,run-retrieval-medium-arff-gz,run-retrieval-large-arff-gz">
+        </target>
 
     <target name="test" depends="compile">
         <junit showoutput="yes" haltonfailure="no">
