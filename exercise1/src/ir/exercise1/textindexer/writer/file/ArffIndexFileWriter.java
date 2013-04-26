@@ -62,7 +62,7 @@ public class ArffIndexFileWriter implements IndexFileWriterInterface
 			vals = new double[data.numAttributes()];
 			vals[0] = data.attribute(0).addStringValue(index.getClassName(documentId));
 			vals[1] = data.attribute(1).addStringValue(index.getDocumentName(documentId));
-			vals[2] = data.attribute(2).addStringValue(index.getDocLengths().get(documentId).toString()); 
+			vals[2] = data.attribute(2).addStringValue(index.getDocumentLengths().get(documentId).toString()); 
 			attId = 3;
 			
 			// Iterate through all tokens

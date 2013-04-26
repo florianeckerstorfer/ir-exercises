@@ -27,6 +27,11 @@ public class TextIndexFileWriter implements IndexFileWriterInterface
 	{
 		WeightedPostingList postingList;
 		
+		// Store some main statistics that are required to build the index when reading this file later
+		outputStream.println(">>>STATS<<<");
+		outputStream.print(index.getDocumentCount());
+		outputStream.print("\n");
+		
 		// Iterate through all documents to store some meta data
 		outputStream.println(">>>METADATA<<<");
 		for (int documentId = 0; documentId < index.getDocumentCount(); documentId++) {
@@ -34,7 +39,7 @@ public class TextIndexFileWriter implements IndexFileWriterInterface
 					documentId + ","+
 					index.getClassName(documentId) + "," + 
 					index.getDocumentName(documentId) + "," + 
-					index.getDocLength(documentId));
+					index.getDocumentLength(documentId));
 		}
 		
 		// Iterate through all tokens to store the posting lists

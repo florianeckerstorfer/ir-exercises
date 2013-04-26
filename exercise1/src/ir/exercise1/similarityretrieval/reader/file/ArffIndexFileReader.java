@@ -13,10 +13,9 @@ import weka.core.Instances;
  * 
  * @author florian@eckerstorfer.co (Florian Eckerstorfer)
  */
-public class ArffIndexFileReader
+public class ArffIndexFileReader implements IndexFileReaderInterface
 {
-	
-	
+	@Override
 	public WeightedInvertedIndex readIndex(BufferedReader reader)
 	{
 		WeightedInvertedIndex index = new WeightedInvertedIndex();
@@ -43,7 +42,7 @@ public class ArffIndexFileReader
 				
 				if (data.attribute(2).value(i) != null){
 					int curDocLength = Integer.parseInt(data.attribute(2).value(i));
-					index.getDocLengths().put(docId, curDocLength);
+					index.getDocumentLengths().put(docId, curDocLength);
 					totalDocLength += curDocLength;
 				} // TODO why null for higher i values?
 				index.addClassName(docId, className);
@@ -59,7 +58,7 @@ public class ArffIndexFileReader
 					System.out.println(i);
 				}
 			}
-			index.setTotalDocLength(totalDocLength);
+			index.setTotalDocumentLength(totalDocLength);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

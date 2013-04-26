@@ -132,23 +132,16 @@ public class SearchEngine
 		
 		int docLength;
 		
-		if (index.getDocLengths().get(docId) != null) {
-			docLength = index.getDocLengths().get(docId);
+		if (index.getDocumentLengths().get(docId) != null) {
+			docLength = index.getDocumentLengths().get(docId);
 		} else {
 			docLength = 1;
 		}
 		
-		double avgLength = index.getTotalDocLength() / N;
+		double avgLength = index.getTotalDocumentLength() / N;
 		
 		score = Math.log(N / df) * (k1+1) * tf / (k1*((1-b)+b*(docLength/avgLength))+tf);
 		
-		/*
-		System.out.println("N: " + N);
-		System.out.println("df: " + df);
-		System.out.println("tf: " + tf);
-		System.out.println("docLength: " + docLength);
-		System.out.println("avgLength: " + avgLength);
-		*/
 		return score;
 	}
 	

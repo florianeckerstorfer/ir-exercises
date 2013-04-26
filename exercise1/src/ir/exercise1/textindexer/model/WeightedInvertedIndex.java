@@ -7,15 +7,25 @@ import java.util.Map;
 
 public class WeightedInvertedIndex
 {
+	/**
+	 * The names of the documents in the index.
+	 */
 	private List<String> documentNames = new ArrayList<String>();
-	private Map<Integer, Integer> docLengths = new HashMap<Integer, Integer>();
+	
+	/**
+	 * The length of the documents in the index.
+	 */
+	private Map<Integer, Integer> documentLengths = new HashMap<Integer, Integer>();
 	
 	private Map<Integer, String> classNames = new HashMap<Integer, String>();
 	
 	private Map<String, WeightedPostingList> index = new HashMap<String, WeightedPostingList>();
 	private List<String> tokens = new ArrayList<String>();
 	
-	private int totalDocLength;
+	/**
+	 * Stores the total length of all documents in the index.
+	 */
+	private int totalDocumentLength;
 	
 
 	public int addDocument(String documentName)
@@ -25,9 +35,21 @@ public class WeightedInvertedIndex
 		return documentNames.size()-1;
 	}
 	
+	public void setDocument(Integer index, String documentName)
+	{
+		documentNames.set(index, documentName);
+	}
+	
 	public String getDocumentName(int index)
 	{
 		return documentNames.get(index);
+	}
+	
+	public void setDocumentCount(Integer documentCount)
+	{
+		for (int i = 0; i < documentCount; i++) {
+			documentNames.add("");
+		}
 	}
 	
 	public int getDocumentCount()
@@ -105,24 +127,50 @@ public class WeightedInvertedIndex
 		return index.size();
 	}
 	
-	public Integer getDocLength(int index) {
-		return docLengths.get(index);
+	public Integer getDocumentLength(int index) {
+		return documentLengths.get(index);
 	}
 
-	public Map<Integer, Integer> getDocLengths() {
-		return docLengths;
+	public Map<Integer, Integer> getDocumentLengths() {
+		return documentLengths;
+	}
+	
+	/**
+	 * Returns the length of the given document.
+	 * 
+	 * @param documentId The ID of the document
+	 * 
+	 * @return The length of the document
+	 */
+	public Integer getDocumentLength(Integer documentId)
+	{
+		return documentLengths.get(documentId);
 	}
 
-	public void setDocLengths(Map<Integer, Integer> docLengths) {
-		this.docLengths = docLengths;
+	public void setDocumentLengths(Map<Integer, Integer> documentLengths)
+	{
+		this.documentLengths = documentLengths;
+	}
+	
+	/**
+	 * Sets the document length for the given document.
+	 * 
+	 * @param documentId     The ID of the document
+	 * @param documentLength The length of the document
+	 */
+	public void addDocumentLength(Integer documentId, Integer documentLength)
+	{
+		documentLengths.put(documentId, documentLength);
+		totalDocumentLength += documentLength;
 	}
 
-	public int getTotalDocLength() {
-		
-		return totalDocLength;
+	public int getTotalDocumentLength()
+	{
+		return totalDocumentLength;
 	}
 
-	public void setTotalDocLength(int totalDocLength) {
-		this.totalDocLength = totalDocLength;
+	public void setTotalDocumentLength(int totalDocumentLength)
+	{
+		this.totalDocumentLength = totalDocumentLength;
 	}	
 }
