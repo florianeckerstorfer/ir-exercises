@@ -3,26 +3,13 @@ package ir.exercise1.similarityretrieval.search;
 import ir.exercise1.common.array.ArrayIndexComparator;
 import ir.exercise1.textindexer.stemmer.PorterStemmer;
 import ir.exercise1.textindexer.stemmer.StemmerInterface;
-import ir.exercise1.textindexer.tokenizer.Tokenizer;
 import ir.exercise1.textindexer.tools.TextTools;
-import ir.exercise1.textindexer.document.ClassDocument;
-import ir.exercise1.textindexer.document.DocumentInterface;
-import ir.exercise1.textindexer.indexer.TextIndexer;
-import ir.exercise1.textindexer.model.InvertedIndex;
 import ir.exercise1.textindexer.model.WeightedInvertedIndex;
 import ir.exercise1.textindexer.model.WeightedPosting;
 import ir.exercise1.textindexer.model.WeightedPostingList;
-import ir.exercise1.textindexer.reader.file.FileReaderInterface;
 
-import java.io.BufferedOutputStream;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collection;
-import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
@@ -48,7 +35,6 @@ public class SearchEngine
 	private Double[][] dictionary;
 	private ArrayList<String> allTerms;
 	private ArrayList<String> allDocs;
-	private Measure measure = Measure.OVERLAPSCORE;
 
 	public SearchEngine(WeightedInvertedIndex index, boolean stemming)
 	{
@@ -134,13 +120,6 @@ public class SearchEngine
 		return queryTokens;
 	}
 	
-	private double calcWeighting(String token, int documentCount)
-	{
-		double tf = 0.0;
-		double df = 0.0;
-		return Math.log(1 + tf) * Math.log(documentCount/df);
-	}
-
 	public void searchPrototype(String query, Double[][] dictionary, ArrayList<String> termsList, ArrayList<String> docsList)
 	{
 		this.dictionary = dictionary;
@@ -192,8 +171,6 @@ public class SearchEngine
 
 	private Double[] score(ArrayList<String> queryTerms)
 	{
-		String result = "";
-
 		Double[] scores = new Double[queryTerms.size()];
 
 		for(int i = 0; i < queryTerms.size(); i++) {

@@ -4,12 +4,9 @@ import ir.exercise1.textindexer.model.WeightedInvertedIndex;
 
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
 
 import weka.core.Instance;
 import weka.core.Instances;
-import weka.core.converters.ConverterUtils.DataSource;
 
 /**
  * Reads an index in the ARFF format.
@@ -23,7 +20,6 @@ public class ArffIndexFileReader
 	public WeightedInvertedIndex readIndex(BufferedReader reader)
 	{
 		WeightedInvertedIndex index = new WeightedInvertedIndex();
-		Map<Integer, Integer> docLengths = new HashMap<Integer, Integer>();
 
 		Instances data;
 		int docId;

@@ -2,10 +2,8 @@ package ir.exercise1.textindexer.model;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 
 public class WeightedInvertedIndex
 {
@@ -67,6 +65,11 @@ public class WeightedInvertedIndex
 		postingList.setPosting(documentId, new WeightedPosting(tfIdf));
 	}
 	
+	public Integer getTokenCount()
+	{
+		return tokens.size();
+	}
+	
 	public void setPostingList(String token, WeightedPostingList postingList)
 	{
 		tokens.add(token);
@@ -100,6 +103,10 @@ public class WeightedInvertedIndex
 	public int getIndexSize()
 	{
 		return index.size();
+	}
+	
+	public Integer getDocLength(int index) {
+		return docLengths.get(index);
 	}
 
 	public Map<Integer, Integer> getDocLengths() {

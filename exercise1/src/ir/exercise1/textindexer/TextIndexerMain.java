@@ -9,6 +9,7 @@ import java.io.IOException;
 import java.util.zip.GZIPOutputStream;
 import java.io.BufferedOutputStream;
 import java.io.FileOutputStream;
+import java.io.OutputStream;
 import java.io.PrintStream;
 
 import org.kohsuke.args4j.Argument;
@@ -24,6 +25,8 @@ import ir.exercise1.textindexer.reader.document.TextDocumentReader;
 import ir.exercise1.textindexer.reader.file.FilesystemReader;
 import ir.exercise1.textindexer.tokenizer.Tokenizer;
 import ir.exercise1.textindexer.writer.file.ArffIndexFileWriter;
+import ir.exercise1.textindexer.writer.file.IndexFileWriterInterface;
+import ir.exercise1.textindexer.writer.file.TextIndexFileWriter;
 import ir.exercise1.textindexer.document.ClassDocumentFactory;
 import ir.exercise1.textindexer.indexer.TextIndexer;
 import ir.exercise1.textindexer.collection.CollectionInterface;
@@ -86,6 +89,12 @@ public class TextIndexerMain
 
     @Option(name="-stemming", usage="Flag if stemming should be used")
     private boolean stemming;
+    
+    @Option(name="-format", usage="Index format, either arff or text")
+    private String indexFormat;
+    
+    @Option(name="-gzip", usage="Enable GZIP compression for index")
+    private boolean enableGzip;
 
     public TextIndexerMain(String[] args)
     {
@@ -110,6 +119,18 @@ public class TextIndexerMain
     public void run()
     {
         timer.reset().start();
+        
+        System.out.println("Collection directory: " + collectionDirectory);
+        System.out.println("Index file: " + outputFile);
+        System.out.println("Index format: " + indexFormat);
+        System.out.print("Enable GZIP? ");
+        if (enableGzip) System.out.println("yes");
+        else System.out.println("no");
+        System.out.println("Lower threshold: " + lowerThreshold);
+        System.out.println("Upper threshold: " + upperThreshold);
+        System.out.print("Stemming? ");
+        if (stemming) System.out.println("yes");
+        else System.out.println("no");
 
         // First we need to read the documents from the filesystem
         CollectionReaderInterface reader = new ClassCollectionReader(
@@ -120,7 +141,7 @@ public class TextIndexerMain
         
         Tokenizer tokenizer = new Tokenizer(stemming);
 
-        TextIndexer indexer = new TextIndexer(collection, tokenizer, 50);
+        TextIndexer indexer = new TextIndexer(collection, tokenizer);
         indexer.setLowerThreshold(lowerThreshold);
         indexer.setUpperThreshold(upperThreshold);
         indexer.setStemming(stemming);
@@ -132,16 +153,38 @@ public class TextIndexerMain
         System.out.println("Running time: " + timer.getTime() + "ms");
     }
 
-    private ArffIndexFileWriter createIndexFileWriter(String outputFile)
+    private IndexFileWriterInterface createIndexFileWriter(String outputFile)
     {
         try {
-            return new ArffIndexFileWriter(new PrintStream(
-                new BufferedOutputStream(
-                	new GZIPOutputStream(
-                		new FileOutputStream(new File(outputFile))
-                	)
-                )
-            ));
+        	String filename = outputFile;
+        	if ("arff".equals(indexFormat)) {
+            	filename += ".arff";
+            } else if ("text".equals(indexFormat)) {
+            	filename += ".txt"; 
+            } else {
+            	System.out.println("Invalid index format " + indexFormat + ".");
+                System.exit(1);
+            }
+        	
+        	if (enableGzip) {
+        		filename += ".gz";
+        	}
+        	
+        	OutputStream outputStream = new FileOutputStream(new File(filename));
+        	PrintStream printStream;
+        	if (enableGzip) {
+        		printStream = new PrintStream(
+    				new BufferedOutputStream(new GZIPOutputStream(outputStream))
+        		);
+        	} else {
+        		printStream = new PrintStream(new BufferedOutputStream(outputStream));
+        	}
+            
+            if ("arff".equals(indexFormat)) {
+            	return new ArffIndexFileWriter(printStream);
+            } else {
+            	return new TextIndexFileWriter(printStream);
+            }
         } catch (FileNotFoundException e) {
             System.out.println("Could not find file " + outputFile + ".");
             System.exit(1);

@@ -39,6 +39,25 @@ Now you can run the text indexer;
 Or you can run all three at once:
 
     $ ant run-index
+    
+If you want to create the index in the ARFF format instead of our custom text format.
+
+	$ ant run-index-small-arff
+	$ ant run-index-medium-arff
+	$ ant run-index-large-arff
+	$ ant run-index-arff
+	
+You can also enable GZIP compression for the generated index file.
+
+    $ ant run-index-small-gz
+    $ ant run-index-medium-gz
+    $ ant run-index-large-gz
+    $ ant run-index-gz
+	$ ant run-index-small-arff-gz
+	$ ant run-index-medium-arff-gz
+	$ ant run-index-large-arff-gz
+	$ ant run-index-arff-gz
+    
 
 To fire 20 sample queries against the index you can use:
 

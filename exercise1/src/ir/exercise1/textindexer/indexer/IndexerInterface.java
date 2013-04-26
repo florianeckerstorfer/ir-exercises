@@ -1,6 +1,6 @@
 package ir.exercise1.textindexer.indexer;
 
-import ir.exercise1.textindexer.writer.file.ArffIndexFileWriter;
+import ir.exercise1.textindexer.writer.file.IndexFileWriterInterface;
 
 /**
  * IndexerInterface
@@ -9,5 +9,5 @@ import ir.exercise1.textindexer.writer.file.ArffIndexFileWriter;
  */
 public interface IndexerInterface
 {
-    public void buildIndex(ArffIndexFileWriter arffWriter);
+    public void buildIndex(IndexFileWriterInterface arffWriter);
 }

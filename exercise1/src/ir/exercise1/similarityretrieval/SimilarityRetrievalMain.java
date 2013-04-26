@@ -14,7 +14,6 @@ import java.io.Reader;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.zip.GZIPInputStream;
-import java.util.zip.GZIPOutputStream;
 
 import org.kohsuke.args4j.Argument;
 import org.kohsuke.args4j.CmdLineException;
@@ -30,7 +29,6 @@ import ir.exercise1.textindexer.model.WeightedInvertedIndex;
 import ir.exercise1.textindexer.reader.document.DocumentReaderInterface;
 import ir.exercise1.textindexer.reader.document.TextDocumentReader;
 import ir.exercise1.textindexer.reader.file.FilesystemReader;
-import ir.exercise1.textindexer.tokenizer.Tokenizer;
 
 public class SimilarityRetrievalMain
 {

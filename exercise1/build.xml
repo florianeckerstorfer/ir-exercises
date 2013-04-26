@@ -59,7 +59,29 @@
             <arg value="1000" />
             <arg value="-stemming" />
             <arg value="-output" />
-            <arg value="./output/index_large-threshold.arff.gz" />
+            <arg value="./output/index_large-threshold" />
+        	<arg value="-format" />
+        	<arg value="text" />
+        </java>
+    </target>
+	
+    <target name="run-index-large-arff" depends="compile">
+        <java classname="ir.exercise1.textindexer.TextIndexerMain">
+            <classpath>
+                <pathelement location="${build-dir}" />
+                <path refid="main.classpath" />
+            </classpath>
+            <arg value="-directory" />
+            <arg value="./data/20_newsgroups_subset" />
+            <arg value="-lower-threshold" />
+            <arg value="0" />
+            <arg value="-upper-threshold" />
+            <arg value="1000" />
+            <arg value="-stemming" />
+            <arg value="-output" />
+            <arg value="./output/index_large-threshold" />
+        	<arg value="-format" />
+        	<arg value="arff" />
         </java>
     </target>
 
@@ -77,7 +99,29 @@
             <arg value="3" />
             <arg value="-stemming" />
             <arg value="-output" />
-            <arg value="./output/index_medium-threshold.arff.gz" />
+            <arg value="./output/index_medium-threshold" />
+        	<arg value="-format" />
+        	<arg value="text" />
+        </java>
+    </target>
+	
+    <target name="run-index-medium-arff" depends="compile">
+        <java classname="ir.exercise1.textindexer.TextIndexerMain">
+            <classpath>
+                <pathelement location="${build-dir}" />
+                <path refid="main.classpath" />
+            </classpath>
+            <arg value="-directory" />
+            <arg value="./data/20_newsgroups_subset" />
+            <arg value="-lower-threshold" />
+            <arg value="1.1" />
+            <arg value="-upper-threshold" />
+            <arg value="3" />
+            <arg value="-stemming" />
+            <arg value="-output" />
+            <arg value="./output/index_medium-threshold" />
+        	<arg value="-format" />
+        	<arg value="arff" />
         </java>
     </target>
 
@@ -95,11 +139,169 @@
             <arg value="1.7" />
             <arg value="-stemming" />
             <arg value="-output" />
-            <arg value="./output/index_small-threshold.arff.gz" />
+            <arg value="./output/index_small-threshold" />
+        	<arg value="-format" />
+        	<arg value="text" />
         </java>
     </target>
 	
+    <target name="run-index-small-arff" depends="compile">
+        <java classname="ir.exercise1.textindexer.TextIndexerMain">
+            <classpath>
+                <pathelement location="${build-dir}" />
+                <path refid="main.classpath" />
+            </classpath>
+            <arg value="-directory" />
+            <arg value="./data/20_newsgroups_subset" />
+            <arg value="-lower-threshold" />
+            <arg value="1.5" />
+            <arg value="-upper-threshold" />
+            <arg value="1.7" />
+            <arg value="-stemming" />
+            <arg value="-output" />
+            <arg value="./output/index_small-threshold" />
+        	<arg value="-format" />
+        	<arg value="arff" />
+        </java>
+    </target>
+	
+
+    <target name="run-index-large-gz" depends="compile">
+        <java classname="ir.exercise1.textindexer.TextIndexerMain">
+            <classpath>
+                <pathelement location="${build-dir}" />
+                <path refid="main.classpath" />
+            </classpath>
+            <arg value="-directory" />
+            <arg value="./data/20_newsgroups_subset" />
+            <arg value="-lower-threshold" />
+            <arg value="0" />
+            <arg value="-upper-threshold" />
+            <arg value="1000" />
+            <arg value="-stemming" />
+            <arg value="-output" />
+            <arg value="./output/index_large-threshold" />
+        	<arg value="-format" />
+        	<arg value="text" />
+        	<arg value="-gzip" />
+        </java>
+    </target>
+	
+    <target name="run-index-large-arff-gz" depends="compile">
+        <java classname="ir.exercise1.textindexer.TextIndexerMain">
+            <classpath>
+                <pathelement location="${build-dir}" />
+                <path refid="main.classpath" />
+            </classpath>
+            <arg value="-directory" />
+            <arg value="./data/20_newsgroups_subset" />
+            <arg value="-lower-threshold" />
+            <arg value="0" />
+            <arg value="-upper-threshold" />
+            <arg value="1000" />
+            <arg value="-stemming" />
+            <arg value="-output" />
+            <arg value="./output/index_large-threshold" />
+        	<arg value="-format" />
+        	<arg value="arff" />
+        	<arg value="-gzip" />
+        </java>
+    </target>
+
+    <target name="run-index-medium-gz" depends="compile">
+        <java classname="ir.exercise1.textindexer.TextIndexerMain">
+            <classpath>
+                <pathelement location="${build-dir}" />
+                <path refid="main.classpath" />
+            </classpath>
+            <arg value="-directory" />
+            <arg value="./data/20_newsgroups_subset" />
+            <arg value="-lower-threshold" />
+            <arg value="1.1" />
+            <arg value="-upper-threshold" />
+            <arg value="3" />
+            <arg value="-stemming" />
+            <arg value="-output" />
+            <arg value="./output/index_medium-threshold" />
+        	<arg value="-format" />
+        	<arg value="text" />
+        	<arg value="-gzip" />
+        </java>
+    </target>
+	
+    <target name="run-index-medium-arff-gz" depends="compile">
+        <java classname="ir.exercise1.textindexer.TextIndexerMain">
+            <classpath>
+                <pathelement location="${build-dir}" />
+                <path refid="main.classpath" />
+            </classpath>
+            <arg value="-directory" />
+            <arg value="./data/20_newsgroups_subset" />
+            <arg value="-lower-threshold" />
+            <arg value="1.1" />
+            <arg value="-upper-threshold" />
+            <arg value="3" />
+            <arg value="-stemming" />
+            <arg value="-output" />
+            <arg value="./output/index_medium-threshold" />
+        	<arg value="-format" />
+        	<arg value="arff" />
+        	<arg value="-gzip" />
+        </java>
+    </target>
+
+    <target name="run-index-small-gz" depends="compile">
+        <java classname="ir.exercise1.textindexer.TextIndexerMain">
+            <classpath>
+                <pathelement location="${build-dir}" />
+                <path refid="main.classpath" />
+            </classpath>
+            <arg value="-directory" />
+            <arg value="./data/20_newsgroups_subset" />
+            <arg value="-lower-threshold" />
+            <arg value="1.5" />
+            <arg value="-upper-threshold" />
+            <arg value="1.7" />
+            <arg value="-stemming" />
+            <arg value="-output" />
+            <arg value="./output/index_small-threshold" />
+        	<arg value="-format" />
+        	<arg value="text" />
+        	<arg value="-gzip" />
+        </java>
+    </target>
+	
+    <target name="run-index-small-arff-gz" depends="compile">
+        <java classname="ir.exercise1.textindexer.TextIndexerMain">
+            <classpath>
+                <pathelement location="${build-dir}" />
+                <path refid="main.classpath" />
+            </classpath>
+            <arg value="-directory" />
+            <arg value="./data/20_newsgroups_subset" />
+            <arg value="-lower-threshold" />
+            <arg value="1.5" />
+            <arg value="-upper-threshold" />
+            <arg value="1.7" />
+            <arg value="-stemming" />
+            <arg value="-output" />
+            <arg value="./output/index_small-threshold" />
+        	<arg value="-format" />
+        	<arg value="arff" />
+        	<arg value="-gzip" />
+        </java>
+    </target>
+	
+	<target name="run-index-arff" depends="run-index-small-arff,run-index-medium-arff,run-index-large-arff">
+	</target>
+	
+	<target name="run-index-arff-gz" depends="run-index-small-arff-gz,run-index-medium-arff-gz,run-index-large-arff-gz">
+	</target>
+	
 	<target name="run-index" depends="run-index-small,run-index-medium,run-index-large">
+	</target>
+	
+	<target name="run-index-gz" depends="run-index-small-gz,run-index-medium-gz,run-index-large-gz">
 	</target>
 	
     <target name="run-retrieval-small" depends="compile">

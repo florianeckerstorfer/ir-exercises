@@ -17,7 +17,7 @@ import weka.core.Instances;
  * @author hmiao87@gmail.com (Haichao Miao)
  * @author florian@eckerstorfer.co (Florian Eckerstorfer)
  */
-public class ArffIndexFileWriter
+public class ArffIndexFileWriter implements IndexFileWriterInterface
 {
 	PrintStream outputStream;
 
@@ -83,10 +83,6 @@ public class ArffIndexFileWriter
 				}
 			}
 			data.add(new Instance(1.0, vals));
-			
-			if ((documentId % 100) == 0) {
-				System.out.println(documentId);
-			}
 		}
 		
 		outputStream.print(data);

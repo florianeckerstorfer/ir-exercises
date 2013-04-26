@@ -9,7 +9,7 @@ import ir.exercise1.textindexer.model.WeightedPosting;
 import ir.exercise1.textindexer.model.PostingList;
 import ir.exercise1.textindexer.model.WeightedPostingList;
 import ir.exercise1.textindexer.tokenizer.Tokenizer;
-import ir.exercise1.textindexer.writer.file.ArffIndexFileWriter;
+import ir.exercise1.textindexer.writer.file.IndexFileWriterInterface;
 
 import java.util.Iterator;
 import java.util.Map;
@@ -122,7 +122,7 @@ public class TextIndexer implements IndexerInterface
 		return stemming;
 	}
 
-	public void buildIndex(ArffIndexFileWriter arffWriter)
+	public void buildIndex(IndexFileWriterInterface arffWriter)
 	{
 		InvertedIndex index = new InvertedIndex();
 		tokenizer.setInvertedIndex(index);
@@ -150,7 +150,7 @@ public class TextIndexer implements IndexerInterface
 				
 		double avgTokensPerDoc = index.getIndexSize() / index.getDocumentCount();
 
-		System.out.println("\nSome startistics:");
+		System.out.println("\nSome statistics:");
 		System.out.println(index.getDocumentCount() + " documents");
 		System.out.println(index.getIndexSize() + " tokens");
 		System.out.println(avgTokensPerDoc + " avg. # tokens per document");
@@ -162,7 +162,7 @@ public class TextIndexer implements IndexerInterface
 		index = null;
 		collection = null;
 
-		System.out.println("\nStarting to write ARFF index.");
+		System.out.println("\nStarting to write index.");
 		arffWriter.buildIndexFile(weightedIndex, getStemming(), getLowerThreshold(), getUpperThreshold());
 	}
 
