@@ -141,7 +141,7 @@ public class TextIndexerMain
         
         Tokenizer tokenizer = new Tokenizer(stemming);
 
-        TextIndexer indexer = new TextIndexer(collection, tokenizer, 300);
+        TextIndexer indexer = new TextIndexer(collection, tokenizer);
         indexer.setLowerThreshold(lowerThreshold);
         indexer.setUpperThreshold(upperThreshold);
         indexer.setStemming(stemming);
