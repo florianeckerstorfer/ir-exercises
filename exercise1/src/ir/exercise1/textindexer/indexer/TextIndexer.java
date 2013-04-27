@@ -138,8 +138,8 @@ public class TextIndexer implements IndexerInterface
 			int documentId = index.addDocument(document.getName());
 			weightedIndex.addDocument(document.getName());
 			weightedIndex.addClassName(documentId, document.getClassName());
-			weightedIndex.addDocumentLength(documentId, index.getDocumentLength(documentId));
 			tokenizer.tokenize(document, documentId);
+			weightedIndex.addDocumentLength(documentId, index.getDocumentLength(documentId));
 			
 			document = null;
 			
