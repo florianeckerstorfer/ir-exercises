@@ -159,6 +159,7 @@ public class TextIndexer implements IndexerInterface
 		System.out.println("Starting computation of TF.IDF weights.");
 		computeWeights(index, weightedIndex);
 		weightedIndex.setDocumentLengths(index.getDocumentLengths());
+		System.out.println(weightedIndex.getDocumentLengths());
 		// We don't need the normal index anymore, hopefully JVM garbage collects it
 		index = null;
 		collection = null;
