@@ -25,7 +25,7 @@ public class WeightedInvertedIndex
 	/**
 	 * Stores the total length of all documents in the index.
 	 */
-	private int totalDocumentLength;
+	private int totalDocumentLength = 0;
 	
 
 	public int addDocument(String documentName)

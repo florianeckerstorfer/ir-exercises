@@ -78,7 +78,6 @@ public class Tokenizer
 		}
 		
 		index.addDocumentLength(documentId, documentLength);
-		
 		textScanner.close();
 	}
 }
