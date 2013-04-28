@@ -39,14 +39,14 @@ Now you can run the text indexer;
 Or you can run all three at once:
 
     $ ant run-index
-    
+
 If you want to create the index in the ARFF format instead of our custom text format.
 
 	$ ant run-index-small-arff
 	$ ant run-index-medium-arff
 	$ ant run-index-large-arff
 	$ ant run-index-arff
-	
+
 You can also enable GZIP compression for the generated index file.
 
     $ ant run-index-small-gz
@@ -57,7 +57,7 @@ You can also enable GZIP compression for the generated index file.
 	$ ant run-index-medium-arff-gz
 	$ ant run-index-large-arff-gz
 	$ ant run-index-arff-gz
-    
+
 
 To fire 20 sample queries against the index you can use:
 
@@ -68,6 +68,8 @@ To fire 20 sample queries against the index you can use:
 Or you can execute all three at once:
 
     $ ant run-retrieval
+
+*Please note that this runs the retrieval code from exercise 1, the BM25 retrieval is implemented in `exercise2`.*
 
 The index is stored in `./output` and the results of the queries are stored in `./output/query`.
 

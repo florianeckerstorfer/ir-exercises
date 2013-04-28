@@ -6,3 +6,6 @@ bin/
 dist/
 vendor/
 *.zip
+exercise2/output/query/large*
+exercise2/output/query/medium*
+exercise2/output/query/small*
