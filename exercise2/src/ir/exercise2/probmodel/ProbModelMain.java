@@ -134,8 +134,8 @@ public class ProbModelMain
 	        List<String> queryFiles = new ArrayList<String>();
 	        queryFiles.add("alt.atheism/51120"); // 1
 	        queryFiles.add("alt.atheism/51121"); // 2
-	        queryFiles.add("talk.politics.mideast/75422"); // 3
-	        queryFiles.add("sci.electronics/53720"); // 4
+	        queryFiles.add("alt.atheism/51123"); // 3
+	        queryFiles.add("alt.atheism/51127"); // 4
 	        queryFiles.add("sci.crypt/15725"); // 5
 	        queryFiles.add("misc.forsale/76165"); // 6
 	        queryFiles.add("talk.politics.mideast/76261"); // 7
@@ -143,13 +143,13 @@ public class ProbModelMain
 	        queryFiles.add("sci.electronics/54340"); // 9
 	        queryFiles.add("rec.motorcycles/104389"); // 10
 	        queryFiles.add("talk.politics.guns/54328"); // 11
-	        queryFiles.add("misc.forsale/76468"); // 12
+	        queryFiles.add("misc.forsale/76426"); // 12
 	        queryFiles.add("sci.crypt/15469"); // 13
 	        queryFiles.add("rec.sport.hockey/54171"); // 14
 	        queryFiles.add("talk.religion.misc/84177"); // 15
 	        queryFiles.add("rec.motorcycles/104727"); // 16
 	        queryFiles.add("comp.sys.mac.hardware/52165"); // 17
-	        queryFiles.add("sci.crypt/15379"); // 18
+	        queryFiles.add("comp.graphics/38999"); // 18
 	        queryFiles.add("sci.space/60779"); // 19
 	        queryFiles.add("sci.med/59456"); // 20
 	        
