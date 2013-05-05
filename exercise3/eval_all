@@ -8,15 +8,18 @@ do
     do
         for i in {1..20}
         do
-            official="./data/golden-standard/postings_topic$i.qrels.txt"
-            submitted="./data/exercise${e}/${s}_topic${i}_groupC"
-            output="./output/exercise${e}/${s}_topic${i}_groupC.txt"
-            if [ -f $official ]; then
-                if [ -f $submitted ]; then
-                    count=$[count+1]
-                    trec_eval $official $submitted > $output
-                fi
-            fi;
+            for j in "" "b" "c"
+            do
+                official="./data/golden-standard/postings_topic${i}${j}.qrels.txt"
+                submitted="./data/exercise${e}/${s}_topic${i}_groupC"
+                output="./output/exercise${e}/${s}_topic${i}${j}_groupC.txt"
+                if [ -f $official ]; then
+                    if [ -f $submitted ]; then
+                        count=$[count+1]
+                        trec_eval $official $submitted > $output
+                    fi
+                fi;
+            done
         done
     done
 done

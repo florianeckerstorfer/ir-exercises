@@ -7,19 +7,21 @@ $columns = array();
 foreach (array('exercise1', 'exercise2') as $exercise) {
     foreach (array('large', 'medium', 'small') as $size) {
         for ($i = 1; $i <= 20; $i++) {
-            $evalFile = sprintf('%s/output/%s/%s_topic%d_groupC.txt', __DIR__, $exercise, $size, $i);
-            if (!file_exists($evalFile) || !is_readable($evalFile)) {
-                // Skip queries where we don't have an evaluation
-                continue;
-            }
+            foreach (array("", "b", "c") as $j) {
+                $evalFile = sprintf('%s/output/%s/%s_topic%d_groupC.txt', __DIR__, $exercise, $size, $i);
+                if (!file_exists($evalFile) || !is_readable($evalFile)) {
+                    // Skip queries where we don't have an evaluation
+                    continue;
+                }
 
-            $row = sprintf('topic%d.%s.%s', $i, $exercise, $size);
+                $row = sprintf('topic%d%s.%s.%s', $i, $j, $exercise, $size);
 
-            $lines = file($evalFile);
-            foreach ($lines as $line) {
-                list($key,,$value) = preg_split('/\s+/', trim($line));
-                $columns[$key] = 1;
-                $table[$row][$key] = $value;
+                $lines = file($evalFile);
+                foreach ($lines as $line) {
+                    list($key,,$value) = preg_split('/\s+/', trim($line));
+                    $columns[$key] = 1;
+                    $table[$row][$key] = $value;
+                }
             }
         }
     }
