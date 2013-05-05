@@ -29,6 +29,6 @@ At the end we also took a close look at the effect of the threshold on the quali
 
 ## Conclusion
 
-We can see that our naive implementation in exercise 1 did not perform very will. Our retrieval system returned relevant (as defined in the golden standard) for one topic and it performs bad. However, we can see a great improvement in the performance of our system since we started using BM25 in exercise 2.
+We can see that our naive implementation in exercise 1 did not perform very well. Our retrieval system returned relevant (as defined in the golden standard) for one topic and it performs bad. However, we can see a great improvement in the performance of our system since we started using BM25 in exercise 2.
 
-While the performance quite good when we look only at the top 3 results (which, for example, in web search are the ones that matter most), our system is not that good when we look at all retrieved documents. However, one possible reason for this is that are often only very few as relevant evaluated (by the golden standard) documents for each topic. Therefore the average precision of ten results when only two relevant topics exist is not very meaningful.
+While the performance is quite good when we look only at the top 3 results (which, for example, in web search are the ones that matter most), our system is not that good when we look at all retrieved documents. However, one possible reason for this is that are often only very few as relevant evaluated (by the golden standard) documents for each topic. Therefore the average precision of ten results when only two relevant topics exist is not very meaningful.
