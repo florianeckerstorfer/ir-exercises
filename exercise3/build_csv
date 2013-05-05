@@ -1,0 +1,42 @@
+#!/usr/bin/env php
+<?php
+
+$table = array();
+$columns = array();
+
+foreach (array('exercise1', 'exercise2') as $exercise) {
+    foreach (array('large', 'medium', 'small') as $size) {
+        for ($i = 1; $i <= 20; $i++) {
+            $evalFile = sprintf('%s/output/%s/%s_topic%d_groupC.txt', __DIR__, $exercise, $size, $i);
+            if (!file_exists($evalFile) || !is_readable($evalFile)) {
+                // Skip queries where we don't have an evaluation
+                continue;
+            }
+
+            $row = sprintf('topic%d.%s.%s', $i, $exercise, $size);
+
+            $lines = file($evalFile);
+            foreach ($lines as $line) {
+                list($key,,$value) = preg_split('/\s+/', trim($line));
+                $columns[$key] = 1;
+                $table[$row][$key] = $value;
+            }
+        }
+    }
+}
+
+$columns = array_merge(array('query'), array_keys($columns));
+
+$csv = '';
+$csv .= implode(',', array_map(function($v) { return sprintf('"%s"', $v); }, $columns)) . "\n";
+
+foreach ($table as $query => $row) {
+    $row = array_merge(array(sprintf('"%s"', $query)), array_values($row));
+    $csv .= implode(',', $row) . "\n";
+}
+
+$csvFile = __DIR__.'/output/eval.csv';
+file_put_contents($csvFile, $csv);
+
+echo "Written CSV file to ${csvFile}.\n";
+
