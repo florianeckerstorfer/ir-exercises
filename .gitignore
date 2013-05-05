@@ -9,5 +9,8 @@ vendor/
 exercise2/output/query/large*
 exercise2/output/query/medium*
 exercise2/output/query/small*
-exercise2/output/exercise1/*
-exercise2/output/exercise2/*
+exercise3/output/exercise1/*
+exercise3/output/exercise2/*
+exercise3/output/*.pdf
+exercise3/output/*.numbers
+exercise3/output/*.csv
