@@ -1,0 +1,142 @@
+2013-05-18 13:43:20 WARN  Gate:266 - GATE home system property ("gate.home") not set.
+Attempting to guess...
+2013-05-18 13:43:20 WARN  Gate:286 - Using "/Users/atmanB/git/ir-exercises/exercise4/vendor/GATE_Developer_7.1" as GATE Home.
+If this is not correct please set it manually using the -Dgate.home option in your start-up script
+2013-05-18 13:43:20 INFO  Gate:297 - Using /Users/atmanB/git/ir-exercises/exercise4/vendor/GATE_Developer_7.1 as GATE home
+2013-05-18 13:43:20 INFO  Gate:321 - Using /Users/atmanB/git/ir-exercises/exercise4/vendor/GATE_Developer_7.1/plugins as installed plug-ins directory.
+2013-05-18 13:43:20 INFO  Gate:344 - Using /Users/atmanB/git/ir-exercises/exercise4/vendor/GATE_Developer_7.1/gate.xml as site configuration file.
+2013-05-18 13:43:20 INFO  Gate:356 - Using /Users/atmanB/.gate.xml as user configuration file
+2013-05-18 13:43:20 INFO  Gate:369 - Using /Users/atmanB/.gate.session as user session file
+2013-05-18 13:43:22 INFO  CreoleRegisterImpl:319 - CREOLE plugin loaded: file:/Users/atmanB/git/ir-exercises/exercise4/vendor/GATE_Developer_7.1/plugins/ANNIE/
+2013-05-18 13:44:31 INFO  CreoleRegisterImpl:319 - CREOLE plugin loaded: file:/Users/atmanB/git/ir-exercises/exercise4/vendor/GATE_Developer_7.1/plugins/Learning/
+2013-05-18 13:49:10 WARN  Gate:266 - GATE home system property ("gate.home") not set.
+Attempting to guess...
+2013-05-18 13:49:10 WARN  Gate:286 - Using "/Users/atmanB/git/ir-exercises/exercise4/vendor/GATE_Developer_7.1" as GATE Home.
+If this is not correct please set it manually using the -Dgate.home option in your start-up script
+2013-05-18 13:49:10 INFO  Gate:297 - Using /Users/atmanB/git/ir-exercises/exercise4/vendor/GATE_Developer_7.1 as GATE home
+2013-05-18 13:49:10 INFO  Gate:321 - Using /Users/atmanB/git/ir-exercises/exercise4/vendor/GATE_Developer_7.1/plugins as installed plug-ins directory.
+2013-05-18 13:49:10 INFO  Gate:344 - Using /Users/atmanB/git/ir-exercises/exercise4/vendor/GATE_Developer_7.1/gate.xml as site configuration file.
+2013-05-18 13:49:10 INFO  Gate:356 - Using /Users/atmanB/.gate.xml as user configuration file
+2013-05-18 13:49:10 INFO  Gate:369 - Using /Users/atmanB/.gate.session as user session file
+2013-05-18 13:49:12 INFO  CreoleRegisterImpl:319 - CREOLE plugin loaded: file:/Users/atmanB/git/ir-exercises/exercise4/vendor/GATE_Developer_7.1/plugins/ANNIE/
+2013-05-18 13:50:39 WARN  Gate:266 - GATE home system property ("gate.home") not set.
+Attempting to guess...
+2013-05-18 13:50:39 WARN  Gate:286 - Using "/Users/atmanB/git/ir-exercises/exercise4/vendor/GATE_Developer_7.1" as GATE Home.
+If this is not correct please set it manually using the -Dgate.home option in your start-up script
+2013-05-18 13:50:39 INFO  Gate:297 - Using /Users/atmanB/git/ir-exercises/exercise4/vendor/GATE_Developer_7.1 as GATE home
+2013-05-18 13:50:39 INFO  Gate:321 - Using /Users/atmanB/git/ir-exercises/exercise4/vendor/GATE_Developer_7.1/plugins as installed plug-ins directory.
+2013-05-18 13:50:39 INFO  Gate:344 - Using /Users/atmanB/git/ir-exercises/exercise4/vendor/GATE_Developer_7.1/gate.xml as site configuration file.
+2013-05-18 13:50:39 INFO  Gate:356 - Using /Users/atmanB/.gate.xml as user configuration file
+2013-05-18 13:50:39 INFO  Gate:369 - Using /Users/atmanB/.gate.session as user session file
+2013-05-18 13:50:41 INFO  CFPExtractorMain:38 - asf
+2013-05-18 13:50:41 INFO  CreoleRegisterImpl:319 - CREOLE plugin loaded: file:/Users/atmanB/git/ir-exercises/exercise4/vendor/GATE_Developer_7.1/plugins/ANNIE/
+2013-05-18 14:02:55 WARN  Gate:266 - GATE home system property ("gate.home") not set.
+Attempting to guess...
+2013-05-18 14:02:55 WARN  Gate:286 - Using "/Users/atmanB/git/ir-exercises/exercise4/vendor/GATE_Developer_7.1" as GATE Home.
+If this is not correct please set it manually using the -Dgate.home option in your start-up script
+2013-05-18 14:02:55 INFO  Gate:297 - Using /Users/atmanB/git/ir-exercises/exercise4/vendor/GATE_Developer_7.1 as GATE home
+2013-05-18 14:02:55 INFO  Gate:321 - Using /Users/atmanB/git/ir-exercises/exercise4/vendor/GATE_Developer_7.1/plugins as installed plug-ins directory.
+2013-05-18 14:02:55 INFO  Gate:344 - Using /Users/atmanB/git/ir-exercises/exercise4/vendor/GATE_Developer_7.1/gate.xml as site configuration file.
+2013-05-18 14:02:55 INFO  Gate:356 - Using /Users/atmanB/.gate.xml as user configuration file
+2013-05-18 14:02:55 INFO  Gate:369 - Using /Users/atmanB/.gate.session as user session file
+2013-05-18 14:02:57 INFO  CFPExtractorMain:43 - Gate-MainFrame started
+2013-05-18 14:02:57 INFO  CFPExtractorMain:62 - ANNIE-controller initialization started
+2013-05-18 14:02:57 INFO  CreoleRegisterImpl:319 - CREOLE plugin loaded: file:/Users/atmanB/git/ir-exercises/exercise4/vendor/GATE_Developer_7.1/plugins/ANNIE/
+2013-05-18 14:03:01 INFO  CFPExtractorMain:81 - Annie-Controller loaded
+2013-05-18 14:08:11 WARN  Gate:266 - GATE home system property ("gate.home") not set.
+Attempting to guess...
+2013-05-18 14:08:11 WARN  Gate:286 - Using "/Users/atmanB/git/ir-exercises/exercise4/vendor/GATE_Developer_7.1" as GATE Home.
+If this is not correct please set it manually using the -Dgate.home option in your start-up script
+2013-05-18 14:08:11 INFO  Gate:297 - Using /Users/atmanB/git/ir-exercises/exercise4/vendor/GATE_Developer_7.1 as GATE home
+2013-05-18 14:08:11 INFO  Gate:321 - Using /Users/atmanB/git/ir-exercises/exercise4/vendor/GATE_Developer_7.1/plugins as installed plug-ins directory.
+2013-05-18 14:08:11 INFO  Gate:344 - Using /Users/atmanB/git/ir-exercises/exercise4/vendor/GATE_Developer_7.1/gate.xml as site configuration file.
+2013-05-18 14:08:11 INFO  Gate:356 - Using /Users/atmanB/.gate.xml as user configuration file
+2013-05-18 14:08:11 INFO  Gate:369 - Using /Users/atmanB/.gate.session as user session file
+2013-05-18 14:08:13 INFO  CFPExtractorMain:45 - Gate-MainFrame started
+2013-05-18 14:08:13 INFO  CFPExtractorMain:52 - initialize ANNIE-controller...
+2013-05-18 14:08:13 INFO  CreoleRegisterImpl:319 - CREOLE plugin loaded: file:/Users/atmanB/git/ir-exercises/exercise4/vendor/GATE_Developer_7.1/plugins/ANNIE/
+2013-05-18 14:08:17 INFO  CFPExtractorMain:71 - Annie-Controller loaded
+2013-05-18 14:21:37 WARN  Gate:266 - GATE home system property ("gate.home") not set.
+Attempting to guess...
+2013-05-18 14:21:37 WARN  Gate:286 - Using "/Users/atmanB/git/ir-exercises/exercise4/vendor/GATE_Developer_7.1" as GATE Home.
+If this is not correct please set it manually using the -Dgate.home option in your start-up script
+2013-05-18 14:21:37 INFO  Gate:297 - Using /Users/atmanB/git/ir-exercises/exercise4/vendor/GATE_Developer_7.1 as GATE home
+2013-05-18 14:21:37 INFO  Gate:321 - Using /Users/atmanB/git/ir-exercises/exercise4/vendor/GATE_Developer_7.1/plugins as installed plug-ins directory.
+2013-05-18 14:21:37 INFO  Gate:344 - Using /Users/atmanB/git/ir-exercises/exercise4/vendor/GATE_Developer_7.1/gate.xml as site configuration file.
+2013-05-18 14:21:37 INFO  Gate:356 - Using /Users/atmanB/.gate.xml as user configuration file
+2013-05-18 14:21:37 INFO  Gate:369 - Using /Users/atmanB/.gate.session as user session file
+2013-05-18 14:21:39 INFO  CFPExtractor:51 - Gate-MainFrame started
+2013-05-18 14:21:39 INFO  CFPExtractor:61 - initialize annieController...
+2013-05-18 14:21:39 INFO  CreoleRegisterImpl:319 - CREOLE plugin loaded: file:/Users/atmanB/git/ir-exercises/exercise4/vendor/GATE_Developer_7.1/plugins/ANNIE/
+2013-05-18 14:21:43 INFO  CFPExtractor:80 - annieController loaded
+2013-05-18 14:22:30 WARN  Gate:266 - GATE home system property ("gate.home") not set.
+Attempting to guess...
+2013-05-18 14:22:30 WARN  Gate:286 - Using "/Users/atmanB/git/ir-exercises/exercise4/vendor/GATE_Developer_7.1" as GATE Home.
+If this is not correct please set it manually using the -Dgate.home option in your start-up script
+2013-05-18 14:22:30 INFO  Gate:297 - Using /Users/atmanB/git/ir-exercises/exercise4/vendor/GATE_Developer_7.1 as GATE home
+2013-05-18 14:22:30 INFO  Gate:321 - Using /Users/atmanB/git/ir-exercises/exercise4/vendor/GATE_Developer_7.1/plugins as installed plug-ins directory.
+2013-05-18 14:22:30 INFO  Gate:344 - Using /Users/atmanB/git/ir-exercises/exercise4/vendor/GATE_Developer_7.1/gate.xml as site configuration file.
+2013-05-18 14:22:30 INFO  Gate:356 - Using /Users/atmanB/.gate.xml as user configuration file
+2013-05-18 14:22:30 INFO  Gate:369 - Using /Users/atmanB/.gate.session as user session file
+2013-05-18 14:22:31 INFO  CFPExtractor:49 - Gate-MainFrame started
+2013-05-18 14:22:31 INFO  CFPExtractor:59 - initialize annieController...
+2013-05-18 14:22:31 INFO  CreoleRegisterImpl:319 - CREOLE plugin loaded: file:/Users/atmanB/git/ir-exercises/exercise4/vendor/GATE_Developer_7.1/plugins/ANNIE/
+2013-05-18 14:22:35 INFO  CFPExtractor:78 - annieController loaded
+2013-05-18 14:33:04 WARN  Gate:266 - GATE home system property ("gate.home") not set.
+Attempting to guess...
+2013-05-18 14:33:04 WARN  Gate:286 - Using "/Users/atmanB/git/ir-exercises/exercise4/vendor/GATE_Developer_7.1" as GATE Home.
+If this is not correct please set it manually using the -Dgate.home option in your start-up script
+2013-05-18 14:33:04 INFO  Gate:297 - Using /Users/atmanB/git/ir-exercises/exercise4/vendor/GATE_Developer_7.1 as GATE home
+2013-05-18 14:33:04 INFO  Gate:321 - Using /Users/atmanB/git/ir-exercises/exercise4/vendor/GATE_Developer_7.1/plugins as installed plug-ins directory.
+2013-05-18 14:33:04 INFO  Gate:344 - Using /Users/atmanB/git/ir-exercises/exercise4/vendor/GATE_Developer_7.1/gate.xml as site configuration file.
+2013-05-18 14:33:04 INFO  Gate:356 - Using /Users/atmanB/.gate.xml as user configuration file
+2013-05-18 14:33:04 INFO  Gate:369 - Using /Users/atmanB/.gate.session as user session file
+2013-05-18 14:33:06 INFO  CFPExtractor:50 - Gate-MainFrame started
+2013-05-18 14:33:06 INFO  CFPExtractor:60 - initialize annieController...
+2013-05-18 14:33:06 INFO  CreoleRegisterImpl:319 - CREOLE plugin loaded: file:/Users/atmanB/git/ir-exercises/exercise4/vendor/GATE_Developer_7.1/plugins/ANNIE/
+2013-05-18 14:33:10 INFO  CFPExtractor:79 - annieController loaded
+2013-05-18 14:33:31 WARN  Gate:266 - GATE home system property ("gate.home") not set.
+Attempting to guess...
+2013-05-18 14:33:31 WARN  Gate:286 - Using "/Users/atmanB/git/ir-exercises/exercise4/vendor/GATE_Developer_7.1" as GATE Home.
+If this is not correct please set it manually using the -Dgate.home option in your start-up script
+2013-05-18 14:33:31 INFO  Gate:297 - Using /Users/atmanB/git/ir-exercises/exercise4/vendor/GATE_Developer_7.1 as GATE home
+2013-05-18 14:33:31 INFO  Gate:321 - Using /Users/atmanB/git/ir-exercises/exercise4/vendor/GATE_Developer_7.1/plugins as installed plug-ins directory.
+2013-05-18 14:33:31 INFO  Gate:344 - Using /Users/atmanB/git/ir-exercises/exercise4/vendor/GATE_Developer_7.1/gate.xml as site configuration file.
+2013-05-18 14:33:31 INFO  Gate:356 - Using /Users/atmanB/.gate.xml as user configuration file
+2013-05-18 14:33:31 INFO  Gate:369 - Using /Users/atmanB/.gate.session as user session file
+2013-05-18 14:33:33 INFO  CFPExtractor:50 - Gate-MainFrame started
+2013-05-18 14:33:33 INFO  CFPExtractor:62 - initialize annieController...
+2013-05-18 14:33:33 INFO  CreoleRegisterImpl:319 - CREOLE plugin loaded: file:/Users/atmanB/git/ir-exercises/exercise4/vendor/GATE_Developer_7.1/plugins/ANNIE/
+2013-05-18 14:33:37 INFO  CFPExtractor:81 - annieController loaded
+2013-05-18 14:33:37 INFO  CFPExtractor:86 - initialize MachineLearningController...
+2013-05-18 14:33:37 INFO  CreoleRegisterImpl:319 - CREOLE plugin loaded: file:/Users/atmanB/git/ir-exercises/exercise4/vendor/GATE_Developer_7.1/plugins/Learning/
+2013-05-18 14:37:57 WARN  Gate:266 - GATE home system property ("gate.home") not set.
+Attempting to guess...
+2013-05-18 14:37:57 WARN  Gate:286 - Using "/Users/atmanB/git/ir-exercises/exercise4/vendor/GATE_Developer_7.1" as GATE Home.
+If this is not correct please set it manually using the -Dgate.home option in your start-up script
+2013-05-18 14:37:57 INFO  Gate:297 - Using /Users/atmanB/git/ir-exercises/exercise4/vendor/GATE_Developer_7.1 as GATE home
+2013-05-18 14:37:57 INFO  Gate:321 - Using /Users/atmanB/git/ir-exercises/exercise4/vendor/GATE_Developer_7.1/plugins as installed plug-ins directory.
+2013-05-18 14:37:57 INFO  Gate:344 - Using /Users/atmanB/git/ir-exercises/exercise4/vendor/GATE_Developer_7.1/gate.xml as site configuration file.
+2013-05-18 14:37:57 INFO  Gate:356 - Using /Users/atmanB/.gate.xml as user configuration file
+2013-05-18 14:37:57 INFO  Gate:369 - Using /Users/atmanB/.gate.session as user session file
+2013-05-18 14:37:59 INFO  CFPExtractor:50 - Gate-MainFrame started
+2013-05-18 14:37:59 INFO  CFPExtractor:62 - initialize annieController...
+2013-05-18 14:37:59 INFO  CreoleRegisterImpl:319 - CREOLE plugin loaded: file:/Users/atmanB/git/ir-exercises/exercise4/vendor/GATE_Developer_7.1/plugins/ANNIE/
+2013-05-18 14:38:03 INFO  CFPExtractor:81 - annieController loaded
+2013-05-18 14:38:03 INFO  CFPExtractor:86 - initialize MachineLearningController...
+2013-05-18 14:38:03 INFO  CreoleRegisterImpl:319 - CREOLE plugin loaded: file:/Users/atmanB/git/ir-exercises/exercise4/vendor/GATE_Developer_7.1/plugins/Learning/
+2013-05-18 14:39:20 WARN  Gate:266 - GATE home system property ("gate.home") not set.
+Attempting to guess...
+2013-05-18 14:39:20 WARN  Gate:286 - Using "/Users/atmanB/git/ir-exercises/exercise4/vendor/GATE_Developer_7.1" as GATE Home.
+If this is not correct please set it manually using the -Dgate.home option in your start-up script
+2013-05-18 14:39:20 INFO  Gate:297 - Using /Users/atmanB/git/ir-exercises/exercise4/vendor/GATE_Developer_7.1 as GATE home
+2013-05-18 14:39:20 INFO  Gate:321 - Using /Users/atmanB/git/ir-exercises/exercise4/vendor/GATE_Developer_7.1/plugins as installed plug-ins directory.
+2013-05-18 14:39:20 INFO  Gate:344 - Using /Users/atmanB/git/ir-exercises/exercise4/vendor/GATE_Developer_7.1/gate.xml as site configuration file.
+2013-05-18 14:39:20 INFO  Gate:356 - Using /Users/atmanB/.gate.xml as user configuration file
+2013-05-18 14:39:20 INFO  Gate:369 - Using /Users/atmanB/.gate.session as user session file
+2013-05-18 14:39:22 INFO  CFPExtractor:50 - Gate-MainFrame started
+2013-05-18 14:39:22 INFO  CFPExtractor:62 - initialize annieController...
+2013-05-18 14:39:22 INFO  CreoleRegisterImpl:319 - CREOLE plugin loaded: file:/Users/atmanB/git/ir-exercises/exercise4/vendor/GATE_Developer_7.1/plugins/ANNIE/
+2013-05-18 14:39:26 INFO  CFPExtractor:81 - annieController loaded
+2013-05-18 14:39:26 INFO  CFPExtractor:86 - initialize MachineLearningController...
+2013-05-18 14:39:26 INFO  CreoleRegisterImpl:319 - CREOLE plugin loaded: file:/Users/atmanB/git/ir-exercises/exercise4/vendor/GATE_Developer_7.1/plugins/Learning/
