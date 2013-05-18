@@ -1,0 +1,1 @@
+- download generic installer (https://sourceforge.net/projects/gate/files/gate/7.1/gate-7.1-build4485-installer.jar/download) and install it under vendor
