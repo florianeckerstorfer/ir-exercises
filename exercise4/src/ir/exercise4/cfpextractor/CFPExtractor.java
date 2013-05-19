@@ -18,18 +18,19 @@ import java.io.File;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Collection;
+import java.util.Iterator;
 
 import javax.swing.SwingUtilities;
 
 import org.apache.log4j.Logger;
 
+//TODO how to get workshopname annotations..., now Persons annotations are extracted and learned
 public class CFPExtractor {
 	
 	private static Logger logger = Logger.getLogger(CFPExtractor.class);
 	
-	//TODO make them relative paths
+	//TODO relative paths
 	private final String GATE_PLUGINS_DIR = "/Users/atmanB/git/ir-exercises/exercise4/vendor/GATE_Developer_7.1/plugins";
 	private final String TRAINING_SET_URL = "file:/Users/atmanB/git/ir-exercises/exercise4/data/training/";
 	private final String TEST_SET_URL = "file:/Users/atmanB/git/ir-exercises/exercise4/data/test/";
@@ -41,7 +42,7 @@ public class CFPExtractor {
 	private SerialAnalyserController machineLearningController;
 	private Corpus trainingCorpus;
 	private Corpus testCorpus;
-	
+	private ProcessingResource batchLearningTraining;
 	public static void main(String[] args) throws Exception {
 		
 		CFPExtractor extractor = new CFPExtractor();
@@ -56,13 +57,15 @@ public class CFPExtractor {
 		
 		logger.info("Gate-MainFrame started");
 		
-		extractor.initAnnieController();
+		//extractor.initAnnieController();
 		
 		extractor.initMachineLearningController();
 		
 		extractor.loadCorpora();
 		
 		extractor.useMachineLearningTraining();
+		
+		extractor.useMachineLearningApplication();
 		
 	}
 	
@@ -106,9 +109,11 @@ public class CFPExtractor {
 		FeatureMap params_batch_learning = Factory.newFeatureMap();
 		params_batch_learning.put("configFileURL", new URL(ML_CONFIG_FILE_URL));	
 		params_batch_learning.put("learningMode", RunMode.TRAINING);
+		params_batch_learning.put("inputASName", "Original markups");
 		
-		ProcessingResource batch_learning = (ProcessingResource) Factory.createResource("gate.learning.LearningAPIMain", params_batch_learning);
+		batchLearningTraining = (ProcessingResource) Factory.createResource("gate.learning.LearningAPIMain", params_batch_learning);
 		
+		/*
 		FeatureMap params_document_reset = Factory.newFeatureMap();
 		List<String> setsToRemove = new ArrayList<String>();
 		setsToRemove.add("ML");
@@ -117,16 +122,36 @@ public class CFPExtractor {
 		ProcessingResource document_reset = (ProcessingResource) Factory.createResource("gate.creole.annotdelete.AnnotationDeletePR", params_document_reset);
 		
 		machineLearningController.add(document_reset);
-		machineLearningController.add(batch_learning);	
+		*/
+		machineLearningController.add(batchLearningTraining);	
 		
 		logger.info("MachineLearningController loaded");
 	}
 	
 	public void useMachineLearningTraining() throws ExecutionException {
-		logger.info("");
+		logger.info("executing machine learning controller -> TRAINING Mode");
 		machineLearningController.setCorpus(trainingCorpus);
 		
 		machineLearningController.execute();
+		logger.info("machine learning controller TRAINING Mode executed");
+	}
+	
+	public void useMachineLearningApplication() throws ExecutionException, MalformedURLException, ResourceInstantiationException {
+		logger.info("executing machine learning controller -> APPLICATION Mode...");
+		machineLearningController.setCorpus(testCorpus);
+		
+		//code from here is very clumsy... TODO
+		machineLearningController.remove(batchLearningTraining);
+		FeatureMap params_batch_learning = Factory.newFeatureMap();
+		params_batch_learning.put("configFileURL", new URL(ML_CONFIG_FILE_URL));	
+		params_batch_learning.put("learningMode", RunMode.APPLICATION);
+		params_batch_learning.put("inputASName", "Original markups");
+		params_batch_learning.put("outputASName", "machine_learned");
+		ProcessingResource batchLearningApplication = (ProcessingResource) Factory.createResource("gate.learning.LearningAPIMain", params_batch_learning);
+		machineLearningController.add(batchLearningApplication);	
+		
+		machineLearningController.execute();
+		logger.info("machine learning controller APPLICATION Mode executed");
 	}
 	
 	private void loadCorpora() throws ResourceInstantiationException, MalformedURLException, IOException {
@@ -136,14 +161,16 @@ public class CFPExtractor {
 		testCorpus = Factory.newCorpus("test");
 		
 		//only these file extensions should be loaded into the corpus
-		ExtensionFileFilter exf = new ExtensionFileFilter();
-		exf.addExtension("key");
-		exf.addExtension("txt");
-
+		ExtensionFileFilter exf_xml = new ExtensionFileFilter();
+		exf_xml.addExtension("xml");
+		
 		logger.info("load training Corpus...");
-		trainingCorpus.populate(new URL(TRAINING_SET_URL), exf, "", false);
+		trainingCorpus.populate(new URL(TRAINING_SET_URL), exf_xml, "", false);
+		
+		ExtensionFileFilter exf_key = new ExtensionFileFilter();
+		exf_key.addExtension("key");		
 		logger.info("load test Corpus...");
-		testCorpus.populate(new URL(TEST_SET_URL), exf, "", false);
+		testCorpus.populate(new URL(TEST_SET_URL), exf_key, "", false);
 	}
 	
 }
