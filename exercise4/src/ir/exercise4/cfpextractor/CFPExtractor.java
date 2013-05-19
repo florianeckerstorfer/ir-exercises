@@ -6,9 +6,11 @@ import gate.FeatureMap;
 import gate.Gate;
 import gate.ProcessingResource;
 import gate.creole.ANNIEConstants;
+import gate.creole.ExecutionException;
 import gate.creole.ResourceInstantiationException;
 import gate.creole.SerialAnalyserController;
 import gate.gui.MainFrame;
+import gate.learning.RunMode;
 import gate.util.ExtensionFileFilter;
 import gate.util.GateException;
 
@@ -16,6 +18,8 @@ import java.io.File;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.swing.SwingUtilities;
 
@@ -24,9 +28,12 @@ import org.apache.log4j.Logger;
 public class CFPExtractor {
 	
 	private static Logger logger = Logger.getLogger(CFPExtractor.class);
+	
+	//TODO make them relative paths
 	private final String GATE_PLUGINS_DIR = "/Users/atmanB/git/ir-exercises/exercise4/vendor/GATE_Developer_7.1/plugins";
 	private final String TRAINING_SET_URL = "file:/Users/atmanB/git/ir-exercises/exercise4/data/training/";
 	private final String TEST_SET_URL = "file:/Users/atmanB/git/ir-exercises/exercise4/data/test/";
+	private final String ML_CONFIG_FILE_URL = "file:/Users/atmanB/git/ir-exercises/exercise4/config/ml-config.xml";
 	
 	private File pluginsDir = new File(GATE_PLUGINS_DIR);;
 	
@@ -51,9 +58,11 @@ public class CFPExtractor {
 		
 		extractor.initAnnieController();
 		
-		//extractor.initMachineLearningController();
+		extractor.initMachineLearningController();
 		
 		extractor.loadCorpora();
+		
+		extractor.useMachineLearningTraining();
 		
 	}
 	
@@ -93,22 +102,36 @@ public class CFPExtractor {
 		machineLearningController = (SerialAnalyserController) Factory.createResource("gate.creole.SerialAnalyserController", 
 				Factory.newFeatureMap(), Factory.newFeatureMap(), "MachineLearning_Controller");
 		
-		FeatureMap params = Factory.newFeatureMap();
-		
 		// load machineLearningController with PRs
-		ProcessingResource machinelearner = (ProcessingResource) Factory.createResource("gate.learning.LearningAPIMain", params);
+		FeatureMap params_batch_learning = Factory.newFeatureMap();
+		params_batch_learning.put("configFileURL", new URL(ML_CONFIG_FILE_URL));	
+		params_batch_learning.put("learningMode", RunMode.TRAINING);
 		
-		machineLearningController.add(machinelearner);		
+		ProcessingResource batch_learning = (ProcessingResource) Factory.createResource("gate.learning.LearningAPIMain", params_batch_learning);
+		
+		FeatureMap params_document_reset = Factory.newFeatureMap();
+		List<String> setsToRemove = new ArrayList<String>();
+		setsToRemove.add("ML");
+		params_document_reset.put("setsToRemove", setsToRemove);
+		params_document_reset.put("setsToKeep", new ArrayList<String>());
+		ProcessingResource document_reset = (ProcessingResource) Factory.createResource("gate.creole.annotdelete.AnnotationDeletePR", params_document_reset);
+		
+		machineLearningController.add(document_reset);
+		machineLearningController.add(batch_learning);	
 		
 		logger.info("MachineLearningController loaded");
 	}
 	
+	public void useMachineLearningTraining() throws ExecutionException {
+		logger.info("");
+		machineLearningController.setCorpus(trainingCorpus);
+		
+		machineLearningController.execute();
+	}
 	
 	private void loadCorpora() throws ResourceInstantiationException, MalformedURLException, IOException {
-
 		//create training corpus
 		trainingCorpus = Factory.newCorpus("training");
-		
 		//create test corpus
 		testCorpus = Factory.newCorpus("test");
 		
@@ -116,8 +139,10 @@ public class CFPExtractor {
 		ExtensionFileFilter exf = new ExtensionFileFilter();
 		exf.addExtension("key");
 		exf.addExtension("txt");
-		
+
+		logger.info("load training Corpus...");
 		trainingCorpus.populate(new URL(TRAINING_SET_URL), exf, "", false);
+		logger.info("load test Corpus...");
 		testCorpus.populate(new URL(TEST_SET_URL), exf, "", false);
 	}
 	
