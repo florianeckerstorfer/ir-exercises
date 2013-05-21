@@ -1,7 +1,7 @@
 28 #numTrainingDocs
 10 #numClasses
 28145 #numNullLabelInstances
-4747 #totalFeatures
+9494 #totalFeatures
 /Users/atmanB/git/ir-exercises/exercise4/config/savedFiles/learnedModels.save #modelFile
 PAUM #learnerName
 null #learnerExecutable

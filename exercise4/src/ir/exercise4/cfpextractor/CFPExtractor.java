@@ -19,6 +19,7 @@ import gate.util.GateException;
 
 import java.io.File;
 import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
 import java.net.MalformedURLException;
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -58,11 +59,8 @@ public class CFPExtractor {
 		
 		Gate.init();
 		
-		SwingUtilities.invokeAndWait(new Runnable() {
-			public void run() {
-				MainFrame.getInstance().setVisible(true);
-			}
-		});
+		callGateGui();
+		
 		
 		logger.info("Gate-MainFrame started");
 		
@@ -80,6 +78,14 @@ public class CFPExtractor {
 		
 		extractor.resultsToXML();
 		
+	}
+	
+	public static void callGateGui() throws InterruptedException, InvocationTargetException {
+		SwingUtilities.invokeAndWait(new Runnable() {
+			public void run() {
+				MainFrame.getInstance().setVisible(true);
+			}
+		});
 	}
 	
 	//we actually don't need annie, if we only apply the batch learning on preprocessed data
