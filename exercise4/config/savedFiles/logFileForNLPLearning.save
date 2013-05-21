@@ -4048,3 +4048,13 @@ Learner name: PAUM
 Learner nick name: PAUM
 Learner parameter settings: PAUM
 Surroud mode (or chunk learning): true
+21.05.2013 16:27:35: 
+
+*************************
+A new session for NLP learning is starting: 20130521_162735file:/Users/atmanB/git/ir-exercises/exercise4/config/ml-config.xml (saved 20130521_140902, 8313secs ago)The initiliased time of NLP learning: Tue May 21 16:27:35 CEST 2013
+Working directory: /Users/atmanB/git/ir-exercises/exercise4/config
+The feature files and models are saved at: /Users/atmanB/git/ir-exercises/exercise4/config/savedFiles
+Learner name: PAUM
+Learner nick name: PAUM
+Learner parameter settings: PAUM
+Surroud mode (or chunk learning): true

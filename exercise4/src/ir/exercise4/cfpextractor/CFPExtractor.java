@@ -74,7 +74,6 @@ public class CFPExtractor {
 		extractor.getMachineLearnedAnnotations();
 		
 		extractor.resultsToXML();
-		
 	}
 	
 	public static void callGateGui() throws InterruptedException, InvocationTargetException {
