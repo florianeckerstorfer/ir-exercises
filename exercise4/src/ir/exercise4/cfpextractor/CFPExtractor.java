@@ -31,10 +31,10 @@ public class CFPExtractor {
 	private static Logger logger = Logger.getLogger(CFPExtractor.class);
 	
 	//TODO relative paths
-	private final String GATE_PLUGINS_DIR = "/Users/atmanB/git/ir-exercises/exercise4/vendor/GATE_Developer_7.1/plugins";
-	private final String TRAINING_SET_URL = "file:/Users/atmanB/git/ir-exercises/exercise4/data/training/";
-	private final String TEST_SET_URL = "file:/Users/atmanB/git/ir-exercises/exercise4/data/test/";
-	private final String ML_CONFIG_FILE_URL = "file:/Users/atmanB/git/ir-exercises/exercise4/config/ml-config.xml";
+	private final String GATE_PLUGINS_DIR = "exercise4/vendor/GATE_Developer_7.1/plugins";
+	private final String TRAINING_SET_DIR = "exercise4/data/training/";
+	private final String TEST_SET_DIR = "exercise4/data/test/";
+	private final String ML_CONFIG_FILE_DIR = "exercise4/config/ml-config.xml";
 	
 	private File pluginsDir = new File(GATE_PLUGINS_DIR);;
 	
@@ -107,7 +107,7 @@ public class CFPExtractor {
 		
 		// load machineLearningController with PRs
 		FeatureMap params_batch_learning = Factory.newFeatureMap();
-		params_batch_learning.put("configFileURL", new URL(ML_CONFIG_FILE_URL));	
+		params_batch_learning.put("configFileURL", new File(ML_CONFIG_FILE_DIR).toURL());	
 		params_batch_learning.put("learningMode", RunMode.TRAINING);
 		params_batch_learning.put("inputASName", "Original markups");
 		
@@ -143,7 +143,7 @@ public class CFPExtractor {
 		//code from here is very clumsy... TODO
 		machineLearningController.remove(batchLearningTraining);
 		FeatureMap params_batch_learning = Factory.newFeatureMap();
-		params_batch_learning.put("configFileURL", new URL(ML_CONFIG_FILE_URL));	
+		params_batch_learning.put("configFileURL", new File(ML_CONFIG_FILE_DIR).toURL());	
 		params_batch_learning.put("learningMode", RunMode.APPLICATION);
 		params_batch_learning.put("inputASName", "Original markups");
 		params_batch_learning.put("outputASName", "machine_learned");
@@ -165,12 +165,12 @@ public class CFPExtractor {
 		exf_xml.addExtension("xml");
 		
 		logger.info("load training Corpus...");
-		trainingCorpus.populate(new URL(TRAINING_SET_URL), exf_xml, "", false);
+		trainingCorpus.populate(new File(TRAINING_SET_DIR).toURL(), exf_xml, "", false);
 		
 		ExtensionFileFilter exf_key = new ExtensionFileFilter();
 		exf_key.addExtension("key");		
 		logger.info("load test Corpus...");
-		testCorpus.populate(new URL(TEST_SET_URL), exf_key, "", false);
+		testCorpus.populate(new File(TEST_SET_DIR).toURL(), exf_key, "", false);
 	}
 	
 }
