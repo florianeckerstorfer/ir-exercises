@@ -61,9 +61,6 @@ public class CFPExtractor {
 		
 		callGateGui();
 		
-		
-		logger.info("Gate-MainFrame started");
-		
 		//extractor.initAnnieController();
 		
 		extractor.initMachineLearningController();
@@ -86,6 +83,7 @@ public class CFPExtractor {
 				MainFrame.getInstance().setVisible(true);
 			}
 		});
+		logger.info("Gate-MainFrame started");
 	}
 	
 	//we actually don't need annie, if we only apply the batch learning on preprocessed data

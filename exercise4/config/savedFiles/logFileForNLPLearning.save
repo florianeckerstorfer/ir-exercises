@@ -4038,3 +4038,13 @@ Number of classes in model: 10
 21.05.2013 15:06:05: The learning start at Tue May 21 15:06:05 CEST 2013
 21.05.2013 15:06:05: The number of documents in dataset: 12
 21.05.2013 15:06:05: This learning session finished!.
+21.05.2013 15:10:37: 
+
+*************************
+A new session for NLP learning is starting: 20130521_151037file:/Users/atmanB/git/ir-exercises/exercise4/config/ml-config.xml (saved 20130521_140902, 3695secs ago)The initiliased time of NLP learning: Tue May 21 15:10:37 CEST 2013
+Working directory: /Users/atmanB/git/ir-exercises/exercise4/config
+The feature files and models are saved at: /Users/atmanB/git/ir-exercises/exercise4/config/savedFiles
+Learner name: PAUM
+Learner nick name: PAUM
+Learner parameter settings: PAUM
+Surroud mode (or chunk learning): true
