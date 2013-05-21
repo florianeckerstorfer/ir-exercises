@@ -1,4 +1,5 @@
 <?xml version="1.0"?>  
+<!-- prerequisites: keep the annotation names after APPLICATION of machine learning, they will be saved in a new annotation set called "machine learning" anyway -->
 <ML-CONFIG>  
   <VERBOSITY level="1"/>
   <SURROUND value="true"/>  

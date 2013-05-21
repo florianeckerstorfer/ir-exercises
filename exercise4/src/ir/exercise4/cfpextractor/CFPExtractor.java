@@ -1,6 +1,9 @@
 package ir.exercise4.cfpextractor;
 
+import gate.Annotation;
+import gate.AnnotationSet;
 import gate.Corpus;
+import gate.Document;
 import gate.Factory;
 import gate.FeatureMap;
 import gate.Gate;
@@ -17,9 +20,13 @@ import gate.util.GateException;
 import java.io.File;
 import java.io.IOException;
 import java.net.MalformedURLException;
-import java.net.URL;
-import java.util.Collection;
+import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.Vector;
 
 import javax.swing.SwingUtilities;
 
@@ -42,6 +49,9 @@ public class CFPExtractor {
 	private Corpus trainingCorpus;
 	private Corpus testCorpus;
 	private ProcessingResource batchLearningTraining;
+	
+	private List<GateAnalysisResult> extractedAnnotations = new ArrayList<GateAnalysisResult>(); ;
+	
 	public static void main(String[] args) throws Exception {
 		
 		CFPExtractor extractor = new CFPExtractor();
@@ -66,9 +76,13 @@ public class CFPExtractor {
 		
 		extractor.useMachineLearningApplication();
 		
+		extractor.getMachineLearnedAnnotations();
+		
+		extractor.resultsToXML();
+		
 	}
 	
-	
+	//we actually don't need annie, if we only apply the batch learning on preprocessed data
 	public void initAnnieController() throws GateException, MalformedURLException {
 		logger.info("initialize annieController...");
 		
@@ -91,6 +105,26 @@ public class CFPExtractor {
 		
 		logger.info("annieController loaded");
 	}
+	
+	private void loadCorpora() throws ResourceInstantiationException, MalformedURLException, IOException {
+		//create training corpus
+		trainingCorpus = Factory.newCorpus("training");
+		//create test corpus
+		testCorpus = Factory.newCorpus("test");
+		
+		//only these file extensions should be loaded into the corpus
+		ExtensionFileFilter exf_xml = new ExtensionFileFilter();
+		exf_xml.addExtension("xml");
+		
+		logger.info("load training Corpus...");
+		trainingCorpus.populate(new File(TRAINING_SET_DIR).toURL(), exf_xml, "", false);
+		
+		ExtensionFileFilter exf_key = new ExtensionFileFilter();
+		exf_key.addExtension("key");		
+		logger.info("load test Corpus...");
+		testCorpus.populate(new File(TEST_SET_DIR).toURL(), exf_key, "", false);
+	}
+	
 	
 
 	public void initMachineLearningController() throws GateException, MalformedURLException {
@@ -155,23 +189,122 @@ public class CFPExtractor {
 		logger.info("machine learning controller APPLICATION Mode executed");
 	}
 	
-	private void loadCorpora() throws ResourceInstantiationException, MalformedURLException, IOException {
-		//create training corpus
-		trainingCorpus = Factory.newCorpus("training");
-		//create test corpus
-		testCorpus = Factory.newCorpus("test");
+	//Code partially based on StandAloneAnnie.java tutorial
+	public void getMachineLearnedAnnotations() {
+		logger.info("fetch the required annotations from test corpus...");
 		
-		//only these file extensions should be loaded into the corpus
-		ExtensionFileFilter exf_xml = new ExtensionFileFilter();
-		exf_xml.addExtension("xml");
+		Iterator iter = testCorpus.iterator();
 		
-		logger.info("load training Corpus...");
-		trainingCorpus.populate(new File(TRAINING_SET_DIR).toURL(), exf_xml, "", false);
+		while(iter.hasNext()) {
+			Document doc = (Document) iter.next();
+			
+			 
+			
+			Set requiredAnnotations = new HashSet();
+			requiredAnnotations.add("workshopname");
+			requiredAnnotations.add("workshopacronym");
+			requiredAnnotations.add("workshopdate");
+			requiredAnnotations.add("workshoplocation");
+			requiredAnnotations.add("conferencename");
+			requiredAnnotations.add("conferenceacronym");
+			requiredAnnotations.add("workshoppapersubmissiondate");
+			
+			
+			//TODO ml-config.xml
+			//the resulting machine_learned AS is empty since the batch learning PR is not configured properly
+			AnnotationSet machineLearnedAS = doc.getAnnotations("machine_learned").get(requiredAnnotations);
+			
+			Iterator it = machineLearnedAS.iterator();
+			Annotation currAnnot;
+            SortedAnnotationList sortedAnnotationList = new SortedAnnotationList();
+
+			while(it.hasNext()) {
+				currAnnot = (Annotation) it.next();
+				sortedAnnotationList.addSortedExclusive(currAnnot);
+			}
+			
+			extractedAnnotations.add(new GateAnalysisResult(doc, sortedAnnotationList));
+		}
 		
-		ExtensionFileFilter exf_key = new ExtensionFileFilter();
-		exf_key.addExtension("key");		
-		logger.info("load test Corpus...");
-		testCorpus.populate(new File(TEST_SET_DIR).toURL(), exf_key, "", false);
+		logger.info("annotations fetched");
 	}
+	
+	//TODO implement XML serializer
+	public void resultsToXML() {
+		logger.info("saving the result into XML");
+		for(GateAnalysisResult res : extractedAnnotations) {
+			logger.info(res.document.getName());
+			Iterator it = res.sortedAnnotationList.iterator();
+			while (it.hasNext()) {
+				logger.info("annotation: " + (Annotation)it.next());
+			}
+		}
+		logger.info("XML file saved!");
+	}
+	
+	//Code based on StandAloneAnnie.java tutorial
+	public static class SortedAnnotationList extends Vector<Annotation> {
+		public SortedAnnotationList() {
+			super();
+		}
+		
+		public boolean addSortedExclusive(Annotation annot) {
+			 Annotation currAnot = null;
+
+            // overlapping check
+            for (int i = 0; i < size(); ++i) {
+                currAnot = (Annotation) get(i);
+                if (annot.overlaps(currAnot)) {
+                    return false;
+                }
+            }
+            
+            long annotStart = annot.getStartNode().getOffset().longValue();
+            long currStart;
+
+            // insert
+            for (int i = 0; i < size(); ++i) {
+                currAnot = (Annotation) get(i);
+                currStart = currAnot.getStartNode().getOffset().longValue();
+                if (annotStart < currStart) {
+                    insertElementAt(annot, i);
+                    return true;
+                }
+            }
+
+            int size = size();
+            insertElementAt(annot, size);
+
+            return true;
+		}
+	}
+	
+	//Code based on StandAloneAnnie.java tutorial
+	public static class GateAnalysisResult {
+        private Document document;
+        private SortedAnnotationList sortedAnnotationList;
+
+        public GateAnalysisResult(Document document, SortedAnnotationList sortedAnnotationList) {
+            this.document = document;
+            this.sortedAnnotationList = sortedAnnotationList;
+        }
+
+        public SortedAnnotationList getSortedAnnotationList() {
+            return sortedAnnotationList;
+        }
+
+        public Document getDocument() {
+            return document;
+        }
+
+        public void setSortedAnnotationList(SortedAnnotationList sortedAnnotationList) {
+            this.sortedAnnotationList = sortedAnnotationList;
+        }
+
+        public void setDocument(Document document) {
+            this.document = document;
+        }
+
+    }
 	
 }

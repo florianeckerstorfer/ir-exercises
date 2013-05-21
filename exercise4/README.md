@@ -1,4 +1,4 @@
-Information Retrieval Exercise 1
+Information Retrieval Exercise 4
 ================================
 
 Requirements
