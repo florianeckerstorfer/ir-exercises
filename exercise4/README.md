@@ -50,6 +50,7 @@ This Java application uses Gate to extract the following information from confer
 	- Paper Submission Date (of Workshop)
 
 Gate provides many useful functionality through it's creole plugins. For our purpose the plugin "Learning" (gate.learning.LearningAPIMain) is used. The Processing Resource (PR) "Batch Leraning PR" is set up with an configuration file (ml-config.xml) and will be run in two run modes:
+
 	1. TRAINING mode. The classes will be learned according to ml-config.xml on the training corpus.
 	2. APPLICATION mode. The learned classes are applied on the test corpus.
 
