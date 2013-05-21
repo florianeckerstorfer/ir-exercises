@@ -30,7 +30,6 @@ public class CFPExtractor {
 	
 	private static Logger logger = Logger.getLogger(CFPExtractor.class);
 	
-	//TODO relative paths
 	private final String GATE_PLUGINS_DIR = "exercise4/vendor/GATE_Developer_7.1/plugins";
 	private final String TRAINING_SET_DIR = "exercise4/data/training/";
 	private final String TEST_SET_DIR = "exercise4/data/test/";
@@ -140,7 +139,9 @@ public class CFPExtractor {
 		logger.info("executing machine learning controller -> APPLICATION Mode...");
 		machineLearningController.setCorpus(testCorpus);
 		
-		//code from here is very clumsy... TODO
+		//code from here is very clumsy, but it works... 
+		//the same PR should be used for Application mode to save resources
+		//TODO
 		machineLearningController.remove(batchLearningTraining);
 		FeatureMap params_batch_learning = Factory.newFeatureMap();
 		params_batch_learning.put("configFileURL", new File(ML_CONFIG_FILE_DIR).toURL());	
