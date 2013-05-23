@@ -16,16 +16,17 @@ import gate.gui.MainFrame;
 import gate.learning.RunMode;
 import gate.util.ExtensionFileFilter;
 import gate.util.GateException;
+import gate.util.persistence.PersistenceManager;
 
 import java.io.File;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.net.MalformedURLException;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Map;
 import java.util.Set;
 import java.util.Vector;
 
@@ -38,12 +39,12 @@ public class CFPExtractor {
 	
 	private static Logger logger = Logger.getLogger(CFPExtractor.class);
 	
-	private final String GATE_PLUGINS_DIR = "exercise4/vendor/GATE_Developer_7.1/plugins";
-	private final String TRAINING_SET_DIR = "exercise4/data/training/";
-	private final String TEST_SET_DIR = "exercise4/data/test/";
-	private final String ML_CONFIG_FILE_DIR = "exercise4/config/ml-config.xml";
+	private final String GATE_PLUGINS_DIR = "vendor/GATE_Developer_7.1/plugins";
+	private final String TRAINING_SET_DIR = "data/training/";
+	private final String TEST_SET_DIR = "data/test/";
+	private final String ML_CONFIG_FILE_DIR = "config/ml-config.xml";
 	
-	private File pluginsDir = new File(GATE_PLUGINS_DIR);;
+	private File pluginsDir = new File(GATE_PLUGINS_DIR);
 	
 	private SerialAnalyserController annieController;
 	private SerialAnalyserController machineLearningController;
@@ -51,7 +52,7 @@ public class CFPExtractor {
 	private Corpus testCorpus;
 	private ProcessingResource batchLearningTraining;
 	
-	private List<GateAnalysisResult> extractedAnnotations = new ArrayList<GateAnalysisResult>(); ;
+	private List<GateAnalysisResult> extractedAnnotations = new ArrayList<GateAnalysisResult>();
 	
 	public static void main(String[] args) throws Exception {
 		
@@ -96,13 +97,24 @@ public class CFPExtractor {
 		//create annieController
 		annieController = (SerialAnalyserController) Factory.createResource("gate.creole.SerialAnalyserController", 
 				Factory.newFeatureMap(), Factory.newFeatureMap(), "ANNIE_Controller");
+		
+		Collection<String> prs = null;
+		try {
+			SerialAnalyserController annie = (SerialAnalyserController)
+					PersistenceManager.loadObjectFromFile(
+							new File(new File(Gate.getPluginsHome(), GATE_PLUGINS_DIR), ANNIEConstants.DEFAULT_FILE)
+					);
+			prs = (Collection<String>)annie.getPRs();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
 		//load ANNIE controller with PRs as defined in ANNIEConstants
-		for(int i = 0; i < ANNIEConstants.PR_NAMES.length; i++) {
+		Iterator<String> prsIterator = prs.iterator();
+		while (prsIterator.hasNext()) {
 			FeatureMap params = Factory.newFeatureMap(); //with defaults
-			
-			ProcessingResource pr = (ProcessingResource) Factory.createResource(ANNIEConstants.PR_NAMES[i], params);
-			
+			ProcessingResource pr = (ProcessingResource) Factory.createResource(prsIterator.next(), params);
 			annieController.add(pr);
 		}
 		
@@ -120,12 +132,12 @@ public class CFPExtractor {
 		exf_xml.addExtension("xml");
 		
 		logger.info("load training Corpus...");
-		trainingCorpus.populate(new File(TRAINING_SET_DIR).toURL(), exf_xml, "", false);
+		trainingCorpus.populate(new File(TRAINING_SET_DIR).toURI().toURL(), exf_xml, "", false);
 		
 		ExtensionFileFilter exf_key = new ExtensionFileFilter();
 		exf_key.addExtension("key");		
 		logger.info("load test Corpus...");
-		testCorpus.populate(new File(TEST_SET_DIR).toURL(), exf_key, "", false);
+		testCorpus.populate(new File(TEST_SET_DIR).toURI().toURL(), exf_key, "", false);
 	}
 	
 	
@@ -143,7 +155,8 @@ public class CFPExtractor {
 		
 		// load machineLearningController with PRs
 		FeatureMap params_batch_learning = Factory.newFeatureMap();
-		params_batch_learning.put("configFileURL", new File(ML_CONFIG_FILE_DIR).toURL());	
+		File configFile =  new File(ML_CONFIG_FILE_DIR);
+		params_batch_learning.put("configFileURL", configFile.toURI().toURL());	
 		params_batch_learning.put("learningMode", RunMode.TRAINING);
 		params_batch_learning.put("inputASName", "Original markups");
 		
@@ -181,7 +194,7 @@ public class CFPExtractor {
 		//TODO
 		machineLearningController.remove(batchLearningTraining);
 		FeatureMap params_batch_learning = Factory.newFeatureMap();
-		params_batch_learning.put("configFileURL", new File(ML_CONFIG_FILE_DIR).toURL());	
+		params_batch_learning.put("configFileURL", new File(ML_CONFIG_FILE_DIR).toURI().toURL());	
 		params_batch_learning.put("learningMode", RunMode.APPLICATION);
 		params_batch_learning.put("inputASName", "Original markups");
 		params_batch_learning.put("outputASName", "machine_learned");
@@ -196,14 +209,14 @@ public class CFPExtractor {
 	public void getMachineLearnedAnnotations() {
 		logger.info("fetch the required annotations from test corpus...");
 		
-		Iterator iter = testCorpus.iterator();
+		Iterator<Document> iter = testCorpus.iterator();
 		
 		while(iter.hasNext()) {
-			Document doc = (Document) iter.next();
+			Document doc = iter.next();
 			
 			 
 			
-			Set requiredAnnotations = new HashSet();
+			Set<String> requiredAnnotations = new HashSet<String>();
 			requiredAnnotations.add("workshopname");
 			requiredAnnotations.add("workshopacronym");
 			requiredAnnotations.add("workshopdate");
@@ -217,12 +230,12 @@ public class CFPExtractor {
 			//the resulting machine_learned AS is empty since the batch learning PR is not configured properly
 			AnnotationSet machineLearnedAS = doc.getAnnotations("machine_learned").get(requiredAnnotations);
 			
-			Iterator it = machineLearnedAS.iterator();
+			Iterator<Annotation> it = machineLearnedAS.iterator();
 			Annotation currAnnot;
             SortedAnnotationList sortedAnnotationList = new SortedAnnotationList();
 
 			while(it.hasNext()) {
-				currAnnot = (Annotation) it.next();
+				currAnnot = it.next();
 				sortedAnnotationList.addSortedExclusive(currAnnot);
 			}
 			
@@ -237,9 +250,9 @@ public class CFPExtractor {
 		logger.info("saving the result into XML");
 		for(GateAnalysisResult res : extractedAnnotations) {
 			logger.info(res.document.getName());
-			Iterator it = res.sortedAnnotationList.iterator();
+			Iterator<Annotation> it = res.sortedAnnotationList.iterator();
 			while (it.hasNext()) {
-				logger.info("annotation: " + (Annotation)it.next());
+				logger.info("annotation: " + it.next());
 			}
 		}
 		logger.info("XML file saved!");
@@ -247,6 +260,11 @@ public class CFPExtractor {
 	
 	//Code based on StandAloneAnnie.java tutorial
 	public static class SortedAnnotationList extends Vector<Annotation> {
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+
 		public SortedAnnotationList() {
 			super();
 		}

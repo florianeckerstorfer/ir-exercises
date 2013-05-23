@@ -4058,3 +4058,441 @@ Learner name: PAUM
 Learner nick name: PAUM
 Learner parameter settings: PAUM
 Surroud mode (or chunk learning): true
+May 23, 2013 10:05:11 PM: 
+
+*************************
+A new session for NLP learning is starting: 20130523_220511file:/Users/florian/Workspace/study/ir/exercise4/config/ml-config.xml (saved 20130523_144105, 26646secs ago)The initiliased time of NLP learning: Thu May 23 22:05:11 CEST 2013
+Working directory: /Users/florian/Workspace/study/ir/exercise4/config
+The feature files and models are saved at: /Users/florian/Workspace/study/ir/exercise4/config/savedFiles
+Learner name: PAUM
+Learner nick name: PAUM
+Learner parameter settings: PAUM
+Surroud mode (or chunk learning): true
+May 23, 2013 10:05:13 PM: 
+*** A new run starts.
+May 23, 2013 10:05:13 PM: 
+The execution time (pre-processing the first document): Thu May 23 22:05:13 CEST 2013
+May 23, 2013 10:05:13 PM: The learning start at Thu May 23 22:05:13 CEST 2013
+May 23, 2013 10:05:13 PM: The number of documents in dataset: 11
+May 23, 2013 10:05:14 PM: ** Training mode:
+May 23, 2013 10:05:15 PM: 
+Training starts.
+
+May 23, 2013 10:05:15 PM: Multi to binary conversion.
+May 23, 2013 10:05:15 PM: The learners: PAUM
+May 23, 2013 10:05:15 PM: The number of classes in dataset: 6
+May 23, 2013 10:05:15 PM: total Number of classes for learning is 6
+May 23, 2013 10:05:15 PM: One against others for multi to binary class conversion.
+May 23, 2013 10:05:15 PM: Training time for class 1: 27ms
+May 23, 2013 10:05:15 PM: Training time for class 2: 60ms
+May 23, 2013 10:05:15 PM: Training time for class 3: 15ms
+May 23, 2013 10:05:15 PM: Training time for class 4: 14ms
+May 23, 2013 10:05:15 PM: Training time for class 9: 4ms
+May 23, 2013 10:05:15 PM: Training time for class 10: 5ms
+May 23, 2013 10:05:15 PM: This learning session finished!.
+May 23, 2013 10:05:15 PM: 
+
+*************************
+A new session for NLP learning is starting: 20130523_220515file:/Users/florian/Workspace/study/ir/exercise4/config/ml-config.xml (saved 20130523_144105, 26650secs ago)The initiliased time of NLP learning: Thu May 23 22:05:15 CEST 2013
+Working directory: /Users/florian/Workspace/study/ir/exercise4/config
+The feature files and models are saved at: /Users/florian/Workspace/study/ir/exercise4/config/savedFiles
+Learner name: PAUM
+Learner nick name: PAUM
+Learner parameter settings: PAUM
+Surroud mode (or chunk learning): true
+May 23, 2013 10:05:15 PM: 
+*** A new run starts.
+May 23, 2013 10:05:15 PM: 
+The execution time (pre-processing the first document): Thu May 23 22:05:15 CEST 2013
+May 23, 2013 10:05:15 PM: ** Application mode for document from 0 to 1(not included):
+May 23, 2013 10:05:15 PM: Creating temp directory for application-mode files
+May 23, 2013 10:05:15 PM: 
+Application starts.
+May 23, 2013 10:05:15 PM: Multi to binary conversion.
+May 23, 2013 10:05:15 PM: The learners: PAUM
+May 23, 2013 10:05:15 PM: One against others for multi to binary class conversion.
+Number of classes in model: 6
+May 23, 2013 10:05:15 PM: Application time for class: 9ms
+May 23, 2013 10:05:15 PM: ** Application mode for document from 1 to 2(not included):
+May 23, 2013 10:05:15 PM: 
+Application starts.
+May 23, 2013 10:05:15 PM: Multi to binary conversion.
+May 23, 2013 10:05:15 PM: The learners: PAUM
+May 23, 2013 10:05:15 PM: One against others for multi to binary class conversion.
+Number of classes in model: 6
+May 23, 2013 10:05:15 PM: Application time for class: 9ms
+May 23, 2013 10:05:15 PM: ** Application mode for document from 2 to 3(not included):
+May 23, 2013 10:05:15 PM: 
+Application starts.
+May 23, 2013 10:05:15 PM: Multi to binary conversion.
+May 23, 2013 10:05:15 PM: The learners: PAUM
+May 23, 2013 10:05:15 PM: One against others for multi to binary class conversion.
+Number of classes in model: 6
+May 23, 2013 10:05:15 PM: Application time for class: 12ms
+May 23, 2013 10:05:15 PM: ** Application mode for document from 3 to 4(not included):
+May 23, 2013 10:05:15 PM: 
+Application starts.
+May 23, 2013 10:05:15 PM: Multi to binary conversion.
+May 23, 2013 10:05:15 PM: The learners: PAUM
+May 23, 2013 10:05:15 PM: One against others for multi to binary class conversion.
+Number of classes in model: 6
+May 23, 2013 10:05:15 PM: Application time for class: 8ms
+May 23, 2013 10:05:15 PM: ** Application mode for document from 4 to 5(not included):
+May 23, 2013 10:05:16 PM: 
+Application starts.
+May 23, 2013 10:05:16 PM: Multi to binary conversion.
+May 23, 2013 10:05:16 PM: The learners: PAUM
+May 23, 2013 10:05:16 PM: One against others for multi to binary class conversion.
+Number of classes in model: 6
+May 23, 2013 10:05:16 PM: Application time for class: 3ms
+May 23, 2013 10:05:16 PM: ** Application mode for document from 5 to 6(not included):
+May 23, 2013 10:05:16 PM: 
+Application starts.
+May 23, 2013 10:05:16 PM: Multi to binary conversion.
+May 23, 2013 10:05:16 PM: The learners: PAUM
+May 23, 2013 10:05:16 PM: One against others for multi to binary class conversion.
+Number of classes in model: 6
+May 23, 2013 10:05:16 PM: Application time for class: 3ms
+May 23, 2013 10:05:16 PM: ** Application mode for document from 6 to 7(not included):
+May 23, 2013 10:05:16 PM: 
+Application starts.
+May 23, 2013 10:05:16 PM: Multi to binary conversion.
+May 23, 2013 10:05:16 PM: The learners: PAUM
+May 23, 2013 10:05:16 PM: One against others for multi to binary class conversion.
+Number of classes in model: 6
+May 23, 2013 10:05:16 PM: Application time for class: 2ms
+May 23, 2013 10:05:16 PM: ** Application mode for document from 7 to 8(not included):
+May 23, 2013 10:05:16 PM: 
+Application starts.
+May 23, 2013 10:05:16 PM: Multi to binary conversion.
+May 23, 2013 10:05:16 PM: The learners: PAUM
+May 23, 2013 10:05:16 PM: One against others for multi to binary class conversion.
+Number of classes in model: 6
+May 23, 2013 10:05:16 PM: Application time for class: 3ms
+May 23, 2013 10:05:16 PM: ** Application mode for document from 8 to 9(not included):
+May 23, 2013 10:05:16 PM: 
+Application starts.
+May 23, 2013 10:05:16 PM: Multi to binary conversion.
+May 23, 2013 10:05:16 PM: The learners: PAUM
+May 23, 2013 10:05:16 PM: One against others for multi to binary class conversion.
+Number of classes in model: 6
+May 23, 2013 10:05:16 PM: Application time for class: 2ms
+May 23, 2013 10:05:16 PM: ** Application mode for document from 9 to 10(not included):
+May 23, 2013 10:05:16 PM: 
+Application starts.
+May 23, 2013 10:05:16 PM: Multi to binary conversion.
+May 23, 2013 10:05:16 PM: The learners: PAUM
+May 23, 2013 10:05:16 PM: One against others for multi to binary class conversion.
+Number of classes in model: 6
+May 23, 2013 10:05:16 PM: Application time for class: 4ms
+May 23, 2013 10:05:16 PM: ** Application mode for document from 10 to 11(not included):
+May 23, 2013 10:05:16 PM: 
+Application starts.
+May 23, 2013 10:05:16 PM: Multi to binary conversion.
+May 23, 2013 10:05:16 PM: The learners: PAUM
+May 23, 2013 10:05:16 PM: One against others for multi to binary class conversion.
+Number of classes in model: 6
+May 23, 2013 10:05:16 PM: Application time for class: 3ms
+May 23, 2013 10:05:16 PM: ** Application mode for document from 11 to 12(not included):
+May 23, 2013 10:05:16 PM: 
+Application starts.
+May 23, 2013 10:05:16 PM: Multi to binary conversion.
+May 23, 2013 10:05:16 PM: The learners: PAUM
+May 23, 2013 10:05:16 PM: One against others for multi to binary class conversion.
+Number of classes in model: 6
+May 23, 2013 10:05:16 PM: Application time for class: 3ms
+May 23, 2013 10:05:16 PM: The learning start at Thu May 23 22:05:16 CEST 2013
+May 23, 2013 10:05:16 PM: The number of documents in dataset: 12
+May 23, 2013 10:05:16 PM: This learning session finished!.
+May 23, 2013 10:18:14 PM: 
+
+*************************
+A new session for NLP learning is starting: 20130523_221814file:/Users/florian/Workspace/study/ir/exercise4/config/ml-config.xml (saved 20130523_144105, 27429secs ago)The initiliased time of NLP learning: Thu May 23 22:18:14 CEST 2013
+Working directory: /Users/florian/Workspace/study/ir/exercise4/config
+The feature files and models are saved at: /Users/florian/Workspace/study/ir/exercise4/config/savedFiles
+Learner name: PAUM
+Learner nick name: PAUM
+Learner parameter settings: PAUM
+Surroud mode (or chunk learning): true
+May 23, 2013 10:18:16 PM: 
+*** A new run starts.
+May 23, 2013 10:18:16 PM: 
+The execution time (pre-processing the first document): Thu May 23 22:18:16 CEST 2013
+May 23, 2013 10:18:16 PM: The learning start at Thu May 23 22:18:16 CEST 2013
+May 23, 2013 10:18:16 PM: The number of documents in dataset: 11
+May 23, 2013 10:18:16 PM: ** Training mode:
+May 23, 2013 10:18:18 PM: 
+Training starts.
+
+May 23, 2013 10:18:18 PM: Multi to binary conversion.
+May 23, 2013 10:18:18 PM: The learners: PAUM
+May 23, 2013 10:18:18 PM: The number of classes in dataset: 6
+May 23, 2013 10:18:18 PM: total Number of classes for learning is 6
+May 23, 2013 10:18:18 PM: One against others for multi to binary class conversion.
+May 23, 2013 10:18:18 PM: Training time for class 1: 28ms
+May 23, 2013 10:18:18 PM: Training time for class 2: 63ms
+May 23, 2013 10:18:18 PM: Training time for class 3: 14ms
+May 23, 2013 10:18:18 PM: Training time for class 4: 12ms
+May 23, 2013 10:18:18 PM: Training time for class 9: 7ms
+May 23, 2013 10:18:18 PM: Training time for class 10: 6ms
+May 23, 2013 10:18:18 PM: This learning session finished!.
+May 23, 2013 10:18:18 PM: 
+
+*************************
+A new session for NLP learning is starting: 20130523_221818file:/Users/florian/Workspace/study/ir/exercise4/config/ml-config.xml (saved 20130523_144105, 27433secs ago)The initiliased time of NLP learning: Thu May 23 22:18:18 CEST 2013
+Working directory: /Users/florian/Workspace/study/ir/exercise4/config
+The feature files and models are saved at: /Users/florian/Workspace/study/ir/exercise4/config/savedFiles
+Learner name: PAUM
+Learner nick name: PAUM
+Learner parameter settings: PAUM
+Surroud mode (or chunk learning): true
+May 23, 2013 10:18:18 PM: 
+*** A new run starts.
+May 23, 2013 10:18:18 PM: 
+The execution time (pre-processing the first document): Thu May 23 22:18:18 CEST 2013
+May 23, 2013 10:18:18 PM: ** Application mode for document from 0 to 1(not included):
+May 23, 2013 10:18:18 PM: Creating temp directory for application-mode files
+May 23, 2013 10:18:18 PM: 
+Application starts.
+May 23, 2013 10:18:18 PM: Multi to binary conversion.
+May 23, 2013 10:18:18 PM: The learners: PAUM
+May 23, 2013 10:18:18 PM: One against others for multi to binary class conversion.
+Number of classes in model: 6
+May 23, 2013 10:18:18 PM: Application time for class: 31ms
+May 23, 2013 10:18:18 PM: ** Application mode for document from 1 to 2(not included):
+May 23, 2013 10:18:19 PM: 
+Application starts.
+May 23, 2013 10:18:19 PM: Multi to binary conversion.
+May 23, 2013 10:18:19 PM: The learners: PAUM
+May 23, 2013 10:18:19 PM: One against others for multi to binary class conversion.
+Number of classes in model: 6
+May 23, 2013 10:18:19 PM: Application time for class: 11ms
+May 23, 2013 10:18:19 PM: ** Application mode for document from 2 to 3(not included):
+May 23, 2013 10:18:19 PM: 
+Application starts.
+May 23, 2013 10:18:19 PM: Multi to binary conversion.
+May 23, 2013 10:18:19 PM: The learners: PAUM
+May 23, 2013 10:18:19 PM: One against others for multi to binary class conversion.
+Number of classes in model: 6
+May 23, 2013 10:18:19 PM: Application time for class: 8ms
+May 23, 2013 10:18:19 PM: ** Application mode for document from 3 to 4(not included):
+May 23, 2013 10:18:19 PM: 
+Application starts.
+May 23, 2013 10:18:19 PM: Multi to binary conversion.
+May 23, 2013 10:18:19 PM: The learners: PAUM
+May 23, 2013 10:18:19 PM: One against others for multi to binary class conversion.
+Number of classes in model: 6
+May 23, 2013 10:18:19 PM: Application time for class: 6ms
+May 23, 2013 10:18:19 PM: ** Application mode for document from 4 to 5(not included):
+May 23, 2013 10:18:19 PM: 
+Application starts.
+May 23, 2013 10:18:19 PM: Multi to binary conversion.
+May 23, 2013 10:18:19 PM: The learners: PAUM
+May 23, 2013 10:18:19 PM: One against others for multi to binary class conversion.
+Number of classes in model: 6
+May 23, 2013 10:18:19 PM: Application time for class: 3ms
+May 23, 2013 10:18:19 PM: ** Application mode for document from 5 to 6(not included):
+May 23, 2013 10:18:19 PM: 
+Application starts.
+May 23, 2013 10:18:19 PM: Multi to binary conversion.
+May 23, 2013 10:18:19 PM: The learners: PAUM
+May 23, 2013 10:18:19 PM: One against others for multi to binary class conversion.
+Number of classes in model: 6
+May 23, 2013 10:18:19 PM: Application time for class: 6ms
+May 23, 2013 10:18:19 PM: ** Application mode for document from 6 to 7(not included):
+May 23, 2013 10:18:19 PM: 
+Application starts.
+May 23, 2013 10:18:19 PM: Multi to binary conversion.
+May 23, 2013 10:18:19 PM: The learners: PAUM
+May 23, 2013 10:18:19 PM: One against others for multi to binary class conversion.
+Number of classes in model: 6
+May 23, 2013 10:18:19 PM: Application time for class: 3ms
+May 23, 2013 10:18:19 PM: ** Application mode for document from 7 to 8(not included):
+May 23, 2013 10:18:19 PM: 
+Application starts.
+May 23, 2013 10:18:19 PM: Multi to binary conversion.
+May 23, 2013 10:18:19 PM: The learners: PAUM
+May 23, 2013 10:18:19 PM: One against others for multi to binary class conversion.
+Number of classes in model: 6
+May 23, 2013 10:18:19 PM: Application time for class: 3ms
+May 23, 2013 10:18:19 PM: ** Application mode for document from 8 to 9(not included):
+May 23, 2013 10:18:19 PM: 
+Application starts.
+May 23, 2013 10:18:19 PM: Multi to binary conversion.
+May 23, 2013 10:18:19 PM: The learners: PAUM
+May 23, 2013 10:18:19 PM: One against others for multi to binary class conversion.
+Number of classes in model: 6
+May 23, 2013 10:18:19 PM: Application time for class: 2ms
+May 23, 2013 10:18:19 PM: ** Application mode for document from 9 to 10(not included):
+May 23, 2013 10:18:19 PM: 
+Application starts.
+May 23, 2013 10:18:19 PM: Multi to binary conversion.
+May 23, 2013 10:18:19 PM: The learners: PAUM
+May 23, 2013 10:18:19 PM: One against others for multi to binary class conversion.
+Number of classes in model: 6
+May 23, 2013 10:18:19 PM: Application time for class: 4ms
+May 23, 2013 10:18:19 PM: ** Application mode for document from 10 to 11(not included):
+May 23, 2013 10:18:19 PM: 
+Application starts.
+May 23, 2013 10:18:19 PM: Multi to binary conversion.
+May 23, 2013 10:18:19 PM: The learners: PAUM
+May 23, 2013 10:18:19 PM: One against others for multi to binary class conversion.
+Number of classes in model: 6
+May 23, 2013 10:18:19 PM: Application time for class: 4ms
+May 23, 2013 10:18:19 PM: ** Application mode for document from 11 to 12(not included):
+May 23, 2013 10:18:19 PM: 
+Application starts.
+May 23, 2013 10:18:19 PM: Multi to binary conversion.
+May 23, 2013 10:18:19 PM: The learners: PAUM
+May 23, 2013 10:18:19 PM: One against others for multi to binary class conversion.
+Number of classes in model: 6
+May 23, 2013 10:18:19 PM: Application time for class: 3ms
+May 23, 2013 10:18:19 PM: The learning start at Thu May 23 22:18:19 CEST 2013
+May 23, 2013 10:18:19 PM: The number of documents in dataset: 12
+May 23, 2013 10:18:19 PM: This learning session finished!.
+May 23, 2013 10:24:17 PM: 
+
+*************************
+A new session for NLP learning is starting: 20130523_222416file:/Users/florian/Workspace/study/ir/exercise4/config/ml-config.xml (saved 20130523_144105, 27791secs ago)The initiliased time of NLP learning: Thu May 23 22:24:16 CEST 2013
+Working directory: /Users/florian/Workspace/study/ir/exercise4/config
+The feature files and models are saved at: /Users/florian/Workspace/study/ir/exercise4/config/savedFiles
+Learner name: PAUM
+Learner nick name: PAUM
+Learner parameter settings: PAUM
+Surroud mode (or chunk learning): true
+May 23, 2013 10:24:19 PM: 
+*** A new run starts.
+May 23, 2013 10:24:19 PM: 
+The execution time (pre-processing the first document): Thu May 23 22:24:19 CEST 2013
+May 23, 2013 10:24:19 PM: The learning start at Thu May 23 22:24:19 CEST 2013
+May 23, 2013 10:24:19 PM: The number of documents in dataset: 11
+May 23, 2013 10:24:19 PM: ** Training mode:
+May 23, 2013 10:24:20 PM: 
+Training starts.
+
+May 23, 2013 10:24:20 PM: Multi to binary conversion.
+May 23, 2013 10:24:20 PM: The learners: PAUM
+May 23, 2013 10:24:20 PM: The number of classes in dataset: 6
+May 23, 2013 10:24:20 PM: total Number of classes for learning is 6
+May 23, 2013 10:24:20 PM: One against others for multi to binary class conversion.
+May 23, 2013 10:24:20 PM: Training time for class 1: 33ms
+May 23, 2013 10:24:20 PM: Training time for class 2: 46ms
+May 23, 2013 10:24:20 PM: Training time for class 3: 10ms
+May 23, 2013 10:24:20 PM: Training time for class 4: 7ms
+May 23, 2013 10:24:20 PM: Training time for class 9: 5ms
+May 23, 2013 10:24:20 PM: Training time for class 10: 7ms
+May 23, 2013 10:24:20 PM: This learning session finished!.
+May 23, 2013 10:24:20 PM: 
+
+*************************
+A new session for NLP learning is starting: 20130523_222420file:/Users/florian/Workspace/study/ir/exercise4/config/ml-config.xml (saved 20130523_144105, 27795secs ago)The initiliased time of NLP learning: Thu May 23 22:24:20 CEST 2013
+Working directory: /Users/florian/Workspace/study/ir/exercise4/config
+The feature files and models are saved at: /Users/florian/Workspace/study/ir/exercise4/config/savedFiles
+Learner name: PAUM
+Learner nick name: PAUM
+Learner parameter settings: PAUM
+Surroud mode (or chunk learning): true
+May 23, 2013 10:24:20 PM: 
+*** A new run starts.
+May 23, 2013 10:24:20 PM: 
+The execution time (pre-processing the first document): Thu May 23 22:24:20 CEST 2013
+May 23, 2013 10:24:20 PM: ** Application mode for document from 0 to 1(not included):
+May 23, 2013 10:24:20 PM: Creating temp directory for application-mode files
+May 23, 2013 10:24:20 PM: 
+Application starts.
+May 23, 2013 10:24:20 PM: Multi to binary conversion.
+May 23, 2013 10:24:20 PM: The learners: PAUM
+May 23, 2013 10:24:20 PM: One against others for multi to binary class conversion.
+Number of classes in model: 6
+May 23, 2013 10:24:20 PM: Application time for class: 9ms
+May 23, 2013 10:24:20 PM: ** Application mode for document from 1 to 2(not included):
+May 23, 2013 10:24:20 PM: 
+Application starts.
+May 23, 2013 10:24:20 PM: Multi to binary conversion.
+May 23, 2013 10:24:20 PM: The learners: PAUM
+May 23, 2013 10:24:20 PM: One against others for multi to binary class conversion.
+Number of classes in model: 6
+May 23, 2013 10:24:20 PM: Application time for class: 6ms
+May 23, 2013 10:24:20 PM: ** Application mode for document from 2 to 3(not included):
+May 23, 2013 10:24:21 PM: 
+Application starts.
+May 23, 2013 10:24:21 PM: Multi to binary conversion.
+May 23, 2013 10:24:21 PM: The learners: PAUM
+May 23, 2013 10:24:21 PM: One against others for multi to binary class conversion.
+Number of classes in model: 6
+May 23, 2013 10:24:21 PM: Application time for class: 8ms
+May 23, 2013 10:24:21 PM: ** Application mode for document from 3 to 4(not included):
+May 23, 2013 10:24:21 PM: 
+Application starts.
+May 23, 2013 10:24:21 PM: Multi to binary conversion.
+May 23, 2013 10:24:21 PM: The learners: PAUM
+May 23, 2013 10:24:21 PM: One against others for multi to binary class conversion.
+Number of classes in model: 6
+May 23, 2013 10:24:21 PM: Application time for class: 5ms
+May 23, 2013 10:24:21 PM: ** Application mode for document from 4 to 5(not included):
+May 23, 2013 10:24:21 PM: 
+Application starts.
+May 23, 2013 10:24:21 PM: Multi to binary conversion.
+May 23, 2013 10:24:21 PM: The learners: PAUM
+May 23, 2013 10:24:21 PM: One against others for multi to binary class conversion.
+Number of classes in model: 6
+May 23, 2013 10:24:21 PM: Application time for class: 3ms
+May 23, 2013 10:24:21 PM: ** Application mode for document from 5 to 6(not included):
+May 23, 2013 10:24:21 PM: 
+Application starts.
+May 23, 2013 10:24:21 PM: Multi to binary conversion.
+May 23, 2013 10:24:21 PM: The learners: PAUM
+May 23, 2013 10:24:21 PM: One against others for multi to binary class conversion.
+Number of classes in model: 6
+May 23, 2013 10:24:21 PM: Application time for class: 5ms
+May 23, 2013 10:24:21 PM: ** Application mode for document from 6 to 7(not included):
+May 23, 2013 10:24:21 PM: 
+Application starts.
+May 23, 2013 10:24:21 PM: Multi to binary conversion.
+May 23, 2013 10:24:21 PM: The learners: PAUM
+May 23, 2013 10:24:21 PM: One against others for multi to binary class conversion.
+Number of classes in model: 6
+May 23, 2013 10:24:21 PM: Application time for class: 3ms
+May 23, 2013 10:24:21 PM: ** Application mode for document from 7 to 8(not included):
+May 23, 2013 10:24:21 PM: 
+Application starts.
+May 23, 2013 10:24:21 PM: Multi to binary conversion.
+May 23, 2013 10:24:21 PM: The learners: PAUM
+May 23, 2013 10:24:21 PM: One against others for multi to binary class conversion.
+Number of classes in model: 6
+May 23, 2013 10:24:21 PM: Application time for class: 3ms
+May 23, 2013 10:24:21 PM: ** Application mode for document from 8 to 9(not included):
+May 23, 2013 10:24:21 PM: 
+Application starts.
+May 23, 2013 10:24:21 PM: Multi to binary conversion.
+May 23, 2013 10:24:21 PM: The learners: PAUM
+May 23, 2013 10:24:21 PM: One against others for multi to binary class conversion.
+Number of classes in model: 6
+May 23, 2013 10:24:21 PM: Application time for class: 3ms
+May 23, 2013 10:24:21 PM: ** Application mode for document from 9 to 10(not included):
+May 23, 2013 10:24:21 PM: 
+Application starts.
+May 23, 2013 10:24:21 PM: Multi to binary conversion.
+May 23, 2013 10:24:21 PM: The learners: PAUM
+May 23, 2013 10:24:21 PM: One against others for multi to binary class conversion.
+Number of classes in model: 6
+May 23, 2013 10:24:21 PM: Application time for class: 3ms
+May 23, 2013 10:24:21 PM: ** Application mode for document from 10 to 11(not included):
+May 23, 2013 10:24:21 PM: 
+Application starts.
+May 23, 2013 10:24:21 PM: Multi to binary conversion.
+May 23, 2013 10:24:21 PM: The learners: PAUM
+May 23, 2013 10:24:21 PM: One against others for multi to binary class conversion.
+Number of classes in model: 6
+May 23, 2013 10:24:21 PM: Application time for class: 4ms
+May 23, 2013 10:24:21 PM: ** Application mode for document from 11 to 12(not included):
+May 23, 2013 10:24:21 PM: 
+Application starts.
+May 23, 2013 10:24:21 PM: Multi to binary conversion.
+May 23, 2013 10:24:21 PM: The learners: PAUM
+May 23, 2013 10:24:21 PM: One against others for multi to binary class conversion.
+Number of classes in model: 6
+May 23, 2013 10:24:21 PM: Application time for class: 2ms
+May 23, 2013 10:24:21 PM: The learning start at Thu May 23 22:24:21 CEST 2013
+May 23, 2013 10:24:21 PM: The number of documents in dataset: 12
+May 23, 2013 10:24:21 PM: This learning session finished!.

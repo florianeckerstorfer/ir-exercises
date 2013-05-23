@@ -9479,3 +9479,205 @@ If this is not correct please set it manually using the -Dgate.home option in yo
 2013-05-21 15:06:05 INFO  CFPExtractor:243 - 1.5-train-2-3-4-LDIE_1997-gate.key_0002F
 2013-05-21 15:06:05 INFO  CFPExtractor:243 - 1.5-train-2-3-5-MSD_1997-gate.key_00030
 2013-05-21 15:06:05 INFO  CFPExtractor:249 - XML file saved!
+2013-05-23 21:54:51 WARN  Gate:266 - GATE home system property ("gate.home") not set.
+Attempting to guess...
+2013-05-23 21:54:51 WARN  Gate:286 - Using "/Users/florian/Workspace/study/ir/exercise4/vendor/GATE" as GATE Home.
+If this is not correct please set it manually using the -Dgate.home option in your start-up script
+2013-05-23 21:54:51 INFO  Gate:297 - Using /Users/florian/Workspace/study/ir/exercise4/vendor/GATE as GATE home
+2013-05-23 21:54:51 INFO  Gate:321 - Using /Users/florian/Workspace/study/ir/exercise4/vendor/GATE/plugins as installed plug-ins directory.
+2013-05-23 21:54:51 INFO  Gate:344 - Using /Users/florian/Workspace/study/ir/exercise4/vendor/GATE/gate.xml as site configuration file.
+2013-05-23 21:54:51 INFO  Gate:356 - Using /Users/florian/.gate.xml as user configuration file
+2013-05-23 21:54:51 INFO  Gate:369 - Using /Users/florian/.gate.session as user session file
+2013-05-23 21:55:50 WARN  Gate:266 - GATE home system property ("gate.home") not set.
+Attempting to guess...
+2013-05-23 21:55:50 WARN  Gate:286 - Using "/Users/florian/Workspace/study/ir/exercise4/vendor/GATE" as GATE Home.
+If this is not correct please set it manually using the -Dgate.home option in your start-up script
+2013-05-23 21:55:50 INFO  Gate:297 - Using /Users/florian/Workspace/study/ir/exercise4/vendor/GATE as GATE home
+2013-05-23 21:55:50 INFO  Gate:321 - Using /Users/florian/Workspace/study/ir/exercise4/vendor/GATE/plugins as installed plug-ins directory.
+2013-05-23 21:55:50 INFO  Gate:344 - Using /Users/florian/Workspace/study/ir/exercise4/vendor/GATE/gate.xml as site configuration file.
+2013-05-23 21:55:50 INFO  Gate:356 - Using /Users/florian/.gate.xml as user configuration file
+2013-05-23 21:55:50 INFO  Gate:369 - Using /Users/florian/.gate.session as user session file
+2013-05-23 21:56:24 WARN  Gate:266 - GATE home system property ("gate.home") not set.
+Attempting to guess...
+2013-05-23 21:56:24 WARN  Gate:286 - Using "/Users/florian/Workspace/study/ir/exercise4/vendor/GATE" as GATE Home.
+If this is not correct please set it manually using the -Dgate.home option in your start-up script
+2013-05-23 21:56:24 INFO  Gate:297 - Using /Users/florian/Workspace/study/ir/exercise4/vendor/GATE as GATE home
+2013-05-23 21:56:24 INFO  Gate:321 - Using /Users/florian/Workspace/study/ir/exercise4/vendor/GATE/plugins as installed plug-ins directory.
+2013-05-23 21:56:24 INFO  Gate:344 - Using /Users/florian/Workspace/study/ir/exercise4/vendor/GATE/gate.xml as site configuration file.
+2013-05-23 21:56:24 INFO  Gate:356 - Using /Users/florian/.gate.xml as user configuration file
+2013-05-23 21:56:24 INFO  Gate:369 - Using /Users/florian/.gate.session as user session file
+2013-05-23 21:57:58 WARN  Gate:266 - GATE home system property ("gate.home") not set.
+Attempting to guess...
+2013-05-23 21:57:58 WARN  Gate:286 - Using "/Users/florian/Workspace/study/ir/exercise4/vendor/GATE" as GATE Home.
+If this is not correct please set it manually using the -Dgate.home option in your start-up script
+2013-05-23 21:57:58 INFO  Gate:297 - Using /Users/florian/Workspace/study/ir/exercise4/vendor/GATE as GATE home
+2013-05-23 21:57:58 INFO  Gate:321 - Using /Users/florian/Workspace/study/ir/exercise4/vendor/GATE/plugins as installed plug-ins directory.
+2013-05-23 21:57:58 INFO  Gate:344 - Using /Users/florian/Workspace/study/ir/exercise4/vendor/GATE/gate.xml as site configuration file.
+2013-05-23 21:57:58 INFO  Gate:356 - Using /Users/florian/.gate.xml as user configuration file
+2013-05-23 21:57:58 INFO  Gate:369 - Using /Users/florian/.gate.session as user session file
+2013-05-23 21:58:18 WARN  Gate:266 - GATE home system property ("gate.home") not set.
+Attempting to guess...
+2013-05-23 21:58:18 WARN  Gate:286 - Using "/Users/florian/Workspace/study/ir/exercise4/vendor/GATE" as GATE Home.
+If this is not correct please set it manually using the -Dgate.home option in your start-up script
+2013-05-23 21:58:18 INFO  Gate:297 - Using /Users/florian/Workspace/study/ir/exercise4/vendor/GATE as GATE home
+2013-05-23 21:58:18 INFO  Gate:321 - Using /Users/florian/Workspace/study/ir/exercise4/vendor/GATE/plugins as installed plug-ins directory.
+2013-05-23 21:58:18 INFO  Gate:344 - Using /Users/florian/Workspace/study/ir/exercise4/vendor/GATE/gate.xml as site configuration file.
+2013-05-23 21:58:18 INFO  Gate:356 - Using /Users/florian/.gate.xml as user configuration file
+2013-05-23 21:58:18 INFO  Gate:369 - Using /Users/florian/.gate.session as user session file
+2013-05-23 21:58:37 WARN  Gate:266 - GATE home system property ("gate.home") not set.
+Attempting to guess...
+2013-05-23 21:58:37 WARN  Gate:286 - Using "/Users/florian/Workspace/study/ir/exercise4/vendor/GATE" as GATE Home.
+If this is not correct please set it manually using the -Dgate.home option in your start-up script
+2013-05-23 21:58:37 INFO  Gate:297 - Using /Users/florian/Workspace/study/ir/exercise4/vendor/GATE as GATE home
+2013-05-23 21:58:37 INFO  Gate:321 - Using /Users/florian/Workspace/study/ir/exercise4/vendor/GATE/plugins as installed plug-ins directory.
+2013-05-23 21:58:37 INFO  Gate:344 - Using /Users/florian/Workspace/study/ir/exercise4/vendor/GATE/gate.xml as site configuration file.
+2013-05-23 21:58:37 INFO  Gate:356 - Using /Users/florian/.gate.xml as user configuration file
+2013-05-23 21:58:37 INFO  Gate:369 - Using /Users/florian/.gate.session as user session file
+2013-05-23 21:59:03 WARN  Gate:266 - GATE home system property ("gate.home") not set.
+Attempting to guess...
+2013-05-23 21:59:03 WARN  Gate:286 - Using "/Users/florian/Workspace/study/ir/exercise4/vendor/GATE" as GATE Home.
+If this is not correct please set it manually using the -Dgate.home option in your start-up script
+2013-05-23 21:59:03 INFO  Gate:297 - Using /Users/florian/Workspace/study/ir/exercise4/vendor/GATE as GATE home
+2013-05-23 21:59:03 INFO  Gate:321 - Using /Users/florian/Workspace/study/ir/exercise4/vendor/GATE/plugins as installed plug-ins directory.
+2013-05-23 21:59:03 INFO  Gate:344 - Using /Users/florian/Workspace/study/ir/exercise4/vendor/GATE/gate.xml as site configuration file.
+2013-05-23 21:59:03 INFO  Gate:356 - Using /Users/florian/.gate.xml as user configuration file
+2013-05-23 21:59:03 INFO  Gate:369 - Using /Users/florian/.gate.session as user session file
+2013-05-23 21:59:21 WARN  Gate:266 - GATE home system property ("gate.home") not set.
+Attempting to guess...
+2013-05-23 21:59:21 WARN  Gate:286 - Using "/Users/florian/Workspace/study/ir/exercise4/vendor/GATE" as GATE Home.
+If this is not correct please set it manually using the -Dgate.home option in your start-up script
+2013-05-23 21:59:21 INFO  Gate:297 - Using /Users/florian/Workspace/study/ir/exercise4/vendor/GATE as GATE home
+2013-05-23 21:59:21 INFO  Gate:321 - Using /Users/florian/Workspace/study/ir/exercise4/vendor/GATE/plugins as installed plug-ins directory.
+2013-05-23 21:59:21 INFO  Gate:344 - Using /Users/florian/Workspace/study/ir/exercise4/vendor/GATE/gate.xml as site configuration file.
+2013-05-23 21:59:21 INFO  Gate:356 - Using /Users/florian/.gate.xml as user configuration file
+2013-05-23 21:59:21 INFO  Gate:369 - Using /Users/florian/.gate.session as user session file
+2013-05-23 22:01:47 WARN  Gate:266 - GATE home system property ("gate.home") not set.
+Attempting to guess...
+2013-05-23 22:01:47 WARN  Gate:286 - Using "/Users/florian/Workspace/study/ir/exercise4/vendor/GATE" as GATE Home.
+If this is not correct please set it manually using the -Dgate.home option in your start-up script
+2013-05-23 22:01:47 INFO  Gate:297 - Using /Users/florian/Workspace/study/ir/exercise4/vendor/GATE as GATE home
+2013-05-23 22:01:47 INFO  Gate:321 - Using /Users/florian/Workspace/study/ir/exercise4/vendor/GATE/plugins as installed plug-ins directory.
+2013-05-23 22:01:47 INFO  Gate:344 - Using /Users/florian/Workspace/study/ir/exercise4/vendor/GATE/gate.xml as site configuration file.
+2013-05-23 22:01:47 INFO  Gate:356 - Using /Users/florian/.gate.xml as user configuration file
+2013-05-23 22:01:47 INFO  Gate:369 - Using /Users/florian/.gate.session as user session file
+2013-05-23 22:01:50 INFO  CFPExtractor:85 - Gate-MainFrame started
+2013-05-23 22:01:50 INFO  CFPExtractor:134 - initialize MachineLearningController...
+2013-05-23 22:04:40 WARN  Gate:266 - GATE home system property ("gate.home") not set.
+Attempting to guess...
+2013-05-23 22:04:40 WARN  Gate:286 - Using "/Users/florian/Workspace/study/ir/exercise4/vendor/GATE_Developer_7.1" as GATE Home.
+If this is not correct please set it manually using the -Dgate.home option in your start-up script
+2013-05-23 22:04:40 INFO  Gate:297 - Using /Users/florian/Workspace/study/ir/exercise4/vendor/GATE_Developer_7.1 as GATE home
+2013-05-23 22:04:40 INFO  Gate:321 - Using /Users/florian/Workspace/study/ir/exercise4/vendor/GATE_Developer_7.1/plugins as installed plug-ins directory.
+2013-05-23 22:04:40 INFO  Gate:344 - Using /Users/florian/Workspace/study/ir/exercise4/vendor/GATE_Developer_7.1/gate.xml as site configuration file.
+2013-05-23 22:04:40 INFO  Gate:356 - Using /Users/florian/.gate.xml as user configuration file
+2013-05-23 22:04:40 INFO  Gate:369 - Using /Users/florian/.gate.session as user session file
+2013-05-23 22:04:42 INFO  CFPExtractor:85 - Gate-MainFrame started
+2013-05-23 22:04:42 INFO  CFPExtractor:134 - initialize MachineLearningController...
+2013-05-23 22:05:09 WARN  Gate:266 - GATE home system property ("gate.home") not set.
+Attempting to guess...
+2013-05-23 22:05:09 WARN  Gate:286 - Using "/Users/florian/Workspace/study/ir/exercise4/vendor/GATE_Developer_7.1" as GATE Home.
+If this is not correct please set it manually using the -Dgate.home option in your start-up script
+2013-05-23 22:05:09 INFO  Gate:297 - Using /Users/florian/Workspace/study/ir/exercise4/vendor/GATE_Developer_7.1 as GATE home
+2013-05-23 22:05:09 INFO  Gate:321 - Using /Users/florian/Workspace/study/ir/exercise4/vendor/GATE_Developer_7.1/plugins as installed plug-ins directory.
+2013-05-23 22:05:09 INFO  Gate:344 - Using /Users/florian/Workspace/study/ir/exercise4/vendor/GATE_Developer_7.1/gate.xml as site configuration file.
+2013-05-23 22:05:09 INFO  Gate:356 - Using /Users/florian/.gate.xml as user configuration file
+2013-05-23 22:05:09 INFO  Gate:369 - Using /Users/florian/.gate.session as user session file
+2013-05-23 22:05:11 INFO  CFPExtractor:85 - Gate-MainFrame started
+2013-05-23 22:05:11 INFO  CFPExtractor:134 - initialize MachineLearningController...
+2013-05-23 22:05:11 WARN  GateClassLoader:147 - gate.learning.LearningAPIMain is available via both the system classpath and a plugin; the plugin classes will be ignored
+2013-05-23 22:05:11 INFO  CreoleRegisterImpl:319 - CREOLE plugin loaded: file:/Users/florian/Workspace/study/ir/exercise4/vendor/GATE_Developer_7.1/plugins/Learning/
+2013-05-23 22:05:11 INFO  CFPExtractor:164 - MachineLearningController loaded
+2013-05-23 22:05:11 INFO  CFPExtractor:122 - load training Corpus...
+2013-05-23 22:05:13 INFO  CFPExtractor:127 - load test Corpus...
+2013-05-23 22:05:13 INFO  CFPExtractor:168 - executing machine learning controller -> TRAINING Mode
+2013-05-23 22:05:15 INFO  CFPExtractor:172 - machine learning controller TRAINING Mode executed
+2013-05-23 22:05:15 INFO  CFPExtractor:176 - executing machine learning controller -> APPLICATION Mode...
+2013-05-23 22:05:16 INFO  CFPExtractor:192 - machine learning controller APPLICATION Mode executed
+2013-05-23 22:05:16 INFO  CFPExtractor:197 - fetch the required annotations from test corpus...
+2013-05-23 22:05:16 INFO  CFPExtractor:232 - annotations fetched
+2013-05-23 22:05:16 INFO  CFPExtractor:237 - saving the result into XML
+2013-05-23 22:05:16 INFO  CFPExtractor:239 - 1.5-train-2-2-4-ICOS_1999-gate.key_00014
+2013-05-23 22:05:16 INFO  CFPExtractor:239 - 1.5-train-2-2-5-KRDB_1998-gate.key_00015
+2013-05-23 22:05:16 INFO  CFPExtractor:239 - 1.5-train-2-2-6-MMNS_2000-gate.key_00016
+2013-05-23 22:05:16 INFO  CFPExtractor:239 - 1.5-train-2-2-7-PJW_1997-gate.key_00017
+2013-05-23 22:05:16 INFO  CFPExtractor:239 - 1.5-train-2-2-8-SMSE_2000-gate.key_00018
+2013-05-23 22:05:16 INFO  CFPExtractor:239 - 1.5-train-2-2-9-WEBDB_1998-gate.key_00019
+2013-05-23 22:05:16 INFO  CFPExtractor:239 - 1.5-train-2-3-0-AML_1998-gate.key_0001A
+2013-05-23 22:05:16 INFO  CFPExtractor:239 - 1.5-train-2-3-1-COMMON_1996-gate.key_0001B
+2013-05-23 22:05:16 INFO  CFPExtractor:239 - 1.5-train-2-3-2-DMIM_1998-gate.key_0001C
+2013-05-23 22:05:16 INFO  CFPExtractor:239 - 1.5-train-2-3-3-IDMS_1997-gate.key_0001D
+2013-05-23 22:05:16 INFO  CFPExtractor:239 - 1.5-train-2-3-4-LDIE_1997-gate.key_0001E
+2013-05-23 22:05:16 INFO  CFPExtractor:239 - 1.5-train-2-3-5-MSD_1997-gate.key_0001F
+2013-05-23 22:05:16 INFO  CFPExtractor:245 - XML file saved!
+2013-05-23 22:18:12 WARN  Gate:266 - GATE home system property ("gate.home") not set.
+Attempting to guess...
+2013-05-23 22:18:12 WARN  Gate:286 - Using "/Users/florian/Workspace/study/ir/exercise4/vendor/GATE_Developer_7.1" as GATE Home.
+If this is not correct please set it manually using the -Dgate.home option in your start-up script
+2013-05-23 22:18:12 INFO  Gate:297 - Using /Users/florian/Workspace/study/ir/exercise4/vendor/GATE_Developer_7.1 as GATE home
+2013-05-23 22:18:12 INFO  Gate:321 - Using /Users/florian/Workspace/study/ir/exercise4/vendor/GATE_Developer_7.1/plugins as installed plug-ins directory.
+2013-05-23 22:18:12 INFO  Gate:344 - Using /Users/florian/Workspace/study/ir/exercise4/vendor/GATE_Developer_7.1/gate.xml as site configuration file.
+2013-05-23 22:18:12 INFO  Gate:356 - Using /Users/florian/.gate.xml as user configuration file
+2013-05-23 22:18:12 INFO  Gate:369 - Using /Users/florian/.gate.session as user session file
+2013-05-23 22:18:14 INFO  CFPExtractor:85 - Gate-MainFrame started
+2013-05-23 22:18:14 INFO  CFPExtractor:144 - initialize MachineLearningController...
+2013-05-23 22:18:14 WARN  GateClassLoader:147 - gate.learning.LearningAPIMain is available via both the system classpath and a plugin; the plugin classes will be ignored
+2013-05-23 22:18:14 INFO  CreoleRegisterImpl:319 - CREOLE plugin loaded: file:/Users/florian/Workspace/study/ir/exercise4/vendor/GATE_Developer_7.1/plugins/Learning/
+2013-05-23 22:18:14 INFO  CFPExtractor:175 - MachineLearningController loaded
+2013-05-23 22:18:14 INFO  CFPExtractor:132 - load training Corpus...
+2013-05-23 22:18:15 INFO  CFPExtractor:137 - load test Corpus...
+2013-05-23 22:18:16 INFO  CFPExtractor:179 - executing machine learning controller -> TRAINING Mode
+2013-05-23 22:18:18 INFO  CFPExtractor:183 - machine learning controller TRAINING Mode executed
+2013-05-23 22:18:18 INFO  CFPExtractor:187 - executing machine learning controller -> APPLICATION Mode...
+2013-05-23 22:18:19 INFO  CFPExtractor:203 - machine learning controller APPLICATION Mode executed
+2013-05-23 22:18:19 INFO  CFPExtractor:208 - fetch the required annotations from test corpus...
+2013-05-23 22:18:19 INFO  CFPExtractor:243 - annotations fetched
+2013-05-23 22:18:19 INFO  CFPExtractor:248 - saving the result into XML
+2013-05-23 22:18:19 INFO  CFPExtractor:250 - 1.5-train-2-2-4-ICOS_1999-gate.key_00014
+2013-05-23 22:18:19 INFO  CFPExtractor:250 - 1.5-train-2-2-5-KRDB_1998-gate.key_00015
+2013-05-23 22:18:19 INFO  CFPExtractor:250 - 1.5-train-2-2-6-MMNS_2000-gate.key_00016
+2013-05-23 22:18:19 INFO  CFPExtractor:250 - 1.5-train-2-2-7-PJW_1997-gate.key_00017
+2013-05-23 22:18:19 INFO  CFPExtractor:250 - 1.5-train-2-2-8-SMSE_2000-gate.key_00018
+2013-05-23 22:18:19 INFO  CFPExtractor:250 - 1.5-train-2-2-9-WEBDB_1998-gate.key_00019
+2013-05-23 22:18:19 INFO  CFPExtractor:250 - 1.5-train-2-3-0-AML_1998-gate.key_0001A
+2013-05-23 22:18:19 INFO  CFPExtractor:250 - 1.5-train-2-3-1-COMMON_1996-gate.key_0001B
+2013-05-23 22:18:19 INFO  CFPExtractor:250 - 1.5-train-2-3-2-DMIM_1998-gate.key_0001C
+2013-05-23 22:18:19 INFO  CFPExtractor:250 - 1.5-train-2-3-3-IDMS_1997-gate.key_0001D
+2013-05-23 22:18:19 INFO  CFPExtractor:250 - 1.5-train-2-3-4-LDIE_1997-gate.key_0001E
+2013-05-23 22:18:19 INFO  CFPExtractor:250 - 1.5-train-2-3-5-MSD_1997-gate.key_0001F
+2013-05-23 22:18:19 INFO  CFPExtractor:256 - XML file saved!
+2013-05-23 22:24:14 WARN  Gate:266 - GATE home system property ("gate.home") not set.
+Attempting to guess...
+2013-05-23 22:24:14 WARN  Gate:286 - Using "/Users/florian/Workspace/study/ir/exercise4/vendor/GATE_Developer_7.1" as GATE Home.
+If this is not correct please set it manually using the -Dgate.home option in your start-up script
+2013-05-23 22:24:14 INFO  Gate:297 - Using /Users/florian/Workspace/study/ir/exercise4/vendor/GATE_Developer_7.1 as GATE home
+2013-05-23 22:24:14 INFO  Gate:321 - Using /Users/florian/Workspace/study/ir/exercise4/vendor/GATE_Developer_7.1/plugins as installed plug-ins directory.
+2013-05-23 22:24:14 INFO  Gate:344 - Using /Users/florian/Workspace/study/ir/exercise4/vendor/GATE_Developer_7.1/gate.xml as site configuration file.
+2013-05-23 22:24:14 INFO  Gate:356 - Using /Users/florian/.gate.xml as user configuration file
+2013-05-23 22:24:14 INFO  Gate:369 - Using /Users/florian/.gate.session as user session file
+2013-05-23 22:24:16 INFO  CFPExtractor:86 - Gate-MainFrame started
+2013-05-23 22:24:16 INFO  CFPExtractor:146 - initialize MachineLearningController...
+2013-05-23 22:24:16 WARN  GateClassLoader:147 - gate.learning.LearningAPIMain is available via both the system classpath and a plugin; the plugin classes will be ignored
+2013-05-23 22:24:16 INFO  CreoleRegisterImpl:319 - CREOLE plugin loaded: file:/Users/florian/Workspace/study/ir/exercise4/vendor/GATE_Developer_7.1/plugins/Learning/
+2013-05-23 22:24:17 INFO  CFPExtractor:177 - MachineLearningController loaded
+2013-05-23 22:24:17 INFO  CFPExtractor:134 - load training Corpus...
+2013-05-23 22:24:18 INFO  CFPExtractor:139 - load test Corpus...
+2013-05-23 22:24:18 INFO  CFPExtractor:181 - executing machine learning controller -> TRAINING Mode
+2013-05-23 22:24:20 INFO  CFPExtractor:185 - machine learning controller TRAINING Mode executed
+2013-05-23 22:24:20 INFO  CFPExtractor:189 - executing machine learning controller -> APPLICATION Mode...
+2013-05-23 22:24:21 INFO  CFPExtractor:205 - machine learning controller APPLICATION Mode executed
+2013-05-23 22:24:21 INFO  CFPExtractor:210 - fetch the required annotations from test corpus...
+2013-05-23 22:24:21 INFO  CFPExtractor:245 - annotations fetched
+2013-05-23 22:24:21 INFO  CFPExtractor:250 - saving the result into XML
+2013-05-23 22:24:21 INFO  CFPExtractor:252 - 1.5-train-2-2-4-ICOS_1999-gate.key_00014
+2013-05-23 22:24:21 INFO  CFPExtractor:252 - 1.5-train-2-2-5-KRDB_1998-gate.key_00015
+2013-05-23 22:24:21 INFO  CFPExtractor:252 - 1.5-train-2-2-6-MMNS_2000-gate.key_00016
+2013-05-23 22:24:21 INFO  CFPExtractor:252 - 1.5-train-2-2-7-PJW_1997-gate.key_00017
+2013-05-23 22:24:21 INFO  CFPExtractor:252 - 1.5-train-2-2-8-SMSE_2000-gate.key_00018
+2013-05-23 22:24:21 INFO  CFPExtractor:252 - 1.5-train-2-2-9-WEBDB_1998-gate.key_00019
+2013-05-23 22:24:21 INFO  CFPExtractor:252 - 1.5-train-2-3-0-AML_1998-gate.key_0001A
+2013-05-23 22:24:21 INFO  CFPExtractor:252 - 1.5-train-2-3-1-COMMON_1996-gate.key_0001B
+2013-05-23 22:24:21 INFO  CFPExtractor:252 - 1.5-train-2-3-2-DMIM_1998-gate.key_0001C
+2013-05-23 22:24:21 INFO  CFPExtractor:252 - 1.5-train-2-3-3-IDMS_1997-gate.key_0001D
+2013-05-23 22:24:21 INFO  CFPExtractor:252 - 1.5-train-2-3-4-LDIE_1997-gate.key_0001E
+2013-05-23 22:24:21 INFO  CFPExtractor:252 - 1.5-train-2-3-5-MSD_1997-gate.key_0001F
+2013-05-23 22:24:21 INFO  CFPExtractor:258 - XML file saved!
