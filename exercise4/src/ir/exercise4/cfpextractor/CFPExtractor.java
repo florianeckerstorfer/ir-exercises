@@ -46,9 +46,9 @@ public class CFPExtractor {
 	private static Logger logger = Logger.getLogger(CFPExtractor.class);
 
 	//the directory of the plugins and the corpora
-	private final String GATE_PLUGINS_DIR = "exercise4/vendor/GATE_Developer_7.1/plugins";
-	private final String TRAINING_SET_DIR = "exercise4/data/training/";
-	private final String TEST_SET_DIR = "exercise4/data/test/";
+	private final String GATE_PLUGINS_DIR = "vendor/GATE_Developer_7.1/plugins";
+	private final String TRAINING_SET_DIR = "data/training/";
+	private final String TEST_SET_DIR = "data/test/";
 	
 	//the configuration file for the batch learning PR
 	private final String ML_CONFIG_FILE_DIR = "exercise4/config/ml-config.xml";
