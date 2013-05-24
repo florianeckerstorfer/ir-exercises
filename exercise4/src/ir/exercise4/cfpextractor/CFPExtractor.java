@@ -51,7 +51,7 @@ public class CFPExtractor {
 	private final String TEST_SET_DIR = "data/test/";
 	
 	//the configuration file for the batch learning PR
-	private final String ML_CONFIG_FILE_DIR = "exercise4/config/ml-config.xml";
+	private final String ML_CONFIG_FILE_DIR = "config/ml-config.xml";
 	
 	private File pluginsDir = new File(GATE_PLUGINS_DIR);;
 	
