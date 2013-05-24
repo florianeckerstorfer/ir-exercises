@@ -34,25 +34,43 @@ import javax.swing.SwingUtilities;
 
 import org.apache.log4j.Logger;
 
+
 //TODO how to get workshopname annotations..., now Persons annotations are extracted and learned
+/*
+* this application extracts information from CFP files. the application is divided into two parts, 
+* the learning part and the application part. first the model must be automatically learned by the machine
+* and then the learned model can be applied to new files, which is the extraction step.
+*/
 public class CFPExtractor {
 	
 	private static Logger logger = Logger.getLogger(CFPExtractor.class);
+
+	//the directory of the plugins and the corpora
+	private final String GATE_PLUGINS_DIR = "exercise4/vendor/GATE_Developer_7.1/plugins";
+	private final String TRAINING_SET_DIR = "exercise4/data/training/";
+	private final String TEST_SET_DIR = "exercise4/data/test/";
 	
-	private final String GATE_PLUGINS_DIR = "vendor/GATE_Developer_7.1/plugins";
-	private final String TRAINING_SET_DIR = "data/training/";
-	private final String TEST_SET_DIR = "data/test/";
-	private final String ML_CONFIG_FILE_DIR = "config/ml-config.xml";
+	//the configuration file for the batch learning PR
+	private final String ML_CONFIG_FILE_DIR = "exercise4/config/ml-config.xml";
 	
-	private File pluginsDir = new File(GATE_PLUGINS_DIR);
+	private File pluginsDir = new File(GATE_PLUGINS_DIR);;
 	
+	//if we don't extract from plain text, we don't need annie
 	private SerialAnalyserController annieController;
+	
+	//the controller is pipeline of PRs
 	private SerialAnalyserController machineLearningController;
+	
+	//the language resources (LRs)
 	private Corpus trainingCorpus;
 	private Corpus testCorpus;
+	
+	//the processing resource (PR) that implements various machine learning algorithms
+	//PRs are used to run over our LRs
 	private ProcessingResource batchLearningTraining;
 	
-	private List<GateAnalysisResult> extractedAnnotations = new ArrayList<GateAnalysisResult>();
+	//the list of extracted annotation from our application/extraction step
+	private List<GateAnalysisResult> extractedAnnotations = new ArrayList<GateAnalysisResult>(); ;
 	
 	public static void main(String[] args) throws Exception {
 		
@@ -77,6 +95,10 @@ public class CFPExtractor {
 		extractor.resultsToXML();
 	}
 	
+	/*
+	 * shows the gate main window. 
+	 * for mac users
+	 */
 	public static void callGateGui() throws InterruptedException, InvocationTargetException {
 		SwingUtilities.invokeAndWait(new Runnable() {
 			public void run() {
@@ -87,6 +109,11 @@ public class CFPExtractor {
 	}
 	
 	//we actually don't need annie, if we only apply the batch learning on preprocessed data
+	/*
+	 * annie is the default controller by gate. it is a ready made collection of 
+	 * PRs (tokenizer, sentence splitter, POS tagger, gazetteers etc.) that performs 
+	 * text extraction on plain/unstrctured text
+	 */
 	public void initAnnieController() throws GateException, MalformedURLException {
 		logger.info("initialize annieController...");
 		
@@ -121,6 +148,11 @@ public class CFPExtractor {
 		logger.info("annieController loaded");
 	}
 	
+	/*
+	 * we need two corpora. 
+	 * one for the training mode to train our classes
+	 * one to apply our learned model (application mode)
+	 */
 	private void loadCorpora() throws ResourceInstantiationException, MalformedURLException, IOException {
 		//create training corpus
 		trainingCorpus = Factory.newCorpus("training");
@@ -140,8 +172,9 @@ public class CFPExtractor {
 		testCorpus.populate(new File(TEST_SET_DIR).toURI().toURL(), exf_key, "", false);
 	}
 	
-	
-
+	/*
+	 * initializes a controller ("corpus pipeline") with an batch learning PR
+	 */
 	public void initMachineLearningController() throws GateException, MalformedURLException {
 		logger.info("initialize MachineLearningController...");
 		
@@ -162,6 +195,8 @@ public class CFPExtractor {
 		
 		batchLearningTraining = (ProcessingResource) Factory.createResource("gate.learning.LearningAPIMain", params_batch_learning);
 		
+		//delete the machine_learned AS
+		//only needed if we want to apply APPLICATION multiple times
 		/*
 		FeatureMap params_document_reset = Factory.newFeatureMap();
 		List<String> setsToRemove = new ArrayList<String>();
@@ -177,6 +212,10 @@ public class CFPExtractor {
 		logger.info("MachineLearningController loaded");
 	}
 	
+	/*
+	 * executes the controller on the training corpus
+	 * the result is a learned model, specified in the ml_config.xml
+	 */
 	public void useMachineLearningTraining() throws ExecutionException {
 		logger.info("executing machine learning controller -> TRAINING Mode");
 		machineLearningController.setCorpus(trainingCorpus);
@@ -185,13 +224,17 @@ public class CFPExtractor {
 		logger.info("machine learning controller TRAINING Mode executed");
 	}
 	
+	/*
+	 * applys the learned model on the test corpus
+	 * the result is saved in a new Annotation Set called "machine_learned"
+	 */
 	public void useMachineLearningApplication() throws ExecutionException, MalformedURLException, ResourceInstantiationException {
 		logger.info("executing machine learning controller -> APPLICATION Mode...");
 		machineLearningController.setCorpus(testCorpus);
 		
 		//code from here is very clumsy, but it works... 
 		//the same PR should be used for Application mode to save resources
-		//TODO
+		//TODO maybe...
 		machineLearningController.remove(batchLearningTraining);
 		FeatureMap params_batch_learning = Factory.newFeatureMap();
 		params_batch_learning.put("configFileURL", new File(ML_CONFIG_FILE_DIR).toURI().toURL());	
@@ -204,7 +247,10 @@ public class CFPExtractor {
 		machineLearningController.execute();
 		logger.info("machine learning controller APPLICATION Mode executed");
 	}
-	
+	/*
+	 * fetches the annotations from the machine_learned Annotation Set
+	 * which contains the automatically annotated data
+	 */
 	//Code partially based on StandAloneAnnie.java tutorial
 	public void getMachineLearnedAnnotations() {
 		logger.info("fetch the required annotations from test corpus...");
@@ -226,8 +272,8 @@ public class CFPExtractor {
 			requiredAnnotations.add("workshoppapersubmissiondate");
 			
 			
-			//TODO ml-config.xml
-			//the resulting machine_learned AS is empty since the batch learning PR is not configured properly
+			//TODO the resulting machine_learned AS is empty since the batch learning PR is not configured yet
+			//see ml-config.xml 
 			AnnotationSet machineLearnedAS = doc.getAnnotations("machine_learned").get(requiredAnnotations);
 			
 			Iterator<Annotation> it = machineLearnedAS.iterator();
@@ -245,7 +291,10 @@ public class CFPExtractor {
 		logger.info("annotations fetched");
 	}
 	
-	//TODO implement XML serializer
+	/*
+	 * the required Annotations are inserted into an list of Annotations
+	 */
+	//Code partially based on StandAloneAnnie.java tutorial
 	public void resultsToXML() {
 		logger.info("saving the result into XML");
 		for(GateAnalysisResult res : extractedAnnotations) {
@@ -258,6 +307,9 @@ public class CFPExtractor {
 		logger.info("XML file saved!");
 	}
 	
+	/*
+	 * the datastructure for the required annotations
+	 */
 	//Code based on StandAloneAnnie.java tutorial
 	public static class SortedAnnotationList extends Vector<Annotation> {
 		/**
