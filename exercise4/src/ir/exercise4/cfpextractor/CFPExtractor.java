@@ -35,69 +35,94 @@ import javax.swing.SwingUtilities;
 import org.apache.log4j.Logger;
 
 
-//TODO how to get workshopname annotations..., now Persons annotations are extracted and learned
-/*
-* this application extracts information from CFP files. the application is divided into two parts, 
-* the learning part and the application part. first the model must be automatically learned by the machine
-* and then the learned model can be applied to new files, which is the extraction step.
-*/
-public class CFPExtractor {
-	
+/**
+ * This application extracts information from CFP files. the application is divided into two parts, 
+ * the learning part and the application part. first the model must be automatically learned by the machine
+ * and then the learned model can be applied to new files, which is the extraction step.
+ *
+ * TODO: how to get workshopname annotations..., now Persons annotations are extracted and learned
+ */
+public class CFPExtractor
+{
+	/**
+	 * Logger
+	 */
 	private static Logger logger = Logger.getLogger(CFPExtractor.class);
 
-	//the directory of the plugins and the corpora
+	/**
+	 * The directory of the plugins and the corpora
+	 */
 	private final String GATE_PLUGINS_DIR = System.getenv("GATE_HOME") + "/plugins";
 	private final String TRAINING_SET_DIR = System.getenv("CFP_HOME") + "/data/training/";
 	private final String TEST_SET_DIR = System.getenv("CFP_HOME") + "/data/test/";
 	
-	//the configuration file for the batch learning PR
+	/**
+	 * The configuration file for the batch learning PR
+	 */
 	private final String ML_CONFIG_FILE_DIR = System.getenv("CFP_HOME") + "/config/ml-config.xml";
 	
+	/**
+	 * Plugins directory
+	 */
 	private File pluginsDir = new File(GATE_PLUGINS_DIR);
 	
-	//if we don't extract from plain text, we don't need annie
+	/**
+	 * Annie controller.
+	 * If we don't extract from plain text, we don't need annie
+	 */
 	private SerialAnalyserController annieController;
 	
-	//the controller is pipeline of PRs
+	/**
+	 * The controller is pipeline of PRs
+	 */
 	private SerialAnalyserController machineLearningController;
 	
-	//the language resources (LRs)
+	/**
+	 * The language resources (LRs)
+	 */
 	private Corpus trainingCorpus;
 	private Corpus testCorpus;
 	
-	//the processing resource (PR) that implements various machine learning algorithms
-	//PRs are used to run over our LRs
+	/**
+	 * The processing resource (PR) that implements various machine learning algorithms
+	 * PRs are used to run over our LRs
+	 */
 	private ProcessingResource batchLearningTraining;
 	
-	//the list of extracted annotation from our application/extraction step
+	/**
+	 * The list of extracted annotation from our application/extraction step
+	 */
 	private List<GateAnalysisResult> extractedAnnotations = new ArrayList<GateAnalysisResult>(); ;
 	
+	/**
+	 * Main method
+	 * 
+	 * @param args
+	 * @throws Exception
+	 */
 	public static void main(String[] args) throws Exception {
 		
 		CFPExtractor extractor = new CFPExtractor();
 		
 		Gate.init();
 		
-		// callGateGui();
+		// Disabled GUI loading because (I think) is not required and does not work when started from Ant
+//		 callGateGui();
 		
 		//extractor.initAnnieController();
 		
 		extractor.initMachineLearningController();
-		
 		extractor.loadCorpora();
-		
 		extractor.useMachineLearningTraining();
-		
 		extractor.useMachineLearningApplication();
-		
 		extractor.getMachineLearnedAnnotations();
-		
 		extractor.resultsToXML();
 	}
 	
-	/*
-	 * shows the gate main window. 
-	 * for mac users
+	/**
+	 * Shows the gate main window for mac users
+	 * @throws InterruptedException
+	 * @throws InvocationTargetException
 	 */
 	public static void callGateGui() throws InterruptedException, InvocationTargetException {
 		SwingUtilities.invokeAndWait(new Runnable() {
@@ -108,11 +133,15 @@ public class CFPExtractor {
 		logger.info("Gate-MainFrame started");
 	}
 	
-	//we actually don't need annie, if we only apply the batch learning on preprocessed data
-	/*
-	 * annie is the default controller by gate. it is a ready made collection of 
+	/**
+	 * Annie is the default controller by gate. it is a ready made collection of 
 	 * PRs (tokenizer, sentence splitter, POS tagger, gazetteers etc.) that performs 
 	 * text extraction on plain/unstrctured text
+	 * 
+	 * We actually don't need annie, if we only apply the batch learning on preprocessed data
+	 * 
+	 * @throws GateException
+	 * @throws MalformedURLException
 	 */
 	public void initAnnieController() throws GateException, MalformedURLException {
 		logger.info("initialize annieController...");
@@ -147,11 +176,15 @@ public class CFPExtractor {
 		
 		logger.info("annieController loaded");
 	}
-	
-	/*
-	 * we need two corpora. 
-	 * one for the training mode to train our classes
-	 * one to apply our learned model (application mode)
+
+	/**
+	 * We need two corpora: 
+	 * - one for the training mode to train our classes
+	 * - one to apply our learned model (application mode)
+	 * 
+	 * @throws ResourceInstantiationException
+	 * @throws MalformedURLException
+	 * @throws IOException
 	 */
 	private void loadCorpora() throws ResourceInstantiationException, MalformedURLException, IOException {
 		//create training corpus
@@ -172,21 +205,24 @@ public class CFPExtractor {
 		testCorpus.populate(new File(TEST_SET_DIR).toURI().toURL(), exf_key, "", false);
 	}
 	
-	/*
-	 * initializes a controller ("corpus pipeline") with an batch learning PR
+	/**
+	 * Initializes a controller ("corpus pipeline") with an batch learning PR
+	 * 
+	 * @throws GateException
+	 * @throws MalformedURLException
 	 */
 	public void initMachineLearningController() throws GateException, MalformedURLException {
 		logger.info("initialize MachineLearningController...");
 		
-		//load the Learning Plugin
+		// Load the Learning Plugin
 		File learningPluginDir = new File(pluginsDir, "Learning");
 		Gate.getCreoleRegister().registerDirectories(learningPluginDir.toURI().toURL());
 		
-		//create machineLearningController
+		// Create machineLearningController
 		machineLearningController = (SerialAnalyserController) Factory.createResource("gate.creole.SerialAnalyserController", 
 				Factory.newFeatureMap(), Factory.newFeatureMap(), "MachineLearning_Controller");
 		
-		// load machineLearningController with PRs
+		// Load machineLearningController with PRs
 		FeatureMap params_batch_learning = Factory.newFeatureMap();
 		File configFile =  new File(ML_CONFIG_FILE_DIR);
 		params_batch_learning.put("configFileURL", configFile.toURI().toURL());	
@@ -211,10 +247,11 @@ public class CFPExtractor {
 		
 		logger.info("MachineLearningController loaded");
 	}
-	
-	/*
-	 * executes the controller on the training corpus
-	 * the result is a learned model, specified in the ml_config.xml
+
+	/**
+	 * Executes the controller on the training corpus the result is a learned model, specified in the ml_config.xml
+	 * 
+	 * @throws ExecutionException
 	 */
 	public void useMachineLearningTraining() throws ExecutionException {
 		logger.info("executing machine learning controller -> TRAINING Mode");
@@ -224,16 +261,21 @@ public class CFPExtractor {
 		logger.info("machine learning controller TRAINING Mode executed");
 	}
 	
-	/*
-	 * applys the learned model on the test corpus
-	 * the result is saved in a new Annotation Set called "machine_learned"
+	/**
+	 * Applies the learned model on the test corpus.
+	 * 
+	 * The result is saved in a new Annotation Set called "machine_learned"
+	 * 
+	 * @throws ExecutionException
+	 * @throws MalformedURLException
+	 * @throws ResourceInstantiationException
 	 */
 	public void useMachineLearningApplication() throws ExecutionException, MalformedURLException, ResourceInstantiationException {
 		logger.info("executing machine learning controller -> APPLICATION Mode...");
 		machineLearningController.setCorpus(testCorpus);
 		
-		//code from here is very clumsy, but it works... 
-		//the same PR should be used for Application mode to save resources
+		// Code from here is very clumsy, but it works... 
+		// The same PR should be used for Application mode to save resources
 		//TODO maybe...
 		machineLearningController.remove(batchLearningTraining);
 		FeatureMap params_batch_learning = Factory.newFeatureMap();
@@ -247,11 +289,13 @@ public class CFPExtractor {
 		machineLearningController.execute();
 		logger.info("machine learning controller APPLICATION Mode executed");
 	}
-	/*
-	 * fetches the annotations from the machine_learned Annotation Set
+	
+	/**
+	 * Fetches the annotations from the machine_learned Annotation Set
 	 * which contains the automatically annotated data
+	 *
+	 * Code partially based on StandAloneAnnie.java tutorial
 	 */
-	//Code partially based on StandAloneAnnie.java tutorial
 	public void getMachineLearnedAnnotations() {
 		logger.info("fetch the required annotations from test corpus...");
 		
@@ -259,8 +303,6 @@ public class CFPExtractor {
 		
 		while(iter.hasNext()) {
 			Document doc = iter.next();
-			
-			 
 			
 			Set<String> requiredAnnotations = new HashSet<String>();
 			requiredAnnotations.add("workshopname");
@@ -271,9 +313,8 @@ public class CFPExtractor {
 			requiredAnnotations.add("conferenceacronym");
 			requiredAnnotations.add("workshoppapersubmissiondate");
 			
-			
-			//TODO the resulting machine_learned AS is empty since the batch learning PR is not configured yet
-			//see ml-config.xml 
+			// TODO:  the resulting machine_learned AS is empty since the batch learning PR is not configured yet
+			// See ml-config.xml 
 			AnnotationSet machineLearnedAS = doc.getAnnotations("machine_learned").get(requiredAnnotations);
 			
 			Iterator<Annotation> it = machineLearnedAS.iterator();
@@ -291,15 +332,17 @@ public class CFPExtractor {
 		logger.info("annotations fetched");
 	}
 	
-	/*
-	 * the required Annotations are inserted into an list of Annotations
+	/**
+	 * The required Annotations are inserted into an list of Annotations
+	 * 
+	 * Code partially based on StandAloneAnnie.java tutorial
 	 */
-	//Code partially based on StandAloneAnnie.java tutorial
 	public void resultsToXML() {
 		logger.info("saving the result into XML");
 		for(GateAnalysisResult res : extractedAnnotations) {
-			logger.info(res.document.getName());
-			Iterator<Annotation> it = res.sortedAnnotationList.iterator();
+			logger.info("\n\n" + res.document.getName());
+			logger.info("Number of annotations: " + res.getSortedAnnotationList().size());
+			Iterator<Annotation> it = res.getSortedAnnotationList().iterator();
 			while (it.hasNext()) {
 				logger.info("annotation: " + it.next());
 			}
@@ -307,20 +350,22 @@ public class CFPExtractor {
 		logger.info("XML file saved!");
 	}
 	
-	/*
-	 * the datastructure for the required annotations
+	/**
+	 * The datastructure for the required annotations
+	 * 
+	 * Code based on StandAloneAnnie.java tutorial
 	 */
-	//Code based on StandAloneAnnie.java tutorial
 	public static class SortedAnnotationList extends Vector<Annotation> {
-		/**
-		 * 
-		 */
 		private static final long serialVersionUID = 1L;
 
 		public SortedAnnotationList() {
 			super();
 		}
-		
+
+		/**
+		 * @param annot
+		 * @return
+		 */
 		public boolean addSortedExclusive(Annotation annot) {
 			 Annotation currAnot = null;
 
@@ -352,32 +397,49 @@ public class CFPExtractor {
 		}
 	}
 	
-	//Code based on StandAloneAnnie.java tutorial
+	/**
+	 * Code based on StandAloneAnnie.java tutorial
+	 *
+	 */
 	public static class GateAnalysisResult {
         private Document document;
         private SortedAnnotationList sortedAnnotationList;
 
+        /**
+         * @param document
+         * @param sortedAnnotationList
+         */
         public GateAnalysisResult(Document document, SortedAnnotationList sortedAnnotationList) {
             this.document = document;
             this.sortedAnnotationList = sortedAnnotationList;
         }
 
+        /**
+         * @return
+         */
         public SortedAnnotationList getSortedAnnotationList() {
             return sortedAnnotationList;
         }
 
+        /**
+         * @return
+         */
         public Document getDocument() {
             return document;
         }
 
+        /**
+         * @param sortedAnnotationList
+         */
         public void setSortedAnnotationList(SortedAnnotationList sortedAnnotationList) {
             this.sortedAnnotationList = sortedAnnotationList;
         }
 
+        /**
+         * @param document
+         */
         public void setDocument(Document document) {
             this.document = document;
         }
-
     }
-	
 }
