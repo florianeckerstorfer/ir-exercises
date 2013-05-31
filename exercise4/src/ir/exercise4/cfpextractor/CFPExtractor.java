@@ -46,14 +46,14 @@ public class CFPExtractor {
 	private static Logger logger = Logger.getLogger(CFPExtractor.class);
 
 	//the directory of the plugins and the corpora
-	private final String GATE_PLUGINS_DIR = "vendor/GATE_Developer_7.1/plugins";
-	private final String TRAINING_SET_DIR = "data/training/";
-	private final String TEST_SET_DIR = "data/test/";
+	private final String GATE_PLUGINS_DIR = System.getenv("GATE_HOME") + "/plugins";
+	private final String TRAINING_SET_DIR = System.getenv("CFP_HOME") + "/data/training/";
+	private final String TEST_SET_DIR = System.getenv("CFP_HOME") + "/data/test/";
 	
 	//the configuration file for the batch learning PR
-	private final String ML_CONFIG_FILE_DIR = "config/ml-config.xml";
+	private final String ML_CONFIG_FILE_DIR = System.getenv("CFP_HOME") + "/config/ml-config.xml";
 	
-	private File pluginsDir = new File(GATE_PLUGINS_DIR);;
+	private File pluginsDir = new File(GATE_PLUGINS_DIR);
 	
 	//if we don't extract from plain text, we don't need annie
 	private SerialAnalyserController annieController;
@@ -78,7 +78,7 @@ public class CFPExtractor {
 		
 		Gate.init();
 		
-		callGateGui();
+		// callGateGui();
 		
 		//extractor.initAnnieController();
 		

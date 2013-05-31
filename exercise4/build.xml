@@ -1,0 +1,50 @@
+<project name="ir-exercise2" default='compile' basedir="." >
+	<property environment="env"/>
+	
+    <property name="project-name" value="ir-exercise4" />
+    <property name="build-dir" location="bin" />
+    <property name="source-dir" location="src" />
+	<property name="config-dir" location="config" />
+	<property name="gate-dir" location="${env.GATE_HOME}" />
+	<property namE="cfp-dir" location="${env.CFP_HOME}" />
+
+    <path id="main.classpath">
+    	<pathelement location="${vendor-dir}/log4j-1.2.17.jar" />
+        <pathelement location="${gate-dir}/bin/gate.jar" />
+		<fileset dir="${gate-dir}/lib">
+			<include name="**/*.jar" />
+		</fileset>
+    	<pathelement location="${gate-dir}/plugins/Learning/learningapi.jar" />
+    </path>
+
+    <target name="init">
+        <tstamp/>
+        <mkdir dir="${build-dir}" />
+        <echo message="$GATE_HOME=${gate-dir}" />
+    	<echo message="$CFP_HOME=${cfp-dir}" />
+    </target>
+
+    <target name="clean">
+        <delete dir="${build-dir}" />
+        <mkdir dir="${build-dir}" />
+    </target>
+
+    <target name="compile" depends="init">
+        <javac srcdir="${source-dir}" destdir="${build-dir}" includeantruntime="false">
+            <classpath>
+            	<path refid="main.classpath" />
+            </classpath>
+        </javac>
+    </target>
+
+    <target name="run" depends="compile">
+        <java classname="ir.exercise4.cfpextractor.CFPExtractor">
+            <classpath>
+                <pathelement location="${build-dir}" />
+            	<pathelement location="${config-dir}" />
+                <path refid="main.classpath" />
+            </classpath>
+        </java>
+    </target>
+
+</project>
