@@ -1,0 +1,269 @@
+2013-05-31 12:38:09 WARN  Gate:266 - GATE home system property ("gate.home") not set.
+Attempting to guess...
+2013-05-31 12:38:09 WARN  Gate:286 - Using "/Users/florian/Workspace/study/ir/exercise4/vendor/GATE_Developer_7.1" as GATE Home.
+If this is not correct please set it manually using the -Dgate.home option in your start-up script
+2013-05-31 12:38:09 INFO  Gate:297 - Using /Users/florian/Workspace/study/ir/exercise4/vendor/GATE_Developer_7.1 as GATE home
+2013-05-31 12:38:09 INFO  Gate:321 - Using /Users/florian/Workspace/study/ir/exercise4/vendor/GATE_Developer_7.1/plugins as installed plug-ins directory.
+2013-05-31 12:38:09 INFO  Gate:344 - Using /Users/florian/Workspace/study/ir/exercise4/vendor/GATE_Developer_7.1/gate.xml as site configuration file.
+2013-05-31 12:38:09 INFO  Gate:356 - Using /Users/florian/.gate.xml as user configuration file
+2013-05-31 12:38:09 INFO  Gate:369 - Using /Users/florian/.gate.session as user session file
+2013-05-31 12:38:11 INFO  CFPExtractor:85 - Gate-MainFrame started
+2013-05-31 12:38:11 INFO  CFPExtractor:134 - initialize MachineLearningController...
+2013-05-31 12:38:11 WARN  GateClassLoader:147 - gate.learning.LearningAPIMain is available via both the system classpath and a plugin; the plugin classes will be ignored
+2013-05-31 12:38:11 INFO  CreoleRegisterImpl:319 - CREOLE plugin loaded: file:/Users/florian/Workspace/study/ir/exercise4/vendor/GATE_Developer_7.1/plugins/Learning/
+2013-05-31 12:38:12 INFO  CFPExtractor:164 - MachineLearningController loaded
+2013-05-31 12:38:12 INFO  CFPExtractor:122 - load training Corpus...
+2013-05-31 12:38:13 INFO  CFPExtractor:127 - load test Corpus...
+2013-05-31 12:38:14 INFO  CFPExtractor:168 - executing machine learning controller -> TRAINING Mode
+2013-05-31 12:38:16 INFO  CFPExtractor:172 - machine learning controller TRAINING Mode executed
+2013-05-31 12:38:16 INFO  CFPExtractor:176 - executing machine learning controller -> APPLICATION Mode...
+2013-05-31 12:38:17 INFO  CFPExtractor:192 - machine learning controller APPLICATION Mode executed
+2013-05-31 12:38:17 INFO  CFPExtractor:197 - fetch the required annotations from test corpus...
+2013-05-31 12:38:17 INFO  CFPExtractor:232 - annotations fetched
+2013-05-31 12:38:17 INFO  CFPExtractor:237 - saving the result into XML
+2013-05-31 12:38:17 INFO  CFPExtractor:239 - 1.5-train-2-2-4-ICOS_1999-gate.key_00014
+2013-05-31 12:38:17 INFO  CFPExtractor:239 - 1.5-train-2-2-5-KRDB_1998-gate.key_00015
+2013-05-31 12:38:17 INFO  CFPExtractor:239 - 1.5-train-2-2-6-MMNS_2000-gate.key_00016
+2013-05-31 12:38:17 INFO  CFPExtractor:239 - 1.5-train-2-2-7-PJW_1997-gate.key_00017
+2013-05-31 12:38:17 INFO  CFPExtractor:239 - 1.5-train-2-2-8-SMSE_2000-gate.key_00018
+2013-05-31 12:38:17 INFO  CFPExtractor:239 - 1.5-train-2-2-9-WEBDB_1998-gate.key_00019
+2013-05-31 12:38:17 INFO  CFPExtractor:239 - 1.5-train-2-3-0-AML_1998-gate.key_0001A
+2013-05-31 12:38:17 INFO  CFPExtractor:239 - 1.5-train-2-3-1-COMMON_1996-gate.key_0001B
+2013-05-31 12:38:17 INFO  CFPExtractor:239 - 1.5-train-2-3-2-DMIM_1998-gate.key_0001C
+2013-05-31 12:38:17 INFO  CFPExtractor:239 - 1.5-train-2-3-3-IDMS_1997-gate.key_0001D
+2013-05-31 12:38:17 INFO  CFPExtractor:239 - 1.5-train-2-3-4-LDIE_1997-gate.key_0001E
+2013-05-31 12:38:17 INFO  CFPExtractor:239 - 1.5-train-2-3-5-MSD_1997-gate.key_0001F
+2013-05-31 12:38:17 INFO  CFPExtractor:245 - XML file saved!
+2013-06-01 17:08:28 WARN  Gate:266 - GATE home system property ("gate.home") not set.
+Attempting to guess...
+2013-06-01 17:08:28 WARN  Gate:286 - Using "/Users/florian/Workspace/study/ir/exercise4/vendor/GATE_Developer_7.1" as GATE Home.
+If this is not correct please set it manually using the -Dgate.home option in your start-up script
+2013-06-01 17:08:28 INFO  Gate:297 - Using /Users/florian/Workspace/study/ir/exercise4/vendor/GATE_Developer_7.1 as GATE home
+2013-06-01 17:08:28 INFO  Gate:321 - Using /Users/florian/Workspace/study/ir/exercise4/vendor/GATE_Developer_7.1/plugins as installed plug-ins directory.
+2013-06-01 17:08:28 INFO  Gate:344 - Using /Users/florian/Workspace/study/ir/exercise4/vendor/GATE_Developer_7.1/gate.xml as site configuration file.
+2013-06-01 17:08:28 INFO  Gate:356 - Using /Users/florian/.gate.xml as user configuration file
+2013-06-01 17:08:28 INFO  Gate:369 - Using /Users/florian/.gate.session as user session file
+2013-06-01 17:08:29 INFO  CFPExtractor:215 - initialize MachineLearningController...
+2013-06-01 17:08:29 WARN  GateClassLoader:147 - gate.learning.LearningAPIMain is available via both the system classpath and a plugin; the plugin classes will be ignored
+2013-06-01 17:08:29 INFO  CreoleRegisterImpl:319 - CREOLE plugin loaded: file:/Users/florian/Workspace/study/ir/exercise4/vendor/GATE_Developer_7.1/plugins/Learning/
+2013-06-01 17:08:29 INFO  CFPExtractor:248 - MachineLearningController loaded
+2013-06-01 17:08:29 INFO  CFPExtractor:199 - load training Corpus...
+2013-06-01 17:08:30 INFO  CFPExtractor:204 - load test Corpus...
+2013-06-01 17:08:31 INFO  CFPExtractor:257 - executing machine learning controller -> TRAINING Mode
+2013-06-01 17:08:33 INFO  CFPExtractor:261 - machine learning controller TRAINING Mode executed
+2013-06-01 17:08:33 INFO  CFPExtractor:274 - executing machine learning controller -> APPLICATION Mode...
+2013-06-01 17:08:33 INFO  CFPExtractor:290 - machine learning controller APPLICATION Mode executed
+2013-06-01 17:08:33 INFO  CFPExtractor:300 - fetch the required annotations from test corpus...
+2013-06-01 17:08:33 INFO  CFPExtractor:332 - annotations fetched
+2013-06-01 17:08:33 INFO  CFPExtractor:341 - saving the result into XML
+2013-06-01 17:08:33 INFO  CFPExtractor:343 - 
+
+1.5-train-2-2-4-ICOS_1999-gate.key_00014
+2013-06-01 17:08:33 INFO  CFPExtractor:344 - Number of annotations: 0
+2013-06-01 17:08:33 INFO  CFPExtractor:343 - 
+
+1.5-train-2-2-5-KRDB_1998-gate.key_00015
+2013-06-01 17:08:33 INFO  CFPExtractor:344 - Number of annotations: 0
+2013-06-01 17:08:33 INFO  CFPExtractor:343 - 
+
+1.5-train-2-2-6-MMNS_2000-gate.key_00016
+2013-06-01 17:08:33 INFO  CFPExtractor:344 - Number of annotations: 0
+2013-06-01 17:08:33 INFO  CFPExtractor:343 - 
+
+1.5-train-2-2-7-PJW_1997-gate.key_00017
+2013-06-01 17:08:33 INFO  CFPExtractor:344 - Number of annotations: 0
+2013-06-01 17:08:33 INFO  CFPExtractor:343 - 
+
+1.5-train-2-2-8-SMSE_2000-gate.key_00018
+2013-06-01 17:08:33 INFO  CFPExtractor:344 - Number of annotations: 0
+2013-06-01 17:08:33 INFO  CFPExtractor:343 - 
+
+1.5-train-2-2-9-WEBDB_1998-gate.key_00019
+2013-06-01 17:08:33 INFO  CFPExtractor:344 - Number of annotations: 0
+2013-06-01 17:08:33 INFO  CFPExtractor:343 - 
+
+1.5-train-2-3-0-AML_1998-gate.key_0001A
+2013-06-01 17:08:33 INFO  CFPExtractor:344 - Number of annotations: 0
+2013-06-01 17:08:33 INFO  CFPExtractor:343 - 
+
+1.5-train-2-3-1-COMMON_1996-gate.key_0001B
+2013-06-01 17:08:33 INFO  CFPExtractor:344 - Number of annotations: 0
+2013-06-01 17:08:33 INFO  CFPExtractor:343 - 
+
+1.5-train-2-3-2-DMIM_1998-gate.key_0001C
+2013-06-01 17:08:33 INFO  CFPExtractor:344 - Number of annotations: 0
+2013-06-01 17:08:33 INFO  CFPExtractor:343 - 
+
+1.5-train-2-3-3-IDMS_1997-gate.key_0001D
+2013-06-01 17:08:33 INFO  CFPExtractor:344 - Number of annotations: 0
+2013-06-01 17:08:33 INFO  CFPExtractor:343 - 
+
+1.5-train-2-3-4-LDIE_1997-gate.key_0001E
+2013-06-01 17:08:33 INFO  CFPExtractor:344 - Number of annotations: 0
+2013-06-01 17:08:33 INFO  CFPExtractor:343 - 
+
+1.5-train-2-3-5-MSD_1997-gate.key_0001F
+2013-06-01 17:08:33 INFO  CFPExtractor:344 - Number of annotations: 0
+2013-06-01 17:08:33 INFO  CFPExtractor:350 - XML file saved!
+2013-06-01 17:08:54 WARN  Gate:266 - GATE home system property ("gate.home") not set.
+Attempting to guess...
+2013-06-01 17:08:54 WARN  Gate:286 - Using "/Users/florian/Workspace/study/ir/exercise4/vendor/GATE_Developer_7.1" as GATE Home.
+If this is not correct please set it manually using the -Dgate.home option in your start-up script
+2013-06-01 17:08:54 INFO  Gate:297 - Using /Users/florian/Workspace/study/ir/exercise4/vendor/GATE_Developer_7.1 as GATE home
+2013-06-01 17:08:54 INFO  Gate:321 - Using /Users/florian/Workspace/study/ir/exercise4/vendor/GATE_Developer_7.1/plugins as installed plug-ins directory.
+2013-06-01 17:08:54 INFO  Gate:344 - Using /Users/florian/Workspace/study/ir/exercise4/vendor/GATE_Developer_7.1/gate.xml as site configuration file.
+2013-06-01 17:08:54 INFO  Gate:356 - Using /Users/florian/.gate.xml as user configuration file
+2013-06-01 17:08:54 INFO  Gate:369 - Using /Users/florian/.gate.session as user session file
+2013-06-01 17:08:56 INFO  CFPExtractor:133 - Gate-MainFrame started
+2013-06-01 17:08:56 INFO  CFPExtractor:215 - initialize MachineLearningController...
+2013-06-01 17:08:56 WARN  GateClassLoader:147 - gate.learning.LearningAPIMain is available via both the system classpath and a plugin; the plugin classes will be ignored
+2013-06-01 17:08:56 INFO  CreoleRegisterImpl:319 - CREOLE plugin loaded: file:/Users/florian/Workspace/study/ir/exercise4/vendor/GATE_Developer_7.1/plugins/Learning/
+2013-06-01 17:08:56 INFO  CFPExtractor:248 - MachineLearningController loaded
+2013-06-01 17:08:56 INFO  CFPExtractor:199 - load training Corpus...
+2013-06-01 17:08:57 INFO  CFPExtractor:204 - load test Corpus...
+2013-06-01 17:08:58 INFO  CFPExtractor:257 - executing machine learning controller -> TRAINING Mode
+2013-06-01 17:09:00 INFO  CFPExtractor:261 - machine learning controller TRAINING Mode executed
+2013-06-01 17:09:00 INFO  CFPExtractor:274 - executing machine learning controller -> APPLICATION Mode...
+2013-06-01 17:09:00 INFO  CFPExtractor:290 - machine learning controller APPLICATION Mode executed
+2013-06-01 17:09:00 INFO  CFPExtractor:300 - fetch the required annotations from test corpus...
+2013-06-01 17:09:00 INFO  CFPExtractor:332 - annotations fetched
+2013-06-01 17:09:00 INFO  CFPExtractor:341 - saving the result into XML
+2013-06-01 17:09:00 INFO  CFPExtractor:343 - 
+
+1.5-train-2-2-4-ICOS_1999-gate.key_00014
+2013-06-01 17:09:00 INFO  CFPExtractor:344 - Number of annotations: 0
+2013-06-01 17:09:00 INFO  CFPExtractor:343 - 
+
+1.5-train-2-2-5-KRDB_1998-gate.key_00015
+2013-06-01 17:09:00 INFO  CFPExtractor:344 - Number of annotations: 0
+2013-06-01 17:09:00 INFO  CFPExtractor:343 - 
+
+1.5-train-2-2-6-MMNS_2000-gate.key_00016
+2013-06-01 17:09:00 INFO  CFPExtractor:344 - Number of annotations: 0
+2013-06-01 17:09:00 INFO  CFPExtractor:343 - 
+
+1.5-train-2-2-7-PJW_1997-gate.key_00017
+2013-06-01 17:09:00 INFO  CFPExtractor:344 - Number of annotations: 0
+2013-06-01 17:09:00 INFO  CFPExtractor:343 - 
+
+1.5-train-2-2-8-SMSE_2000-gate.key_00018
+2013-06-01 17:09:00 INFO  CFPExtractor:344 - Number of annotations: 0
+2013-06-01 17:09:00 INFO  CFPExtractor:343 - 
+
+1.5-train-2-2-9-WEBDB_1998-gate.key_00019
+2013-06-01 17:09:00 INFO  CFPExtractor:344 - Number of annotations: 0
+2013-06-01 17:09:00 INFO  CFPExtractor:343 - 
+
+1.5-train-2-3-0-AML_1998-gate.key_0001A
+2013-06-01 17:09:00 INFO  CFPExtractor:344 - Number of annotations: 0
+2013-06-01 17:09:00 INFO  CFPExtractor:343 - 
+
+1.5-train-2-3-1-COMMON_1996-gate.key_0001B
+2013-06-01 17:09:00 INFO  CFPExtractor:344 - Number of annotations: 0
+2013-06-01 17:09:00 INFO  CFPExtractor:343 - 
+
+1.5-train-2-3-2-DMIM_1998-gate.key_0001C
+2013-06-01 17:09:00 INFO  CFPExtractor:344 - Number of annotations: 0
+2013-06-01 17:09:00 INFO  CFPExtractor:343 - 
+
+1.5-train-2-3-3-IDMS_1997-gate.key_0001D
+2013-06-01 17:09:00 INFO  CFPExtractor:344 - Number of annotations: 0
+2013-06-01 17:09:00 INFO  CFPExtractor:343 - 
+
+1.5-train-2-3-4-LDIE_1997-gate.key_0001E
+2013-06-01 17:09:00 INFO  CFPExtractor:344 - Number of annotations: 0
+2013-06-01 17:09:00 INFO  CFPExtractor:343 - 
+
+1.5-train-2-3-5-MSD_1997-gate.key_0001F
+2013-06-01 17:09:00 INFO  CFPExtractor:344 - Number of annotations: 0
+2013-06-01 17:09:00 INFO  CFPExtractor:350 - XML file saved!
+2013-06-01 17:21:13 WARN  Gate:266 - GATE home system property ("gate.home") not set.
+Attempting to guess...
+2013-06-01 17:21:13 WARN  Gate:286 - Using "/Users/florian/Workspace/study/ir/exercise4/vendor/GATE_Developer_7.1" as GATE Home.
+If this is not correct please set it manually using the -Dgate.home option in your start-up script
+2013-06-01 17:21:13 INFO  Gate:297 - Using /Users/florian/Workspace/study/ir/exercise4/vendor/GATE_Developer_7.1 as GATE home
+2013-06-01 17:21:13 INFO  Gate:321 - Using /Users/florian/Workspace/study/ir/exercise4/vendor/GATE_Developer_7.1/plugins as installed plug-ins directory.
+2013-06-01 17:21:13 INFO  Gate:344 - Using /Users/florian/Workspace/study/ir/exercise4/vendor/GATE_Developer_7.1/gate.xml as site configuration file.
+2013-06-01 17:21:13 INFO  Gate:356 - Using /Users/florian/.gate.xml as user configuration file
+2013-06-01 17:21:13 INFO  Gate:369 - Using /Users/florian/.gate.session as user session file
+2013-06-01 17:21:14 INFO  CFPExtractor:133 - Gate-MainFrame started
+2013-06-01 17:21:14 INFO  CFPExtractor:215 - initialize MachineLearningController...
+2013-06-01 17:21:14 WARN  GateClassLoader:147 - gate.learning.LearningAPIMain is available via both the system classpath and a plugin; the plugin classes will be ignored
+2013-06-01 17:21:14 INFO  CreoleRegisterImpl:319 - CREOLE plugin loaded: file:/Users/florian/Workspace/study/ir/exercise4/vendor/GATE_Developer_7.1/plugins/Learning/
+2013-06-01 17:21:15 INFO  CFPExtractor:248 - MachineLearningController loaded
+2013-06-01 17:21:15 INFO  CFPExtractor:199 - load training Corpus...
+2013-06-01 17:21:16 INFO  CFPExtractor:204 - load test Corpus...
+2013-06-01 17:21:16 INFO  CFPExtractor:257 - executing machine learning controller -> TRAINING Mode
+2013-06-01 17:21:18 INFO  CFPExtractor:261 - machine learning controller TRAINING Mode executed
+2013-06-01 17:21:18 INFO  CFPExtractor:274 - executing machine learning controller -> APPLICATION Mode...
+2013-06-01 17:21:19 INFO  CFPExtractor:290 - machine learning controller APPLICATION Mode executed
+2013-06-01 17:21:19 INFO  CFPExtractor:300 - fetch the required annotations from test corpus...
+2013-06-01 17:21:19 INFO  CFPExtractor:333 - annotations fetched
+2013-06-01 17:21:19 INFO  CFPExtractor:342 - saving the result into XML
+2013-06-01 17:21:19 INFO  CFPExtractor:344 - 
+
+1.5-train-2-2-4-ICOS_1999-gate.key_00014
+2013-06-01 17:21:19 INFO  CFPExtractor:345 - Number of annotations: 0
+2013-06-01 17:21:19 INFO  CFPExtractor:344 - 
+
+1.5-train-2-2-5-KRDB_1998-gate.key_00015
+2013-06-01 17:21:19 INFO  CFPExtractor:345 - Number of annotations: 3
+2013-06-01 17:21:19 INFO  CFPExtractor:348 - annotation: AnnotationImpl: id=9965; type=Person; features={rule1=GazPersonFirst, prob=1.0}; start=NodeImpl: id=2314; offset=2842; end=NodeImpl: id=2315; offset=2846
+
+2013-06-01 17:21:19 INFO  CFPExtractor:348 - annotation: AnnotationImpl: id=9964; type=Person; features={rule1=PersonFull, prob=1.0}; start=NodeImpl: id=2312; offset=5432; end=NodeImpl: id=2313; offset=5444
+
+2013-06-01 17:21:19 INFO  CFPExtractor:348 - annotation: AnnotationImpl: id=9963; type=Person; features={rule1=GazPersonFirst, prob=1.0}; start=NodeImpl: id=2310; offset=5634; end=NodeImpl: id=2311; offset=5638
+
+2013-06-01 17:21:19 INFO  CFPExtractor:344 - 
+
+1.5-train-2-2-6-MMNS_2000-gate.key_00016
+2013-06-01 17:21:19 INFO  CFPExtractor:345 - Number of annotations: 1
+2013-06-01 17:21:19 INFO  CFPExtractor:348 - annotation: AnnotationImpl: id=2327; type=Person; features={rule1=PersonFull, prob=1.0}; start=NodeImpl: id=2164; offset=3247; end=NodeImpl: id=2165; offset=3257
+
+2013-06-01 17:21:19 INFO  CFPExtractor:344 - 
+
+1.5-train-2-2-7-PJW_1997-gate.key_00017
+2013-06-01 17:21:19 INFO  CFPExtractor:345 - Number of annotations: 1
+2013-06-01 17:21:19 INFO  CFPExtractor:348 - annotation: AnnotationImpl: id=1013; type=Person; features={rule1=PersonFull, prob=1.0}; start=NodeImpl: id=946; offset=1468; end=NodeImpl: id=947; offset=1480
+
+2013-06-01 17:21:19 INFO  CFPExtractor:344 - 
+
+1.5-train-2-2-8-SMSE_2000-gate.key_00018
+2013-06-01 17:21:19 INFO  CFPExtractor:345 - Number of annotations: 1
+2013-06-01 17:21:19 INFO  CFPExtractor:348 - annotation: AnnotationImpl: id=9965; type=Person; features={rule1=GazPersonFirst, prob=1.0}; start=NodeImpl: id=3073; offset=6347; end=NodeImpl: id=3074; offset=6353
+
+2013-06-01 17:21:19 INFO  CFPExtractor:344 - 
+
+1.5-train-2-2-9-WEBDB_1998-gate.key_00019
+2013-06-01 17:21:19 INFO  CFPExtractor:345 - Number of annotations: 1
+2013-06-01 17:21:19 INFO  CFPExtractor:348 - annotation: AnnotationImpl: id=3018; type=Person; features={rule1=GazPersonFirst, prob=1.0}; start=NodeImpl: id=4161; offset=3907; end=NodeImpl: id=4162; offset=3911
+
+2013-06-01 17:21:19 INFO  CFPExtractor:344 - 
+
+1.5-train-2-3-0-AML_1998-gate.key_0001A
+2013-06-01 17:21:19 INFO  CFPExtractor:345 - Number of annotations: 0
+2013-06-01 17:21:19 INFO  CFPExtractor:344 - 
+
+1.5-train-2-3-1-COMMON_1996-gate.key_0001B
+2013-06-01 17:21:19 INFO  CFPExtractor:345 - Number of annotations: 1
+2013-06-01 17:21:19 INFO  CFPExtractor:348 - annotation: AnnotationImpl: id=5840; type=Person; features={rule1=GazPersonFirst, prob=1.0}; start=NodeImpl: id=3456; offset=5855; end=NodeImpl: id=3457; offset=5861
+
+2013-06-01 17:21:19 INFO  CFPExtractor:344 - 
+
+1.5-train-2-3-2-DMIM_1998-gate.key_0001C
+2013-06-01 17:21:19 INFO  CFPExtractor:345 - Number of annotations: 0
+2013-06-01 17:21:19 INFO  CFPExtractor:344 - 
+
+1.5-train-2-3-3-IDMS_1997-gate.key_0001D
+2013-06-01 17:21:19 INFO  CFPExtractor:345 - Number of annotations: 1
+2013-06-01 17:21:19 INFO  CFPExtractor:348 - annotation: AnnotationImpl: id=3041; type=Person; features={rule1=PersonTitle, prob=1.0}; start=NodeImpl: id=2944; offset=4606; end=NodeImpl: id=2945; offset=4619
+
+2013-06-01 17:21:19 INFO  CFPExtractor:344 - 
+
+1.5-train-2-3-4-LDIE_1997-gate.key_0001E
+2013-06-01 17:21:19 INFO  CFPExtractor:345 - Number of annotations: 0
+2013-06-01 17:21:19 INFO  CFPExtractor:344 - 
+
+1.5-train-2-3-5-MSD_1997-gate.key_0001F
+2013-06-01 17:21:19 INFO  CFPExtractor:345 - Number of annotations: 0
+2013-06-01 17:21:19 INFO  CFPExtractor:351 - XML file saved!
