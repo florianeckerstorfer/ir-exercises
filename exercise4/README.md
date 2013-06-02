@@ -61,3 +61,9 @@ The automatically applied Annotations will be saved in a Annotation Set called "
 The output is an XML-file contains the extracted information (Annotations).
 
 
+Resources
+----------
+
+- [Module 11: Machine Learning](http://gate.ac.uk/sale/talks/gate-course-jun12/track-3/module-11-machine-learning/module-11.pdf) and [resources](http://gate.ac.uk/sale/talks/gate-course-jun12/track-3/module-11-machine-learning/)
+- [GATE Embedded](http://gate.ac.uk/sale/tao/splitch7.html#x11-1570007)
+- [Batch Learning PR](http://gate.ac.uk/sale/tao/splitch18.html#x23-44600018.2)
