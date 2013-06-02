@@ -232,12 +232,6 @@ public class CFPExtractor
 		logger.info("MachineLearningController loaded");
 	}
 	
-	public void initJapeController() throws GateException, MalformedURLException
-	{
-		logger.info("initialize JapeController...");
-		
-	}
-
 	/**
 	 * Executes the controller on the training corpus the result is a learned model, specified in the ml_config.xml
 	 * 
