@@ -1,0 +1,124 @@
+Buildfile: /Users/florian/Workspace/study/ir/exercise4/build.xml
+
+init:
+     [echo] $GATE_HOME=/Users/florian/Workspace/study/ir/exercise4/vendor/GATE_Developer_7.1
+     [echo] $CFP_HOME=/Users/florian/Workspace/study/ir/exercise4
+
+compile:
+
+run:
+     [java] 2013-05-31 12:43:03 WARN  Gate:266 - GATE home system property ("gate.home") not set.
+     [java] Attempting to guess...
+     [java] 2013-05-31 12:43:03 WARN  Gate:286 - Using "/Users/florian/Workspace/study/ir/exercise4/vendor/GATE_Developer_7.1" as GATE Home.
+     [java] If this is not correct please set it manually using the -Dgate.home option in your start-up script
+     [java] 2013-05-31 12:43:03 INFO  Gate:297 - Using /Users/florian/Workspace/study/ir/exercise4/vendor/GATE_Developer_7.1 as GATE home
+     [java] 2013-05-31 12:43:03 INFO  Gate:321 - Using /Users/florian/Workspace/study/ir/exercise4/vendor/GATE_Developer_7.1/plugins as installed plug-ins directory.
+     [java] 2013-05-31 12:43:03 INFO  Gate:344 - Using /Users/florian/Workspace/study/ir/exercise4/vendor/GATE_Developer_7.1/gate.xml as site configuration file.
+     [java] 2013-05-31 12:43:03 INFO  Gate:356 - Using /Users/florian/.gate.xml as user configuration file
+     [java] 2013-05-31 12:43:03 INFO  Gate:369 - Using /Users/florian/.gate.session as user session file
+     [java] 2013-05-31 12:43:04 INFO  CFPExtractor:? - initialize MachineLearningController...
+     [java] 2013-05-31 12:43:04 WARN  GateClassLoader:147 - gate.learning.LearningAPIMain is available via both the system classpath and a plugin; the plugin classes will be ignored
+     [java] 2013-05-31 12:43:04 INFO  CreoleRegisterImpl:319 - CREOLE plugin loaded: file:/Users/florian/Workspace/study/ir/exercise4/vendor/GATE_Developer_7.1/plugins/Learning/
+     [java] Configuration File=file:/Users/florian/Workspace/study/ir/exercise4/config/ml-config.xml
+     [java] 
+     [java] 
+     [java] *************************
+     [java] A new session for NLP learning is starting: 20130531_124304
+     [java] file:/Users/florian/Workspace/study/ir/exercise4/config/ml-config.xml (saved 20130531_123323, 581secs ago)
+     [java] 
+     [java] 2013-05-31 12:43:04 INFO  CFPExtractor:? - MachineLearningController loaded
+     [java] 2013-05-31 12:43:04 INFO  CFPExtractor:? - load training Corpus...
+     [java] 2013-05-31 12:43:05 INFO  CFPExtractor:? - load test Corpus...
+     [java] 2013-05-31 12:43:06 INFO  CFPExtractor:? - executing machine learning controller -> TRAINING Mode
+     [java] Pre-processing the 11 documents...
+     [java] Learning starts.
+     [java] For the information about this learning see the log file /Users/florian/Workspace/study/ir/exercise4/config/savedFiles/logFileForNLPLearning.save
+     [java] The number of threads used is 1
+     [java] ** Training mode:
+     [java] time for NLP features: 0
+     [java] time for fv: 0
+     [java] time for filtering: 0
+     [java] time for NLP training: 0
+     [java] This learning session finished!
+     [java] 2013-05-31 12:43:08 INFO  CFPExtractor:? - machine learning controller TRAINING Mode executed
+     [java] 2013-05-31 12:43:08 INFO  CFPExtractor:? - executing machine learning controller -> APPLICATION Mode...
+     [java] Configuration File=file:/Users/florian/Workspace/study/ir/exercise4/config/ml-config.xml
+     [java] 
+     [java] 
+     [java] *************************
+     [java] A new session for NLP learning is starting: 20130531_124308
+     [java] file:/Users/florian/Workspace/study/ir/exercise4/config/ml-config.xml (saved 20130531_123323, 585secs ago)
+     [java] 
+     [java] Pre-processing the 12 documents...
+     [java] Learning starts.
+     [java] For the information about this learning see the log file /Users/florian/Workspace/study/ir/exercise4/config/savedFiles/logFileForNLPLearning.save
+     [java] The number of threads used is 1
+     [java] ** Application mode for document from 0 to 1(not included):
+     [java] ** Application mode for document from 1 to 2(not included):
+     [java] ** Application mode for document from 2 to 3(not included):
+     [java] ** Application mode for document from 3 to 4(not included):
+     [java] ** Application mode for document from 4 to 5(not included):
+     [java] ** Application mode for document from 5 to 6(not included):
+     [java] ** Application mode for document from 6 to 7(not included):
+     [java] ** Application mode for document from 7 to 8(not included):
+     [java] ** Application mode for document from 8 to 9(not included):
+     [java] ** Application mode for document from 9 to 10(not included):
+     [java] ** Application mode for document from 10 to 11(not included):
+     [java] ** Application mode for document from 11 to 12(not included):
+     [java] This learning session finished!
+     [java] 2013-05-31 12:43:09 INFO  CFPExtractor:? - machine learning controller APPLICATION Mode executed
+     [java] 2013-05-31 12:43:09 INFO  CFPExtractor:? - fetch the required annotations from test corpus...
+     [java] 2013-05-31 12:43:09 INFO  CFPExtractor:? - annotations fetched
+     [java] 2013-05-31 12:43:09 INFO  CFPExtractor:? - saving the result into XML
+     [java] 2013-05-31 12:43:09 INFO  CFPExtractor:? - 
+     [java] 
+     [java] 1.5-train-2-2-4-ICOS_1999-gate.key_00014
+     [java] 2013-05-31 12:43:09 INFO  CFPExtractor:? - Number of annotations: 0
+     [java] 2013-05-31 12:43:09 INFO  CFPExtractor:? - 
+     [java] 
+     [java] 1.5-train-2-2-5-KRDB_1998-gate.key_00015
+     [java] 2013-05-31 12:43:09 INFO  CFPExtractor:? - Number of annotations: 0
+     [java] 2013-05-31 12:43:09 INFO  CFPExtractor:? - 
+     [java] 
+     [java] 1.5-train-2-2-6-MMNS_2000-gate.key_00016
+     [java] 2013-05-31 12:43:09 INFO  CFPExtractor:? - Number of annotations: 0
+     [java] 2013-05-31 12:43:09 INFO  CFPExtractor:? - 
+     [java] 
+     [java] 1.5-train-2-2-7-PJW_1997-gate.key_00017
+     [java] 2013-05-31 12:43:09 INFO  CFPExtractor:? - Number of annotations: 0
+     [java] 2013-05-31 12:43:09 INFO  CFPExtractor:? - 
+     [java] 
+     [java] 1.5-train-2-2-8-SMSE_2000-gate.key_00018
+     [java] 2013-05-31 12:43:09 INFO  CFPExtractor:? - Number of annotations: 0
+     [java] 2013-05-31 12:43:09 INFO  CFPExtractor:? - 
+     [java] 
+     [java] 1.5-train-2-2-9-WEBDB_1998-gate.key_00019
+     [java] 2013-05-31 12:43:09 INFO  CFPExtractor:? - Number of annotations: 0
+     [java] 2013-05-31 12:43:09 INFO  CFPExtractor:? - 
+     [java] 
+     [java] 1.5-train-2-3-0-AML_1998-gate.key_0001A
+     [java] 2013-05-31 12:43:09 INFO  CFPExtractor:? - Number of annotations: 0
+     [java] 2013-05-31 12:43:09 INFO  CFPExtractor:? - 
+     [java] 
+     [java] 1.5-train-2-3-1-COMMON_1996-gate.key_0001B
+     [java] 2013-05-31 12:43:09 INFO  CFPExtractor:? - Number of annotations: 0
+     [java] 2013-05-31 12:43:09 INFO  CFPExtractor:? - 
+     [java] 
+     [java] 1.5-train-2-3-2-DMIM_1998-gate.key_0001C
+     [java] 2013-05-31 12:43:09 INFO  CFPExtractor:? - Number of annotations: 0
+     [java] 2013-05-31 12:43:09 INFO  CFPExtractor:? - 
+     [java] 
+     [java] 1.5-train-2-3-3-IDMS_1997-gate.key_0001D
+     [java] 2013-05-31 12:43:09 INFO  CFPExtractor:? - Number of annotations: 0
+     [java] 2013-05-31 12:43:09 INFO  CFPExtractor:? - 
+     [java] 
+     [java] 1.5-train-2-3-4-LDIE_1997-gate.key_0001E
+     [java] 2013-05-31 12:43:09 INFO  CFPExtractor:? - Number of annotations: 0
+     [java] 2013-05-31 12:43:09 INFO  CFPExtractor:? - 
+     [java] 
+     [java] 1.5-train-2-3-5-MSD_1997-gate.key_0001F
+     [java] 2013-05-31 12:43:09 INFO  CFPExtractor:? - Number of annotations: 0
+     [java] 2013-05-31 12:43:09 INFO  CFPExtractor:? - XML file saved!
+
+BUILD SUCCESSFUL
+Total time: 6 seconds

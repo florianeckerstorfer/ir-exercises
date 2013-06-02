@@ -1,39 +1,39 @@
 <?xml version="1.0"?>  
 <!-- prerequisites: keep the annotation names after APPLICATION of machine learning, they will be saved in a new annotation set called "machine learning" anyway -->
 <ML-CONFIG>  
-  <VERBOSITY level="1"/>
-  <SURROUND value="true"/>  
-  <PARAMETER name="thresholdProbabilityEntity" value="0.2"/>  
-  <PARAMETER name="thresholdProbabilityBoundary" value="0.4"/>  
+	<VERBOSITY level="2"/>
+	<SURROUND value="true"/>
+	<PARAMETER name="thresholdProbabilityEntity" value="0.2" />  
+	<PARAMETER name="thresholdProbabilityBoundary" value="0.4" />  
 
-  <multiClassification2Binary method="one-vs-others"/>  
+	<multiClassification2Binary method="one-vs-others" />  
 
-  <EVALUATION method="kfold" 
-        runs="4"/>  
+	<EVALUATION method="kfold" runs="4"/>
 
-  <ENGINE nickname="PAUM" implementationName="PAUM"  
-    options="-p 50 -n 5 -optB 0.3"/>  
+	<ENGINE nickname="PAUM" implementationName="PAUM" options="-p 50 -n 5 -optB 0.3"/>  
 
-  <DATASET>
+	<DATASET>
 
-    <INSTANCE-TYPE>Token</INSTANCE-TYPE>  
-    
-    <ATTRIBUTE>  
-      <NAME>NameOfWorkshop</NAME>  
-      <SEMTYPE>NOMINAL</SEMTYPE>  
-      <TYPE>Token</TYPE>  
-      <FEATURE>string</FEATURE>  
-      <POSITION>0</POSITION>
-    </ATTRIBUTE> 
-
-    <ATTRIBUTE>
-      <NAME>Person</NAME>
+		<INSTANCE-TYPE>Token</INSTANCE-TYPE>
+		
+		<ATTRIBUTE>  
+			<NAME>token</NAME>
+			<SEMTYPE>NOMINAL</SEMTYPE>  
+			<TYPE>Token</TYPE>
+			<FEATURE>string</FEATURE>  
+			<POSITION>0</POSITION>
+		</ATTRIBUTE>
+		
+		<ATTRIBUTE>
+      <NAME>Class</NAME>
       <SEMTYPE>NOMINAL</SEMTYPE>
-      <TYPE>Person</TYPE>
-      <FEATURE>rule1</FEATURE>
+      <TYPE>IE</TYPE>
+      <FEATURE>type</FEATURE>
       <POSITION>0</POSITION>
       <CLASS/>
     </ATTRIBUTE>
 
-  </DATASET>  
-</ML-CONFIG> 
+
+
+	</DATASET>
+</ML-CONFIG>

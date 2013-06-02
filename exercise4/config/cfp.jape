@@ -1,0 +1,53 @@
+Phase:firstpass
+Input: Token
+Options: control = brill
+
+Rule: conferenceacronym
+(
+{conferenceacronym}
+):conferenceacronym
+-->
+ :conferenceacronym.IE = {type="conferenceacronym"}
+
+Rule: conferencename
+(
+{conferencename}
+):conferencename
+-->
+ :conferencename.IE = {type="conferencename"}
+
+Rule: workshopname
+(
+{workshopname}
+):workshopname
+-->
+ :workshopname.IE = {type="workshopname"}
+
+Rule: workshopacronym
+(
+{workshopacronym}
+):workshopacronym
+-->
+ :workshopacronym.IE = {type="workshopacronym"}
+
+Rule: workshopdate
+(
+{workshopdate}
+):workshopdate
+-->
+ :workshopdate.IE = {type="workshopdate"}
+
+Rule: workshoplocation
+(
+{workshoplocation}
+):workshoplocation
+-->
+ :workshoplocation.IE = {type="workshoplocation"}
+
+Rule: workshoppapersubmissiondate
+(
+{workshoppapersubmissiondate}
+):workshoppapersubmissiondate
+-->
+ :workshoppapersubmissiondate.IE = {type="workshoppapersubmissiondate"}
+

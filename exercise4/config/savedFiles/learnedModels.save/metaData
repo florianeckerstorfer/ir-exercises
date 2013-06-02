@@ -1,7 +1,7 @@
-11 #numTrainingDocs
-6 #numClasses
-10081 #numNullLabelInstances
-2388 #totalFeatures
+10 #numTrainingDocs
+14 #numClasses
+9730 #numNullLabelInstances
+2212 #totalFeatures
 /Users/florian/Workspace/study/ir/exercise4/config/savedFiles/learnedModels.save #modelFile
 PAUM #learnerName
 null #learnerExecutable

@@ -8,6 +8,8 @@ import gate.Factory;
 import gate.FeatureMap;
 import gate.Gate;
 import gate.ProcessingResource;
+import gate.Resource;
+import gate.Utils;
 import gate.creole.ANNIEConstants;
 import gate.creole.ExecutionException;
 import gate.creole.ResourceInstantiationException;
@@ -19,7 +21,9 @@ import gate.util.GateException;
 import gate.util.persistence.PersistenceManager;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.lang.reflect.InvocationTargetException;
 import java.net.MalformedURLException;
 import java.util.ArrayList;
@@ -31,6 +35,7 @@ import java.util.Set;
 import java.util.Vector;
 
 import javax.swing.SwingUtilities;
+import javax.xml.transform.stream.StreamResult;
 
 import org.apache.log4j.Logger;
 
@@ -53,8 +58,10 @@ public class CFPExtractor
 	 * The directory of the plugins and the corpora
 	 */
 	private final String GATE_PLUGINS_DIR = System.getenv("GATE_HOME") + "/plugins";
-	private final String TRAINING_SET_DIR = System.getenv("CFP_HOME") + "/data/training/";
-	private final String TEST_SET_DIR = System.getenv("CFP_HOME") + "/data/test/";
+	private final String TRAINING_SET_DIR = System.getenv("CFP_HOME") + "/data/training-xml/";
+	private final String TEST_SET_DIR = System.getenv("CFP_HOME") + "/data/test-xml/";
+	
+	private final String OUTPUT_DIR = System.getenv("CFP_HOME") + "/output/";
 	
 	/**
 	 * The configuration file for the batch learning PR
@@ -107,9 +114,9 @@ public class CFPExtractor
 		Gate.init();
 		
 		// Disabled GUI loading because (I think) is not required and does not work when started from Ant
-//		 callGateGui();
+//		callGateGui();
 		
-		//extractor.initAnnieController();
+//		extractor.initAnnieController();
 		
 		extractor.initMachineLearningController();
 		extractor.loadCorpora();
@@ -143,6 +150,7 @@ public class CFPExtractor
 	 * @throws GateException
 	 * @throws MalformedURLException
 	 */
+	@SuppressWarnings("unchecked")
 	public void initAnnieController() throws GateException, MalformedURLException {
 		logger.info("initialize annieController...");
 		
@@ -154,25 +162,9 @@ public class CFPExtractor
 		annieController = (SerialAnalyserController) Factory.createResource("gate.creole.SerialAnalyserController", 
 				Factory.newFeatureMap(), Factory.newFeatureMap(), "ANNIE_Controller");
 		
-		Collection<String> prs = null;
-		try {
-			SerialAnalyserController annie = (SerialAnalyserController)
-					PersistenceManager.loadObjectFromFile(
-							new File(new File(Gate.getPluginsHome(), GATE_PLUGINS_DIR), ANNIEConstants.DEFAULT_FILE)
-					);
-			prs = (Collection<String>)annie.getPRs();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-
-		//load ANNIE controller with PRs as defined in ANNIEConstants
-		Iterator<String> prsIterator = prs.iterator();
-		while (prsIterator.hasNext()) {
-			FeatureMap params = Factory.newFeatureMap(); //with defaults
-			ProcessingResource pr = (ProcessingResource) Factory.createResource(prsIterator.next(), params);
-			annieController.add(pr);
-		}
+		FeatureMap params = Factory.newFeatureMap(); //with defaults
+		Resource pr = Factory.createResource("gate.creole.ANNIETransducer", params);
+		annieController.add((ProcessingResource) pr);
 		
 		logger.info("annieController loaded");
 	}
@@ -195,12 +187,14 @@ public class CFPExtractor
 		//only these file extensions should be loaded into the corpus
 		ExtensionFileFilter exf_xml = new ExtensionFileFilter();
 		exf_xml.addExtension("xml");
+		exf_xml.addExtension("key");
 		
 		logger.info("load training Corpus...");
 		trainingCorpus.populate(new File(TRAINING_SET_DIR).toURI().toURL(), exf_xml, "", false);
 		
 		ExtensionFileFilter exf_key = new ExtensionFileFilter();
-		exf_key.addExtension("key");		
+		exf_key.addExtension("key");
+		exf_key.addExtension("xml");
 		logger.info("load test Corpus...");
 		testCorpus.populate(new File(TEST_SET_DIR).toURI().toURL(), exf_key, "", false);
 	}
@@ -222,6 +216,8 @@ public class CFPExtractor
 		machineLearningController = (SerialAnalyserController) Factory.createResource("gate.creole.SerialAnalyserController", 
 				Factory.newFeatureMap(), Factory.newFeatureMap(), "MachineLearning_Controller");
 		
+		
+		
 		// Load machineLearningController with PRs
 		FeatureMap params_batch_learning = Factory.newFeatureMap();
 		File configFile =  new File(ML_CONFIG_FILE_DIR);
@@ -231,21 +227,15 @@ public class CFPExtractor
 		
 		batchLearningTraining = (ProcessingResource) Factory.createResource("gate.learning.LearningAPIMain", params_batch_learning);
 		
-		//delete the machine_learned AS
-		//only needed if we want to apply APPLICATION multiple times
-		/*
-		FeatureMap params_document_reset = Factory.newFeatureMap();
-		List<String> setsToRemove = new ArrayList<String>();
-		setsToRemove.add("ML");
-		params_document_reset.put("setsToRemove", setsToRemove);
-		params_document_reset.put("setsToKeep", new ArrayList<String>());
-		ProcessingResource document_reset = (ProcessingResource) Factory.createResource("gate.creole.annotdelete.AnnotationDeletePR", params_document_reset);
-		
-		machineLearningController.add(document_reset);
-		*/
 		machineLearningController.add(batchLearningTraining);	
 		
 		logger.info("MachineLearningController loaded");
+	}
+	
+	public void initJapeController() throws GateException, MalformedURLException
+	{
+		logger.info("initialize JapeController...");
+		
 	}
 
 	/**
@@ -305,13 +295,14 @@ public class CFPExtractor
 			Document doc = iter.next();
 			
 			Set<String> requiredAnnotations = new HashSet<String>();
-			requiredAnnotations.add("workshopname");
-			requiredAnnotations.add("workshopacronym");
-			requiredAnnotations.add("workshopdate");
-			requiredAnnotations.add("workshoplocation");
-			requiredAnnotations.add("conferencename");
-			requiredAnnotations.add("conferenceacronym");
-			requiredAnnotations.add("workshoppapersubmissiondate");
+			requiredAnnotations.add("IE");
+//			requiredAnnotations.add("workshopacronym");
+//			requiredAnnotations.add("workshopdate");
+//			requiredAnnotations.add("workshoplocation");
+//			requiredAnnotations.add("conferencename");
+//			requiredAnnotations.add("conferenceacronym");
+//			requiredAnnotations.add("workshoppapersubmissiondate");
+//			requiredAnnotations.add("Person");
 			
 			// TODO:  the resulting machine_learned AS is empty since the batch learning PR is not configured yet
 			// See ml-config.xml 
@@ -339,13 +330,15 @@ public class CFPExtractor
 	 */
 	public void resultsToXML() {
 		logger.info("saving the result into XML");
-		for(GateAnalysisResult res : extractedAnnotations) {
-			logger.info("\n\n" + res.document.getName());
-			logger.info("Number of annotations: " + res.getSortedAnnotationList().size());
-			Iterator<Annotation> it = res.getSortedAnnotationList().iterator();
-			while (it.hasNext()) {
-				logger.info("annotation: " + it.next());
-			}
+		XmlWriter writer = new XmlWriter();
+		PrintWriter out;
+		try {
+			out = new PrintWriter(OUTPUT_DIR + "/result.xml");
+			writer.writeXml(extractedAnnotations, out);
+			out.close();
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 		logger.info("XML file saved!");
 	}
