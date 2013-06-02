@@ -1,39 +1,41 @@
 Information Retrieval Exercise 4
 ================================
 
-HOW-TO
-------
+Installation
+------------
 
-Step 1:
+Clone (or download) this repository:
 
-- download generic installer (https://sourceforge.net/projects/gate/files/gate/7.1/gate-7.1-build4485-installer.jar/download) and install it under vendor
+	$ git clone git@github.com:florianeckerstorfer/ir-exercises.git
 
-Step 2:
+Navigate into the directory for exercise 4:
 
-add following jars into the build path:
+	$ cd ./ir-exercises/exercise4
 
-	- vendor/GATE_Developer_7.1/bin/gate.jar 
-	- vendor/GATE_Developer_7.1/lib/*
-	- vendor/GATE_Developer_7.1/plugins/Learning/learningapi.jar
+You need to have GATE installed and store the path to it in the environment variable `$GATE_HOME`
 
-- split the corpus into two separate corpora, training and test. 2/3 in training and 1/3 in test. 
+	$ export GATE_HOME=/path/to/GATE/
 
-Step 3:
+You also need to store the path to this exercise in `$CFP_HOME`:
 
-- convert the training corpus from gate's "inline annotations" into gate's standoff markup. 
-	1. create a Corpus in Gate (opt. called it "training")
-	2. populate it with the files in the training folder
-	3. save the corpus as xml
-- reason: the xml format is supported by the Batch Learning PR
+	$ export CFP_HOME=/path/to/ir-exercises/exercise4
 
-Step 4: 
+You need to place a copy of `log4j-1.2.17.jar` into the `vendor/` directory.
 
-- run CFPExtractor.java
+Then you can run CFP:
 
-Step 5: 
+	$ ant run
 
-- check the xml result
-	- TODO
+The result will be stored as a XML file in `output/result.xml`.
+
+How it works
+------------
+
+Our code works like this.
+
+The training and test data is stored in `data/training-xml` and `data/test-xml` in the XML format. This data is the preprocessed corpus. That is, JAPE has been used (within GATE) to convert the annotations. In our case we transform all annotations (from a type like `workshopname`, `conferencename`, etc) to an annotation `IE` with the original type as feature.
+
+Java is then used to execute Batch Learning PR and to extract the annotations from the corpus. The corpus was split at 20-80.
 
 
 DESCRIPION
@@ -56,6 +58,6 @@ Gate provides many useful functionality through it's creole plugins. For our pur
 
 The automatically applied Annotations will be saved in a Annotation Set called "machine_learned".
 
-The output is an XML-file contains the extracted information (Annotations). 
+The output is an XML-file contains the extracted information (Annotations).
 
 
