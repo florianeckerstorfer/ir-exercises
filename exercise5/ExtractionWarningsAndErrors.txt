@@ -1,0 +1,103 @@
+WARNING: Number of segments extracted (20) differs from expected number (119)! (File length: 93800700  Segment Size: 262144  Step Width: 3
+ERROR: Exception during feature extraction: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Electro/02 Cott's Face (Original Mix).mp3 - Sample rate of 48000 Hz not supported!
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Electro/02 Cott's Face (Original Mix).mp3" failed.
+WARNING: Number of segments extracted (16) differs from expected number (17)! (File length: 13582800  Segment Size: 262144  Step Width: 3
+WARNING: Number of segments extracted (23) differs from expected number (24)! (File length: 19007100  Segment Size: 262144  Step Width: 3
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/01 Beastie Boys.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/01 Beastie Boys.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/01 The Biz vs. The Nuge.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/01 The Biz vs. The Nuge.mp3" failed.
+ERROR: Exception during feature extraction: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/02 Love The Way You Lie.mp3 - Sample rate of 48000 Hz not supported!
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/02 Love The Way You Lie.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/02 Slow And Low.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/02 Slow And Low.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/03 Ch-check it out.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/03 Ch-check it out.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/03 Shadrach.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/03 Shadrach.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/04 Gratitude.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/04 Gratitude.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/05 Skills To Pay The Bills.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/05 Skills To Pay The Bills.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/05 Time For Livin'.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/05 Time For Livin'.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/06 Dub The Mic.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/06 Dub The Mic.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/06 Pass the Mic.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/06 Pass the Mic.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/07 An open letter to NYC.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/07 An open letter to NYC.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/07 Believe Me.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/07 Believe Me.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/07 Benny And The Jets.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/07 Benny And The Jets.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/08 Root down.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/08 Root down.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/08 The Negotiation Limerick File.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/08 The Negotiation Limerick File.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/09 Body Movin' (Fatboy Slim Remix).mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/09 Body Movin' (Fatboy Slim Remix).mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/09 I Want Some.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/09 I Want Some.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/09 Shake your Rump.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/09 Shake your Rump.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/10 Boomin' Granny.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/10 Boomin' Granny.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/10 She's On It.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/10 She's On It.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/11 Son Of Neckbone.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/11 Son Of Neckbone.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/11 Sure Shot.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/11 Sure Shot.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/12 Body movin' (Fatboy Slim Remix).mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/12 Body movin' (Fatboy Slim Remix).mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/12 Country Mike's Theme.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/12 Country Mike's Theme.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/13 Triple Trouble.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/13 Triple Trouble.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/13 Twenty Questions.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/13 Twenty Questions.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/14 Remote Control.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/14 Remote Control.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/14 Sabotage.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/14 Sabotage.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/14 Something's Got To Give.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/14 Something's Got To Give.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/15 Bodhisattva Vow.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/15 Bodhisattva Vow.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/15 Railroad Blues.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/15 Railroad Blues.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/15 You gotta fight for your Right (to party).mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/15 You gotta fight for your Right (to party).mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/16 Live Wire.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/16 Live Wire.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/17 Song For The Man.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/17 Song For The Man.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/18 Netty's Girl.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/18 Netty's Girl.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/18 Soba Violence.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/18 Soba Violence.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/19 Alive.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/19 Alive.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/19 Egg Raid On Mojo.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/19 Egg Raid On Mojo.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/20 Jimmy James (Original Version).mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/20 Jimmy James (Original Version).mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/21 Three MC's And One DJ (Live Video Version).mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/21 Three MC's And One DJ (Live Video Version).mp3" failed.
+WARNING: Track is < 45 sec. Ignoring step width > 1 and skip leadin/fadeout options.
+WARNING: Number of segments extracted (12) differs from expected number (13)! (File length: 10628100  Segment Size: 262144  Step Width: 3
+WARNING: Number of segments extracted (15) differs from expected number (16)! (File length: 12877200  Segment Size: 262144  Step Width: 3
+WARNING: Number of segments extracted (14) differs from expected number (15)! (File length: 12392100  Segment Size: 262144  Step Width: 3
+WARNING: Number of segments extracted (15) differs from expected number (16)! (File length: 13141800  Segment Size: 262144  Step Width: 3
+WARNING: Number of segments extracted (21) differs from expected number (22)! (File length: 17684100  Segment Size: 262144  Step Width: 3
+WARNING: Number of segments extracted (13) differs from expected number (14)! (File length: 11289600  Segment Size: 262144  Step Width: 3
+WARNING: Number of segments extracted (14) differs from expected number (15)! (File length: 12259800  Segment Size: 262144  Step Width: 3
+WARNING: Number of segments extracted (12) differs from expected number (13)! (File length: 10407600  Segment Size: 262144  Step Width: 3
+WARNING: Number of segments extracted (13) differs from expected number (14)! (File length: 11157300  Segment Size: 262144  Step Width: 3
+WARNING: Number of segments extracted (12) differs from expected number (13)! (File length: 10495800  Segment Size: 262144  Step Width: 3
+WARNING: Number of segments extracted (14) differs from expected number (15)! (File length: 11862900  Segment Size: 262144  Step Width: 3
+WARNING: Number of segments extracted (12) differs from expected number (13)! (File length: 10584000  Segment Size: 262144  Step Width: 3
+WARNING: Number of segments extracted (21) differs from expected number (22)! (File length: 17507700  Segment Size: 262144  Step Width: 3
+WARNING: Number of segments extracted (15) differs from expected number (16)! (File length: 12921300  Segment Size: 262144  Step Width: 3
+WARNING: Number of segments extracted (11) differs from expected number (12)! (File length: 10143000  Segment Size: 262144  Step Width: 3
