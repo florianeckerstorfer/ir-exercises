@@ -1,0 +1,262 @@
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Classic/09 Air on the G String (from Suite III), BWV 1068.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Classic/09 Air on the G String (from Suite III), BWV 1068.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Classic/10 Air on a G String.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Classic/10 Air on a G String.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Classic/15 Sonata No. 2 in A minor_ Andante.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Classic/15 Sonata No. 2 in A minor_ Andante.mp3" failed.
+WARNING: Number of segments extracted (20) differs from expected number (119)! (File length: 93800700  Segment Size: 262144  Step Width: 3
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Electro/01 First Of The Year (Equinox) - Original Mix.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Electro/01 First Of The Year (Equinox) - Original Mix.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Electro/01 Right In.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Electro/01 Right In.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Electro/02 Bangarang (feat. Sirah).mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Electro/02 Bangarang (feat. Sirah).mp3" failed.
+ERROR: Exception during feature extraction: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Electro/02 Cott's Face (Original Mix).mp3 - Sample rate of 48000 Hz not supported!
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Electro/02 Cott's Face (Original Mix).mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Electro/02 Ruffneck (Flex) - Original Mix.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Electro/02 Ruffneck (Flex) - Original Mix.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Electro/03 Breakn' A Sweat (Skrillex & The Doors).mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Electro/03 Breakn' A Sweat (Skrillex & The Doors).mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Electro/03 Ruffneck (FULL Flex) - Original Mix.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Electro/03 Ruffneck (FULL Flex) - Original Mix.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Electro/04 Scary Monsters And Nice Sprites - Dirtyphonics Remix.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Electro/04 Scary Monsters And Nice Sprites - Dirtyphonics Remix.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Electro/04 The Devil's Den (Skrillex & Wolfgang Gartner).mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Electro/04 The Devil's Den (Skrillex & Wolfgang Gartner).mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Electro/05 Right On Time (Skrillex, 12th Planet & Kill The Noise).mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Electro/05 Right On Time (Skrillex, 12th Planet & Kill The Noise).mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Electro/05 Scary Monsters And Nice Sprites - Phonat Remix.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Electro/05 Scary Monsters And Nice Sprites - Phonat Remix.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Electro/06 Scary Monsters And Nice Sprites - The Juggernaut Remix.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Electro/06 Scary Monsters And Nice Sprites - The Juggernaut Remix.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Electro/07 Scary Monsters And Nice Sprites - Kaskade Remix.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Electro/07 Scary Monsters And Nice Sprites - Kaskade Remix.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Electro/07 Summit (feat. Ellie Goulding).mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Electro/07 Summit (feat. Ellie Goulding).mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Electro/08 Orchestral Suite By Varien (Bonus Track).mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Electro/08 Orchestral Suite By Varien (Bonus Track).mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Electro/Chain Smoker.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Electro/Chain Smoker.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Electro/Pink Lady.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Electro/Pink Lady.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Electro/Strange Behaviour.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Electro/Strange Behaviour.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Electro/To The Stars.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Electro/To The Stars.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Heavy Metal/01 Bitter Pill.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Heavy Metal/01 Bitter Pill.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Heavy Metal/01 Nightmare.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Heavy Metal/01 Nightmare.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Heavy Metal/01 That Was Just Your Life.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Heavy Metal/01 That Was Just Your Life.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Heavy Metal/02 Enslaved.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Heavy Metal/02 Enslaved.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Heavy Metal/02 The End Of The Line.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Heavy Metal/02 The End Of The Line.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Heavy Metal/03 Broken, Beat And Scarred.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Heavy Metal/03 Broken, Beat And Scarred.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Heavy Metal/03 Girls. Girls. Girls.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Heavy Metal/03 Girls. Girls. Girls.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Heavy Metal/04 The Day That Never Comes.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Heavy Metal/04 The Day That Never Comes.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Heavy Metal/05 All Nightmare Long.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Heavy Metal/05 All Nightmare Long.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Heavy Metal/05 Wild Side.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Heavy Metal/05 Wild Side.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Heavy Metal/06 Cyanide.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Heavy Metal/06 Cyanide.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Heavy Metal/06 Glitter (Remix).mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Heavy Metal/06 Glitter (Remix).mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Heavy Metal/07 Dr. Feelgood.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Heavy Metal/07 Dr. Feelgood.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Heavy Metal/08 Same Ol' Situation.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Heavy Metal/08 Same Ol' Situation.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Heavy Metal/08 The Judas Kiss.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Heavy Metal/08 The Judas Kiss.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Heavy Metal/09 Home Sweet Home.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Heavy Metal/09 Home Sweet Home.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Heavy Metal/10 Afraid.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Heavy Metal/10 Afraid.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Heavy Metal/10 My Apocalypse.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Heavy Metal/10 My Apocalypse.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Heavy Metal/11 Don't Go Away Mad (Just Go Away).mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Heavy Metal/11 Don't Go Away Mad (Just Go Away).mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Heavy Metal/12 Without You.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Heavy Metal/12 Without You.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Heavy Metal/13 Smokin' In The Boys Room.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Heavy Metal/13 Smokin' In The Boys Room.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Heavy Metal/14 Primal Scream.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Heavy Metal/14 Primal Scream.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Heavy Metal/15 Too Fast For Love.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Heavy Metal/15 Too Fast For Love.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Heavy Metal/16 Looks That Kill.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Heavy Metal/16 Looks That Kill.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Heavy Metal/17 Shout At The Devil.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Heavy Metal/17 Shout At The Devil.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/01 Beastie Boys.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/01 Beastie Boys.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/01 Rhymin and Stealin.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/01 Rhymin and Stealin.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/01 The Biz vs. The Nuge.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/01 The Biz vs. The Nuge.mp3" failed.
+ERROR: Exception during feature extraction: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/02 Love The Way You Lie.mp3 - Sample rate of 48000 Hz not supported!
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/02 Love The Way You Lie.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/02 Slow And Low.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/02 Slow And Low.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/03 Ch-check it out.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/03 Ch-check it out.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/03 Shadrach.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/03 Shadrach.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/04 Gratitude.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/04 Gratitude.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/04 Posse In Effect.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/04 Posse In Effect.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/05 Skills To Pay The Bills.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/05 Skills To Pay The Bills.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/05 Take Care (feat. Rihanna).mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/05 Take Care (feat. Rihanna).mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/05 Time For Livin'.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/05 Time For Livin'.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/06 Dub The Mic.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/06 Dub The Mic.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/06 Girls.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/06 Girls.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/06 Pass the Mic.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/06 Pass the Mic.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/07 An open letter to NYC.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/07 An open letter to NYC.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/07 Believe Me.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/07 Believe Me.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/07 Benny And The Jets.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/07 Benny And The Jets.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/07 Get It Together.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/07 Get It Together.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/07 Intergalactic.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/07 Intergalactic.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/07 So What'cha Want.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/07 So What'cha Want.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/08 Hey Ladies.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/08 Hey Ladies.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/08 No Sleep Till Brooklyn.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/08 No Sleep Till Brooklyn.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/08 Root down.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/08 Root down.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/08 The Negotiation Limerick File.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/08 The Negotiation Limerick File.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/09 Body Movin' (Fatboy Slim Remix).mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/09 Body Movin' (Fatboy Slim Remix).mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/09 I Want Some.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/09 I Want Some.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/09 Shake your Rump.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/09 Shake your Rump.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/10 Boomin' Granny.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/10 Boomin' Granny.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/10 She's On It.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/10 She's On It.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/11 Son Of Neckbone.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/11 Son Of Neckbone.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/11 Sure Shot.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/11 Sure Shot.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/12 Body movin' (Fatboy Slim Remix).mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/12 Body movin' (Fatboy Slim Remix).mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/12 Country Mike's Theme.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/12 Country Mike's Theme.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/13 Triple Trouble.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/13 Triple Trouble.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/13 Twenty Questions.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/13 Twenty Questions.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/14 Remote Control.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/14 Remote Control.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/14 Sabotage.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/14 Sabotage.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/14 Something's Got To Give.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/14 Something's Got To Give.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/15 Bodhisattva Vow.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/15 Bodhisattva Vow.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/15 Railroad Blues.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/15 Railroad Blues.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/15 You gotta fight for your Right (to party).mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/15 You gotta fight for your Right (to party).mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/16 Live Wire.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/16 Live Wire.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/17 Song For The Man.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/17 Song For The Man.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/18 Netty's Girl.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/18 Netty's Girl.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/18 Soba Violence.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/18 Soba Violence.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/19 Alive.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/19 Alive.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/19 Egg Raid On Mojo.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/19 Egg Raid On Mojo.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/19 The Motto (feat. Lil Wayne) [Bonus Track].mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/19 The Motto (feat. Lil Wayne) [Bonus Track].mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/20 Jimmy James (Original Version).mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/20 Jimmy James (Original Version).mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/21 Three MC's And One DJ (Live Video Version).mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/21 Three MC's And One DJ (Live Video Version).mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/Headlines.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/Headlines.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/Sabatoge.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/Sabatoge.mp3" failed.
+WARNING: Track is < 45 sec. Ignoring step width > 1 and skip leadin/fadeout options.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/She's Crafty.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Hip Hop/She's Crafty.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Jazz/01 Chasing Pirates.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Jazz/01 Chasing Pirates.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Jazz/01 Your Love Is King.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Jazz/01 Your Love Is King.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Jazz/02 Even Though.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Jazz/02 Even Though.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Jazz/02 Hang On To Your Love.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Jazz/02 Hang On To Your Love.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Jazz/03 Light as a Feather.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Jazz/03 Light as a Feather.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Jazz/03 Smooth Operator.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Jazz/03 Smooth Operator.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Jazz/04 Young Blood.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Jazz/04 Young Blood.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Jazz/05 I Wouldn't Need You.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Jazz/05 I Wouldn't Need You.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Jazz/05 The Sweetest Taboo.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Jazz/05 The Sweetest Taboo.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Jazz/06 Is It A Crime.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Jazz/06 Is It A Crime.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Jazz/06 Waiting.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Jazz/06 Waiting.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Jazz/07 It's Gonna Be.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Jazz/07 It's Gonna Be.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Jazz/07 Never As Good As The First Time.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Jazz/07 Never As Good As The First Time.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Jazz/08 Love Is Stronger Than Pride.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Jazz/08 Love Is Stronger Than Pride.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Jazz/08 You've Ruined Me.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Jazz/08 You've Ruined Me.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Jazz/09 Back to Manhatten.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Jazz/09 Back to Manhatten.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Jazz/09 Paradise.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Jazz/09 Paradise.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Jazz/10 Nothing Can Come Between Us.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Jazz/10 Nothing Can Come Between Us.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Jazz/10 Stuck.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Jazz/10 Stuck.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Jazz/11 December.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Jazz/11 December.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Jazz/11 No Ordinary Love.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Jazz/11 No Ordinary Love.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Jazz/12 Like A Tattoo.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Jazz/12 Like A Tattoo.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Jazz/12 Tell Yer Mama.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Jazz/12 Tell Yer Mama.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Jazz/13 Kiss Of Life.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Jazz/13 Kiss Of Life.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Jazz/13 Man of the Hour.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Jazz/13 Man of the Hour.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Jazz/14 Please Send Me Someone To Love.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Jazz/14 Please Send Me Someone To Love.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Jazz/15 Cherish The Day.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Jazz/15 Cherish The Day.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Jazz/16 Pearls.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Jazz/16 Pearls.mp3" failed.
+ERROR: IOException: /Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Jazz/Something is Calling You.mp3 - Resetting to invalid mark
+ERROR: Extracting "/Users/atmanB/git/ir-exercises/exercise5/Music/Corpus/Jazz/Something is Calling You.mp3" failed.
