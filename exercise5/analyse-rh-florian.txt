@@ -1,0 +1,169 @@
+Query 6: Heavy Metal/03 Broken, Beat And Scarred
+Rank    Vector Label    Distance
+1   Heavy Metal/04 The Day That Never Comes.mp3 137.4199
+    -  Very similar
+2   Heavy Metal/03 Fist of the Dragon.mp3   168.5244
+    - Very similar
+3   Heavy Metal/09 Wheels of Purgatory.mp3  172.0607
+    - Very similar
+4   Heavy Metal/13 Electric Rise (Bonus).mp3    172.6668
+    - Very similar
+5   Heavy Metal/06 Cyanide.mp3  178.4084
+    - Very similar
+6   Heavy Metal/10 Afraid.mp3   195.0051
+    - Similar
+7   Heavy Metal/04 King of the Dead End Road.mp3    198.7097
+    - Similar
+8   Heavy Metal/05 Fuel the Warmachine.mp3  199.2646
+    - Very similar
+9   Heavy Metal/So Far Away.mp3 199.5371
+    - Similar
+10  Heavy Metal/12 Fire 99.mp3  203.1767
+    - Similar
+20  Heavy Metal/05 All Nightmare Long.mp3   228.2832
+    - Very similar
+30  Heavy Metal/01 Nightmare.mp3    280.5052
+    - Similar
+40  Heavy Metal/09 Home Sweet Home.mp3  337.838
+    - Not very similar
+50  Hip Hop/28 She Will.mp3 369.6714
+    - Not similar
+100 Heavy Metal/16 Looks That Kill.mp3  524.4761
+    - Not very similar
+
+
+
+Query 7: Electro/02 Raw Chicken
+Rank    Vector Label    Distance
+1   Electro/09 Raw Chicken.mp3  87.0548
+    - Same song (remix)
+2   Electro/10 The Spell (Original Mix).mp3 239.1402
+    - Very similar
+3   Electro/To The Stars.mp3    274.6812
+    - Very similar
+4   Electro/01 The Spell.mp3    279.3919
+    - Very similar
+5   Electro/04 Embers (feat. Lindsay).mp3   374.0393
+    - Very similar
+6   Electro/04 The Devil's Den (Skrillex & Wolfgang Gartner).mp3    432.651
+    - Very similar
+7   Electro/13 Rocket In The Sky.mp3    434.8623
+    - Similar
+8   Electro/07 Green Bottle (Original Mix).mp3  450.7923
+    - Similar
+9   Electro/02 Silicone Lube (Original Mix).mp3 467.631
+    - Similar
+10  Electro/06 Scary Monsters And Nice Sprites - The Juggernaut Remix.mp3   475.914
+    - Very similar
+20  Jazz/01 Maiden Voyage.mp3   547.0462
+    - Not similar
+30  Electro/11 No Matter What You Do.mp3    571.3193
+    - Similar
+40  Heavy Metal/10 Fiction.mp3  584.9427
+    - Not similar
+50  Heavy Metal/09 Tonight The World Dies.mp3   605.9995
+    - Not similar
+100 Hip Hop/Love Lockdown.mp3   692.0595
+    - Not similar
+
+
+Query 8: Electro/07 Get Loose
+Rank    Vector Label    Distance
+1   Electro/13 Bootleg Megamix.mp3  441.2034
+    - Very similar
+2   Electro/09 I Love My Sex.mp3    458.3213
+    - Very similar
+3   Electro/11 No Matter What You Do.mp3    460.8041
+    - Very similar
+4   Electro/08 Put Your Hands Up.mp3    463.6756
+    - Very similar
+5   Electro/04 Satisfaction.mp3 532.2331
+    - Very similar
+6   Electro/05 Time.mp3 587.4635
+    - Very similar
+7   Electro/13 Rocket In The Sky.mp3    633.9506
+    - Very similar
+8   Electro/09 Raw Chicken.mp3  640.9354
+    - Similar
+9   Electro/08 No Matter What You Do (Vision X Long Mix).mp3    656.764
+    - Very similar
+10  Electro/02 Raw Chicken.mp3  661.2975
+    - Similar
+20  Electro/12 Feel Alive.mp3   734.3486
+    - Very similar
+30  Hip Hop/03 Boyz.mp3 800.7844
+    - Not very similar
+40  Jazz/07 River (with Corinne Bailey Rae).mp3 858.0907
+    - Absolutely not similar
+50  Heavy Metal/06 Cyanide.mp3  875.2442
+    - Not similar
+100 Electro/08 Orchestral Suite By Varien (Bonus Track).mp3 952.3805
+    - A little bit similar
+
+
+Query 9: Hip Hop/05 Ms. Jackson
+Rank    Vector Label    Distance
+1   Hip Hop/She's Crafty.mp3    565.7145
+    - Shes Crafty is more aggrassive than Ms. Jackson. However, the flow of the raps has about the same speed.
+2   Jazz/13 Kiss Of Life.mp3    794.4391
+    - Sade's voice is softer and Kiss Of Life is a slower song than Ms. Jackson
+3   Electro/03 Grand Theft Ecstasy (Original Mix).mp3   909.957
+    - The beat of Grand Thest Ecstasy is more aggressive and thrifing, Ms. Jackson is more melodic and has, unlike Grand Theft Ecstasy, lyrics.
+4   Hip Hop/Ghostwriter.mp3 928.7416
+    - The beat of the songs has a similar speed and the voices are both rather soft, I kinda sounds similar.
+5   Hip Hop/Smoke and Mirrors.mp3   952.4992
+    - RJD2 is slower and more rythmic, I don't hear much similarity.
+6   Hip Hop/June Ft. Copywrite.mp3  1013.506
+    - The raps on Ms. Jackson have more flow than those on June, however, the speed is quite similar.
+7   Jazz/06 Waiting.mp3 1061.787
+    - Parts of the songs have a similar speed, otherwise they are not similar
+8   Hip Hop/Silver Fox.mp3  1071.5892
+    The songs are a little bit similar, in the sense that they both have soul infleunces. Silver Fox is, however, more melodic.
+9   Hip Hop/06 Mango Pickle Down River.mp3  1080.3398
+    - Both songs are Hip Hop, but nevertheless I can't hear a lot of similarity.
+10  Hip Hop/Take the Picture Off.mp3    1087.9824
+    - Sound not very similar
+20  Jazz/02 Seven Years.mp3 1165.2214
+    - Not similar
+30  Jazz/13 Man of the Hour.mp3 1221.2002
+    - Not similar
+40  Jazz/12 Nightingale.mp3 1254.8205
+    - Not similar
+50  Jazz/03 Light as a Feather.mp3  1278.7522
+    - I don't hear any similarity
+100 Hip Hop/07 20 Dollar.mp3    1357.2498
+    - Not similar
+
+
+Query 10: Hip Hop/07 Intergalactic
+Rank    Vector Label    Distance
+1   Jazz/05 Bull Rider.mp3  631.8702
+    - Not similar, Intergalactic has a kind of dirty sound, while Norah Jones music is very clean.
+2   Jazz/04 Chameleon (Edit).mp3    661.4085
+    - Kinda similar, has slower beat, sounds a little bit electric
+3   Electro/06 Whiskers.mp3 671.534
+    - Not very similar, however, uses laser like sounds
+4   Jazz/08 You've Ruined Me.mp3    763.3007
+    - I can't hear any similirarity
+5   Jazz/07 It's Gonna Be.mp3   770.0761
+    - More aggressive beat than the other Norah Jones songs, but once again not very similar to Intergalactic
+6   Electro/Strange Behaviour.mp3   770.2588
+    - Like Whiskers, has a similar laser/space sound
+7   Jazz/03 Cold Cold Heart.mp3 779.1946
+    - Not very similar
+8   Hip Hop/01 Make Me Proud (feat. Nicki Minaj).mp3    784.0339
+    - Quite similar, the flow of the raps are similar, however, Intergalatic sounds on the one hand more spacy and also more dirty and metallic, while Make Me Proud has a cleaner sound
+9   Jazz/05 I Wouldn't Need You.mp3 786.2131
+    - And yet another Norah Jones song.
+10  Jazz/07 Never As Good As The First Time.mp3 786.5948
+    - This song is even for Norah Jones really slow and has very little beat.
+20  Hip Hop/June Ft. Copywrite.mp3  818.18
+    - Somehow similar, also a dirty/metallic sound, but also more melodic and jazzy as Intergalactic
+30  Jazz/06 Waiting.mp3 845.1305
+    - Another Norah Jones song, has a strong bass but otherwise sounds not very similar than Intergalactic
+40  Hip Hop/Work.mp3    867.2595
+    - Sounds more like Jazz than Hip Hop, but has more beat than the Norah Jones songs
+50  Electro/13 Rocket In The Sky.mp3    885.3044
+    - I don't hear much similarity between Rocket In The Sky and Intergalactic.
+100 Heavy Metal/Buried Alive.mp3    962.113
+    - Not similar
