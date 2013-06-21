@@ -1,0 +1,101 @@
+Rank	Vector Label	Distance	
+1	Electro/13 Bootleg Megamix.mp3	441.2034	
+2	Electro/09 I Love My Sex.mp3	458.3213	
+3	Electro/11 No Matter What You Do.mp3	460.8041	
+4	Electro/08 Put Your Hands Up.mp3	463.6756	
+5	Electro/04 Satisfaction.mp3	532.2331	
+6	Electro/05 Time.mp3	587.4635	
+7	Electro/13 Rocket In The Sky.mp3	633.9506	
+8	Electro/09 Raw Chicken.mp3	640.9354	
+9	Electro/08 No Matter What You Do (Vision X Long Mix).mp3	656.764	
+10	Electro/02 Raw Chicken.mp3	661.2975	
+11	Electro/10 The Spell (Original Mix).mp3	678.3285	
+12	Electro/10 Love Is Gonna Save Us.mp3	692.4363	
+13	Electro/01 The Spell.mp3	693.7391	
+14	Electro/04 Embers (feat. Lindsay).mp3	697.7862	
+15	Electro/To The Stars.mp3	705.7901	
+16	Electro/09 Satisfaction (B.Deep Remix).mp3	710.7134	
+17	Jazz/07 It's Gonna Be.mp3	712.3433	
+18	Hip Hop/01 Make Me Proud (feat. Nicki Minaj).mp3	716.2554	
+19	Electro/06 Able To Love.mp3	717.0094	
+20	Electro/12 Feel Alive.mp3	734.3486	
+21	Electro/01 In Tango (Sfaction Extended).mp3	734.6125	
+22	Electro/07 Green Bottle (Original Mix).mp3	742.2209	
+23	Jazz/04 Young Blood.mp3	765.2531	
+24	Electro/04 Scary Monsters And Nice Sprites - Dirtyphonics Remix.mp3	767.2977	
+25	Jazz/08 You've Ruined Me.mp3	781.6256	
+26	Hip Hop/Salud.mp3	786.0812	
+27	Jazz/03 Light as a Feather.mp3	791.4859	
+28	Electro/04 The Devil's Den (Skrillex & Wolfgang Gartner).mp3	797.1078	
+29	Heavy Metal/08 Victim.mp3	797.721	
+30	Hip Hop/03 Boyz.mp3	800.7844	
+31	Heavy Metal/13 Smokin' In The Boys Room.mp3	814.3494	
+32	Electro/06 Scary Monsters And Nice Sprites - The Juggernaut Remix.mp3	814.973	
+33	Electro/02 Silicone Lube (Original Mix).mp3	829.3363	
+34	Electro/02 Relocation.mp3	834.6649	
+35	Heavy Metal/01 Nightmare.mp3	837.9205	
+36	Jazz/02 Seven Years.mp3	842.0538	
+37	Electro/04 Miles Of Love (Beeside Radio Edit).mp3	844.038	
+38	Electro/01 White Spirit (Original Mix).mp3	853.921	
+39	Electro/08 Talk to Me (Original Mix).mp3	856.5165	
+40	Jazz/07 River (with Corinne Bailey Rae).mp3	858.0907	
+41	Electro/11 Rocket In The Sky (Club Mix).mp3	860.8521	
+42	Heavy Metal/02 Welcome To The Family.mp3	861.8554	
+43	Electro/10 Illusion (Sfaction Mix).mp3	861.9573	
+44	Electro/Strange Behaviour.mp3	862.5355	
+45	Electro/03 No No No (Sfaction Mix).mp3	864.1881	
+46	Electro/01 Trapdoor (feat. Hadouken!).mp3	871.4983	
+47	Electro/14 Every Single Day.mp3	871.6667	
+48	Jazz/12 River (Live with Joni Mitchell) (Bonus Track).mp3	873.7102	
+49	Hip Hop/Smoke and Mirrors.mp3	874.0436	
+50	Heavy Metal/06 Cyanide.mp3	875.2442	
+51	Heavy Metal/12 Without You.mp3	877.2443	
+52	Electro/02 Get Better (Sfaction Reloaded Mix).mp3	877.7467	
+53	Hip Hop/28 She Will.mp3	880.8801	
+54	Heavy Metal/01 That Was Just Your Life.mp3	881.0153	
+55	Electro/02 Bangarang (feat. Sirah).mp3	882.3378	
+56	Heavy Metal/11 Don't Go Away Mad (Just Go Away).mp3	883.5342	
+57	Heavy Metal/02 The End Of The Line.mp3	889.3686	
+58	Hip Hop/36 Find Your Love.mp3	892.36	
+59	Heavy Metal/16 Looks That Kill.mp3	899.108	
+60	Electro/04 Muscle Rollers (Original Mix).mp3	899.3243	
+61	Jazz/10 Stuck.mp3	900.9106	
+62	Jazz/01 Maiden Voyage.mp3	905.3264	
+63	Heavy Metal/08 The Judas Kiss.mp3	905.4883	
+64	Heavy Metal/09 Tonight The World Dies.mp3	909.1246	
+65	Electro/06 Blood Red (Original Mix).mp3	909.751	
+66	Jazz/08 Love Is Stronger Than Pride.mp3	910.7764	
+67	Hip Hop/The Horror.mp3	911.9346	
+68	Jazz/05 St. Louis Blues (with Stevie Wonder).mp3	912.5648	
+69	Jazz/13 Loretta.mp3	912.6895	
+70	Electro/01 First Of The Year (Equinox) - Original Mix.mp3	912.8924	
+71	Jazz/11 December.mp3	913.1238	
+72	Heavy Metal/10 My Apocalypse.mp3	918.065	
+73	Hip Hop/07 Intergalactic.mp3	920.2379	
+74	Jazz/09 Wake Me Up.mp3	921.7572	
+75	Hip Hop/07 20 Dollar.mp3	922.0719	
+76	Heavy Metal/14 Old Man (Bonus).mp3	922.68	
+77	Heavy Metal/14 Primal Scream.mp3	923.8144	
+78	Jazz/06 Is It A Crime.mp3	925.9764	
+79	Heavy Metal/11 Save Me.mp3	926.9069	
+80	Jazz/10 Painter Song.mp3	929.9356	
+81	Heavy Metal/03 Danger Line.mp3	930.8208	
+82	Jazz/02 Cantaloupe Island.mp3	931.1145	
+83	Jazz/08 My Dear Country.mp3	931.4662	
+84	Hip Hop/Chicken-Bone Circuit.mp3	933.2537	
+85	Hip Hop/Good Times Roll Pt 2.mp3	936.6161	
+86	Electro/01 Right In.mp3	937.2108	
+87	Heavy Metal/Buried Alive.mp3	937.4609	
+88	Heavy Metal/03 Broken, Beat And Scarred.mp3	940.3567	
+89	Heavy Metal/05 Natural Born Killer.mp3	942.2661	
+90	Jazz/08 Don't Explain (with Damien Rice & Lisa Hannigan).mp3	943.0899	
+91	Jazz/08 Toes.mp3	944.2167	
+92	Heavy Metal/05 Wild Side.mp3	944.7222	
+93	Heavy Metal/10 Fiction.mp3	944.7756	
+94	Jazz/14 The Nearness Of You.mp3	947.989	
+95	Heavy Metal/So Far Away.mp3	948.1824	
+96	Jazz/18 Blue Bayou.mp3	949.0272	
+97	Heavy Metal/05 All Nightmare Long.mp3	949.2642	
+98	Heavy Metal/06 Glitter (Remix).mp3	950.2688	
+99	Jazz/04 Chameleon (Edit).mp3	950.5104	
+100	Electro/08 Orchestral Suite By Varien (Bonus Track).mp3	952.3805	

@@ -1,0 +1,101 @@
+Rank	Vector Label	Distance	
+1	Jazz/04 Chameleon (Edit).mp3	180.6512	
+2	Jazz/05 Bull Rider.mp3	183.5088	
+3	Electro/06 Whiskers.mp3	185.7896	
+4	Jazz/18 Blue Bayou.mp3	195.1633	
+5	Electro/Strange Behaviour.mp3	197.1119	
+6	Jazz/03 Cold Cold Heart.mp3	200.2267	
+7	Jazz/08 You've Ruined Me.mp3	201.4386	
+8	Jazz/10 Stuck.mp3	202.2051	
+9	Jazz/05 I Wouldn't Need You.mp3	202.7391	
+10	Jazz/07 It's Gonna Be.mp3	205.5021	
+11	Jazz/02 Seven Years.mp3	205.6109	
+12	Jazz/12 Nightingale.mp3	206.2277	
+13	Jazz/13 Loretta.mp3	206.4882	
+14	Jazz/09 Humble Me.mp3	207.7749	
+15	Jazz/14 The Nearness Of You.mp3	207.7829	
+16	Hip Hop/01 Make Me Proud (feat. Nicki Minaj).mp3	209.4451	
+17	Jazz/06 Waiting.mp3	210.7745	
+18	Jazz/05 Come Away With Me.mp3	210.7886	
+19	Hip Hop/01 Marvins Room.mp3	210.9487	
+20	Jazz/08 Toes.mp3	211.0908	
+21	Jazz/11 December.mp3	212.6267	
+22	Jazz/03 Light as a Feather.mp3	212.7953	
+23	Electro/05 Scary Monsters And Nice Sprites - Phonat Remix.mp3	213.3302	
+24	Jazz/07 Never As Good As The First Time.mp3	215.1542	
+25	Jazz/13 Man of the Hour.mp3	216.395	
+26	Hip Hop/June Ft. Copywrite.mp3	216.7294	
+27	Heavy Metal/13 Smokin' In The Boys Room.mp3	217.031	
+28	Jazz/01 Chasing Pirates.mp3	217.3127	
+29	Jazz/10 Be My Somebody.mp3	217.3237	
+30	Jazz/01 Sunrise.mp3	218.1984	
+31	Jazz/05 St. Louis Blues (with Stevie Wonder).mp3	218.2343	
+32	Jazz/09 Back to Manhatten.mp3	219.0877	
+33	Hip Hop/07 20 Dollar.mp3	220.9095	
+34	Hip Hop/Work.mp3	220.9539	
+35	Jazz/09 Wake Me Up.mp3	221.2931	
+36	Electro/04 Embers (feat. Lindsay).mp3	221.5285	
+37	Jazz/09 I've Got To See You Again.mp3	222.1136	
+38	Jazz/12 The Prettiest Thing.mp3	222.3981	
+39	Jazz/10 Above Ground.mp3	223.0423	
+40	Jazz/04 Feelin' The Same Way.mp3	223.9396	
+41	Jazz/03 The Sun Doesn't Like You.mp3	224.2479	
+42	Electro/08 Put Your Hands Up.mp3	225.0765	
+43	Electro/06 Scary Monsters And Nice Sprites - The Juggernaut Remix.mp3	225.0991	
+44	Electro/07 Green Bottle (Original Mix).mp3	225.8965	
+45	Electro/02 Ruffneck (Flex) - Original Mix.mp3	226.0042	
+46	Hip Hop/Smoke and Mirrors.mp3	226.0915	
+47	Jazz/04 Until The End.mp3	226.4101	
+48	Jazz/07 River (with Corinne Bailey Rae).mp3	227.2935	
+49	Heavy Metal/02 The End Of The Line.mp3	227.318	
+50	Electro/10 The Spell (Original Mix).mp3	227.8685	
+51	Electro/01 The Spell.mp3	228.0384	
+52	Jazz/07 Creepin In.mp3	228.3566	
+53	Heavy Metal/Buried Alive.mp3	228.4141	
+54	Hip Hop/28 She Will.mp3	228.7341	
+55	Electro/13 Bootleg Megamix.mp3	228.7595	
+56	Electro/06 Blood Red (Original Mix).mp3	228.9277	
+57	Hip Hop/Good Times Roll Pt 2.mp3	229.3481	
+58	Jazz/02 Even Though.mp3	229.3649	
+59	Jazz/07 Broken.mp3	229.5953	
+60	Hip Hop/Love Lockdown.mp3	229.931	
+61	Electro/11 No Matter What You Do.mp3	230.095	
+62	Electro/04 Scary Monsters And Nice Sprites - Dirtyphonics Remix.mp3	230.9226	
+63	Jazz/08 Lonestar.mp3	231.0933	
+64	Electro/01 Trapdoor (feat. Hadouken!).mp3	231.1626	
+65	Electro/To The Stars.mp3	231.2327	
+66	Electro/04 Satisfaction.mp3	231.2395	
+67	Electro/02 Raw Chicken.mp3	231.2777	
+68	Jazz/04 Carnival Town.mp3	231.4862	
+69	Heavy Metal/02 Welcome To The Family.mp3	231.8031	
+70	Jazz/08 My Dear Country.mp3	231.8333	
+71	Electro/07 Summit (feat. Ellie Goulding).mp3	231.9737	
+72	Jazz/01 Don't Know Why.mp3	232.0768	
+73	Hip Hop/Chicken-Bone Circuit.mp3	232.4093	
+74	Electro/09 Raw Chicken.mp3	232.5647	
+75	Heavy Metal/12 Without You.mp3	232.8095	
+76	Heavy Metal/10 Fiction.mp3	232.8591	
+77	Hip Hop/Headlines.mp3	232.9242	
+78	Jazz/10 Painter Song.mp3	233.1834	
+79	Electro/04 The Devil's Den (Skrillex & Wolfgang Gartner).mp3	234.0189	
+80	Heavy Metal/16 Looks That Kill.mp3	234.0878	
+81	Electro/05 Right On Time (Skrillex, 12th Planet & Kill The Noise).mp3	234.1764	
+82	Electro/03 Ruffneck (FULL Flex) - Original Mix.mp3	234.3693	
+83	Jazz/13 Don`t Miss You At All.mp3	235.4768	
+84	Jazz/12 River (Live with Joni Mitchell) (Bonus Track).mp3	235.4844	
+85	Hip Hop/36 Find Your Love.mp3	236.4505	
+86	Jazz/11 One Flight Down.mp3	236.4807	
+87	Heavy Metal/05 Wild Side.mp3	236.687	
+88	Jazz/04 Young Blood.mp3	236.7075	
+89	Heavy Metal/14 Primal Scream.mp3	237.0657	
+90	Heavy Metal/08 The Judas Kiss.mp3	237.284	
+91	Jazz/06 Shoot The Moon.mp3	237.3955	
+92	Hip Hop/05 Hussel [Ft. Afrikan Boy].mp3	237.5014	
+93	Electro/05 Cloudburn (Original Mix).mp3	237.8543	
+94	Heavy Metal/14 Old Man (Bonus).mp3	237.8602	
+95	Jazz/15 Creepin' In.mp3	237.8722	
+96	Jazz/05 In The Morning.mp3	237.8894	
+97	Electro/01 Right In.mp3	237.9036	
+98	Jazz/14 Please Send Me Someone To Love.mp3	238.3865	
+99	Electro/01 First Of The Year (Equinox) - Original Mix.mp3	238.6832	
+100	Electro/Pink Lady.mp3	239.1801	

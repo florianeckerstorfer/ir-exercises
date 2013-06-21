@@ -1,0 +1,101 @@
+Rank	Vector Label	Distance	
+1	Electro/05 Love Is Gonna Save Us (Remix 2007).mp3	0.7086	
+2	Electro/12 Feel Alive (Fuzzy Hair Vocal Mix).mp3	0.7145	
+3	Jazz/15 Cherish The Day.mp3	0.7579	
+4	Hip Hop/19 The Motto (feat. Lil Wayne) [Bonus Track].mp3	0.7631	
+5	Electro/02 Stop Go.mp3	0.7702	
+6	Jazz/09 Paradise.mp3	0.7725	
+7	Electro/07 Scary Monsters And Nice Sprites - Kaskade Remix.mp3	0.7845	
+8	Jazz/05 The Sweetest Taboo.mp3	0.789	
+9	Hip Hop/06 Girls.mp3	0.7891	
+10	Hip Hop/The Proxy.mp3	0.7922	
+11	Jazz/11 No Ordinary Love.mp3	0.7935	
+12	Jazz/12 Tell Yer Mama.mp3	0.8001	
+13	Hip Hop/11 Paper Planes.mp3	0.8131	
+14	Electro/14 Every Single Day.mp3	0.8154	
+15	Hip Hop/10 XR2.mp3	0.8169	
+16	Hip Hop/02 Bird Flu.mp3	0.8188	
+17	Hip Hop/08 Hey Ladies.mp3	0.821	
+18	Electro/Chain Smoker.mp3	0.823	
+19	Hip Hop/01 Rhymin and Stealin.mp3	0.8238	
+20	Hip Hop/07 Get It Together.mp3	0.8246	
+21	Electro/09 Satisfaction (B.Deep Remix).mp3	0.8262	
+22	Hip Hop/01 Bamboo Banga.mp3	0.8293	
+23	Electro/05 Trichitillomania.mp3	0.8297	
+24	Electro/06 Who's Your Daddy (Fuzzy Hair Remix).mp3	0.8301	
+25	Hip Hop/01 In Da Club.mp3	0.8302	
+26	Hip Hop/Paul Revere.mp3	0.8308	
+27	Hip Hop/05 Ms. Jackson.mp3	0.8313	
+28	Hip Hop/04 Jimmy.mp3	0.8317	
+29	Hip Hop/Final Frontier Ft. Blueprint.mp3	0.8345	
+30	Jazz/03 Smooth Operator.mp3	0.8365	
+31	Hip Hop/08 93 'til infinity.mp3	0.8367	
+32	Hip Hop/05 Take Care (feat. Rihanna).mp3	0.8387	
+33	Hip Hop/09 The Turn.mp3	0.8403	
+34	Hip Hop/08 World Town.mp3	0.8409	
+35	Electro/10 Love Is Gonna Save Us.mp3	0.8409	
+36	Electro/06 Able To Love.mp3	0.8415	
+37	Electro/03 No No No (Sfaction Mix).mp3	0.8421	
+38	Heavy Metal/06 Glitter (Remix).mp3	0.8432	
+39	Electro/02 Get Better (Sfaction Reloaded Mix).mp3	0.8435	
+40	Electro/08 Talk to Me (Original Mix).mp3	0.8453	
+41	Hip Hop/Shot in the Dark.mp3	0.8457	
+42	Hip Hop/06 Mango Pickle Down River.mp3	0.8463	
+43	Hip Hop/Ghostwriter.mp3	0.8468	
+44	Electro/05 Time.mp3	0.8477	
+45	Hip Hop/07 So What'cha Want.mp3	0.8479	
+46	Heavy Metal/15 Too Fast For Love.mp3	0.8487	
+47	Hip Hop/She's Crafty.mp3	0.8489	
+48	Electro/08 No Matter What You Do (Vision X Long Mix).mp3	0.8512	
+49	Electro/04 Muscle Rollers (Original Mix).mp3	0.8521	
+50	Jazz/10 Nothing Can Come Between Us.mp3	0.8522	
+51	Hip Hop/Cut Out to Fl.mp3	0.8528	
+52	Electro/02 Relocation.mp3	0.8537	
+53	Electro/01 Whos Your Daddy.mp3	0.8548	
+54	Hip Hop/Paper Planes.mp3	0.8553	
+55	Electro/01 White Spirit (Original Mix).mp3	0.8559	
+56	Jazz/13 Kiss Of Life.mp3	0.857	
+57	Hip Hop/Take the Picture Off.mp3	0.8573	
+58	Hip Hop/2 More Dead.mp3	0.8578	
+59	Jazz/02 Sinkin' Soon.mp3	0.8581	
+60	Electro/07 Stop Go (B Side Mix).mp3	0.8592	
+61	Hip Hop/04 Posse In Effect.mp3	0.8601	
+62	Hip Hop/Sabatoge.mp3	0.8602	
+63	Electro/01 In Tango (Sfaction Extended).mp3	0.8612	
+64	Jazz/02 What Am I To You.mp3	0.862	
+65	Hip Hop/Silver Fox.mp3	0.8631	
+66	Jazz/11 The long way home.mp3	0.8647	
+67	Hip Hop/08 No Sleep Till Brooklyn.mp3	0.8659	
+68	Electro/12 Feel Alive.mp3	0.8685	
+69	Hip Hop/01 Headlines.mp3	0.8695	
+70	Jazz/11 Rock It (Live).mp3	0.8705	
+71	Hip Hop/12 Come Around [Ft. Timbaland].mp3	0.871	
+72	Heavy Metal/03 Girls. Girls. Girls.mp3	0.8712	
+73	Electro/03 B Tone.mp3	0.8719	
+74	Hip Hop/28 Not Affraid.mp3	0.8726	
+75	Electro/10 Illusion (Sfaction Mix).mp3	0.8738	
+76	Jazz/01 Your Love Is King.mp3	0.8739	
+77	Heavy Metal/Kickstart My Heart.mp3	0.8744	
+78	Jazz/13 The Long Day Is Over.mp3	0.8804	
+79	Jazz/06 Be Here To Love Me.mp3	0.8806	
+80	Electro/05 Cloudburn (Original Mix).mp3	0.881	
+81	Hip Hop/25 Headlines.mp3	0.8814	
+82	Jazz/14 Please Send Me Someone To Love.mp3	0.8816	
+83	Electro/04 Miles Of Love (Beeside Radio Edit).mp3	0.8819	
+84	Jazz/06 Shoot The Moon.mp3	0.8822	
+85	Hip Hop/F.H.H. Ft. Jakki.mp3	0.8827	
+86	Jazz/10 Watermelon Man.mp3	0.8836	
+87	Jazz/Something is Calling You.mp3	0.8842	
+88	Classic/03 Symphony no.2 in D major, op.3.mp3	0.8845	
+89	Electro/07 Summit (feat. Ellie Goulding).mp3	0.8851	
+90	Heavy Metal/08 Same Ol' Situation.mp3	0.8855	
+91	Classic/09 Air on the G String (from Suite III), BWV 1068.mp3	0.8863	
+92	Hip Hop/01 Power.mp3	0.8867	
+93	Electro/03 Grand Theft Ecstasy (Original Mix).mp3	0.8874	
+94	Jazz/05 In The Morning.mp3	0.8896	
+95	Hip Hop/03 Boyz.mp3	0.8904	
+96	Jazz/01 Don't Know Why.mp3	0.8904	
+97	Electro/Pink Lady.mp3	0.8906	
+98	Classic/06 Symphony no.8 in F major, op.9.mp3	0.8919	
+99	Electro/07 Get Loose.mp3	0.8922	
+100	Jazz/08 Lonestar.mp3	0.8923	

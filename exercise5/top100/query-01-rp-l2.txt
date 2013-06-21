@@ -1,0 +1,101 @@
+Rank	Vector Label	Distance	
+1	Hip Hop/07 Intergalactic.mp3	217.3127	
+2	Jazz/02 Hang On To Your Love.mp3	231.0737	
+3	Jazz/05 Bull Rider.mp3	240.4425	
+4	Hip Hop/05 1000 Kisses  & jada.mp3	248.2056	
+5	Jazz/07 Never As Good As The First Time.mp3	255.2923	
+6	Jazz/03 Cold Cold Heart.mp3	267.6812	
+7	Jazz/04 Chameleon (Edit).mp3	269.6883	
+8	Jazz/05 I Wouldn't Need You.mp3	281.1033	
+9	Hip Hop/01 Marvins Room.mp3	284.5962	
+10	Electro/06 Whiskers.mp3	290.4982	
+11	Jazz/09 I've Got To See You Again.mp3	295.7603	
+12	Jazz/02 Even Though.mp3	300.6465	
+13	Electro/05 Scary Monsters And Nice Sprites - Phonat Remix.mp3	301.8327	
+14	Jazz/14 The Nearness Of You.mp3	307.2773	
+15	Jazz/18 Blue Bayou.mp3	308.4087	
+16	Jazz/04 Feelin' The Same Way.mp3	308.9046	
+17	Jazz/08 Toes.mp3	310.3588	
+18	Jazz/08 You've Ruined Me.mp3	314.0292	
+19	Jazz/07 Creepin In.mp3	314.1156	
+20	Jazz/15 Creepin' In.mp3	315.2712	
+21	Jazz/09 Wake Me Up.mp3	316.7662	
+22	Jazz/13 Loretta.mp3	317.0156	
+23	Jazz/12 Nightingale.mp3	317.7819	
+24	Hip Hop/June Ft. Copywrite.mp3	318.6813	
+25	Electro/Strange Behaviour.mp3	318.6814	
+26	Jazz/02 Seven Years.mp3	318.8131	
+27	Jazz/09 Humble Me.mp3	319.0876	
+28	Jazz/13 Man of the Hour.mp3	319.8321	
+29	Jazz/01 Sunrise.mp3	320.0965	
+30	Jazz/10 Stuck.mp3	320.2049	
+31	Jazz/03 Those Sweet Words.mp3	320.3436	
+32	Hip Hop/Work.mp3	320.8926	
+33	Jazz/05 Come Away With Me.mp3	322.0399	
+34	Electro/Pink Lady.mp3	323.5174	
+35	Jazz/05 St. Louis Blues (with Stevie Wonder).mp3	326.1838	
+36	Hip Hop/Good Times Roll Pt 2.mp3	326.3091	
+37	Jazz/11 December.mp3	326.4388	
+38	Jazz/10 Be My Somebody.mp3	326.8534	
+39	Jazz/07 Turn Me On.mp3	326.8749	
+40	Jazz/14 Please Send Me Someone To Love.mp3	327.2521	
+41	Hip Hop/05 Hussel [Ft. Afrikan Boy].mp3	327.6185	
+42	Jazz/07 It's Gonna Be.mp3	327.9209	
+43	Hip Hop/01 Make Me Proud (feat. Nicki Minaj).mp3	329.0406	
+44	Jazz/06 Shoot The Moon.mp3	330.1245	
+45	Hip Hop/Headlines.mp3	331.0233	
+46	Jazz/01 Don't Know Why.mp3	331.6873	
+47	Jazz/06 Be Here To Love Me.mp3	332.27	
+48	Jazz/06 Waiting.mp3	332.4835	
+49	Hip Hop/07 20 Dollar.mp3	333.9021	
+50	Jazz/10 Above Ground.mp3	334.0081	
+51	Hip Hop/08 Not Afraid.mp3	334.3232	
+52	Jazz/03 Light as a Feather.mp3	334.6805	
+53	Hip Hop/01 Headlines.mp3	334.9422	
+54	Jazz/05 In The Morning.mp3	335.1351	
+55	Jazz/08 Lonestar.mp3	335.6124	
+56	Jazz/09 Back to Manhatten.mp3	336.0352	
+57	Jazz/03 The Sun Doesn't Like You.mp3	336.8296	
+58	Jazz/07 Broken.mp3	336.9512	
+59	Jazz/04 Carnival Town.mp3	337.2978	
+60	Electro/02 Ruffneck (Flex) - Original Mix.mp3	337.7031	
+61	Jazz/12 The Prettiest Thing.mp3	338.0271	
+62	Hip Hop/Love Lockdown.mp3	338.4645	
+63	Jazz/04 Until The End.mp3	339.8206	
+64	Hip Hop/01 Power.mp3	340.2034	
+65	Hip Hop/25 Headlines.mp3	340.236	
+66	Electro/01 Trapdoor (feat. Hadouken!).mp3	340.5535	
+67	Heavy Metal/02 The End Of The Line.mp3	340.9465	
+68	Hip Hop/08 93 'til infinity.mp3	341.1483	
+69	Heavy Metal/13 Smokin' In The Boys Room.mp3	341.5825	
+70	Electro/07 Summit (feat. Ellie Goulding).mp3	341.9899	
+71	Jazz/11 The long way home.mp3	342.1817	
+72	Jazz/11 Rock It (Live).mp3	343.5665	
+73	Hip Hop/Smoke and Mirrors.mp3	343.6378	
+74	Electro/06 Blood Red (Original Mix).mp3	343.9615	
+75	Heavy Metal/Buried Alive.mp3	343.977	
+76	Heavy Metal/05 Wild Side.mp3	344.7784	
+77	Heavy Metal/02 Enslaved.mp3	345.1395	
+78	Jazz/07 River (with Corinne Bailey Rae).mp3	345.2816	
+79	Electro/09 Raw Chicken.mp3	345.4552	
+80	Electro/03 Ruffneck (FULL Flex) - Original Mix.mp3	345.487	
+81	Jazz/06 Thinking About You.mp3	346.2546	
+82	Electro/02 Raw Chicken.mp3	346.841	
+83	Electro/04 Scary Monsters And Nice Sprites - Dirtyphonics Remix.mp3	347.0948	
+84	Jazz/10 Painter Song.mp3	347.4293	
+85	Electro/06 Scary Monsters And Nice Sprites - The Juggernaut Remix.mp3	347.4736	
+86	Hip Hop/28 She Will.mp3	347.5268	
+87	Heavy Metal/10 Fiction.mp3	347.8154	
+88	Jazz/11 One Flight Down.mp3	348.1238	
+89	Electro/10 The Spell (Original Mix).mp3	348.3687	
+90	Jazz/02 What Am I To You.mp3	348.5733	
+91	Electro/02 Bangarang (feat. Sirah).mp3	348.7652	
+92	Electro/07 Green Bottle (Original Mix).mp3	348.8975	
+93	Jazz/13 Don`t Miss You At All.mp3	349.1512	
+94	Hip Hop/36 Find Your Love.mp3	349.2595	
+95	Electro/01 First Of The Year (Equinox) - Original Mix.mp3	349.2606	
+96	Heavy Metal/12 Without You.mp3	349.2887	
+97	Electro/01 The Spell.mp3	349.3484	
+98	Jazz/12 Rosie's Lullaby.mp3	349.5029	
+99	Jazz/08 My Dear Country.mp3	349.6935	
+100	Electro/04 Embers (feat. Lindsay).mp3	349.7313	

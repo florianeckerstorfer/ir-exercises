@@ -1,0 +1,101 @@
+Rank	Vector Label	Distance	
+1	Hip Hop/She's Crafty.mp3	209.67	
+2	Jazz/13 Kiss Of Life.mp3	213.8666	
+3	Hip Hop/Smoke and Mirrors.mp3	226.4998	
+4	Electro/03 Grand Theft Ecstasy (Original Mix).mp3	256.3793	
+5	Hip Hop/Ghostwriter.mp3	259.2193	
+6	Hip Hop/06 Mango Pickle Down River.mp3	261.4062	
+7	Jazz/06 Waiting.mp3	265.7867	
+8	Hip Hop/June Ft. Copywrite.mp3	266.9782	
+9	Hip Hop/36 Find Your Love.mp3	270.4648	
+10	Heavy Metal/02 Welcome To The Family.mp3	272.2665	
+11	Electro/10 The Spell (Original Mix).mp3	275.8279	
+12	Heavy Metal/01 That Was Just Your Life.mp3	276.1481	
+13	Electro/01 The Spell.mp3	277.0061	
+14	Hip Hop/Silver Fox.mp3	277.7816	
+15	Jazz/09 I've Got To See You Again.mp3	278.9349	
+16	Electro/06 Whiskers.mp3	283.5629	
+17	Jazz/02 Seven Years.mp3	285.3343	
+18	Electro/09 Raw Chicken.mp3	285.5213	
+19	Electro/07 Green Bottle (Original Mix).mp3	286.6599	
+20	Electro/02 Raw Chicken.mp3	286.9671	
+21	Hip Hop/08 No Sleep Till Brooklyn.mp3	287.5464	
+22	Electro/Strange Behaviour.mp3	290.2134	
+23	Jazz/04 Chameleon (Edit).mp3	291.6471	
+24	Electro/04 Embers (feat. Lindsay).mp3	295.3026	
+25	Electro/04 Muscle Rollers (Original Mix).mp3	295.928	
+26	Jazz/18 Blue Bayou.mp3	296.1928	
+27	Electro/02 Ruffneck (Flex) - Original Mix.mp3	297.1999	
+28	Hip Hop/Work.mp3	297.8449	
+29	Electro/05 Scary Monsters And Nice Sprites - Phonat Remix.mp3	298.008	
+30	Electro/02 Silicone Lube (Original Mix).mp3	298.5415	
+31	Jazz/10 Stuck.mp3	298.6847	
+32	Jazz/12 Nightingale.mp3	298.7612	
+33	Jazz/13 Man of the Hour.mp3	299.4141	
+34	Jazz/08 You've Ruined Me.mp3	299.4465	
+35	Electro/05 Cloudburn (Original Mix).mp3	299.6152	
+36	Jazz/09 Back to Manhatten.mp3	301.3532	
+37	Electro/To The Stars.mp3	301.8161	
+38	Electro/07 Summit (feat. Ellie Goulding).mp3	301.9461	
+39	Jazz/05 St. Louis Blues (with Stevie Wonder).mp3	302.2035	
+40	Electro/09 I Love My Sex.mp3	302.4282	
+41	Jazz/14 The Nearness Of You.mp3	302.8822	
+42	Hip Hop/The Horror.mp3	303.9566	
+43	Electro/06 Scary Monsters And Nice Sprites - The Juggernaut Remix.mp3	304.8339	
+44	Jazz/04 Until The End.mp3	305.6646	
+45	Electro/01 Right In.mp3	306.893	
+46	Hip Hop/25 Headlines.mp3	306.9863	
+47	Heavy Metal/Buried Alive.mp3	307.3252	
+48	Electro/Pink Lady.mp3	307.6366	
+49	Hip Hop/Headlines.mp3	308.034	
+50	Hip Hop/01 Make Me Proud (feat. Nicki Minaj).mp3	308.1548	
+51	Jazz/05 Come Away With Me.mp3	308.7166	
+52	Heavy Metal/11 Save Me.mp3	308.8889	
+53	Electro/06 Blood Red (Original Mix).mp3	308.9317	
+54	Jazz/05 In The Morning.mp3	309.8574	
+55	Electro/05 Right On Time (Skrillex, 12th Planet & Kill The Noise).mp3	310.3217	
+56	Jazz/10 Be My Somebody.mp3	310.8305	
+57	Jazz/09 Humble Me.mp3	311.1894	
+58	Hip Hop/01 Candy Shop.mp3	311.4566	
+59	Jazz/01 Sunrise.mp3	311.6499	
+60	Electro/13 Bootleg Megamix.mp3	311.804	
+61	Heavy Metal/13 Smokin' In The Boys Room.mp3	312.2709	
+62	Hip Hop/Good Times Roll Pt 2.mp3	313.6187	
+63	Hip Hop/Take the Picture Off.mp3	313.6457	
+64	Electro/08 Talk to Me (Original Mix).mp3	313.7835	
+65	Electro/04 Scary Monsters And Nice Sprites - Dirtyphonics Remix.mp3	315.0576	
+66	Jazz/11 December.mp3	315.5974	
+67	Jazz/13 Loretta.mp3	315.7058	
+68	Jazz/10 Above Ground.mp3	315.9141	
+69	Electro/08 Put Your Hands Up.mp3	316.1396	
+70	Jazz/03 Cold Cold Heart.mp3	316.2054	
+71	Hip Hop/The Proxy.mp3	316.3335	
+72	Jazz/07 It's Gonna Be.mp3	316.4296	
+73	Hip Hop/28 She Will.mp3	316.712	
+74	Jazz/12 River (Live with Joni Mitchell) (Bonus Track).mp3	316.992	
+75	Jazz/02 Sinkin' Soon.mp3	317.3661	
+76	Heavy Metal/08 The Judas Kiss.mp3	318.0202	
+77	Hip Hop/01 Power.mp3	318.243	
+78	Jazz/03 Light as a Feather.mp3	318.428	
+79	Electro/02 Bangarang (feat. Sirah).mp3	318.6442	
+80	Jazz/07 River (with Corinne Bailey Rae).mp3	318.7374	
+81	Hip Hop/01 Headlines.mp3	319.3951	
+82	Jazz/15 Creepin' In.mp3	319.4151	
+83	Heavy Metal/14 Old Man (Bonus).mp3	319.5709	
+84	Hip Hop/07 Intergalactic.mp3	319.7287	
+85	Electro/11 No Matter What You Do.mp3	319.8386	
+86	Jazz/14 Please Send Me Someone To Love.mp3	320.2349	
+87	Heavy Metal/02 The End Of The Line.mp3	320.3818	
+88	Electro/07 Get Loose.mp3	320.4817	
+89	Heavy Metal/03 Danger Line.mp3	321.5933	
+90	Jazz/07 Creepin In.mp3	321.6464	
+91	Heavy Metal/16 Looks That Kill.mp3	321.8811	
+92	Jazz/08 Toes.mp3	322.1007	
+93	Jazz/05 I Wouldn't Need You.mp3	322.1055	
+94	Electro/03 Ruffneck (FULL Flex) - Original Mix.mp3	322.4701	
+95	Heavy Metal/10 My Apocalypse.mp3	322.5319	
+96	Hip Hop/01 Marvins Room.mp3	322.7191	
+97	Hip Hop/07 20 Dollar.mp3	323.1711	
+98	Heavy Metal/05 Natural Born Killer.mp3	323.2008	
+99	Electro/04 Satisfaction.mp3	323.9255	
+100	Electro/01 Trapdoor (feat. Hadouken!).mp3	324.4388	

@@ -1,0 +1,101 @@
+Rank	Vector Label	Distance	
+1	Electro/12 Feel Alive (Fuzzy Hair Vocal Mix).mp3	0.6632	
+2	Electro/05 Love Is Gonna Save Us (Remix 2007).mp3	0.6676	
+3	Electro/07 Scary Monsters And Nice Sprites - Kaskade Remix.mp3	0.7478	
+4	Electro/02 Stop Go.mp3	0.7502	
+5	Hip Hop/19 The Motto (feat. Lil Wayne) [Bonus Track].mp3	0.7706	
+6	Electro/14 Every Single Day.mp3	0.7744	
+7	Jazz/09 Paradise.mp3	0.7785	
+8	Electro/03 No No No (Sfaction Mix).mp3	0.7867	
+9	Jazz/02 Hang On To Your Love.mp3	0.7928	
+10	Hip Hop/10 XR2.mp3	0.7953	
+11	Jazz/03 Smooth Operator.mp3	0.8017	
+12	Hip Hop/08 93 'til infinity.mp3	0.8018	
+13	Jazz/15 Cherish The Day.mp3	0.802	
+14	Hip Hop/06 Girls.mp3	0.8025	
+15	Electro/05 Trichitillomania.mp3	0.8045	
+16	Jazz/10 Nothing Can Come Between Us.mp3	0.8058	
+17	Electro/09 Satisfaction (B.Deep Remix).mp3	0.8062	
+18	Electro/Chain Smoker.mp3	0.8067	
+19	Electro/08 No Matter What You Do (Vision X Long Mix).mp3	0.8106	
+20	Hip Hop/04 Jimmy.mp3	0.812	
+21	Electro/06 Who's Your Daddy (Fuzzy Hair Remix).mp3	0.8123	
+22	Electro/05 Time.mp3	0.8135	
+23	Electro/02 Get Better (Sfaction Reloaded Mix).mp3	0.8145	
+24	Hip Hop/01 Bamboo Banga.mp3	0.815	
+25	Jazz/11 No Ordinary Love.mp3	0.8178	
+26	Hip Hop/The Proxy.mp3	0.8188	
+27	Electro/10 Love Is Gonna Save Us.mp3	0.819	
+28	Hip Hop/08 Hey Ladies.mp3	0.8232	
+29	Jazz/05 The Sweetest Taboo.mp3	0.8255	
+30	Hip Hop/11 Paper Planes.mp3	0.8257	
+31	Electro/06 Able To Love.mp3	0.8259	
+32	Jazz/01 Chasing Pirates.mp3	0.829	
+33	Hip Hop/05 Ms. Jackson.mp3	0.83	
+34	Hip Hop/07 So What'cha Want.mp3	0.8311	
+35	Electro/01 White Spirit (Original Mix).mp3	0.8321	
+36	Electro/12 Feel Alive.mp3	0.8331	
+37	Hip Hop/12 Come Around [Ft. Timbaland].mp3	0.8334	
+38	Hip Hop/02 Bird Flu.mp3	0.8352	
+39	Hip Hop/07 Get It Together.mp3	0.8358	
+40	Electro/02 Relocation.mp3	0.8387	
+41	Electro/08 Talk to Me (Original Mix).mp3	0.839	
+42	Hip Hop/Ghostwriter.mp3	0.8396	
+43	Hip Hop/08 World Town.mp3	0.8418	
+44	Heavy Metal/06 Glitter (Remix).mp3	0.8462	
+45	Electro/04 Muscle Rollers (Original Mix).mp3	0.8479	
+46	Jazz/12 Tell Yer Mama.mp3	0.8495	
+47	Hip Hop/28 Not Affraid.mp3	0.8497	
+48	Electro/07 Get Loose.mp3	0.8513	
+49	Hip Hop/01 In Da Club.mp3	0.854	
+50	Hip Hop/Shot in the Dark.mp3	0.8562	
+51	Electro/10 Illusion (Sfaction Mix).mp3	0.8571	
+52	Electro/01 In Tango (Sfaction Extended).mp3	0.8571	
+53	Hip Hop/Take the Picture Off.mp3	0.8576	
+54	Hip Hop/01 Rhymin and Stealin.mp3	0.8591	
+55	Hip Hop/Final Frontier Ft. Blueprint.mp3	0.8608	
+56	Hip Hop/Cut Out to Fl.mp3	0.8614	
+57	Electro/03 B Tone.mp3	0.8632	
+58	Hip Hop/Paper Planes.mp3	0.864	
+59	Hip Hop/She's Crafty.mp3	0.8662	
+60	Electro/07 Stop Go (B Side Mix).mp3	0.8667	
+61	Hip Hop/05 Take Care (feat. Rihanna).mp3	0.868	
+62	Electro/05 Right On Time (Skrillex, 12th Planet & Kill The Noise).mp3	0.8692	
+63	Hip Hop/09 The Turn.mp3	0.8694	
+64	Electro/04 Miles Of Love (Beeside Radio Edit).mp3	0.8706	
+65	Electro/09 I Love My Sex.mp3	0.8709	
+66	Electro/02 Ruffneck (Flex) - Original Mix.mp3	0.873	
+67	Hip Hop/Paul Revere.mp3	0.8745	
+68	Hip Hop/2 More Dead.mp3	0.8756	
+69	Hip Hop/F.H.H. Ft. Jakki.mp3	0.8759	
+70	Electro/08 Put Your Hands Up.mp3	0.8779	
+71	Heavy Metal/15 Too Fast For Love.mp3	0.8784	
+72	Jazz/07 Never As Good As The First Time.mp3	0.8795	
+73	Electro/07 Summit (feat. Ellie Goulding).mp3	0.8823	
+74	Jazz/13 Kiss Of Life.mp3	0.8824	
+75	Hip Hop/01 Headlines.mp3	0.8829	
+76	Hip Hop/08 Not Afraid.mp3	0.8838	
+77	Heavy Metal/03 Girls. Girls. Girls.mp3	0.8839	
+78	Jazz/11 Rock It (Live).mp3	0.8842	
+79	Hip Hop/05 1000 Kisses  & jada.mp3	0.8845	
+80	Electro/03 Grand Theft Ecstasy (Original Mix).mp3	0.8856	
+81	Electro/01 Whos Your Daddy.mp3	0.8861	
+82	Hip Hop/06 Mango Pickle Down River.mp3	0.8864	
+83	Hip Hop/08 No Sleep Till Brooklyn.mp3	0.8865	
+84	Jazz/04 Young Blood.mp3	0.8878	
+85	Hip Hop/Silver Fox.mp3	0.888	
+86	Electro/Pink Lady.mp3	0.8887	
+87	Electro/04 Satisfaction.mp3	0.8895	
+88	Hip Hop/03 Boyz.mp3	0.8915	
+89	Electro/05 Cloudburn (Original Mix).mp3	0.8923	
+90	Electro/13 Bootleg Megamix.mp3	0.8936	
+91	Electro/02 Silicone Lube (Original Mix).mp3	0.894	
+92	Hip Hop/Sabatoge.mp3	0.8949	
+93	Heavy Metal/08 Same Ol' Situation.mp3	0.8952	
+94	Heavy Metal/Motley Crue - Dr. Feelgood.mp3	0.8955	
+95	Hip Hop/Love Lockdown.mp3	0.898	
+96	Hip Hop/05 Hussel [Ft. Afrikan Boy].mp3	0.8994	
+97	Jazz/01 Your Love Is King.mp3	0.8995	
+98	Heavy Metal/05 Wild Side.mp3	0.8998	
+99	Jazz/02 Sinkin' Soon.mp3	0.9	
+100	Hip Hop/04 Posse In Effect.mp3	0.9007	

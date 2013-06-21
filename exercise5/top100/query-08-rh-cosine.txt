@@ -1,0 +1,101 @@
+Rank	Vector Label	Distance	
+1	Hip Hop/06 Girls.mp3	0.703	
+2	Hip Hop/19 The Motto (feat. Lil Wayne) [Bonus Track].mp3	0.7293	
+3	Jazz/12 Tell Yer Mama.mp3	0.7384	
+4	Jazz/09 Paradise.mp3	0.7386	
+5	Hip Hop/02 Bird Flu.mp3	0.7451	
+6	Jazz/11 No Ordinary Love.mp3	0.746	
+7	Hip Hop/11 Paper Planes.mp3	0.7589	
+8	Hip Hop/01 Rhymin and Stealin.mp3	0.76	
+9	Jazz/02 Hang On To Your Love.mp3	0.7603	
+10	Jazz/05 The Sweetest Taboo.mp3	0.7632	
+11	Hip Hop/08 93 'til infinity.mp3	0.7657	
+12	Jazz/03 Smooth Operator.mp3	0.7678	
+13	Hip Hop/12 Come Around [Ft. Timbaland].mp3	0.7707	
+14	Jazz/01 Chasing Pirates.mp3	0.7761	
+15	Hip Hop/08 Hey Ladies.mp3	0.7769	
+16	Hip Hop/07 So What'cha Want.mp3	0.7809	
+17	Hip Hop/The Proxy.mp3	0.7819	
+18	Hip Hop/04 Jimmy.mp3	0.7841	
+19	Hip Hop/05 Take Care (feat. Rihanna).mp3	0.7851	
+20	Hip Hop/07 Get It Together.mp3	0.7889	
+21	Jazz/02 What Am I To You.mp3	0.7898	
+22	Hip Hop/Cut Out to Fl.mp3	0.7919	
+23	Heavy Metal/15 Too Fast For Love.mp3	0.7934	
+24	Hip Hop/Ghostwriter.mp3	0.7936	
+25	Jazz/15 Cherish The Day.mp3	0.7936	
+26	Hip Hop/Paul Revere.mp3	0.7939	
+27	Heavy Metal/03 Girls. Girls. Girls.mp3	0.7959	
+28	Hip Hop/2 More Dead.mp3	0.7969	
+29	Hip Hop/Shot in the Dark.mp3	0.797	
+30	Jazz/02 Sinkin' Soon.mp3	0.7979	
+31	Jazz/11 The long way home.mp3	0.7985	
+32	Jazz/14 Please Send Me Someone To Love.mp3	0.8009	
+33	Hip Hop/Paper Planes.mp3	0.8025	
+34	Jazz/06 Be Here To Love Me.mp3	0.8038	
+35	Hip Hop/01 Bamboo Banga.mp3	0.8044	
+36	Hip Hop/09 The Turn.mp3	0.806	
+37	Jazz/13 The Long Day Is Over.mp3	0.8067	
+38	Hip Hop/01 In Da Club.mp3	0.808	
+39	Electro/02 Ruffneck (Flex) - Original Mix.mp3	0.8086	
+40	Electro/07 Summit (feat. Ellie Goulding).mp3	0.8092	
+41	Jazz/06 Shoot The Moon.mp3	0.8102	
+42	Hip Hop/Final Frontier Ft. Blueprint.mp3	0.8104	
+43	Hip Hop/Take the Picture Off.mp3	0.8118	
+44	Electro/12 Feel Alive (Fuzzy Hair Vocal Mix).mp3	0.8121	
+45	Hip Hop/04 Posse In Effect.mp3	0.8142	
+46	Electro/05 Right On Time (Skrillex, 12th Planet & Kill The Noise).mp3	0.8152	
+47	Electro/07 Stop Go (B Side Mix).mp3	0.8165	
+48	Jazz/11 Rock It (Live).mp3	0.8165	
+49	Electro/05 Cloudburn (Original Mix).mp3	0.8176	
+50	Hip Hop/Sabatoge.mp3	0.8191	
+51	Hip Hop/01 Headlines.mp3	0.8193	
+52	Classic/03 Symphony no.2 in D major, op.3.mp3	0.8203	
+53	Hip Hop/Silver Fox.mp3	0.8206	
+54	Classic/09 Air on the G String (from Suite III), BWV 1068.mp3	0.8207	
+55	Jazz/04 Until The End.mp3	0.8207	
+56	Hip Hop/Love Lockdown.mp3	0.8217	
+57	Heavy Metal/08 Same Ol' Situation.mp3	0.8226	
+58	Electro/Pink Lady.mp3	0.8236	
+59	Hip Hop/05 Ms. Jackson.mp3	0.8239	
+60	Electro/05 Love Is Gonna Save Us (Remix 2007).mp3	0.8248	
+61	Jazz/10 Nothing Can Come Between Us.mp3	0.829	
+62	Jazz/01 Your Love Is King.mp3	0.8291	
+63	Jazz/03 Those Sweet Words.mp3	0.8291	
+64	Jazz/09 Back to Manhatten.mp3	0.8295	
+65	Jazz/06 Thinking About You.mp3	0.8295	
+66	Jazz/04 Feelin' The Same Way.mp3	0.83	
+67	Jazz/13 Don`t Miss You At All.mp3	0.8304	
+68	Hip Hop/28 Not Affraid.mp3	0.8308	
+69	Classic/02 Symphony 1- II. Andante cantib.mp3	0.8317	
+70	Jazz/12 Rosie's Lullaby.mp3	0.8324	
+71	Hip Hop/06 Mango Pickle Down River.mp3	0.8327	
+72	Jazz/Something is Calling You.mp3	0.8333	
+73	Jazz/11 Little Room.mp3	0.8335	
+74	Jazz/10 Watermelon Man.mp3	0.8337	
+75	Hip Hop/25 Headlines.mp3	0.8338	
+76	Jazz/01 Don't Know Why.mp3	0.8338	
+77	Electro/01 Whos Your Daddy.mp3	0.8341	
+78	Classic/06 Symphony no.8 in F major, op.9.mp3	0.8352	
+79	Electro/07 Scary Monsters And Nice Sprites - Kaskade Remix.mp3	0.8361	
+80	Heavy Metal/Motley Crue - Dr. Feelgood.mp3	0.8362	
+81	Electro/03 Ruffneck (FULL Flex) - Original Mix.mp3	0.8365	
+82	Jazz/03 Wiggle Waggle.mp3	0.8369	
+83	Jazz/07 Broken.mp3	0.8373	
+84	Hip Hop/F.H.H. Ft. Jakki.mp3	0.8373	
+85	Jazz/01 Wish I Could.mp3	0.8374	
+86	Hip Hop/01 Marvins Room.mp3	0.8397	
+87	Jazz/03 The Sun Doesn't Like You.mp3	0.84	
+88	Jazz/04 Carnival Town.mp3	0.84	
+89	Hip Hop/08 No Sleep Till Brooklyn.mp3	0.8402	
+90	Jazz/10 Above Ground.mp3	0.8405	
+91	Jazz/05 Not My Friend.mp3	0.8405	
+92	Hip Hop/She's Crafty.mp3	0.841	
+93	Jazz/08 Lonestar.mp3	0.8422	
+94	Hip Hop/01 Power.mp3	0.8426	
+95	Jazz/13 Not Too Late.mp3	0.8426	
+96	Jazz/03 Cold Cold Heart.mp3	0.8433	
+97	Hip Hop/01 Candy Shop.mp3	0.8441	
+98	Jazz/05 In The Morning.mp3	0.8446	
+99	Jazz/07 Turn Me On.mp3	0.8448	
+100	Classic/09 - Andante Maestoso - Adagio Ma.mp3	0.845	

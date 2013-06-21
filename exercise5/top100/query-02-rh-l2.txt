@@ -1,0 +1,101 @@
+Rank	Vector Label	Distance	
+1	Jazz/04 Chameleon (Edit).mp3	666.7655	
+2	Jazz/05 I Wouldn't Need You.mp3	764.5293	
+3	Hip Hop/07 Intergalactic.mp3	786.5948	
+4	Jazz/05 Bull Rider.mp3	831.4345	
+5	Jazz/04 Feelin' The Same Way.mp3	859.7003	
+6	Jazz/09 Humble Me.mp3	880.7756	
+7	Jazz/09 Wake Me Up.mp3	890.8376	
+8	Electro/06 Whiskers.mp3	891.9593	
+9	Jazz/03 Cold Cold Heart.mp3	904.343	
+10	Electro/02 Bangarang (feat. Sirah).mp3	909.6175	
+11	Jazz/02 Seven Years.mp3	912.1917	
+12	Jazz/08 Toes.mp3	934.7011	
+13	Electro/Strange Behaviour.mp3	936.6228	
+14	Jazz/14 The Nearness Of You.mp3	943.418	
+15	Jazz/18 Blue Bayou.mp3	943.917	
+16	Electro/09 Raw Chicken.mp3	947.8391	
+17	Jazz/01 Sunrise.mp3	954.2581	
+18	Jazz/05 St. Louis Blues (with Stevie Wonder).mp3	962.3547	
+19	Electro/10 The Spell (Original Mix).mp3	964.3119	
+20	Hip Hop/Work.mp3	971.3412	
+21	Electro/02 Raw Chicken.mp3	971.4532	
+22	Hip Hop/05 Hussel [Ft. Afrikan Boy].mp3	972.1449	
+23	Jazz/12 Nightingale.mp3	974.1785	
+24	Hip Hop/June Ft. Copywrite.mp3	974.397	
+25	Hip Hop/Good Times Roll Pt 2.mp3	974.8259	
+26	Jazz/10 Stuck.mp3	975.8209	
+27	Jazz/09 I've Got To See You Again.mp3	975.957	
+28	Electro/01 The Spell.mp3	976.0302	
+29	Electro/11 No Matter What You Do.mp3	978.8603	
+30	Electro/01 First Of The Year (Equinox) - Original Mix.mp3	983.3944	
+31	Jazz/08 You've Ruined Me.mp3	988.3911	
+32	Hip Hop/36 Find Your Love.mp3	993.0122	
+33	Jazz/07 Creepin In.mp3	999.4942	
+34	Electro/Pink Lady.mp3	1001.9808	
+35	Electro/06 Scary Monsters And Nice Sprites - The Juggernaut Remix.mp3	1005.4058	
+36	Electro/01 Trapdoor (feat. Hadouken!).mp3	1007.1742	
+37	Electro/To The Stars.mp3	1008.0769	
+38	Hip Hop/07 20 Dollar.mp3	1008.7254	
+39	Hip Hop/01 Make Me Proud (feat. Nicki Minaj).mp3	1009.1371	
+40	Jazz/05 Come Away With Me.mp3	1010.9167	
+41	Hip Hop/01 Marvins Room.mp3	1011.7234	
+42	Jazz/06 Waiting.mp3	1013.8302	
+43	Jazz/03 The Sun Doesn't Like You.mp3	1014.8658	
+44	Electro/05 Scary Monsters And Nice Sprites - Phonat Remix.mp3	1020.3102	
+45	Hip Hop/Smoke and Mirrors.mp3	1020.4448	
+46	Electro/04 Scary Monsters And Nice Sprites - Dirtyphonics Remix.mp3	1024.89	
+47	Jazz/02 Even Though.mp3	1031.9513	
+48	Jazz/07 River (with Corinne Bailey Rae).mp3	1033.1258	
+49	Jazz/07 Broken.mp3	1033.5443	
+50	Jazz/03 Light as a Feather.mp3	1034.3873	
+51	Jazz/07 It's Gonna Be.mp3	1036.2085	
+52	Jazz/11 December.mp3	1039.3975	
+53	Jazz/10 Be My Somebody.mp3	1045.344	
+54	Jazz/10 Above Ground.mp3	1046.9992	
+55	Heavy Metal/13 Smokin' In The Boys Room.mp3	1047.5293	
+56	Heavy Metal/02 The End Of The Line.mp3	1047.6589	
+57	Hip Hop/28 She Will.mp3	1049.6427	
+58	Jazz/13 Man of the Hour.mp3	1051.3972	
+59	Electro/07 Green Bottle (Original Mix).mp3	1052.1335	
+60	Electro/06 Blood Red (Original Mix).mp3	1052.147	
+61	Hip Hop/08 Not Afraid.mp3	1052.2152	
+62	Jazz/13 Loretta.mp3	1052.989	
+63	Hip Hop/01 Power.mp3	1054.9543	
+64	Jazz/12 River (Live with Joni Mitchell) (Bonus Track).mp3	1055.2624	
+65	Hip Hop/Headlines.mp3	1055.422	
+66	Jazz/01 Chasing Pirates.mp3	1060.8079	
+67	Electro/04 Embers (feat. Lindsay).mp3	1061.7904	
+68	Heavy Metal/02 Welcome To The Family.mp3	1062.9091	
+69	Jazz/10 Painter Song.mp3	1063.7591	
+70	Heavy Metal/10 Fiction.mp3	1065.4467	
+71	Electro/08 Put Your Hands Up.mp3	1067.1075	
+72	Jazz/04 Carnival Town.mp3	1067.1982	
+73	Hip Hop/Chicken-Bone Circuit.mp3	1070.9135	
+74	Jazz/03 Wiggle Waggle.mp3	1071.8764	
+75	Jazz/08 Love Is Stronger Than Pride.mp3	1075.2376	
+76	Hip Hop/25 Headlines.mp3	1075.5947	
+77	Electro/01 Right In.mp3	1076.1447	
+78	Electro/03 Ruffneck (FULL Flex) - Original Mix.mp3	1077.9913	
+79	Jazz/10 Watermelon Man.mp3	1079.2553	
+80	Jazz/15 Creepin' In.mp3	1081.1886	
+81	Heavy Metal/Buried Alive.mp3	1084.7616	
+82	Heavy Metal/01 That Was Just Your Life.mp3	1086.7431	
+83	Jazz/06 Be Here To Love Me.mp3	1087.6839	
+84	Jazz/01 Maiden Voyage.mp3	1087.9773	
+85	Electro/07 Get Loose.mp3	1088.0903	
+86	Heavy Metal/05 Wild Side.mp3	1089.5966	
+87	Heavy Metal/12 Without You.mp3	1089.626	
+88	Hip Hop/Salud.mp3	1090.5551	
+89	Jazz/11 Rock It (Live).mp3	1090.7939	
+90	Electro/02 Silicone Lube (Original Mix).mp3	1091.8296	
+91	Electro/13 Bootleg Megamix.mp3	1092.5112	
+92	Jazz/07 Turn Me On.mp3	1093.3812	
+93	Electro/02 Ruffneck (Flex) - Original Mix.mp3	1093.9988	
+94	Electro/05 Cloudburn (Original Mix).mp3	1094.1842	
+95	Electro/04 The Devil's Den (Skrillex & Wolfgang Gartner).mp3	1095.9183	
+96	Jazz/02 Cantaloupe Island.mp3	1099.5738	
+97	Jazz/04 Until The End.mp3	1102.667	
+98	Jazz/09 Back to Manhatten.mp3	1103.3455	
+99	Electro/07 Summit (feat. Ellie Goulding).mp3	1107.1748	
+100	Electro/09 I Love My Sex.mp3	1108.4257	

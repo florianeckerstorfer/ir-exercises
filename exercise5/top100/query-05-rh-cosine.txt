@@ -1,0 +1,101 @@
+Rank	Vector Label	Distance	
+1	Electro/12 Feel Alive (Fuzzy Hair Vocal Mix).mp3	0.6653	
+2	Electro/05 Love Is Gonna Save Us (Remix 2007).mp3	0.7196	
+3	Electro/07 Scary Monsters And Nice Sprites - Kaskade Remix.mp3	0.7386	
+4	Electro/02 Stop Go.mp3	0.7503	
+5	Electro/14 Every Single Day.mp3	0.7736	
+6	Hip Hop/19 The Motto (feat. Lil Wayne) [Bonus Track].mp3	0.7874	
+7	Electro/09 Satisfaction (B.Deep Remix).mp3	0.7937	
+8	Electro/Chain Smoker.mp3	0.8117	
+9	Electro/06 Able To Love.mp3	0.8137	
+10	Jazz/09 Paradise.mp3	0.8145	
+11	Hip Hop/06 Girls.mp3	0.8166	
+12	Electro/03 No No No (Sfaction Mix).mp3	0.8171	
+13	Electro/05 Time.mp3	0.8183	
+14	Jazz/11 No Ordinary Love.mp3	0.8205	
+15	Jazz/03 Smooth Operator.mp3	0.8224	
+16	Electro/06 Who's Your Daddy (Fuzzy Hair Remix).mp3	0.8228	
+17	Hip Hop/The Proxy.mp3	0.8234	
+18	Electro/05 Trichitillomania.mp3	0.8264	
+19	Electro/12 Feel Alive.mp3	0.8264	
+20	Hip Hop/04 Jimmy.mp3	0.8265	
+21	Jazz/05 The Sweetest Taboo.mp3	0.8274	
+22	Jazz/15 Cherish The Day.mp3	0.8285	
+23	Hip Hop/08 Hey Ladies.mp3	0.8364	
+24	Jazz/10 Nothing Can Come Between Us.mp3	0.8376	
+25	Hip Hop/01 Bamboo Banga.mp3	0.8386	
+26	Electro/10 Love Is Gonna Save Us.mp3	0.8408	
+27	Hip Hop/07 Get It Together.mp3	0.8413	
+28	Electro/08 No Matter What You Do (Vision X Long Mix).mp3	0.8417	
+29	Hip Hop/10 XR2.mp3	0.8428	
+30	Electro/02 Get Better (Sfaction Reloaded Mix).mp3	0.8432	
+31	Heavy Metal/06 Glitter (Remix).mp3	0.8433	
+32	Hip Hop/07 So What'cha Want.mp3	0.844	
+33	Hip Hop/12 Come Around [Ft. Timbaland].mp3	0.8453	
+34	Electro/04 Muscle Rollers (Original Mix).mp3	0.8458	
+35	Hip Hop/08 93 'til infinity.mp3	0.8466	
+36	Jazz/02 Hang On To Your Love.mp3	0.8477	
+37	Hip Hop/08 World Town.mp3	0.8526	
+38	Electro/01 Whos Your Daddy.mp3	0.8533	
+39	Jazz/02 Sinkin' Soon.mp3	0.8536	
+40	Jazz/01 Chasing Pirates.mp3	0.8549	
+41	Hip Hop/Ghostwriter.mp3	0.8564	
+42	Hip Hop/05 Ms. Jackson.mp3	0.8573	
+43	Electro/01 White Spirit (Original Mix).mp3	0.8576	
+44	Electro/02 Relocation.mp3	0.8594	
+45	Hip Hop/Paul Revere.mp3	0.8601	
+46	Hip Hop/She's Crafty.mp3	0.8638	
+47	Jazz/12 Tell Yer Mama.mp3	0.866	
+48	Jazz/11 One Flight Down.mp3	0.8667	
+49	Hip Hop/02 Bird Flu.mp3	0.8668	
+50	Hip Hop/11 Paper Planes.mp3	0.8672	
+51	Hip Hop/2 More Dead.mp3	0.868	
+52	Hip Hop/08 No Sleep Till Brooklyn.mp3	0.8685	
+53	Hip Hop/06 Mango Pickle Down River.mp3	0.8688	
+54	Hip Hop/05 Take Care (feat. Rihanna).mp3	0.869	
+55	Hip Hop/Take the Picture Off.mp3	0.8695	
+56	Hip Hop/01 In Da Club.mp3	0.8709	
+57	Electro/03 B Tone.mp3	0.8741	
+58	Electro/01 In Tango (Sfaction Extended).mp3	0.8744	
+59	Electro/08 Talk to Me (Original Mix).mp3	0.8746	
+60	Electro/07 Get Loose.mp3	0.8753	
+61	Jazz/13 Don`t Miss You At All.mp3	0.8775	
+62	Hip Hop/Final Frontier Ft. Blueprint.mp3	0.8775	
+63	Hip Hop/09 The Turn.mp3	0.878	
+64	Hip Hop/04 Posse In Effect.mp3	0.8789	
+65	Hip Hop/Shot in the Dark.mp3	0.8801	
+66	Hip Hop/Cut Out to Fl.mp3	0.8805	
+67	Jazz/13 Kiss Of Life.mp3	0.8816	
+68	Electro/09 I Love My Sex.mp3	0.8843	
+69	Hip Hop/01 Rhymin and Stealin.mp3	0.8843	
+70	Hip Hop/28 Not Affraid.mp3	0.8854	
+71	Electro/07 Stop Go (B Side Mix).mp3	0.8872	
+72	Jazz/06 Thinking About You.mp3	0.888	
+73	Electro/04 Miles Of Love (Beeside Radio Edit).mp3	0.8887	
+74	Electro/10 Illusion (Sfaction Mix).mp3	0.8888	
+75	Jazz/11 The long way home.mp3	0.8895	
+76	Jazz/14 Please Send Me Someone To Love.mp3	0.8901	
+77	Jazz/06 Be Here To Love Me.mp3	0.8921	
+78	Jazz/08 Lonestar.mp3	0.8924	
+79	Jazz/04 Until The End.mp3	0.8924	
+80	Electro/02 Silicone Lube (Original Mix).mp3	0.8924	
+81	Classic/03 Symphony no.2 in D major, op.3.mp3	0.8924	
+82	Jazz/13 The Long Day Is Over.mp3	0.8929	
+83	Jazz/03 Those Sweet Words.mp3	0.893	
+84	Jazz/02 What Am I To You.mp3	0.8934	
+85	Classic/09 Air on the G String (from Suite III), BWV 1068.mp3	0.8937	
+86	Electro/13 Bootleg Megamix.mp3	0.8945	
+87	Hip Hop/05 1000 Kisses  & jada.mp3	0.8948	
+88	Electro/04 Satisfaction.mp3	0.8956	
+89	Jazz/04 Carnival Town.mp3	0.8959	
+90	Jazz/01 Don't Know Why.mp3	0.8977	
+91	Jazz/11 Little Room.mp3	0.8979	
+92	Jazz/Something is Calling You.mp3	0.8982	
+93	Jazz/07 Broken.mp3	0.899	
+94	Jazz/01 Your Love Is King.mp3	0.8998	
+95	Jazz/01 Wish I Could.mp3	0.9001	
+96	Hip Hop/03 Boyz.mp3	0.9006	
+97	Jazz/04 Young Blood.mp3	0.9024	
+98	Hip Hop/01 Marvins Room.mp3	0.9029	
+99	Hip Hop/Silver Fox.mp3	0.903	
+100	Jazz/13 Man of the Hour.mp3	0.9031	

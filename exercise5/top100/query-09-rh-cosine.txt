@@ -1,0 +1,101 @@
+Rank	Vector Label	Distance	
+1	Electro/12 Feel Alive (Fuzzy Hair Vocal Mix).mp3	0.6366	
+2	Electro/05 Love Is Gonna Save Us (Remix 2007).mp3	0.6466	
+3	Electro/07 Scary Monsters And Nice Sprites - Kaskade Remix.mp3	0.6767	
+4	Jazz/15 Cherish The Day.mp3	0.7	
+5	Electro/02 Stop Go.mp3	0.7122	
+6	Jazz/09 Paradise.mp3	0.7129	
+7	Electro/03 No No No (Sfaction Mix).mp3	0.7142	
+8	Hip Hop/19 The Motto (feat. Lil Wayne) [Bonus Track].mp3	0.7148	
+9	Jazz/12 Tell Yer Mama.mp3	0.7216	
+10	Jazz/03 Smooth Operator.mp3	0.7237	
+11	Jazz/10 Nothing Can Come Between Us.mp3	0.7237	
+12	Electro/06 Able To Love.mp3	0.7248	
+13	Electro/02 Get Better (Sfaction Reloaded Mix).mp3	0.7348	
+14	Jazz/02 Hang On To Your Love.mp3	0.7348	
+15	Jazz/11 No Ordinary Love.mp3	0.7355	
+16	Electro/14 Every Single Day.mp3	0.7387	
+17	Hip Hop/02 Bird Flu.mp3	0.7414	
+18	Electro/12 Feel Alive.mp3	0.7418	
+19	Hip Hop/08 93 'til infinity.mp3	0.7437	
+20	Hip Hop/04 Jimmy.mp3	0.7501	
+21	Jazz/01 Chasing Pirates.mp3	0.7505	
+22	Hip Hop/07 So What'cha Want.mp3	0.7529	
+23	Hip Hop/12 Come Around [Ft. Timbaland].mp3	0.7531	
+24	Hip Hop/01 Rhymin and Stealin.mp3	0.7545	
+25	Hip Hop/11 Paper Planes.mp3	0.7548	
+26	Hip Hop/06 Girls.mp3	0.7558	
+27	Electro/05 Time.mp3	0.7562	
+28	Jazz/05 The Sweetest Taboo.mp3	0.7613	
+29	Electro/10 Love Is Gonna Save Us.mp3	0.7632	
+30	Hip Hop/08 Hey Ladies.mp3	0.7647	
+31	Hip Hop/07 Get It Together.mp3	0.7652	
+32	Hip Hop/10 XR2.mp3	0.7652	
+33	Hip Hop/08 World Town.mp3	0.7685	
+34	Hip Hop/09 The Turn.mp3	0.7708	
+35	Electro/08 No Matter What You Do (Vision X Long Mix).mp3	0.7726	
+36	Electro/01 In Tango (Sfaction Extended).mp3	0.7732	
+37	Heavy Metal/06 Glitter (Remix).mp3	0.777	
+38	Electro/09 Satisfaction (B.Deep Remix).mp3	0.7779	
+39	Hip Hop/28 Not Affraid.mp3	0.7797	
+40	Jazz/02 What Am I To You.mp3	0.7846	
+41	Hip Hop/Cut Out to Fl.mp3	0.7863	
+42	Electro/06 Who's Your Daddy (Fuzzy Hair Remix).mp3	0.7864	
+43	Hip Hop/04 Posse In Effect.mp3	0.7901	
+44	Hip Hop/Paper Planes.mp3	0.7904	
+45	Jazz/11 The long way home.mp3	0.7908	
+46	Electro/Chain Smoker.mp3	0.7915	
+47	Jazz/01 Your Love Is King.mp3	0.7923	
+48	Hip Hop/01 In Da Club.mp3	0.7924	
+49	Electro/10 Illusion (Sfaction Mix).mp3	0.7931	
+50	Jazz/06 Be Here To Love Me.mp3	0.7932	
+51	Hip Hop/Shot in the Dark.mp3	0.7937	
+52	Heavy Metal/15 Too Fast For Love.mp3	0.7939	
+53	Jazz/06 Shoot The Moon.mp3	0.7946	
+54	Hip Hop/05 Take Care (feat. Rihanna).mp3	0.7961	
+55	Jazz/06 Thinking About You.mp3	0.7994	
+56	Jazz/Something is Calling You.mp3	0.8	
+57	Hip Hop/Final Frontier Ft. Blueprint.mp3	0.8006	
+58	Hip Hop/2 More Dead.mp3	0.8025	
+59	Hip Hop/05 1000 Kisses  & jada.mp3	0.8036	
+60	Jazz/04 Young Blood.mp3	0.804	
+61	Classic/09 Air on the G String (from Suite III), BWV 1068.mp3	0.8045	
+62	Jazz/13 The Long Day Is Over.mp3	0.8046	
+63	Jazz/04 Feelin' The Same Way.mp3	0.8058	
+64	Electro/02 Relocation.mp3	0.806	
+65	Hip Hop/03 Boyz.mp3	0.8067	
+66	Hip Hop/Paul Revere.mp3	0.8071	
+67	Jazz/11 Rock It (Live).mp3	0.8077	
+68	Jazz/05 Bull Rider.mp3	0.8078	
+69	Classic/02 Symphony 1- II. Andante cantib.mp3	0.8086	
+70	Electro/01 White Spirit (Original Mix).mp3	0.81	
+71	Hip Hop/Love Lockdown.mp3	0.8103	
+72	Heavy Metal/05 Wild Side.mp3	0.8106	
+73	Jazz/11 One Flight Down.mp3	0.8131	
+74	Jazz/04 Carnival Town.mp3	0.8133	
+75	Jazz/01 Don't Know Why.mp3	0.8135	
+76	Electro/01 Whos Your Daddy.mp3	0.8138	
+77	Jazz/10 Watermelon Man.mp3	0.8142	
+78	Jazz/12 The Prettiest Thing.mp3	0.8144	
+79	Jazz/08 Lonestar.mp3	0.8145	
+80	Jazz/08 My Dear Country.mp3	0.8152	
+81	Jazz/02 Cantaloupe Island.mp3	0.8156	
+82	Hip Hop/05 Hussel [Ft. Afrikan Boy].mp3	0.8156	
+83	Electro/03 B Tone.mp3	0.8159	
+84	Electro/04 Miles Of Love (Beeside Radio Edit).mp3	0.8179	
+85	Electro/05 Trichitillomania.mp3	0.8182	
+86	Electro/04 Satisfaction.mp3	0.8184	
+87	Hip Hop/01 Marvins Room.mp3	0.8206	
+88	Jazz/13 Don`t Miss You At All.mp3	0.8206	
+89	Jazz/02 Sinkin' Soon.mp3	0.821	
+90	Jazz/08 Toes.mp3	0.8216	
+91	Jazz/12 Rosie's Lullaby.mp3	0.8226	
+92	Hip Hop/01 Headlines.mp3	0.8229	
+93	Classic/01 Symphony No. 9 (Scherzo).mp3	0.8232	
+94	Electro/08 Talk to Me (Original Mix).mp3	0.8232	
+95	Jazz/05 Not My Friend.mp3	0.8237	
+96	Electro/07 Get Loose.mp3	0.8239	
+97	Jazz/09 Wake Me Up.mp3	0.8243	
+98	Jazz/07 Never As Good As The First Time.mp3	0.8248	
+99	Hip Hop/Sabatoge.mp3	0.8251	
+100	Jazz/14 Please Send Me Someone To Love.mp3	0.8251	

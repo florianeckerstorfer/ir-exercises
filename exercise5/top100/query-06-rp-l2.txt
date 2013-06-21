@@ -1,0 +1,101 @@
+Rank	Vector Label	Distance	
+1	Heavy Metal/04 The Day That Never Comes.mp3	57.1329	
+2	Heavy Metal/05 All Nightmare Long.mp3	68.1087	
+3	Heavy Metal/03 Fist of the Dragon.mp3	68.983	
+4	Heavy Metal/09 Wheels of Purgatory.mp3	69.4535	
+5	Heavy Metal/06 Cyanide.mp3	69.5704	
+6	Heavy Metal/13 Electric Rise (Bonus).mp3	71.1104	
+7	Heavy Metal/11 Save Me.mp3	72.7043	
+8	Heavy Metal/12 Fire 99.mp3	73.1962	
+9	Heavy Metal/10 The Church (of Booze and Kerosene).mp3	73.2227	
+10	Heavy Metal/05 Fuel the Warmachine.mp3	73.8313	
+11	Heavy Metal/08 Down to Zero.mp3	74.5972	
+12	Heavy Metal/11 Don't Go Away Mad (Just Go Away).mp3	74.793	
+13	Heavy Metal/11 The Shadowman.mp3	74.9153	
+14	Heavy Metal/So Far Away.mp3	75.4414	
+15	Heavy Metal/04 King of the Dead End Road.mp3	77.9504	
+16	Heavy Metal/07 West of Hell.mp3	78.0077	
+17	Heavy Metal/09 Suicide And Redemption.mp3	78.1857	
+18	Heavy Metal/02 Motor Discipline.mp3	78.5577	
+19	Heavy Metal/08 The Judas Kiss.mp3	79.711	
+20	Heavy Metal/10 Afraid.mp3	80.9245	
+21	Heavy Metal/06 Hammer of the Lord.mp3	81.5205	
+22	Electro/08 Orchestral Suite By Varien (Bonus Track).mp3	82.4865	
+23	Heavy Metal/02 Enslaved.mp3	82.6382	
+24	Heavy Metal/10 My Apocalypse.mp3	83.6195	
+25	Heavy Metal/07 God Hates Us.mp3	83.6494	
+26	Heavy Metal/02 The End Of The Line.mp3	84.5607	
+27	Heavy Metal/05 Natural Born Killer.mp3	84.9851	
+28	Heavy Metal/01 Nightmare.mp3	87.5881	
+29	Electro/03 Breakn' A Sweat (Skrillex & The Doors).mp3	88.912	
+30	Hip Hop/The Horror.mp3	89.219	
+31	Heavy Metal/01 Bitter Pill.mp3	92.9882	
+32	Heavy Metal/08 Victim.mp3	93.117	
+33	Heavy Metal/14 Primal Scream.mp3	94.3423	
+34	Jazz/06 Chan's Song (Never Said).mp3	96.3563	
+35	Jazz/06 Is It A Crime.mp3	98.4195	
+36	Hip Hop/28 She Will.mp3	99.5341	
+37	Heavy Metal/01 That Was Just Your Life.mp3	99.6173	
+38	Jazz/16 Pearls.mp3	100.606	
+39	Heavy Metal/Ace of spades.mp3	101.1748	
+40	Classic/15 Sonata No. 2 in A minor_ Andante.mp3	101.854	
+41	Jazz/12 Like A Tattoo.mp3	102.85	
+42	Heavy Metal/09 Home Sweet Home.mp3	103.3106	
+43	Jazz/08 Don't Explain (with Damien Rice & Lisa Hannigan).mp3	103.7773	
+44	Electro/11 Rocket In The Sky (Club Mix).mp3	105.2526	
+45	Heavy Metal/12 Without You.mp3	105.9864	
+46	Heavy Metal/17 Shout At The Devil.mp3	106.528	
+47	Classic/12 - Poco Allegro, Stringendo Il.mp3	106.5944	
+48	Electro/01 First Of The Year (Equinox) - Original Mix.mp3	106.6884	
+49	Heavy Metal/01 Ignition.mp3	108.5102	
+50	Heavy Metal/07 Dr. Feelgood.mp3	112.073	
+51	Jazz/12 River (Live with Joni Mitchell) (Bonus Track).mp3	112.7817	
+52	Electro/04 The Devil's Den (Skrillex & Wolfgang Gartner).mp3	113.2455	
+53	Electro/06 Scary Monsters And Nice Sprites - The Juggernaut Remix.mp3	113.9731	
+54	Jazz/07 River (with Corinne Bailey Rae).mp3	114.0639	
+55	Electro/06 Blood Red (Original Mix).mp3	114.3962	
+56	Classic/Marriage Of Figaro.mp3	115.6971	
+57	Jazz/01 Wish I Could.mp3	116.3139	
+58	Hip Hop/07 20 Dollar.mp3	117.472	
+59	Heavy Metal/10 Fiction.mp3	117.5317	
+60	Electro/03 Ruffneck (FULL Flex) - Original Mix.mp3	117.835	
+61	Heavy Metal/02 Welcome To The Family.mp3	120.2192	
+62	Jazz/09 All Apologies.mp3	120.3918	
+63	Classic/04 Symphony 1- IV. Adagio - Alleg.mp3	121.9174	
+64	Classic/02 Egmont Overture, Op.84.mp3	122.1669	
+65	Hip Hop/Salud.mp3	123.1488	
+66	Classic/01 Symphony no.2 in D major, op.3.mp3	123.4789	
+67	Classic/06 Symphony No.7 in A major, Op.9.mp3	123.7103	
+68	Jazz/05 Not My Friend.mp3	124.2324	
+69	Classic/04 Symphony no.2 in D major, op.3.mp3	125.2525	
+70	Jazz/08 Love Is Stronger Than Pride.mp3	125.7051	
+71	Heavy Metal/14 Old Man (Bonus).mp3	127.1374	
+72	Classic/01 Symphony 1- I. Adagio molto -.mp3	127.1427	
+73	Classic/07 - Presto - Recitativo - Allegr.mp3	127.4738	
+74	Classic/01 Prometheus Overture, Op.43.mp3	127.6798	
+75	Classic/05 Symphony no.8 in F major, op.9.mp3	128.121	
+76	Jazz/Something is Calling You.mp3	128.7418	
+77	Classic/Eine Kleine Nachtmusik.mp3	128.9368	
+78	Classic/01 Symphony No. 9 (Scherzo).mp3	129.3302	
+79	Classic/03 Symphony no.2 in D major, op.3.mp3	129.3786	
+80	Classic/08 Symphony no.8 in F major, op.9.mp3	129.6217	
+81	Electro/To The Stars.mp3	129.7285	
+82	Electro/01 Right In.mp3	130.1731	
+83	Electro/04 Scary Monsters And Nice Sprites - Dirtyphonics Remix.mp3	130.2567	
+84	Classic/03 Symphony No.7 in A major, Op.9.mp3	130.3709	
+85	Classic/08 - Allegro Assai Vivace.  Alla.mp3	131.2838	
+86	Classic/05 Symphony No.3 In E Flat Major,.mp3	131.9119	
+87	Classic/11 - Allegro Ma Non Tanto - Poco.mp3	132.2351	
+88	Heavy Metal/Kickstart My Heart.mp3	132.2849	
+89	Classic/01 Canon in D major.mp3	132.3008	
+90	Classic/01 Coriolan Overture, Op.62.mp3	132.7651	
+91	Heavy Metal/13 Smokin' In The Boys Room.mp3	133.014	
+92	Classic/05 Symphony No.7 in A major, Op.9.mp3	133.5325	
+93	Classic/10 - Allegro Energico, Sempre Ben.mp3	133.5944	
+94	Electro/01 The Spell.mp3	133.6967	
+95	Heavy Metal/Motley Crue - Dr. Feelgood.mp3	135.0056	
+96	Jazz/11 Little Room.mp3	135.0245	
+97	Hip Hop/Love Lockdown.mp3	135.6635	
+98	Classic/08 Symphony 6- IV. Storm and Temp.mp3	135.9124	
+99	Classic/07 Symphony no.8 in F major, op.9.mp3	136.0478	
+100	Hip Hop/Chicken-Bone Circuit.mp3	136.0818	

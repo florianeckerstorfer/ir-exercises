@@ -1,0 +1,101 @@
+Rank	Vector Label	Distance	
+1	Classic/04 Symphony No.7 in A major, Op.9.mp3	50.3007	
+2	Classic/06 Symphony 6- II. Scene by the b.mp3	53.7287	
+3	Classic/05 III_  Adagio Molto E Cantabile.mp3	56.174	
+4	Classic/06 IV_ Presto - Allegro Ma Non Tr.mp3	56.6138	
+5	Classic/09 Air on the G String (from Suite III), BWV 1068.mp3	69.1012	
+6	Classic/02 Symphony no.2 in D major, op.3.mp3	79.246	
+7	Classic/03 II_ 2.mp3	84.9775	
+8	Classic/02 Symphony 1- II. Andante cantib.mp3	111.5504	
+9	Classic/10 Air on a G String.mp3	119.7717	
+10	Classic/05 Symphony 6- I. Awakening of ha.mp3	134.4897	
+11	Classic/01 I_ Allegro Ma Non Troppo, Un P.mp3	134.6312	
+12	Classic/04 II_ 3.mp3	136.7283	
+13	Classic/02 II_ Molto Vivace - Presto - Mo.mp3	143.3173	
+14	Classic/09 - Andante Maestoso - Adagio Ma.mp3	145.3239	
+15	Classic/04 Symphony No.3 In E Flat Major,.mp3	145.4118	
+16	Classic/07 Symphony 6- III. Merry gatheri.mp3	147.733	
+17	Classic/07 Symphony no.8 in F major, op.9.mp3	152.9789	
+18	Classic/09 Symphony 6- V. Shepherds' Song.mp3	160.379	
+19	Classic/05 Symphony No.7 in A major, Op.9.mp3	173.1636	
+20	Classic/05 Symphony No.3 In E Flat Major,.mp3	173.5224	
+21	Classic/08 Symphony 6- IV. Storm and Temp.mp3	186.0854	
+22	Classic/06 Symphony no.8 in F major, op.9.mp3	193.9065	
+23	Classic/01 Canon in D major.mp3	199.8298	
+24	Classic/03 Symphony 1- III. Menuetto_ All.mp3	200.0284	
+25	Classic/11 - Allegro Ma Non Tanto - Poco.mp3	201.795	
+26	Classic/08 Symphony no.8 in F major, op.9.mp3	217.3127	
+27	Classic/03 Symphony No.7 in A major, Op.9.mp3	224.3273	
+28	Classic/08 - Allegro Assai Vivace.  Alla.mp3	226.2278	
+29	Classic/01 Prometheus Overture, Op.43.mp3	231.2408	
+30	Classic/05 Symphony no.8 in F major, op.9.mp3	232.8859	
+31	Classic/01 Coriolan Overture, Op.62.mp3	239.4014	
+32	Classic/01 Symphony No. 9 (Scherzo).mp3	242.2768	
+33	Classic/Eine Kleine Nachtmusik.mp3	245.7474	
+34	Classic/01 Symphony no.2 in D major, op.3.mp3	258.4006	
+35	Classic/01 Symphony 1- I. Adagio molto -.mp3	260.0673	
+36	Classic/04 Symphony no.2 in D major, op.3.mp3	262.3215	
+37	Classic/07 - Presto - Recitativo - Allegr.mp3	269.988	
+38	Classic/10 - Allegro Energico, Sempre Ben.mp3	277.359	
+39	Classic/02 Egmont Overture, Op.84.mp3	283.7596	
+40	Classic/04 Symphony 1- IV. Adagio - Alleg.mp3	291.9226	
+41	Classic/03 Symphony no.2 in D major, op.3.mp3	307.6596	
+42	Classic/06 Symphony No.7 in A major, Op.9.mp3	313.5537	
+43	Classic/15 Sonata No. 2 in A minor_ Andante.mp3	361.4615	
+44	Classic/Marriage Of Figaro.mp3	362.6544	
+45	Classic/12 - Poco Allegro, Stringendo Il.mp3	391.6263	
+46	Jazz/16 Pearls.mp3	437.3377	
+47	Jazz/12 Like A Tattoo.mp3	489.4442	
+48	Jazz/06 Chan's Song (Never Said).mp3	493.2879	
+49	Heavy Metal/11 The Shadowman.mp3	496.3335	
+50	Heavy Metal/10 The Church (of Booze and Kerosene).mp3	529.439	
+51	Heavy Metal/05 Fuel the Warmachine.mp3	545.6547	
+52	Heavy Metal/13 Electric Rise (Bonus).mp3	557.0859	
+53	Heavy Metal/04 The Day That Never Comes.mp3	559.1689	
+54	Heavy Metal/03 Fist of the Dragon.mp3	560.1459	
+55	Heavy Metal/12 Fire 99.mp3	590.5858	
+56	Heavy Metal/08 Down to Zero.mp3	602.9133	
+57	Heavy Metal/07 West of Hell.mp3	608.8659	
+58	Heavy Metal/09 Wheels of Purgatory.mp3	610.7779	
+59	Heavy Metal/02 Motor Discipline.mp3	628.4629	
+60	Heavy Metal/06 Hammer of the Lord.mp3	632.7141	
+61	Heavy Metal/03 Broken, Beat And Scarred.mp3	645.6257	
+62	Jazz/01 Wish I Could.mp3	654.1069	
+63	Heavy Metal/04 King of the Dead End Road.mp3	665.1467	
+64	Heavy Metal/01 Ignition.mp3	665.6656	
+65	Heavy Metal/10 Afraid.mp3	665.7831	
+66	Heavy Metal/So Far Away.mp3	666.2069	
+67	Heavy Metal/02 Enslaved.mp3	672.7565	
+68	Electro/08 Orchestral Suite By Varien (Bonus Track).mp3	680.1755	
+69	Heavy Metal/09 Suicide And Redemption.mp3	684.1489	
+70	Jazz/05 Not My Friend.mp3	691.239	
+71	Hip Hop/The Horror.mp3	692.0164	
+72	Jazz/Something is Calling You.mp3	694.4719	
+73	Heavy Metal/11 Save Me.mp3	702.5429	
+74	Heavy Metal/05 All Nightmare Long.mp3	707.7704	
+75	Jazz/09 All Apologies.mp3	715.9729	
+76	Heavy Metal/01 Bitter Pill.mp3	719.2939	
+77	Heavy Metal/07 God Hates Us.mp3	726.5499	
+78	Heavy Metal/06 Cyanide.mp3	727.8079	
+79	Jazz/08 Don't Explain (with Damien Rice & Lisa Hannigan).mp3	735.9473	
+80	Electro/03 Breakn' A Sweat (Skrillex & The Doors).mp3	738.841	
+81	Heavy Metal/05 Natural Born Killer.mp3	740.3289	
+82	Heavy Metal/11 Don't Go Away Mad (Just Go Away).mp3	750.6927	
+83	Heavy Metal/17 Shout At The Devil.mp3	756.3217	
+84	Heavy Metal/Ace of spades.mp3	757.6503	
+85	Heavy Metal/14 Primal Scream.mp3	766.1605	
+86	Heavy Metal/10 My Apocalypse.mp3	768.5486	
+87	Heavy Metal/01 Nightmare.mp3	777.6294	
+88	Jazz/06 Is It A Crime.mp3	788.2324	
+89	Heavy Metal/07 Dr. Feelgood.mp3	798.4978	
+90	Heavy Metal/09 Home Sweet Home.mp3	804.7169	
+91	Heavy Metal/02 The End Of The Line.mp3	806.6078	
+92	Heavy Metal/08 Victim.mp3	809.0032	
+93	Heavy Metal/08 The Judas Kiss.mp3	810.5932	
+94	Heavy Metal/12 Without You.mp3	838.6115	
+95	Heavy Metal/Kickstart My Heart.mp3	846.1568	
+96	Heavy Metal/Motley Crue - Dr. Feelgood.mp3	853.9054	
+97	Hip Hop/Salud.mp3	857.8854	
+98	Heavy Metal/01 That Was Just Your Life.mp3	860.1293	
+99	Heavy Metal/10 Fiction.mp3	874.5057	
+100	Electro/11 Rocket In The Sky (Club Mix).mp3	875.7544	

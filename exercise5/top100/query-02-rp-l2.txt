@@ -1,0 +1,101 @@
+Rank	Vector Label	Distance	
+1	Jazz/04 Chameleon (Edit).mp3	202.1339	
+2	Jazz/05 I Wouldn't Need You.mp3	208.0666	
+3	Hip Hop/07 Intergalactic.mp3	215.1542	
+4	Jazz/04 Feelin' The Same Way.mp3	233.1728	
+5	Jazz/09 Wake Me Up.mp3	235.1934	
+6	Jazz/03 Cold Cold Heart.mp3	237.763	
+7	Jazz/05 Bull Rider.mp3	239.1643	
+8	Jazz/09 Humble Me.mp3	239.176	
+9	Jazz/08 Toes.mp3	241.729	
+10	Jazz/02 Seven Years.mp3	245.5008	
+11	Jazz/14 The Nearness Of You.mp3	246.0332	
+12	Hip Hop/Good Times Roll Pt 2.mp3	246.5503	
+13	Jazz/18 Blue Bayou.mp3	247.6383	
+14	Electro/06 Whiskers.mp3	247.6949	
+15	Jazz/09 I've Got To See You Again.mp3	250.1003	
+16	Electro/Strange Behaviour.mp3	252.7807	
+17	Hip Hop/June Ft. Copywrite.mp3	252.952	
+18	Jazz/05 St. Louis Blues (with Stevie Wonder).mp3	253.4115	
+19	Jazz/10 Stuck.mp3	254.5688	
+20	Jazz/01 Chasing Pirates.mp3	255.2923	
+21	Electro/Pink Lady.mp3	255.7016	
+22	Jazz/12 Nightingale.mp3	255.9848	
+23	Jazz/01 Sunrise.mp3	256.0607	
+24	Jazz/03 The Sun Doesn't Like You.mp3	259.488	
+25	Hip Hop/Work.mp3	261.5493	
+26	Electro/01 The Spell.mp3	262.6371	
+27	Electro/10 The Spell (Original Mix).mp3	262.7468	
+28	Jazz/08 You've Ruined Me.mp3	263.8941	
+29	Jazz/02 Even Though.mp3	264.2114	
+30	Heavy Metal/02 The End Of The Line.mp3	264.2304	
+31	Jazz/06 Waiting.mp3	264.4969	
+32	Hip Hop/Smoke and Mirrors.mp3	264.6322	
+33	Hip Hop/07 20 Dollar.mp3	264.9019	
+34	Jazz/10 Above Ground.mp3	265.0906	
+35	Jazz/03 Light as a Feather.mp3	265.512	
+36	Hip Hop/05 Hussel [Ft. Afrikan Boy].mp3	266.472	
+37	Jazz/11 December.mp3	266.5619	
+38	Hip Hop/01 Marvins Room.mp3	267.0109	
+39	Electro/01 First Of The Year (Equinox) - Original Mix.mp3	267.5699	
+40	Electro/04 Embers (feat. Lindsay).mp3	267.7319	
+41	Jazz/07 Creepin In.mp3	267.868	
+42	Heavy Metal/13 Smokin' In The Boys Room.mp3	268.2762	
+43	Electro/02 Bangarang (feat. Sirah).mp3	269.3273	
+44	Electro/09 Raw Chicken.mp3	269.7591	
+45	Jazz/10 Be My Somebody.mp3	269.8342	
+46	Jazz/07 It's Gonna Be.mp3	270.9812	
+47	Electro/To The Stars.mp3	271.0655	
+48	Electro/02 Raw Chicken.mp3	271.7129	
+49	Heavy Metal/02 Welcome To The Family.mp3	272.0281	
+50	Electro/06 Blood Red (Original Mix).mp3	272.1584	
+51	Hip Hop/36 Find Your Love.mp3	272.6127	
+52	Jazz/13 Loretta.mp3	272.6187	
+53	Heavy Metal/05 Wild Side.mp3	272.6813	
+54	Jazz/05 Come Away With Me.mp3	272.6953	
+55	Electro/07 Green Bottle (Original Mix).mp3	272.8801	
+56	Electro/06 Scary Monsters And Nice Sprites - The Juggernaut Remix.mp3	273.0581	
+57	Hip Hop/Chicken-Bone Circuit.mp3	273.0856	
+58	Electro/11 No Matter What You Do.mp3	274.0424	
+59	Heavy Metal/10 Fiction.mp3	274.0566	
+60	Electro/05 Scary Monsters And Nice Sprites - Phonat Remix.mp3	274.5275	
+61	Hip Hop/01 Make Me Proud (feat. Nicki Minaj).mp3	274.6587	
+62	Jazz/06 Be Here To Love Me.mp3	275.2917	
+63	Jazz/07 Turn Me On.mp3	275.3362	
+64	Jazz/04 Carnival Town.mp3	275.5166	
+65	Heavy Metal/12 Without You.mp3	275.5333	
+66	Jazz/07 River (with Corinne Bailey Rae).mp3	276.2641	
+67	Heavy Metal/14 Primal Scream.mp3	276.7715	
+68	Hip Hop/28 She Will.mp3	276.9544	
+69	Jazz/15 Creepin' In.mp3	276.9761	
+70	Heavy Metal/01 That Was Just Your Life.mp3	277.2011	
+71	Jazz/01 Maiden Voyage.mp3	277.3078	
+72	Hip Hop/Headlines.mp3	277.6382	
+73	Jazz/09 Back to Manhatten.mp3	277.9214	
+74	Heavy Metal/Buried Alive.mp3	278.4823	
+75	Electro/04 Scary Monsters And Nice Sprites - Dirtyphonics Remix.mp3	278.6835	
+76	Jazz/04 Until The End.mp3	279.5114	
+77	Jazz/06 Shoot The Moon.mp3	279.6075	
+78	Jazz/11 Rock It (Live).mp3	279.8314	
+79	Jazz/10 Painter Song.mp3	280.1924	
+80	Jazz/13 Man of the Hour.mp3	280.707	
+81	Hip Hop/Love Lockdown.mp3	280.7818	
+82	Electro/04 The Devil's Den (Skrillex & Wolfgang Gartner).mp3	280.8448	
+83	Electro/01 Trapdoor (feat. Hadouken!).mp3	280.9318	
+84	Heavy Metal/07 Dr. Feelgood.mp3	281.7364	
+85	Heavy Metal/08 The Judas Kiss.mp3	281.7398	
+86	Jazz/08 My Dear Country.mp3	282.5294	
+87	Heavy Metal/02 Enslaved.mp3	282.6898	
+88	Jazz/01 Don't Know Why.mp3	283.3543	
+89	Hip Hop/25 Headlines.mp3	283.6016	
+90	Jazz/12 The Prettiest Thing.mp3	283.8102	
+91	Jazz/08 Love Is Stronger Than Pride.mp3	283.8866	
+92	Jazz/12 River (Live with Joni Mitchell) (Bonus Track).mp3	283.9922	
+93	Hip Hop/01 Power.mp3	284.6404	
+94	Electro/07 Summit (feat. Ellie Goulding).mp3	285.0371	
+95	Jazz/07 Broken.mp3	285.1067	
+96	Hip Hop/The Horror.mp3	285.4051	
+97	Jazz/12 Rosie's Lullaby.mp3	285.7729	
+98	Electro/01 Right In.mp3	285.934	
+99	Jazz/13 The Long Day Is Over.mp3	286.1794	
+100	Electro/05 Cloudburn (Original Mix).mp3	286.6471	
