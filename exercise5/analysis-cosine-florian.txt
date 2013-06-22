@@ -1,0 +1,165 @@
+Query 6: Heavy Metal/03 Broken, Beat And Scarred
+Rank    Vector Label    Distance
+1   Electro/12 Feel Alive (Fuzzy Hair Vocal Mix).mp3    0.7215
+    - Not similar
+2   Electro/05 Love Is Gonna Save Us (Remix 2007).mp3   0.7461
+    - Not similar
+3   Electro/02 Stop Go.mp3  0.7811
+    - Not similar
+4   Electro/07 Scary Monsters And Nice Sprites - Kaskade Remix.mp3  0.7914
+    - Not similar
+5   Electro/14 Every Single Day.mp3 0.804
+    - Not similar
+6   Hip Hop/06 Girls.mp3    0.8089
+    - Not similar
+7   Hip Hop/19 The Motto (feat. Lil Wayne) [Bonus Track].mp3    0.8092
+    - Not similar
+8   Jazz/02 Hang On To Your Love.mp3    0.822
+    - Not similar
+9   Jazz/09 Paradise.mp3    0.8222
+    - Not similar
+10  Jazz/11 No Ordinary Love.mp3    0.83
+    - Not similar
+20  Hip Hop/08 Hey Ladies.mp3   0.8475
+    - Not similar
+30  Hip Hop/Ghostwriter.mp3 0.8649
+    - Not similar
+40  Hip Hop/2 More Dead.mp3 0.872
+    - Not similar
+50  Hip Hop/She's Crafty.mp3    0.8812
+    - Not similar
+100 Electro/07 Summit (feat. Ellie Goulding).mp3    0.9167
+    - Not similar
+
+Query 7: Electro/02 Raw Chicken
+Rank    Vector Label    Distance
+1   Electro/05 Love Is Gonna Save Us (Remix 2007).mp3   0.7474
+    - Similar
+2   Hip Hop/19 The Motto (feat. Lil Wayne) [Bonus Track].mp3    0.783
+    - Not really similar
+3   Jazz/09 Paradise.mp3    0.7846
+    - Not similar
+4   Electro/02 Stop Go.mp3  0.7876
+    - Similar
+5   Electro/12 Feel Alive (Fuzzy Hair Vocal Mix).mp3    0.7885
+    - Slight similarity
+6   Hip Hop/06 Girls.mp3    0.7889
+    - Not similar
+7   Jazz/02 Hang On To Your Love.mp3    0.8049
+    - Not similar
+8   Jazz/11 No Ordinary Love.mp3    0.8092
+    - Not similar
+9   Jazz/12 Tell Yer Mama.mp3   0.8108
+    - Not similar
+10  Hip Hop/02 Bird Flu.mp3 0.8144
+    - Not similar
+20  Hip Hop/01 Rhymin and Stealin.mp3   0.8335
+    - Not similar
+30  Hip Hop/Take the Picture Off.mp3    0.8532
+    - Not similar
+40  Jazz/11 The long way home.mp3   0.8684
+    - Not simlar
+50  Electro/06 Able To Love.mp3 0.8796
+    - Similar
+100 Hip Hop/01 Power.mp3    0.9041
+    - Not similar
+
+Query 8: Electro/07 Get Loose
+Rank    Vector Label    Distance
+1   Hip Hop/06 Girls.mp3    0.703
+    - Not very similar
+2   Hip Hop/19 The Motto (feat. Lil Wayne) [Bonus Track].mp3    0.7293
+    - Not very similar
+3   Jazz/12 Tell Yer Mama.mp3   0.7384
+    - Not similar
+4   Jazz/09 Paradise.mp3    0.7386
+    - Not similar
+5   Hip Hop/02 Bird Flu.mp3 0.7451
+    - Not similar
+6   Jazz/11 No Ordinary Love.mp3    0.746
+    - Not similar
+7   Hip Hop/11 Paper Planes.mp3 0.7589
+    - Not similar
+8   Hip Hop/01 Rhymin and Stealin.mp3   0.76
+    - Not similar
+9   Jazz/02 Hang On To Your Love.mp3    0.7603
+    - Not similar
+10  Jazz/05 The Sweetest Taboo.mp3  0.7632
+    - Not similar
+20  Hip Hop/07 Get It Together.mp3  0.7889
+    - Not similar
+30  Jazz/02 Sinkin' Soon.mp3    0.7979
+    - Not similar
+40  Electro/07 Summit (feat. Ellie Goulding).mp3    0.8092
+    - Slightly similar
+50  Hip Hop/Sabatoge.mp3    0.8191
+    - Not really similar
+100 Classic/09 - Andante Maestoso - Adagio Ma.mp3   0.845
+    - Not similar
+
+Query 9: Hip Hop/05 Ms. Jackson
+Rank    Vector Label    Distance
+1   Electro/12 Feel Alive (Fuzzy Hair Vocal Mix).mp3    0.6366
+    - Not similar
+2   Electro/05 Love Is Gonna Save Us (Remix 2007).mp3   0.6466
+    - Not similar
+3   Electro/07 Scary Monsters And Nice Sprites - Kaskade Remix.mp3  0.6767
+    - Not similar
+4   Jazz/15 Cherish The Day.mp3 0.7
+    - Not really similar
+5   Electro/02 Stop Go.mp3  0.7122
+    - Not similar
+6   Jazz/09 Paradise.mp3    0.7129
+    - Not really similar
+7   Electro/03 No No No (Sfaction Mix).mp3  0.7142
+    - Not similar
+8   Hip Hop/19 The Motto (feat. Lil Wayne) [Bonus Track].mp3    0.7148
+    - Slight similarities, similar speed and voice
+9   Jazz/12 Tell Yer Mama.mp3   0.7216
+    - Not similar
+10  Jazz/03 Smooth Operator.mp3 0.7237
+    - Not similar
+20  Hip Hop/04 Jimmy.mp3    0.7501
+    - Not similar
+30  Hip Hop/08 Hey Ladies.mp3   0.7647
+    - Similar speed, but otherwise not similar
+40  Jazz/02 What Am I To You.mp3    0.7846
+    - Not similar
+50  Jazz/06 Be Here To Love Me.mp3  0.7932
+    - Not similar
+100 Jazz/14 Please Send Me Someone To Love.mp3  0.8251
+    - Not similar
+
+
+Query 10: Hip Hop/07 Intergalactic
+Rank    Vector Label    Distance
+1   Electro/05 Love Is Gonna Save Us (Remix 2007).mp3   0.7086
+    - Not similar
+2   Electro/12 Feel Alive (Fuzzy Hair Vocal Mix).mp3    0.7145
+    - Not similar
+3   Jazz/15 Cherish The Day.mp3 0.7579
+    - Not similar
+4   Hip Hop/19 The Motto (feat. Lil Wayne) [Bonus Track].mp3    0.7631
+    - Not similar
+5   Electro/02 Stop Go.mp3  0.7702
+    - Not similar
+6   Jazz/09 Paradise.mp3    0.7725
+    - Not similar
+7   Electro/07 Scary Monsters And Nice Sprites - Kaskade Remix.mp3  0.7845
+    - Not similar
+8   Jazz/05 The Sweetest Taboo.mp3  0.789
+    - Not similar
+9   Hip Hop/06 Girls.mp3    0.7891
+    - Same artist, therefore same voice, but otherwise are the songs pretty different
+10  Hip Hop/The Proxy.mp3   0.7922
+    - Some background melody in Intergalactic sounds very similar to The Proxy, but the songs in general are not similar
+20  Hip Hop/07 Get It Together.mp3  0.8246
+    - Same artist, but Get It Together is a lot slower and has a sad sound.
+30  Jazz/03 Smooth Operator.mp3 0.8365
+    - Not similar
+40  Electro/08 Talk to Me (Original Mix).mp3    0.8453
+    - Not similar
+50  Jazz/10 Nothing Can Come Between Us.mp3 0.8522
+    - Not similar
+100 Jazz/08 Lonestar.mp3    0.8923
+    - Not similar
