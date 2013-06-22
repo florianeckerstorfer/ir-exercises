@@ -1,4 +1,4 @@
-# Information Retrievel, Exercise 5
+# Information Retrieval, Exercise 5
 
 - Florian Eckerstorfer, [florian@eckerstorfer.co](florian@eckerstorfer.co)
 - Haichao Miao, [hmiao87@gmail.com](hmiao87@gmail.com)
